@@ -66,6 +66,7 @@
                                 <TextBlock
 									Text="{loc:TrFormat Path=CurrentEvent.Time, Key=EarthquakeTimetableWindow.F01}"
 									x:Name="DateText" FontSize="13" VerticalAlignment="Bottom" />
+                                <TextBlock Text="{loc:Tr EarthquakeView.05Pre}" FontSize="14" VerticalAlignment="Bottom" Margin="0,0,0,-2" />
                                 <TextBlock
 									Text="{loc:TrFormat Path=CurrentEvent.Time, Key=EarthquakeView.F01}"
 									x:Name="TimeText" Margin="0,0,0,-3" FontSize="23" VerticalAlignment="Bottom" />

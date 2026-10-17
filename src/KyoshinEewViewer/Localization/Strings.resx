@@ -581,6 +581,9 @@
   <data name="EarthquakeView.05" xml:space="preserve">
     <value>頃</value>
   </data>
+  <data name="EarthquakeView.05Pre" xml:space="preserve">
+    <value></value>
+  </data>
   <data name="EarthquakeView.06" xml:space="preserve">
     <value>震央</value>
   </data>

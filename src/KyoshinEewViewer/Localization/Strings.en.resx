@@ -579,7 +579,10 @@ For large earthquakes this becomes heavy, so it is not recommended on low-perfor
     <value>Detection time</value>
   </data>
   <data name="EarthquakeView.05" xml:space="preserve">
-    <value>approx.</value>
+    <value></value>
+  </data>
+  <data name="EarthquakeView.05Pre" xml:space="preserve">
+    <value> approx. </value>
   </data>
   <data name="EarthquakeView.06" xml:space="preserve">
     <value>Epicenter</value>

@@ -579,7 +579,10 @@ Với động đất lớn sẽ nặng máy nên không khuyến nghị trên m�
     <value>Thời điểm phát hiện</value>
   </data>
   <data name="EarthquakeView.05" xml:space="preserve">
-    <value>khoảng</value>
+    <value></value>
+  </data>
+  <data name="EarthquakeView.05Pre" xml:space="preserve">
+    <value> khoảng </value>
   </data>
   <data name="EarthquakeView.06" xml:space="preserve">
     <value>Tâm chấn</value>
