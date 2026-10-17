@@ -1,4 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Services.Workflows.BuiltinActions;
 using R3;
 using System;
@@ -105,8 +106,8 @@ public partial class Workflow : ObservableObject
 		if (SelectedTriggerInfo != null && SelectedTriggerInfo != triggerInfo && Trigger?.GetType() != typeof(DummyTrigger))
 		{
 			var confirmed = await DialogHelper.ShowSettingWindowConfirmationDialogAsync(
-				"トリガー変更の確認",
-				$"現在の設定「{SelectedTriggerInfo.DisplayName}」から「{triggerInfo.DisplayName}」に変更しますか？\n\n変更すると現在設定されているトリガーの内容は失われます。");
+				Loc.Get("Wf.ChangeTrigger.Title"),
+				Loc.Get("Wf.ChangeTrigger.Message", SelectedTriggerInfo.DisplayName, triggerInfo.DisplayName));
 
 			if (!confirmed)
 				return;

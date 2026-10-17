@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:KyoshinEewViewer.Series.Lightning;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-			 Foreground="{DynamicResource MainForegroundColor}"
+			 Foreground="{DynamicResource MainForegroundColor}" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Lightning.LightningView"
 			 x:DataType="local:LightningSeries" x:CompileBindings="True">
     <Design.DataContext>
@@ -14,15 +14,15 @@
     <Grid>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="150" Margin="5">
             <Border Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0">
-                <TextBlock Text="統計情報" HorizontalAlignment="Center" />
+                <TextBlock Text="{loc:Tr DmdataPage.14}" HorizontalAlignment="Center" />
             </Border>
             <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="0,0,4,4">
                 <StackPanel>
-                    <TextBlock Text="遅延" Foreground="{DynamicResource SubForegroundColor}" Margin="0,0,0,-5"
+                    <TextBlock Text="{loc:Tr LightningView.01}" Foreground="{DynamicResource SubForegroundColor}" Margin="0,0,0,-5"
                                HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="{Binding Delay, StringFormat={}{0:0.0}}" FontSize="24" />
-                        <TextBlock Text="秒" Margin="0,4" VerticalAlignment="Bottom"
+                        <TextBlock Text="{loc:Tr EewPanel.14}" Margin="0,4" VerticalAlignment="Bottom"
                                    Foreground="{DynamicResource SubForegroundColor}" />
                     </StackPanel>
                 </StackPanel>
@@ -33,7 +33,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="&#xf071;" Foreground="{DynamicResource WarningForegroundColor}" Margin="5,0,0,0"
                            VerticalAlignment="Center" FontSize="24" Classes="icon" />
-                <TextBlock Text="これは実験目的のツールであり、常用するためのものではありません。" Margin="0,0,5,0" TextWrapping="WrapWithOverflow"
+                <TextBlock Text="{loc:Tr LightningView.02}" Margin="0,0,5,0" TextWrapping="WrapWithOverflow"
                            Foreground="{DynamicResource WarningForegroundColor}" VerticalAlignment="Center"
                            FontSize="22" />
             </StackPanel>

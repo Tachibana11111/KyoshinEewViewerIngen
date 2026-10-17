@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using R3;
 using System;
@@ -25,8 +26,8 @@ public partial class MultipleAction : WorkflowAction
 		if (parameter is not ChildAction action)
 			return;
 		var result = await DialogHelper.ShowSettingWindowConfirmationDialogAsync(
-			"アクションの削除",
-			$"アクション「{action.SelectedActionInfo?.DisplayName}」を削除しますか？\nこの操作は元に戻すことができません。");
+			Loc.Get("Wf.DeleteAction.Title"),
+			Loc.Get("Wf.DeleteAction.Message", action.SelectedActionInfo?.DisplayName));
 		
 		if (result)
 		{
@@ -106,8 +107,8 @@ public partial class ChildAction : ObservableObject
 		if (SelectedActionInfo != null && SelectedActionInfo != actionInfo && Action?.GetType() != typeof(DummyAction))
 		{
 			var confirmed = await DialogHelper.ShowSettingWindowConfirmationDialogAsync(
-				"アクション変更の確認",
-				$"現在の設定「{SelectedActionInfo.DisplayName}」から「{actionInfo.DisplayName}」に変更しますか？\n\n変更すると現在のアクションに設定されている内容は失われます。");
+				Loc.Get("Wf.ChangeAction.Title"),
+				Loc.Get("Wf.ChangeAction.Message", SelectedActionInfo.DisplayName, actionInfo.DisplayName));
 
 			if (!confirmed)
 				return;

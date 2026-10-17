@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="1000"
-			 x:DataType="vm:SettingWindowViewModel"
+			 x:DataType="vm:SettingWindowViewModel" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.SettingPages.KyoshinMonitorPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -21,7 +21,7 @@
     </UserControl.Styles>
     <ScrollViewer>
         <StackPanel>
-            <ui:FASettingsExpander Header="取得元サーバー" Description="基本は 強震モニタ をおすすめします。&#xa;受信しない にすることで強震モニタからの受信を完全に停止します。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorPage.01}" Description="{loc:Tr KyoshinMonitorPage.02}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0ac;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
@@ -31,35 +31,35 @@
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="揺れの検出" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="揺れの検出" Description="強震モニタ上で揺れを検出し、自動ズームを行います。" IsExpanded="True">
+            <TextBlock Text="{loc:Tr KyoshinMonitorPage.03}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorPage.03}" Description="{loc:Tr KyoshinMonitorPage.04}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf6f1;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
 
-                <ui:FASettingsExpanderItem Content="揺れ検知時に自動でタブを切り替える">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorPage.05}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.SwitchAtShakeDetect}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.SwitchAtShakeDetect}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="自動ズーム･タブ切り替え基準の揺れのレベル">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorPage.06}">
                     <ui:FASettingsExpanderItem.Footer>
                         <ComboBox ItemsSource="{x:Static vm:SettingWindowViewModel.KyoshinEventLevelNames}" SelectedValue="{Binding Config.KyoshinMonitor.EventNotificationLevel}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}"
                                   MinWidth="160" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="揺れ検知範囲の表示モード"
-                                         Description="実験中のため、ウィンドウテーマによっては見えにくい配色になる可能性があります。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorPage.07}"
+                                         Description="{loc:Tr KyoshinMonitorPage.08}">
                     <ui:FASettingsExpanderItem.Footer>
                         <ComboBox ItemsSource="{x:Static vm:SettingWindowViewModel.ShakeDetectionDisplayModeNames}" SelectedValue="{Binding Config.KyoshinMonitor.ShakeDetectionDisplayMode}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}"
                                   MinWidth="160" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="揺れ検知範囲のアニメーション"
-                                         Description="描画負荷が高い順に 明滅＞点滅＞なし です。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorPage.09}"
+                                         Description="{loc:Tr KyoshinMonitorPage.10}">
                     <ui:FASettingsExpanderItem.Footer>
                         <ComboBox ItemsSource="{x:Static vm:SettingWindowViewModel.ShakeDetectionAnimationModeNames}" SelectedValue="{Binding Config.KyoshinMonitor.ShakeDetectionAnimationMode}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}"
                                   MinWidth="160" />
@@ -67,8 +67,8 @@
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="取得タイミング" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="データ取得タイミング調整" Description="実際の時間から遅延させて強震モニタから取得します。" IsExpanded="True">
+            <TextBlock Text="{loc:Tr KyoshinMonitorPage.11}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorPage.12}" Description="{loc:Tr KyoshinMonitorPage.13}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf2f2;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
@@ -84,36 +84,36 @@
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="自動でオフセットを調整する">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorPage.14}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Timer.AutoOffsetIncrement}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Timer.AutoOffsetIncrement}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="受信間隔設定" Description="強震モニタの受信を指定した間隔で行います。&#xA;通信量節約に効果があります。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorPage.15}" Description="{loc:Tr KyoshinMonitorPage.16}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf1c0;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
                     <DockPanel Margin="0,5,0,0" Width="150">
-                        <TextBlock Text="{Binding Config.KyoshinMonitor.FetchFrequency, StringFormat={}{0}秒毎}"
+                        <TextBlock Text="{loc:TrFormat Path=Config.KyoshinMonitor.FetchFrequency, Key=KyoshinMonitorPage.F01}"
                                    TextAlignment="Right" Width="50" DockPanel.Dock="Right" />
                         <Slider Maximum="5" Minimum="1" TickFrequency="1" IsSnapToTickEnabled="True"
                                 Value="{Binding Config.KyoshinMonitor.FetchFrequency}" VerticalAlignment="Center" />
                     </DockPanel>
                 </ui:FASettingsExpander.Footer>
-                <CheckBox Content="EEW受信中は受信間隔を1秒毎にする" IsChecked="{Binding Config.KyoshinMonitor.ForcefetchOnEew}" Margin="0,4" />
-                <CheckBox Content="揺れ検知中は受信間隔を1秒毎にする" IsChecked="{Binding Config.KyoshinMonitor.ForcefetchOnShakeDetect}" Margin="0,4" />
+                <CheckBox Content="{loc:Tr KyoshinMonitorPage.17}" IsChecked="{Binding Config.KyoshinMonitor.ForcefetchOnEew}" Margin="0,4" />
+                <CheckBox Content="{loc:Tr KyoshinMonitorPage.18}" IsChecked="{Binding Config.KyoshinMonitor.ForcefetchOnShakeDetect}" Margin="0,4" />
             </ui:FASettingsExpander>
 
-            <TextBlock Text="表示" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="色の例を表示する" Description="Rt震度 は リアルタイム震度 の省略表記です。">
+            <TextBlock Text="{loc:Tr KyoshinMonitorPage.19}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorPage.20}" Description="{loc:Tr KyoshinMonitorPage.21}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf5c3;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.ShowColorSample}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.ShowColorSample}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
         </StackPanel>

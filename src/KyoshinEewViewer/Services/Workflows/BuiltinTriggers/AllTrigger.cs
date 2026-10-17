@@ -1,4 +1,5 @@
 using System;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using System.Text.Json.Serialization;
 
@@ -8,7 +9,7 @@ public class AllTrigger : WorkflowTrigger
 {
 	public override Type EventType => typeof(WorkflowEvent);
 	[JsonIgnore]
-	public override Control DisplayControl => new TextBlock { Text = "すべてのイベントに対しトリガーされます。" };
+	public override Control DisplayControl => new TextBlock { Text = Loc.Get("WfTrigger.All.Desc") };
 
 	public override bool CheckTrigger(WorkflowEvent content) => true;
 	public override WorkflowEvent CreateTestEvent() => new TestEvent();

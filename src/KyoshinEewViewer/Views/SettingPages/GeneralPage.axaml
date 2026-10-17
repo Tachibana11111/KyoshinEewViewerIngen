@@ -8,7 +8,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="1800"
-             x:DataType="vm:SettingWindowViewModel"
+             x:DataType="vm:SettingWindowViewModel" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SettingPages.GeneralPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -24,8 +24,25 @@
     </UserControl.Styles>
     <ScrollViewer>
         <StackPanel>
-            <TextBlock Text="外観" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="ウィンドウテーマ" Description="全体的な配色">
+            <TextBlock Text="{loc:Tr General.Appearance}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr General.Language}" Description="{loc:Tr General.Language.Desc}">
+                <ui:FASettingsExpander.IconSource>
+                    <ui:FAFontIconSource Glyph="&#xf0ac;" FontFamily="{StaticResource IconFont}" />
+                </ui:FASettingsExpander.IconSource>
+                <ui:FASettingsExpander.Footer>
+                    <ComboBox HorizontalAlignment="Right" MinWidth="200"
+                              ItemsSource="{x:Static loc:Loc.Options}"
+                              SelectedValueBinding="{Binding Code}"
+                              SelectedValue="{Binding Config.Language, Mode=TwoWay}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="loc:LanguageOption">
+                                <TextBlock Text="{Binding DisplayName}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </ui:FASettingsExpander.Footer>
+            </ui:FASettingsExpander>
+            <ui:FASettingsExpander Header="{loc:Tr General.WindowTheme}" Description="{loc:Tr General.WindowTheme.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf2d2;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
@@ -44,11 +61,11 @@
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <Button Content="編集" Command="{Binding EditWindowTheme}" VerticalAlignment="Stretch" />
+                        <Button Content="{loc:Tr Common.Edit}" Command="{Binding EditWindowTheme}" VerticalAlignment="Stretch" />
                     </StackPanel>
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="震度アイコンテーマ" Description="震度アイコンのみの配色">
+            <ui:FASettingsExpander Header="{loc:Tr General.IntensityTheme}" Description="{loc:Tr General.IntensityTheme.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf410;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
@@ -67,7 +84,7 @@
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <Button Content="編集" Command="{Binding EditIntensityTheme}" VerticalAlignment="Stretch" />
+                        <Button Content="{loc:Tr Common.Edit}" Command="{Binding EditIntensityTheme}" VerticalAlignment="Stretch" />
                     </StackPanel>
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
@@ -75,7 +92,7 @@
             <Border CornerRadius="4" ClipToBounds="True" Margin="10,3,10,0">
                 <StackPanel>
                     <StackPanel Background="{DynamicResource DockTitleBackgroundColor}">
-                        <TextBlock Text="配色サンプル" Foreground="{DynamicResource SubForegroundColor}" Margin="10,5" />
+                        <TextBlock Text="{loc:Tr General.ColorSample}" Foreground="{DynamicResource SubForegroundColor}" Margin="10,5" />
                     </StackPanel>
                     <Panel Background="{DynamicResource DockBackgroundColor}">
                         <StackPanel HorizontalAlignment="Center" Margin="5">
@@ -127,11 +144,11 @@
             </Border>
 
             <StackPanel Orientation="Horizontal" Margin="10,20,10,5" Spacing="5">
-                <TextBlock Text="ウィンドウ設定" FontWeight="Bold" />
-                <TextBlock Text="最小化時の非表示設定は通知設定にあります。" IsVisible="{Binding IsWindows}" Foreground="{DynamicResource SubForegroundColor}" FontSize="12" VerticalAlignment="Bottom" />
+                <TextBlock Text="{loc:Tr General.WindowSettings}" FontWeight="Bold" />
+                <TextBlock Text="{loc:Tr General.WindowSettings.Hint}" IsVisible="{Binding IsWindows}" Foreground="{DynamicResource SubForegroundColor}" FontSize="12" VerticalAlignment="Bottom" />
             </StackPanel>
 
-            <ui:FASettingsExpander Header="ウィンドウの拡大率" Description="メインウィンドウの拡大･縮小を行います。">
+            <ui:FASettingsExpander Header="{loc:Tr General.WindowScale}" Description="{loc:Tr General.WindowScale.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf00e;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
@@ -145,60 +162,60 @@
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="時刻設定" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="インターネットを使用しての時刻同期を行う" Description="使用しない場合の動作の保証はできません。">
+            <TextBlock Text="{loc:Tr General.TimeSettings}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr General.NtpSync}" Description="{loc:Tr General.NtpSync.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf017;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.NetworkTime.Enable}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.NetworkTime.Enable}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
-                <ui:FASettingsExpanderItem Content="接続先" Description="NTPサーバーのアドレス">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.NtpServer}" Description="{loc:Tr General.NtpServer.Desc}">
                     <ui:FASettingsExpanderItem.Footer>
                         <TextBox Text="{Binding Config.NetworkTime.Address}" HorizontalAlignment="Stretch" Margin="0,1.5" MinWidth="250" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
-                <ui:FASettingsExpanderItem Content="NTPが使用できない場合、HTTPで試行する" Description="HTTPの場合の接続先は現状選ぶことができません。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.NtpFallbackHttp}" Description="{loc:Tr General.NtpFallbackHttp.Desc}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.NetworkTime.EnableFallbackHttp}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.NetworkTime.EnableFallbackHttp}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="その他" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander IsVisible="{Binding !IsMacOs}" Header="プロセスの優先度を『高』にして起動する" Description="他のアプリに処理を優先され情報が表示されないことを防ぎます">
+            <TextBlock Text="{loc:Tr General.Other}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander IsVisible="{Binding !IsMacOs}" Header="{loc:Tr General.HighPriority}" Description="{loc:Tr General.HighPriority.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf2db;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.AutoProcessPriority}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.AutoProcessPriority}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="重複起動時に既存のウィンドウを最前面に表示する" Description="警告画面の代わりに、既に起動しているウィンドウを最前面に表示します">
+            <ui:FASettingsExpander Header="{loc:Tr General.FocusExisting}" Description="{loc:Tr General.FocusExisting.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf2d0;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.FocusExistingInstanceOnDuplicate}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.FocusExistingInstanceOnDuplicate}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="ログを出力する" Description="不具合報告や動作確認に役立ちます(再起動後反映)">
+            <ui:FASettingsExpander Header="{loc:Tr General.WriteLog}" Description="{loc:Tr General.WriteLog.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf15c;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Logging.Enable}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Logging.Enable}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
 
-                <ui:FASettingsExpanderItem Content="実行ディレクトリに出力する" Description="無効の場合はアプリケーションデータディレクトリに出力します。" IsVisible="{Binding IsUseCurrentDirectoryOptionAvailable}">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.LogToExeDir}" Description="{loc:Tr General.LogToExeDir.Desc}" IsVisible="{Binding IsUseCurrentDirectoryOptionAvailable}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Logging.UseCurrentDirectory}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Logging.UseCurrentDirectory}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="出力先ディレクトリ" Description="ファイル名は自動で決定されます。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.LogDir}" Description="{loc:Tr General.LogDir.Desc}">
                     <ui:FASettingsExpanderItem.Footer>
                         <TextBox Text="{Binding Config.Logging.Directory}" Width="250" />
                     </ui:FASettingsExpanderItem.Footer>
@@ -212,50 +229,50 @@
 
                 <ui:FASettingsExpanderItem>
                     <ui:FASettingsExpanderItem.Footer>
-                        <Button Content="ログディレクトリを開く" Command="{Binding OpenLogDirectory}" />
+                        <Button Content="{loc:Tr General.OpenLogDir}" Command="{Binding OpenLogDirectory}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="定期的に更新情報をチェックする">
+            <ui:FASettingsExpander Header="{loc:Tr General.CheckUpdate}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0ed;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Update.Enable}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Update.Enable}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
 
-                <ui:FASettingsExpanderItem Content="正式公開前のビルドを利用する" Description="開発中の新機能がご利用いただけますが、不安定の可能性があります。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.UsePreRelease}" Description="{loc:Tr General.UsePreRelease.Desc}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Update.UsePreReleaseBuild}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Update.UsePreReleaseBuild}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
-                <ui:FASettingsExpanderItem Content="安定版を利用する" Description="機能追加が遅い代わりに安定して利用できるバージョンです。整備までお待ちください。" IsEnabled="False">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.UseStable}" Description="{loc:Tr General.UseStable.Desc}" IsEnabled="False">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding !Config.Update.UseUnstableBuild}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding !Config.Update.UseUnstableBuild}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="自動更新を利用する(未実装)" IsEnabled="False">
+                <ui:FASettingsExpanderItem Content="{loc:Tr General.AutoUpdate}" IsEnabled="False">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="false" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="false" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
                 <ui:FASettingsExpanderItem IsVisible="{Binding IsDebug}">
                     <StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Right">
-                        <TextBlock Text="開発者向け機能:" FontSize="11" VerticalAlignment="Center" Foreground="{DynamicResource SubForegroundColor}" />
-                        <Button Content="強制更新（動作確認用）" FontSize="11" Command="{Binding ForceStartUpdater}" />
+                        <TextBlock Text="{loc:Tr General.DevFeatures}" FontSize="11" VerticalAlignment="Center" Foreground="{DynamicResource SubForegroundColor}" />
+                        <Button Content="{loc:Tr General.ForceUpdate}" FontSize="11" Command="{Binding ForceStartUpdater}" />
                     </StackPanel>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="動作レポートを開発者に送信する" Description="処理時間の統計･エラー内容が送信されます。&#xA;送られた情報から開発者が個人を特定することはありません。&#xA;アプリケーションの安定化にご協力をお願いいたします。">
+            <ui:FASettingsExpander Header="{loc:Tr General.SendReport}" Description="{loc:Tr General.SendReport.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf188;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Update.SendCrashReport}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Update.SendCrashReport}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
         </StackPanel>

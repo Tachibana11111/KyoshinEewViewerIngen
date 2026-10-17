@@ -95,7 +95,7 @@
             </Setter>
         </Style>
         <Style Selector="ui|FANavigationViewItem uip|FANavigationViewItemPresenter">
-            <Setter Property="Height" Value="32" />
+            <Setter Property="MinHeight" Value="32" />
         </Style>
     </Window.Styles>
     <Window.Resources>
@@ -111,7 +111,7 @@
                        IsPaneToggleButtonVisible="False"
                        IsBackEnabled="False"
 					   IsBackButtonVisible="False"
-                       OpenPaneLength="200"
+                       OpenPaneLength="250"
                        MenuItemsSource="{Binding SettingPages}"
                        SelectedItem="{Binding SelectedSettingPage}">
         <ContentControl Background="{DynamicResource MainBackgroundColor}"

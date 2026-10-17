@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Core.Models;
 using KyoshinEewViewer.Series.KyoshinMonitor.Workflow;
@@ -80,16 +81,16 @@ public partial class WebhookAction : WorkflowAction
 
 			if (responseText.Length > 100)
 				responseText = responseText[..100] + "...";
-			LatestResponse = $"レスポンスタイム: {sw.ElapsedMilliseconds}ms\nステータスコード: {(int)response.StatusCode}\nレスポンス: {responseText}" +
+			LatestResponse = Loc.Get("Wf.Webhook.Result", sw.ElapsedMilliseconds, (int)response.StatusCode, responseText) +
 				(injectResult == null ? "" : $"\n{injectResult}");
 		}
 		catch (OperationCanceledException) when (timeoutSource?.IsCancellationRequested ?? false)
 		{
-			LatestResponse = $"地点予測の取り込みのタイムアウト({PointForecastTimeout.TotalSeconds:0.#}秒)に達したため中断しました。";
+			LatestResponse = Loc.Get("Wf.Webhook.Timeout", PointForecastTimeout.TotalSeconds);
 		}
 		catch (Exception e)
 		{
-			LatestResponse = $"例外が発生しました。\n{e.Message}";
+			LatestResponse = Loc.Get("Wf.Webhook.Exception", e.Message);
 		}
 	}
 
@@ -100,12 +101,12 @@ public partial class WebhookAction : WorkflowAction
 	private string InjectPointForecasts(EewEvent content, bool isSuccessStatusCode, string responseText)
 	{
 		if (!isSuccessStatusCode)
-			return "地点予測の取り込み: ステータスコードが成功以外のためスキップしました。";
+			return Loc.Get("Wf.Inject.Skip");
 		if (responseText.Length > MaxPointForecastResponseSize)
-			return $"地点予測の取り込み: レスポンスが大きすぎます({MaxPointForecastResponseSize / 1024}KiB以内)。";
+			return Loc.Get("Wf.Inject.TooLarge", MaxPointForecastResponseSize / 1024);
 		// リプレイ中はホストごとに別のコントローラーになるため、イベントの発火元から注入先を解決する
 		if (content.SourceEewController?.PointForecastController is not { } pointForecastController)
-			return "地点予測の取り込み: 発火元のEEWコントローラーを特定できませんでした。";
+			return Loc.Get("Wf.Inject.NoController");
 
 		// 提供元が指定されていない場合はワークフローを識別できる値を使用する
 		var workflow = FindWorkflow();

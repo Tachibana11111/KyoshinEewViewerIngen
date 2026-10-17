@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Core;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Core.Models;
 using KyoshinEewViewer.Map;
 using KyoshinEewViewer.Map.Layers;
@@ -130,7 +131,7 @@ public class TsunamiStationLayer : MapLayer
 						break;
 				}
 				if (param.Zoom >= 8)
-					canvas.DrawText(station.Name, (float)loc.X + 5, (float)loc.Y + 5, SKTextAlign.Left, TextFont, TextPaint);
+					canvas.DrawText(PlaceNames.Localize(station.Name), (float)loc.X + 5, (float)loc.Y + 5, SKTextAlign.Left, TextFont, TextPaint);
 			}
 		}
 		finally

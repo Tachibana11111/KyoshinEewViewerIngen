@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -35,7 +36,7 @@ using Microsoft.Extensions.Logging;
 namespace KyoshinEewViewer.Series.Tsunami;
 public partial class TsunamiSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(TsunamiSeries), "tsunami", "津波情報", new FAFontIconSource { Glyph = "\xe515", FontFamily = new(Utils.IconFontName) }, true, "津波情報を表示します。");
+	public static SeriesMeta MetaData { get; } = new(typeof(TsunamiSeries), "tsunami", "Series.Tsunami", new FAFontIconSource { Glyph = "\xe515", FontFamily = new(Utils.IconFontName) }, true, "Series.Tsunami.Detail");
 
 	private bool IsInitializing { get; set; }
 	private ILogger Logger { get; set; }
@@ -53,6 +54,9 @@ public partial class TsunamiSeries : SeriesBase
 	/// 期限切れの情報を揮発させるタイマー
 	/// </summary>
 	public Timer? ExpireTimer { get; set; }
+
+	private static string? FormatExpectedArrival(DateTimeOffset? arrival)
+		=> arrival is { } value ? Loc.Get("Tsunami.ExpectedArrival", value) : null;
 
 	private static readonly string[] SupportedControlTitle = ["津波警報・注意報・予報a", "津波情報a"];
 
@@ -91,10 +95,10 @@ public partial class TsunamiSeries : SeriesBase
 			],
 		};
 
-		NewSound = soundPlayer.RegisterSound(SoundCategory, "New", "津波情報の発表", "未発表状態から受信した際に鳴動します。\n{lv}: 警報種別 [fore, adv, warn, major]", new() { { "lv", "fore" }, });
-		UpgradeSound = soundPlayer.RegisterSound(SoundCategory, "Upgrade", "警報/注意報の更新", "より上位の警報/注意報が発表された際に鳴動します。\n{lv}: 更新後の警報種別 [fore, adv, warn, major]", new() { { "lv", "warn" }, });
-		DowngradeSound = soundPlayer.RegisterSound(SoundCategory, "Downgrade", "警報/注意報の解除", "最大の警報レベルが下がった時に鳴動します。\n{lv}: 解除後の警報種別 [none, fore, adv, warn, major]", new() { { "lv", "none" }, });
-		UpdatedSound = soundPlayer.RegisterSound(SoundCategory, "Updated", "津波情報の更新", "他の津波関連の音声が再生されなかった場合、この音声が鳴動します。\n{lv}: 最大の警報種別 [fore, adv, warn, major]", new() { { "lv", "adv" }, });
+		NewSound = soundPlayer.RegisterSound(SoundCategory, "New", "Sound.TsunamiNew", "Sound.Desc.TsunamiNew", new() { { "lv", "fore" }, });
+		UpgradeSound = soundPlayer.RegisterSound(SoundCategory, "Upgrade", "Sound.TsunamiUpgrade", "Sound.Desc.TsunamiUpgrade", new() { { "lv", "warn" }, });
+		DowngradeSound = soundPlayer.RegisterSound(SoundCategory, "Downgrade", "Sound.TsunamiDowngrade", "Sound.Desc.TsunamiDowngrade", new() { { "lv", "none" }, });
+		UpdatedSound = soundPlayer.RegisterSound(SoundCategory, "Updated", "Sound.TsunamiUpdated", "Sound.Desc.TsunamiUpdated", new() { { "lv", "adv" }, });
 
 		ExpireTimer = new Timer(_ =>
 		{
@@ -202,7 +206,7 @@ public partial class TsunamiSeries : SeriesBase
 	private TsunamiView? _control;
 	public override Control DisplayControl => _control ?? throw new InvalidOperationException("初期化前にコントロールが呼ばれています");
 	public override ISettingPage[] SettingPages => [
-		new BasicSettingPage<TsunamiPage>("\xe515", "津波情報", []),
+		new BasicSettingPage<TsunamiPage>("\xe515", "Series.Tsunami", []),
 	];
 
 	/// <summary>
@@ -238,10 +242,10 @@ public partial class TsunamiSeries : SeriesBase
 				};
 				var levelStr = value?.Level switch
 				{
-					TsunamiLevel.MajorWarning => "大津波警報",
-					TsunamiLevel.Warning => "津波警報",
-					TsunamiLevel.Advisory => "津波注意報",
-					TsunamiLevel.Forecast => "津波予報",
+					TsunamiLevel.MajorWarning => Loc.Get("TsunamiLevel.MajorWarning"),
+					TsunamiLevel.Warning => Loc.Get("TsunamiLevel.Warning"),
+					TsunamiLevel.Advisory => Loc.Get("TsunamiLevel.Advisory"),
+					TsunamiLevel.Forecast => Loc.Get("TsunamiLevel.Forecast"),
 					_ => "",
 				};
 
@@ -317,7 +321,7 @@ public partial class TsunamiSeries : SeriesBase
 		{
 			var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 			{
-				Title = "任意のXML電文を開く",
+				Title = Loc.Get("Dialog.OpenXml"),
 				FileTypeFilter = new List<FilePickerFileType>()
 				{
 					FilePickerFileTypes.All,
@@ -379,7 +383,7 @@ public partial class TsunamiSeries : SeriesBase
 				i.Area.Code,
 				i.Area.Name,
 				Utils.ConvertToShortWidthString(height ?? throw new Exception("TsunamiHeight/Description がみつかりません")),
-				Utils.ConvertToShortWidthString(i.FirstHeight?.ArrivalTime?.ToString("HH:mm 到達見込み") ?? i.FirstHeight?.Condition ?? "") // 予報の場合は要素が存在しないので空文字に
+				Utils.ConvertToShortWidthString(FormatExpectedArrival(i.FirstHeight?.ArrivalTime) ?? i.FirstHeight?.Condition ?? "") // 予報の場合は要素が存在しないので空文字に
 			)
 			{
 				ArrivalTime = i.FirstHeight?.ArrivalTime?.DateTime ?? // 到達時刻はソートに使用するため Condition に応じて暫定値を入れる
@@ -412,7 +416,7 @@ public partial class TsunamiSeries : SeriesBase
 						tsunami.ReportedAt, // 算出できなければ電文の作成時刻を入れる,
 					HighTideTime = s.HighTideDateTime,
 					FirstHeight = Utils.ConvertToShortWidthString(i.MaxHeight?.TsunamiHeight?.Description ?? ""),
-					FirstHeightDetail = Utils.ConvertToShortWidthString(s.FirstHeight?.ArrivalTime?.ToString("HH:mm 到達見込み") ?? s.FirstHeight?.Condition ?? ""),
+					FirstHeightDetail = Utils.ConvertToShortWidthString(FormatExpectedArrival(s.FirstHeight?.ArrivalTime) ?? s.FirstHeight?.Condition ?? ""),
 				});
 			}
 			if (stations.Count > 0)
@@ -540,8 +544,8 @@ public partial class TsunamiSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = TsunamiNotificationTemplates.NotificationTitle,
-							TemplateText = TsunamiNotificationTemplates.NotificationMessage,
+							Title = TemplateLocalizer.Get("Tpl.Tsunami.Title", TsunamiNotificationTemplates.NotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Tsunami.Message", TsunamiNotificationTemplates.NotificationMessage),
 							// 津波警報以上は重要 (おやすみ中も表示)
 							Urgency = "{{ if IsWarningOrAbove }}critical{{ else }}normal{{ end }}",
 						}
@@ -574,8 +578,8 @@ public partial class TsunamiSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = TsunamiNotificationTemplates.NotificationTitle,
-							TemplateText = TsunamiNotificationTemplates.NotificationMessage,
+							Title = TemplateLocalizer.Get("Tpl.Tsunami.Title", TsunamiNotificationTemplates.NotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Tsunami.Message", TsunamiNotificationTemplates.NotificationMessage),
 							// 津波警報以上は重要 (おやすみ中も表示)
 							Urgency = "{{ if IsWarningOrAbove }}critical{{ else }}normal{{ end }}",
 						}
@@ -608,8 +612,8 @@ public partial class TsunamiSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = TsunamiNotificationTemplates.NotificationTitle,
-							TemplateText = TsunamiNotificationTemplates.NotificationMessage,
+							Title = TemplateLocalizer.Get("Tpl.Tsunami.Title", TsunamiNotificationTemplates.NotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Tsunami.Message", TsunamiNotificationTemplates.NotificationMessage),
 							// 津波警報以上は重要 (おやすみ中も表示)
 							Urgency = "{{ if IsWarningOrAbove }}critical{{ else }}normal{{ end }}",
 						}
@@ -642,8 +646,8 @@ public partial class TsunamiSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = TsunamiNotificationTemplates.NotificationTitle,
-							TemplateText = TsunamiNotificationTemplates.NotificationMessage,
+							Title = TemplateLocalizer.Get("Tpl.Tsunami.Title", TsunamiNotificationTemplates.NotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Tsunami.Message", TsunamiNotificationTemplates.NotificationMessage),
 							// 津波警報以上は重要 (おやすみ中も表示)
 							Urgency = "{{ if IsWarningOrAbove }}critical{{ else }}normal{{ end }}",
 						}

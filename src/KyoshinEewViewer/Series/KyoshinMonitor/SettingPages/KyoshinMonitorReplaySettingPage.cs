@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FluentAvalonia.UI.Controls;
@@ -12,13 +14,13 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace KyoshinEewViewer.Series.KyoshinMonitor.SettingPages;
 
-public partial class KyoshinMonitorReplaySettingPage : ObservableObject, ISettingPage
+public partial class KyoshinMonitorReplaySettingPage : LocalizedObservableObject, ISettingPage
 {
 	public bool IsVisible => true;
 
 	public string? Icon => null;
 
-	public string Title => "リプレイ";
+	public string Title => Loc.Instance["Setting.Replay"];
 
 	public Control DisplayControl => new KyoshinMonitorReplayPage() { DataContext = this };
 
@@ -49,7 +51,7 @@ public partial class KyoshinMonitorReplaySettingPage : ObservableObject, ISettin
 			TimeshiftedDateTime = TimerService.CurrentDisplayTime.AddSeconds(-TimeshiftSeconds);
 		}
 	}
-	private string _timeshiftSecondsString = "リアルタイム";
+	private string _timeshiftSecondsString = Loc.Get("Replay.RealTime");
 
 	public KyoshinMonitorReplaySettingPage(
 		KyoshinEewViewerConfiguration config,
@@ -83,21 +85,20 @@ public partial class KyoshinMonitorReplaySettingPage : ObservableObject, ISettin
 	{
 		if (TimeshiftSeconds == 0)
 		{
-			TimeshiftSecondsString = "リアルタイム";
+			TimeshiftSecondsString = Loc.Get("Replay.RealTime");
 			return;
 		}
 
-		var sb = new StringBuilder();
+		var parts = new List<string>();
 		var time = TimeSpan.FromSeconds(TimeshiftSeconds);
 		if (time.TotalHours >= 1)
-			sb.Append((int)time.TotalHours + "時間");
+			parts.Add(Loc.Get("Replay.Hours", (int)time.TotalHours));
 		if (time.Minutes > 0)
-			sb.Append(time.Minutes + "分");
+			parts.Add(Loc.Get("Replay.Minutes", time.Minutes));
 		if (time.Seconds > 0)
-			sb.Append(time.Seconds + "秒");
-		sb.Append('前');
+			parts.Add(Loc.Get("Replay.Seconds", time.Seconds));
 
-		TimeshiftSecondsString = sb.ToString();
+		TimeshiftSecondsString = string.Join(Loc.Get("Replay.Separator"), parts) + Loc.Get("Replay.Ago");
 	}
 
 	[ObservableProperty]
@@ -113,7 +114,7 @@ public partial class KyoshinMonitorReplaySettingPage : ObservableObject, ISettin
 				return;
 			var files = await KyoshinEewViewerApp.TopLevelControl.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 			{
-				Title = "リプレイファイルを開く",
+				Title = Loc.Get("Replay.OpenFile"),
 				FileTypeFilter = [FilePickerFileTypes.All],
 				AllowMultiple = false,
 			});
@@ -124,7 +125,7 @@ public partial class KyoshinMonitorReplaySettingPage : ObservableObject, ISettin
 		}
 		catch (Exception ex)
 		{
-			await ShowErrorDialog("リプレイファイルの読み込みに失敗しました", ex.Message);
+			await ShowErrorDialog(Loc.Get("Replay.LoadFailed"), ex.Message);
 		}
 	}
 

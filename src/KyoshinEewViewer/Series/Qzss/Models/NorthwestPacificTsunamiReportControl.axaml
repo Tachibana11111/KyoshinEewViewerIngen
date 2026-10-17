@@ -6,20 +6,20 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:NorthwestPacificTsunamiReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.NorthwestPacificTsunamiReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
     </UserControl.Resources>
     <Grid RowDefinitions="auto,*" Width="350" HorizontalAlignment="Left">
         <StackPanel Margin="2,0">
-            <local:DCReportHeaderControl Title="防災気象情報(北西太平洋津波)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr NorthwestPacificTsunamiReport.01}" ShowReportCount="True" />
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" TextElement.FontSize="16">
             <Border Background="{DynamicResource DockTitleBackgroundColor}" BorderThickness="4" CornerRadius="4" VerticalAlignment="Top">
                 <StackPanel>
-                    <TextBlock Text="北西太平洋津波情報" FontSize="20" FontWeight="Bold" Margin="5,0,7,0" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                    <TextBlock Text="{loc:Tr QzssPage.40}" FontSize="20" FontWeight="Bold" Margin="5,0,7,0" VerticalAlignment="Top" HorizontalAlignment="Center" />
                     <Viewbox Height="22" Stretch="Fill" StretchDirection="DownOnly" Margin="5,0,5,5">
                         <TextBlock Text="{Binding TsunamigenicPotential, Converter={StaticResource DCReportConverter}, ConverterParameter=TsunamigenicPotential}" FontSize="16" HorizontalAlignment="Center" />
                     </Viewbox>

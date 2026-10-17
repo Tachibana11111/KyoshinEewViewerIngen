@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Radar.RadarPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -21,15 +21,15 @@
     </UserControl.Styles>
     <ScrollViewer>
         <StackPanel>
-            <ui:FASettingsExpander Header="自動更新を行う" Description="毎分自動で更新を行います。">
+            <ui:FASettingsExpander Header="{loc:Tr RadarPage.01}" Description="{loc:Tr RadarPage.02}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf2f1;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Radar.AutoUpdate}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Radar.AutoUpdate}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="情報のソース" Description="気象庁HP" Margin="10,50,10,0" />
+            <ui:FASettingsExpander Header="{loc:Tr RadarPage.03}" Description="{loc:Tr RadarPage.04}" Margin="10,50,10,0" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>

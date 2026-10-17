@@ -5,10 +5,10 @@
              xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:actions="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinActions;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="actions:SendNotificationAction" x:CompileBindings="True"
+             x:DataType="actions:SendNotificationAction" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinActions.SendNotificationActionControl">
     <StackPanel>
-        <TextBlock Text="通知タイトル" />
+        <TextBlock Text="{loc:Tr SendNotificationAction.01}" />
         <Grid ColumnDefinitions="*,Auto">
             <TextBox Grid.Column="0" 
                      Text="{Binding Title}" 
@@ -18,13 +18,13 @@
                      FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
                      FontSize="12" />
             <Button Grid.Column="1" 
-                    Content="編集" 
+                    Content="{loc:Tr Common.Edit}" 
                     Click="EditTitleButton_Click"
                     Margin="8,0,0,0"
                     VerticalAlignment="Top" />
         </Grid>
         
-        <TextBlock Text="通知本文テンプレート" Margin="0,8,0,0" />
+        <TextBlock Text="{loc:Tr SendNotificationAction.02}" Margin="0,8,0,0" />
         <Grid ColumnDefinitions="*,Auto">
             <TextBox Grid.Column="0" 
                      Text="{Binding TemplateText}" 
@@ -37,16 +37,16 @@
                      FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
                      FontSize="12" />
             <Button Grid.Column="1"
-                    Content="編集"
+                    Content="{loc:Tr Common.Edit}"
                     Click="EditTemplateButton_Click"
                     Margin="8,0,0,0"
                     VerticalAlignment="Top" />
         </Grid>
 
-        <TextBlock Text="緊急度" Margin="0,8,0,0" />
+        <TextBlock Text="{loc:Tr SendNotificationAction.03}" Margin="0,8,0,0" />
         <ComboBox SelectedValue="{Binding Urgency}" SelectedValueBinding="{Binding Tag, DataType=ComboBoxItem}"
                   HorizontalAlignment="Left" MinWidth="220"
-                  ToolTip.Tip="通知の優先度を設定できます。&#xA;『重要』は対応環境では非表示設定を貫通して表示しようとします。">
+                  ToolTip.Tip="{loc:Tr SendNotificationAction.04}">
             <ComboBoxItem Tag="low">参考</ComboBoxItem>
             <ComboBoxItem Tag="normal">通常</ComboBoxItem>
             <ComboBoxItem Tag="critical">重要</ComboBoxItem>

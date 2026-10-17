@@ -11,6 +11,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using KyoshinEewViewer.Core;
+using KyoshinEewViewer.Localization;
 
 namespace KyoshinEewViewer.Controls;
 
@@ -102,6 +103,19 @@ public class MarkdownViewer : ContentControl
 		}, RoutingStrategies.Tunnel, handledEventsToo: true);
 	}
 
+	protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+	{
+		base.OnAttachedToVisualTree(e);
+		Loc.Instance.LanguageChanged += UpdateContent;
+		UpdateContent();
+	}
+
+	protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+	{
+		Loc.Instance.LanguageChanged -= UpdateContent;
+		base.OnDetachedFromVisualTree(e);
+	}
+
 	protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
 	{
 		base.OnPropertyChanged(change);
@@ -117,8 +131,19 @@ public class MarkdownViewer : ContentControl
 			_builder.Append(text);
 	}
 
+	/// <summary>
+	/// 表示言語が日本語以外のとき、<c>Foo.md</c> に対する <c>Foo.en.md</c> のような言語別ファイルがあればそちらを優先して読み込む
+	/// </summary>
 	private static string? LoadFromSource(string source)
 	{
+		var code = Loc.Instance.CurrentCode;
+		if (code != "ja" && source.EndsWith(".md", StringComparison.OrdinalIgnoreCase))
+		{
+			var localized = new Uri(source[..^3] + "." + code + ".md", UriKind.Absolute);
+			if (AssetLoader.Exists(localized))
+				source = localized.ToString();
+		}
+
 		try
 		{
 			using var stream = AssetLoader.Open(new Uri(source, UriKind.Absolute));

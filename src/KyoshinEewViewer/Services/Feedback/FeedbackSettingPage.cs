@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FluentAvalonia.UI.Controls;
@@ -20,14 +21,14 @@ using Microsoft.Extensions.Logging;
 
 namespace KyoshinEewViewer.Services.Feedback;
 
-public partial class FeedbackSettingPage : ObservableObject, ISettingPage
+public partial class FeedbackSettingPage : LocalizedObservableObject, ISettingPage
 {
 	private const string FeedbackCategoryBug = "バグ報告";
 	private const long AttachmentMaxTotalSize = 20 * 1024 * 1024; // 合計20MB
 
 	public bool IsVisible => true;
 	public string? Icon => "\xf0e0";
-	public string Title => "フィードバック";
+	public string Title => Loc.Instance["Setting.Feedback"];
 	public Control DisplayControl => new FeedbackPage() { DataContext = this };
 	public ISettingPage[] SubPages => [];
 
@@ -35,7 +36,13 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 	private ISubWindowsService? SubWindowService { get; }
 	private ILogger Logger { get; }
 
-	public string[] Categories { get; } = [FeedbackCategoryBug, "機能要望", "質問", "その他"];
+	public LocMap<string> Categories { get; } = new()
+	{
+		{ FeedbackCategoryBug, "Feedback.Cat.Bug" },
+		{ "機能要望", "Feedback.Cat.Feature" },
+		{ "質問", "Feedback.Cat.Question" },
+		{ "その他", "Feedback.Cat.Other" },
+	};
 
 	public bool IsAvailable { get; } = SentrySdk.IsEnabled;
 
@@ -118,7 +125,7 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 	private void UpdateAttachmentsTotalSizeText()
 	{
 		var total = Attachments.Sum(a => a.Size);
-		AttachmentsTotalSizeText = $"合計 {FormatSize(total)} / {FormatSize(AttachmentMaxTotalSize)}";
+		AttachmentsTotalSizeText = Loc.Get("Feedback.TotalSize", FormatSize(total), FormatSize(AttachmentMaxTotalSize));
 	}
 
 	private static string FormatSize(long size) => size switch
@@ -134,7 +141,7 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 			return;
 		var files = await KyoshinEewViewerApp.TopLevelControl.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 		{
-			Title = "添付するファイルを選択",
+			Title = Loc.Get("Feedback.PickFiles"),
 			FileTypeFilter = [FilePickerFileTypes.All],
 			AllowMultiple = true,
 		});
@@ -175,7 +182,7 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 			var sb = new StringBuilder();
 			if (rejectedOversize.Count > 0)
 			{
-				sb.AppendLine($"合計サイズが上限（{AttachmentMaxTotalSize / (1024 * 1024)}MB）を超えるため添付できなかったファイル:");
+				sb.AppendLine(Loc.Get("Feedback.Oversize", AttachmentMaxTotalSize / (1024 * 1024)));
 				foreach (var name in rejectedOversize)
 					sb.AppendLine($"・{name}");
 			}
@@ -183,14 +190,14 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 			{
 				if (sb.Length > 0)
 					sb.AppendLine();
-				sb.AppendLine("読み取りに失敗したファイル:");
+				sb.AppendLine(Loc.Get("Feedback.ReadFailed"));
 				foreach (var name in failed)
 					sb.AppendLine($"・{name}");
 			}
 
 			await new FAContentDialog
 			{
-				Title = "添付できないファイルがあります",
+				Title = Loc.Get("Feedback.CannotAttach"),
 				Content = sb.ToString().TrimEnd(),
 				CloseButtonText = "OK",
 			}.ShowAsync(SubWindowService?.SettingWindow);
@@ -204,12 +211,12 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 	{
 		if (!SentrySdk.IsEnabled)
 		{
-			ResultMessage = "フィードバック機能を利用できません。";
+			ResultMessage = Loc.Get("Feedback.Unavailable");
 			return;
 		}
 
 		IsSending = true;
-		ResultMessage = "送信中...";
+		ResultMessage = Loc.Get("Feedback.Sending");
 		try
 		{
 			var subject = Subject.Trim();
@@ -294,15 +301,15 @@ public partial class FeedbackSettingPage : ObservableObject, ISettingPage
 
 			await new FAContentDialog
 			{
-				Title = "フィードバック送信完了",
-				Content = "フィードバックを送信しました。ご協力ありがとうございました。",
+				Title = Loc.Get("Feedback.SentTitle"),
+				Content = Loc.Get("Feedback.SentMessage"),
 				CloseButtonText = "OK",
 			}.ShowAsync(SubWindowService?.SettingWindow);
 		}
 		catch (Exception ex)
 		{
 			Logger.LogWarning(ex, "フィードバックの送信に失敗しました");
-			ResultMessage = $"送信に失敗しました: {ex.Message}";
+			ResultMessage = Loc.Get("Feedback.SendFailed", ex.Message);
 		}
 		finally
 		{

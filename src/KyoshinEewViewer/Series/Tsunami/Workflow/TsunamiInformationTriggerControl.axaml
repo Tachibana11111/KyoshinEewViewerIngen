@@ -5,25 +5,25 @@
 		     xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:wf="clr-namespace:KyoshinEewViewer.Series.Tsunami.Workflow;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="350"
-             x:DataType="wf:TsunamiInformationTrigger" x:CompileBindings="True"
+             x:DataType="wf:TsunamiInformationTrigger" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Tsunami.Workflow.TsunamiInformationTriggerControl">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="発表レベル: " VerticalAlignment="Center" />
+            <TextBlock Text="{loc:Tr TsunamiInformationTrigger.01}" VerticalAlignment="Center" />
             <ComboBox ItemsSource="{x:Static wf:TsunamiInformationTrigger.LevelNames}" SelectedValue="{Binding Level}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}" />
         </StackPanel>
-        <CheckBox Content="一致しているときのみ実行する" IsChecked="{Binding IsExact}"
-                  ToolTip.Tip="デフォルトではより高いレベルのイベントもトリガ対象となります。&#xA;このオプションを有効にするとそのレベルの時のみでアクションを実行することが可能です。"/>
+        <CheckBox Content="{loc:Tr TsunamiInformationTrigger.02}" IsChecked="{Binding IsExact}"
+                  ToolTip.Tip="{loc:Tr ShakeDetectTrigger.03}"/>
 
         <WrapPanel>
-            <CheckBox IsChecked="{Binding EnableIssued}" Content="発表" Margin="0,2,10,2"
-                      ToolTip.Tip="未発表状態から津波情報が発表されたとき" />
-            <CheckBox IsChecked="{Binding EnableUpgraded}" Content="警報レベル上昇" Margin="0,2,10,2"
-                      ToolTip.Tip="より上位の警報に切り替えられたとき" />
-            <CheckBox IsChecked="{Binding EnableDowngraded}" Content="警報レベル下降・解除" Margin="0,2,10,2"
-                      ToolTip.Tip="警報レベルが下がったり解除されたとき" />
-            <CheckBox IsChecked="{Binding EnableUpdated}" Content="その他更新" Margin="0,2,10,2"
-                      ToolTip.Tip="地域の増減など、上記以外の情報更新時" />
+            <CheckBox IsChecked="{Binding EnableIssued}" Content="{loc:Tr TsunamiInformationTrigger.03}" Margin="0,2,10,2"
+                      ToolTip.Tip="{loc:Tr TsunamiInformationTrigger.04}" />
+            <CheckBox IsChecked="{Binding EnableUpgraded}" Content="{loc:Tr TsunamiInformationTrigger.05}" Margin="0,2,10,2"
+                      ToolTip.Tip="{loc:Tr TsunamiInformationTrigger.06}" />
+            <CheckBox IsChecked="{Binding EnableDowngraded}" Content="{loc:Tr TsunamiInformationTrigger.07}" Margin="0,2,10,2"
+                      ToolTip.Tip="{loc:Tr TsunamiInformationTrigger.08}" />
+            <CheckBox IsChecked="{Binding EnableUpdated}" Content="{loc:Tr TsunamiInformationTrigger.09}" Margin="0,2,10,2"
+                      ToolTip.Tip="{loc:Tr TsunamiInformationTrigger.10}" />
         </WrapPanel>
     </StackPanel>
 </UserControl>

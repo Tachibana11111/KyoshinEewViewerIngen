@@ -1,4 +1,5 @@
 using Avalonia.Data.Converters;
+using KyoshinEewViewer.Localization;
 using DmdataSharp;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,11 @@ namespace KyoshinEewViewer.Services.TelegramPublishers.Dmdata.Converters;
 /// </summary>
 public class EndpointsToStringConverter : IValueConverter
 {
-	private static readonly Dictionary<string, string> EndpointNames = new()
+	private static readonly Dictionary<string, string> EndpointNameKeys = new()
 	{
-		{ DmdataV2SocketEndpoints.Global, "グローバル" },
-		{ DmdataV2SocketEndpoints.Tokyo, "東京" },
-		{ DmdataV2SocketEndpoints.Osaka, "大阪" },
+		{ DmdataV2SocketEndpoints.Global, "Endpoint.Global" },
+		{ DmdataV2SocketEndpoints.Tokyo, "Endpoint.Tokyo" },
+		{ DmdataV2SocketEndpoints.Osaka, "Endpoint.Osaka" },
 		{ DmdataV2SocketEndpoints.Apne1Az4, "apne1-az4" },
 		{ DmdataV2SocketEndpoints.Apne1Az1, "apne1-az1" },
 		{ DmdataV2SocketEndpoints.Apne3Az3, "apne3-az3" },
@@ -26,13 +27,13 @@ public class EndpointsToStringConverter : IValueConverter
 	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
 	{
 		if (value is not string[] endpoints)
-			return "なし";
+			return Loc.Get("Common.None");
 
 		if (endpoints.Length == 0)
-			return "なし";
+			return Loc.Get("Common.None");
 
 		var displayNames = endpoints.Select(endpoint =>
-			EndpointNames.TryGetValue(endpoint, out var name) ? name : endpoint
+			EndpointNameKeys.TryGetValue(endpoint, out var nameKey) ? Loc.Get(nameKey) : endpoint
 		);
 
 		return string.Join(", ", displayNames);

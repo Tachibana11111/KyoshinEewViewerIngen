@@ -6,14 +6,14 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:TsunamiReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.TsunamiReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
     </UserControl.Resources>
     <Grid RowDefinitions="auto,*" Width="350" HorizontalAlignment="Left">
         <StackPanel Margin="2,0">
-            <local:DCReportHeaderControl Title="防災気象情報(津波)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr TsunamiReport.01}" ShowReportCount="True" />
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" TextElement.FontSize="16">
@@ -48,7 +48,7 @@
                 </StackPanel.Styles>
                 <Border IsVisible="{Binding MajorWarningAreas.Count}" Background="{DynamicResource TsunamiMajorWarningColor}" BorderThickness="4" CornerRadius="4">
                     <StackPanel>
-                        <TextBlock Text="大津波警報" Foreground="{DynamicResource TsunamiMajorWarningForegroundColor}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                        <TextBlock Text="{loc:Tr TsunamiLevel.MajorWarning}" Foreground="{DynamicResource TsunamiMajorWarningForegroundColor}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
                         <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="3" ClipToBounds="True">
                             <ItemsControl ItemsSource="{Binding MajorWarningAreas}" Classes="WarningAreas" />
                         </Border>
@@ -56,7 +56,7 @@
                 </Border>
                 <Border IsVisible="{Binding WarningAreas.Count}" Background="{DynamicResource TsunamiWarningColor}" BorderThickness="4" CornerRadius="4">
                     <StackPanel>
-                        <TextBlock Text="津波警報" Foreground="{DynamicResource TsunamiWarningForegroundColor}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                        <TextBlock Text="{loc:Tr TsunamiLevel.Warning}" Foreground="{DynamicResource TsunamiWarningForegroundColor}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
                         <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="3" ClipToBounds="True">
                             <ItemsControl ItemsSource="{Binding WarningAreas}" Classes="WarningAreas" />
                         </Border>
@@ -65,7 +65,7 @@
 
                 <Border IsVisible="{Binding ClearedAreas.Count}" Background="{DynamicResource DockTitleBackgroundColor}" BorderThickness="4" CornerRadius="4">
                     <StackPanel>
-                        <TextBlock Text="警報解除" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                        <TextBlock Text="{loc:Tr TsunamiReport.02}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
                         <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="3" ClipToBounds="True">
                             <ItemsControl ItemsSource="{Binding ClearedAreas}" Classes="WarningAreas" />
                         </Border>
@@ -74,7 +74,7 @@
 
                 <Border IsVisible="{Binding NoTsunamiAreas.Count}" Background="{DynamicResource DockTitleBackgroundColor}" BorderThickness="4" CornerRadius="4">
                     <StackPanel>
-                        <TextBlock Text="津波なし" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                        <TextBlock Text="{loc:Tr TsunamiView.11}" FontSize="20" FontWeight="Bold" Margin="5,0,7,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
                         <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="3" ClipToBounds="True">
                             <ItemsControl ItemsSource="{Binding NoTsunamiAreas}" Classes="WarningAreas" />
                         </Border>

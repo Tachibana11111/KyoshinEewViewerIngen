@@ -57,11 +57,11 @@ public class EewController
 		IsReplay = isReplay;
 		SoundMode = isReplay ? "replay" : "realtime";
 
-		EewReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewReceived", "緊急地震速報受信", "{int}: 最大震度 [？,0,1,...,6-,6+,7]", new() { { "int", "4" }, });
-		EewBeginReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewBeginReceived", "緊急地震速報受信(初回)", "{int}: 最大震度 [-,0,1,...,6-,6+,7]", new() { { "int", "5+" }, });
-		EewFinalReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewFinalReceived", "緊急地震速報受信(最終)", "{int}: 最大震度 [-,0,1,...,6-,6+,7]", new() { { "int", "-" }, });
-		EewCanceledSound = soundPlayer.RegisterSound(SoundCategory, "EewCanceled", "緊急地震速報受信(キャンセル)");
-		EewWarningAnnouncedSound = soundPlayer.RegisterSound(SoundCategory, "EewWarningAnnounced", "緊急地震速報(警報)発表･レベル到達時", "{int}: 最大震度 [？,0,1,...,6-,6+,7]\n{mode}: 再生モード [replay, realtime]", new() { { "int", "5-" }, { "mode", "replay" }, });
+		EewReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewReceived", "Sound.EewReceived", "Sound.Desc.MaxIntensityQ", new() { { "int", "4" }, });
+		EewBeginReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewBeginReceived", "Sound.EewFirst", "Sound.Desc.MaxIntensityDash", new() { { "int", "5+" }, });
+		EewFinalReceivedSound = soundPlayer.RegisterSound(SoundCategory, "EewFinalReceived", "Sound.EewFinal", "Sound.Desc.MaxIntensityDash", new() { { "int", "-" }, });
+		EewCanceledSound = soundPlayer.RegisterSound(SoundCategory, "EewCanceled", "Sound.EewCancel");
+		EewWarningAnnouncedSound = soundPlayer.RegisterSound(SoundCategory, "EewWarningAnnounced", "Sound.EewWarning", "Sound.Desc.MaxIntensityQMode", new() { { "int", "5-" }, { "mode", "replay" }, });
 
 	}
 

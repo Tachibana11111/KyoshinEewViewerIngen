@@ -8,7 +8,7 @@
 			 xmlns:local="clr-namespace:KyoshinEewViewer.Series.KyoshinMonitor.Models;assembly=KyoshinEewViewer"
 			 xmlns:self="clr-namespace:KyoshinEewViewer.Series.KyoshinMonitor.Controls;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="320" d:DesignHeight="300"
-			 x:CompileBindings="True" x:DataType="local:Eew"
+			 x:CompileBindings="True" x:DataType="local:Eew" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.Controls.EewPanel"
              Design.DataContext="{x:Static local:EewMock.WARNING}">
     <Design.DesignStyle>
@@ -62,33 +62,33 @@
 	<Grid RowDefinitions="24,75,auto,auto" Classes.warning="{Binding IsWarning}">
 		<Border Classes="header" CornerRadius="4,4,0,0">
 			<Panel Margin="5,0" VerticalAlignment="Center" HorizontalAlignment="Center" TextElement.FontSize="18">
-				<TextBlock IsVisible="{Binding !IsFinal}" Text="{Binding SerialNo, StringFormat={}緊急地震速報({0:00}報)}" />
-				<TextBlock IsVisible="{Binding IsFinal}" Text="{Binding SerialNo, StringFormat={}緊急地震速報({0:00}報/最終)}" />
+				<TextBlock IsVisible="{Binding !IsFinal}" Text="{loc:TrFormat Path=SerialNo, Key=EewPanel.F01}" />
+				<TextBlock IsVisible="{Binding IsFinal}" Text="{loc:TrFormat Path=SerialNo, Key=EewPanel.F02}" />
 			</Panel>
 		</Border>
 		<Panel Grid.Row="1" Classes="container" VerticalAlignment="Top">
 			<StackPanel Margin="5,-3,0,0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-				<TextBlock Text="{Binding Hypocenter.OccurrenceTime, StringFormat={}{0:dd日 HH:mm:ss}}" FontSize="18" />
-				<TextBlock Text="発生" FontSize="14" VerticalAlignment="Bottom" Margin="3,0,0,2" />
+				<TextBlock Text="{loc:TrFormat Path=Hypocenter.OccurrenceTime, Key=EewPanel.F03}" FontSize="18" />
+				<TextBlock Text="{loc:Tr EewPanel.01}" FontSize="14" VerticalAlignment="Bottom" Margin="3,0,0,2" />
 			</StackPanel>
-			<TextBlock Margin="5,-2,75,0" Text="最大震度" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" />
+			<TextBlock Margin="5,-2,75,0" Text="{loc:Tr EewPanel.02}" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" />
 			<Viewbox Stretch="Fill" StretchDirection="DownOnly" Margin="10,17,0,0" Height="33" Width="210" VerticalAlignment="Top" HorizontalAlignment="Left">
-				<TextBlock Text="{Binding Hypocenter.Place}" FontWeight="Bold" FontSize="22" />
+				<TextBlock Text="{loc:Place Path=Hypocenter.Place}" FontWeight="Bold" FontSize="22" />
 			</Viewbox>
 			<StackPanel Margin="0,0,75,0" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 				<StackPanel IsVisible="{Binding !Hypocenter.IsTemporary}" Orientation="Horizontal">
-					<TextBlock Text="深さ:" VerticalAlignment="Bottom" FontSize="16" />
+					<TextBlock Text="{loc:Tr EewPanel.03}" VerticalAlignment="Bottom" FontSize="16" />
 					<TextBlock Text="{Binding Hypocenter.Depth}" FontSize="22" VerticalAlignment="Bottom" Margin="0,0,0,-2" />
 					<TextBlock Text="km" VerticalAlignment="Bottom" FontSize="16" Margin="0,0,10,0" />
-					<TextBlock Text="規模: " VerticalAlignment="Bottom" FontSize="16" />
+					<TextBlock Text="{loc:Tr EewPanel.04}" VerticalAlignment="Bottom" FontSize="16" />
 					<TextBlock Text="M" VerticalAlignment="Bottom" FontSize="22" FontWeight="Bold" Margin="0,0,0,-2" />
-					<TextBlock Text="不明" IsVisible="{Binding Hypocenter.Magnitude, Converter={x:Static ObjectConverters.IsNull}}" FontWeight="Bold" FontSize="28" Margin="0,0,0,-4" />
+					<TextBlock Text="{loc:Tr EewPanel.05}" IsVisible="{Binding Hypocenter.Magnitude, Converter={x:Static ObjectConverters.IsNull}}" FontWeight="Bold" FontSize="28" Margin="0,0,0,-4" />
 					<TextBlock Text="{Binding Hypocenter.Magnitude,StringFormat={}{0:f1}}" IsVisible="{Binding Hypocenter.Magnitude, Converter={x:Static ObjectConverters.IsNotNull}}" FontWeight="Bold" FontSize="28" Margin="0,0,0,-4" />
 				</StackPanel>
-				<TextBlock IsVisible="{Binding Hypocenter.IsTemporary}" Text="規模未受信" FontSize="16" Margin="5,2" />
+				<TextBlock IsVisible="{Binding Hypocenter.IsTemporary}" Text="{loc:Tr EewPanel.06}" FontSize="16" Margin="5,2" />
 			</StackPanel>
 			<controls:IntensityIcon Intensity="{Binding MaxIntensity}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" />
-			<TextBlock Text="以上"
+			<TextBlock Text="{loc:Tr EewPanel.07}"
 						IsVisible="{Binding IsIntensityOver}"
 						Foreground="{Binding MaxIntensity, Converter={StaticResource IntensityToColor}}"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom" />
@@ -96,30 +96,30 @@
 		<StackPanel Grid.Row="2">
 			<Border Classes="separator" Name="AccuracyAreaHead" IsVisible="{Binding Hypocenter.Accuracy, Converter={x:Static ObjectConverters.IsNotNull}}">
 				<StackPanel Orientation="Horizontal" Spacing="5" Margin="5,0">
-					<TextBlock Text="精度" FontSize="15" />
+					<TextBlock Text="{loc:Tr EewPanel.08}" FontSize="15" />
 					<Panel VerticalAlignment="Bottom">
-						<TextBlock IsVisible="{Binding Hypocenter.Accuracy.IsLocked}" Text="確定済" FontSize="12" />
-						<TextBlock IsVisible="{Binding !Hypocenter.Accuracy.IsLocked}" Text="未確定" FontSize="12" />
+						<TextBlock IsVisible="{Binding Hypocenter.Accuracy.IsLocked}" Text="{loc:Tr EewPanel.09}" FontSize="12" />
+						<TextBlock IsVisible="{Binding !Hypocenter.Accuracy.IsLocked}" Text="{loc:Tr EewPanel.10}" FontSize="12" />
 					</Panel>
 				</StackPanel>
 			</Border>
 			<Border Classes="container" Name="AccuracyAreaBody" IsVisible="{Binding Hypocenter.Accuracy, Converter={x:Static ObjectConverters.IsNotNull}}">
 				<Panel Margin="10,0">
 					<StackPanel IsVisible="{Binding !Hypocenter.IsTemporary}" Spacing="-5" TextElement.FontSize="13">
-						<TextBlock Text="{Binding Hypocenter.Accuracy.LocationAccuracy, StringFormat={}震央位置: {0}, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=epicenter}" />
-						<TextBlock Text="{Binding Hypocenter.Accuracy.DepthAccuracy, StringFormat={}震源深さ: {0}, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=depth}" />
-						<TextBlock Text="{Binding Hypocenter.Accuracy.MagnitudeAccuracy, StringFormat={}　　規模: {0}, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=magnitude}" />
+						<TextBlock Text="{loc:TrFormat Path=Hypocenter.Accuracy.LocationAccuracy, Key=EewPanel.F04, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=epicenter}" />
+						<TextBlock Text="{loc:TrFormat Path=Hypocenter.Accuracy.DepthAccuracy, Key=EewPanel.F05, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=depth}" />
+						<TextBlock Text="{loc:TrFormat Path=Hypocenter.Accuracy.MagnitudeAccuracy, Key=EewPanel.F06, Converter={StaticResource AccuracyDetailToStringConverter}, ConverterParameter=magnitude}" />
 					</StackPanel>
-					<TextBlock IsVisible="{Binding Hypocenter.IsTemporary}" Text="仮定震源要素" Margin="0,0,0,4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" />
+					<TextBlock IsVisible="{Binding Hypocenter.IsTemporary}" Text="{loc:Tr EewPanel.11}" Margin="0,0,0,4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" />
 				</Panel>
 			</Border>
 			<Border Classes="separator" IsVisible="{Binding PointForecasts, Converter={x:Static ObjectConverters.IsNotNull}}">
 				<Panel>
 					<StackPanel Orientation="Horizontal" Spacing="5" Margin="5,0">
-						<TextBlock Text="地点予測" FontSize="15" />
-						<TextBlock Text="{Binding PointForecasts.Length, StringFormat={}{0}地点, Mode=OneWay}" FontSize="12" VerticalAlignment="Bottom" />
+						<TextBlock Text="{loc:Tr EewPanel.12}" FontSize="15" />
+						<TextBlock Text="{loc:TrFormat Path=PointForecasts.Length, Key=EewPanel.F07}" FontSize="12" VerticalAlignment="Bottom" />
 					</StackPanel>
-					<TextBlock Text="外部アプリによる推定値" FontSize="11" Margin="3,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+					<TextBlock Text="{loc:Tr EewPanel.13}" FontSize="11" Margin="3,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
 				</Panel>
 			</Border>
 			<Border Classes="container" IsVisible="{Binding PointForecasts, Converter={x:Static ObjectConverters.IsNotNull}}">
@@ -152,7 +152,7 @@
 											</StackPanel>
 											<StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom">
 												<TextBlock Text="{Binding FineCountdownText}" FontSize="38" FontWeight="Bold" />
-												<TextBlock Text="秒" FontSize="14" VerticalAlignment="Bottom" Margin="2,0,0,4" />
+												<TextBlock Text="{loc:Tr EewPanel.14}" FontSize="14" VerticalAlignment="Bottom" Margin="2,0,0,4" />
 											</StackPanel>
 										</Grid>
 										<ProgressBar Value="{Binding ProgressPercent}" Minimum="0" Maximum="100" Height="4" Margin="0,2,0,0"
@@ -167,11 +167,11 @@
 			<Border Classes="separator" IsVisible="{Binding WarningAreas, Converter={x:Static ObjectConverters.IsNotNull}}">
                 <Panel>
 				    <StackPanel Orientation="Horizontal" Spacing="5" Margin="5,0">
-					    <TextBlock Text="警報地域" FontSize="15" />
-					    <TextBlock Text="{Binding WarningAreas.Codes.Length, StringFormat={}{0}地域}" FontSize="12" VerticalAlignment="Bottom" />
+					    <TextBlock Text="{loc:Tr EewPanel.15}" FontSize="15" />
+					    <TextBlock Text="{loc:TrFormat Path=WarningAreas.Codes.Length, Key=EewPanel.F08}" FontSize="12" VerticalAlignment="Bottom" />
 				    </StackPanel>
 					<TextBlock FontSize="11" Margin="3,0" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-						<Run Text="警報受信元: " /><Run Text="{Binding WarningAreas.DisplaySource}" /><Run Text=" (" /><Run Text="{Binding WarningAreas.SerialNo}" /><Run Text="報)" />
+						<Run Text="{loc:Tr EewPanel.16}" /><Run Text="{Binding WarningAreas.DisplaySource}" /><Run Text=" (" /><Run Text="{Binding WarningAreas.SerialNo}" /><Run Text="{loc:Tr EewPanel.17}" />
 					</TextBlock>
                 </Panel>
 			</Border>
@@ -191,11 +191,11 @@
 			</Border>
 		</StackPanel>
         <Border Grid.Row="3" Classes="separator" CornerRadius="0,0,4,4">
-			<TextBlock Text="{Binding DisplaySource, StringFormat={}受信元: {0}}" FontSize="12" Margin="5,0" />
+			<TextBlock Text="{loc:TrFormat Path=DisplaySource, Key=EewPanel.F09}" FontSize="12" Margin="5,0" />
 		</Border>
         <Panel Grid.Row="1" Grid.RowSpan="2" Classes="container" IsVisible="{Binding IsCancelled}" VerticalAlignment="Stretch">
-            <TextBlock IsVisible="{Binding !IsTrueCancelled}" Text="キャンセルまたは受信範囲外" FontSize="22" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBlock IsVisible="{Binding IsTrueCancelled}" Text="キャンセルされました" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock IsVisible="{Binding !IsTrueCancelled}" Text="{loc:Tr EewPanel.18}" FontSize="22" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock IsVisible="{Binding IsTrueCancelled}" Text="{loc:Tr EewPanel.19}" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </Panel>
     </Grid>
 </UserControl>

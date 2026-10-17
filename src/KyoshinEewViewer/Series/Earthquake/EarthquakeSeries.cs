@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -43,7 +44,7 @@ namespace KyoshinEewViewer.Series.Earthquake;
 
 public partial class EarthquakeSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(EarthquakeSeries), "earthquake", "地震情報", new FAFontIconSource { Glyph = "\xf05a", FontFamily = new(Utils.IconFontName) }, true, "震源･震度情報を受信･表示します。");
+	public static SeriesMeta MetaData { get; } = new(typeof(EarthquakeSeries), "earthquake", "Series.Earthquake", new FAFontIconSource { Glyph = "\xf05a", FontFamily = new(Utils.IconFontName) }, true, "Series.Earthquake.Detail");
 
 	public bool IsDebugBuild { get; }
 #if DEBUG
@@ -80,9 +81,9 @@ public partial class EarthquakeSeries : SeriesBase
 		NotificationService = notifyService;
 		WorkflowService = workflowService;
 
-		UpdatedSound = soundPlayer.RegisterSound(SoundCategory, "Updated", "地震情報の更新", "{int}: 最大震度 [？,0,1,...,6-,6+,7]", new() { { "int", "4" }, });
-		IntensityUpdatedSound = soundPlayer.RegisterSound(SoundCategory, "IntensityUpdated", "震度の更新", "{int}: 最大震度 [？,0,1,...,6-,6+,7]", new() { { "int", "4" }, });
-		UpdatedTrainingSound = soundPlayer.RegisterSound(SoundCategory, "TrainingUpdated", "地震情報の更新(訓練)", "{int}: 最大震度 [？,0,1,...,6-,6+,7]", new() { { "int", "6+" }, });
+		UpdatedSound = soundPlayer.RegisterSound(SoundCategory, "Updated", "Sound.EqUpdated", "Sound.Desc.MaxIntensityQ", new() { { "int", "4" }, });
+		IntensityUpdatedSound = soundPlayer.RegisterSound(SoundCategory, "IntensityUpdated", "Sound.EqIntensityUpdated", "Sound.Desc.MaxIntensityQ", new() { { "int", "4" }, });
+		UpdatedTrainingSound = soundPlayer.RegisterSound(SoundCategory, "TrainingUpdated", "Sound.EqTrainingUpdated", "Sound.Desc.MaxIntensityQ", new() { { "int", "6+" }, });
 
 		//ProcessHistoryXml = ReactiveCommand.CreateFromTask<string>(async id =>
 		//{
@@ -125,7 +126,7 @@ public partial class EarthquakeSeries : SeriesBase
 			{
 				SourceString = s;
 				if (Config.Notification.SwitchEqSource)
-					NotificationService?.Notify("地震情報", s + "で地震情報を受信しています。", Notification.NotificationUrgency.Low);
+					NotificationService?.Notify(Loc.Get("Series.Earthquake"), Loc.Get("Notify.EqSource", s), Notification.NotificationUrgency.Low);
 				IsLoading = false;
 				if (Service.Earthquakes.Count <= 0)
 				{
@@ -167,7 +168,7 @@ public partial class EarthquakeSeries : SeriesBase
 					MaxLpgmIntensity = eq.LpgmIntensity,
 					Hypocenter = eq.IsHypocenterAvailable ? new(
 						eq.Time,
-						eq.Place,
+						PlaceNames.Localize(eq.Place),
 						eq.Location,
 						eq.Magnitude,
 						eq.MagnitudeAlternativeText,
@@ -218,7 +219,7 @@ public partial class EarthquakeSeries : SeriesBase
 	private EarthquakeView? _control;
 	public override Control DisplayControl => _control ?? throw new InvalidOperationException("初期化前にコントロールが呼ばれています");
 	public override ISettingPage[] SettingPages => [
-		new BasicSettingPage<EarthquakePage>("\xf05a", "地震情報", []),
+		new BasicSettingPage<EarthquakePage>("\xf05a", "Series.Earthquake", []),
 	];
 
 	public override void Initialize()
@@ -242,7 +243,7 @@ public partial class EarthquakeSeries : SeriesBase
 				return;
 			var files = await tlc.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 			{
-				Title = "任意のXML電文を開く",
+				Title = Loc.Get("Dialog.OpenXml"),
 				FileTypeFilter = [
 					FilePickerFileTypes.All,
 				],
@@ -552,7 +553,7 @@ public partial class EarthquakeSeries : SeriesBase
 				eq.Location = hypo.Location;
 				eq.Intensity = hypo.MaxIntensity;
 				eq.Depth = hypo.DepthKm ?? throw new EarthquakeTelegramParseException("震源の深さが取得できません");
-				eq.Comment = "出典: 気象庁 震度データベース";
+				eq.Comment = Loc.Get("Quake.Comment.Database");
 				if (float.TryParse(hypo.Magnitude, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var magnitude))
 					eq.Magnitude = magnitude;
 				else
@@ -574,12 +575,12 @@ public partial class EarthquakeSeries : SeriesBase
 
 				if (!stationItems.TryGetValue(st.Intensity, out var stations))
 					stationItems[st.Intensity] = stations = [];
-				stations.Add((st.Location, st.Name ?? "不明"));
+				stations.Add((st.Location, st.Name ?? Loc.Get("Common.Unknown")));
 
 				zoomPoints.Add(new Location(st.Location.Latitude - .1f, st.Location.Longitude - .1f));
 				zoomPoints.Add(new Location(st.Location.Latitude + .1f, st.Location.Longitude + .1f));
 
-				pointGroups.AddArea(st.Intensity, "-", 0, st.Name ?? "不明", int.Parse(st.Code ?? "0"));
+				pointGroups.AddArea(st.Intensity, "-", 0, st.Name ?? Loc.Get("Common.Unknown"), int.Parse(st.Code ?? "0"));
 			}
 
 			var hcLoc = hypocenters.Count > 0 ? hypocenters[^1].Location : null;
@@ -669,7 +670,7 @@ public partial class EarthquakeSeries : SeriesBase
 	public partial bool IsFault { get; set; } = false;
 
 	[ObservableProperty]
-	public partial string SourceString { get; set; } = "不明";
+	public partial string SourceString { get; set; } = Loc.Get("Common.Unknown");
 
 	private void RegisterSystemWorkflows()
 	{
@@ -696,8 +697,8 @@ public partial class EarthquakeSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = EarthquakeNotificationTemplates.NotificationTitle,
-							TemplateText = EarthquakeNotificationTemplates.NotificationMessage
+							Title = TemplateLocalizer.Get("Tpl.Eq.Title", EarthquakeNotificationTemplates.NotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Eq.Message", EarthquakeNotificationTemplates.NotificationMessage)
 						}
 					}
 				}

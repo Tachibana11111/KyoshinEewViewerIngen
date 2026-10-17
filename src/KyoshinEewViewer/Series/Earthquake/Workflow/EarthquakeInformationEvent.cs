@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Core;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Services.Workflows;
 using KyoshinMonitorLib;
 using System;
@@ -33,7 +34,7 @@ public class EarthquakeInformationEvent(EarthquakeSeries? series) : WorkflowEven
 	public JmaIntensity MaxIntensity { get; init; }
 
 	[Description("最大震度の長い表記 (例: \"震度5強\")")]
-	public string MaxIntensityLongName => MaxIntensity.ToLongString();
+	public string MaxIntensityLongName => IntensityNames.GetLongName(MaxIntensity);
 
 	[Description("更新前の最大震度 (Unknown, Int0, Int1, Int2, Int3, Int4, Int5Lower, Int5Upper, Int6Lower, Int6Upper, Int7) - 前回情報からの変化検出用")]
 	public JmaIntensity? PreviousMaxIntensity { get; init; }

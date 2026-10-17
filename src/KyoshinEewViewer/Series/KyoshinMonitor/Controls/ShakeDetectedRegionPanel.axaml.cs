@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using Avalonia.Data;
 using KyoshinEewViewer.Core.Models;
@@ -45,11 +46,11 @@ public partial class ShakeDetectedRegionPanel : UserControl
 	public static string GetTitle(KyoshinEventLevel level)
 		=> level switch
 		{
-			KyoshinEventLevel.Stronger => "非常に強い揺れを検知",
-			KyoshinEventLevel.Strong => "強い揺れを検知",
-			KyoshinEventLevel.Medium => "揺れを検知",
-			KyoshinEventLevel.Weak => "弱い揺れを検知",
-			_ => "微弱な揺れを検知",
+			KyoshinEventLevel.Stronger => Loc.Get("Shake.Title.Stronger"),
+			KyoshinEventLevel.Strong => Loc.Get("Shake.Title.Strong"),
+			KyoshinEventLevel.Medium => Loc.Get("Shake.Title.Medium"),
+			KyoshinEventLevel.Weak => Loc.Get("Shake.Title.Weak"),
+			_ => Loc.Get("Shake.Title.Weaker"),
 		};
 
 	protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)

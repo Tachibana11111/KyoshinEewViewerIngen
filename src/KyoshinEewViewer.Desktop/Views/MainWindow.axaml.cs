@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Input;
@@ -67,7 +68,7 @@ public partial class MainWindow : Window
 				Hide();
 				if (!IsHideAnnounced && config.Notification.HideToTrayNotify)
 				{
-					notificationService?.Notify("タスクトレイに格納しました", "アプリケーションは実行中です");
+					notificationService?.Notify(Loc.Get("Tray.Stored.Title"), Loc.Get("Tray.Stored.Message"));
 					IsHideAnnounced = true;
 				}
 				e.Cancel = true;
@@ -89,7 +90,7 @@ public partial class MainWindow : Window
 				Hide();
 				if (!IsHideAnnounced && config.Notification.HideToTrayNotify)
 				{
-					notificationService?.Notify("タスクトレイに格納しました", "アプリケーションは実行中です");
+					notificationService?.Notify(Loc.Get("Tray.Stored.Title"), Loc.Get("Tray.Stored.Message"));
 					IsHideAnnounced = true;
 				}
 				return;

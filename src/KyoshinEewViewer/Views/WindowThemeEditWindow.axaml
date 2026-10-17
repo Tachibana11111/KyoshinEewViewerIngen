@@ -5,11 +5,11 @@
 		xmlns:ui="using:FluentAvalonia.UI.Controls"
         xmlns:converter="clr-namespace:KyoshinEewViewer.Converters;assembly=KyoshinEewViewer"
         xmlns:models="clr-namespace:KyoshinEewViewer.Core.Models;assembly=KyoshinEewViewer.Core"
-        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="800" Width="500" Height="600"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="800" Width="500" Height="600" xmlns:loc="using:KyoshinEewViewer.Localization"
         x:Class="KyoshinEewViewer.Views.WindowThemeEditWindow"
         x:DataType="models:WindowTheme"
         d:DataContext="{x:Static models:WindowTheme.Dark}"
-        Title="ウィンドウテーマ編集" WindowStartupLocation="CenterOwner"
+        Title="{loc:Tr WindowThemeEditWindow.01}" WindowStartupLocation="CenterOwner"
         Background="{DynamicResource MainBackgroundColor}" Foreground="{DynamicResource MainForegroundColor}">
     <Window.Styles>
         <Style Selector="Label">
@@ -29,23 +29,23 @@
 
     <Grid RowDefinitions="auto,*">
         <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBlock Text="編集中のテーマ" FontSize="18" />
+            <TextBlock Text="{loc:Tr Theme.Temporary}" FontSize="18" />
             <TextBlock x:Name="themeDetailText" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
         </StackPanel>
         <StackPanel Spacing="5" Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
             <Button x:Name="rollbackButton" VerticalAlignment="Stretch"
-                    ToolTip.Tip="復元する(ファイルの状態を読み戻す)" Padding="11">
+                    ToolTip.Tip="{loc:Tr WindowThemeEditWindow.02}" Padding="11">
                 <ui:FASymbolIcon Symbol="Undo" FontSize="18" />
             </Button>
             <Button x:Name="saveButton" VerticalAlignment="Stretch" Classes="accent"
-                    ToolTip.Tip="テーマを保存する" Padding="10">
+                    ToolTip.Tip="{loc:Tr WindowThemeEditWindow.03}" Padding="10">
                 <ui:FASymbolIcon Symbol="Save" FontSize="20" />
             </Button>
         </StackPanel>
         
         <ScrollViewer Grid.Row="1">
             <StackPanel>
-                <ui:FASettingsExpander Header="テーマ名">
+                <ui:FASettingsExpander Header="{loc:Tr WindowThemeEditWindow.04}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf5b7;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
@@ -53,61 +53,61 @@
                         <TextBox Text="{Binding Name}" Width="200" />
                     </ui:FASettingsExpander.Footer>
                 </ui:FASettingsExpander>
-                <ui:FASettingsExpander Header="ウィンドウ全体">
+                <ui:FASettingsExpander Header="{loc:Tr WindowThemeEditWindow.05}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf2d0;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
-                    <ui:FASettingsExpanderItem Content="タイトル･サイドバーの色" Description="タイトルバー部分はWindowsでのみ反映されます。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.06}" Description="{loc:Tr WindowThemeEditWindow.07}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TitleBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="ダークテーマをベースとする"
-                                             Description="ボタンなどの汎用コントロールがダークテーマ基準になります。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.08}"
+                                             Description="{loc:Tr WindowThemeEditWindow.09}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding IsDark}" />
+                            <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding IsDark}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="メイン背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.10}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding MainBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="メイン文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.11}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding ForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="サブ文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.12}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding SubForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="強調文字色" Description="現状では強震モニタリプレイ時の時刻色でのみ使用しています。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.13}" Description="{loc:Tr WindowThemeEditWindow.14}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EmphasisForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="エラー･警告文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.15}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WarningForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="エラー･警告サブ文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.16}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WarningSubForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="エラー･警告背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.17}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WarningBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="内部ウィンドウ(ウィジェット)">
+                <ui:FASettingsExpander Header="{loc:Tr WindowThemeEditWindow.18}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf2d2;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
@@ -115,53 +115,53 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Grid Margin="5" RowDefinitions="24,*">
                             <Border Grid.Row="0" Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0">
-                                <TextBlock Text="通常ウィジェット" Margin="10,0" FontSize="18" Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Center" />
+                                <TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewNormalDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Center" />
                             </Border>
                             <Border Grid.Row="1" Background="{DynamicResource DockBackgroundColor}" CornerRadius="0,0,4,4" ClipToBounds="True">
-                                <TextBlock Margin="5" Text="通常ウィジェット中身" />
+                                <TextBlock Margin="5" Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewNormalDockContent}" />
                             </Border>
                         </Grid>
                         <Grid Margin="5" RowDefinitions="24,*">
                             <Border Grid.Row="0" Background="{DynamicResource DockWarningTitleBackgroundColor}" CornerRadius="4,4,0,0">
-                                <TextBlock Text="緊急ウィジェット" Margin="10,0" FontSize="18" Foreground="{DynamicResource WarningSubForegroundColor}" HorizontalAlignment="Center" />
+                                <TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewWarningDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource WarningSubForegroundColor}" HorizontalAlignment="Center" />
                             </Border>
                             <Border Grid.Row="1" Background="{DynamicResource DockWarningBackgroundColor}" CornerRadius="0,0,4,4"
                                     ClipToBounds="True">
-                                <TextBlock Text="緊急ウィジェット中身" Margin="10,5" Foreground="{DynamicResource WarningForegroundColor}"/>
+                                <TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewWarningDockContent}" Margin="10,5" Foreground="{DynamicResource WarningForegroundColor}"/>
                             </Border>
                         </Grid>
                     </StackPanel>
                     
-                    <ui:FASettingsExpanderItem Content="背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.19}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding DockBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="見出し部分の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.20}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding DockTitleBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="エラー･警告の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.21}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding DockWarningBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="エラー･警告の見出し部分の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.22}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding DockWarningTitleBackgroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="地図">
+                <ui:FASettingsExpander Header="{loc:Tr Setting.Map}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf5a0;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <StackPanel>
-                            <TextBlock Text="地図(日本国内)" />
+                            <TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewMapJapan}" />
                             <Border BorderBrush="{DynamicResource MainForegroundColor}"
                                     Background="{DynamicResource BackgroundColor}" BorderThickness="1"
                                     HorizontalAlignment="Center" Margin="5">
@@ -173,7 +173,7 @@
                             </Border>
                         </StackPanel>
                         <StackPanel>
-                            <TextBlock Text="地図(海外)" />
+                            <TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewMapOther}" />
                             <Border BorderBrush="{DynamicResource MainForegroundColor}"
                                     Background="{DynamicResource BackgroundColor}" BorderThickness="1"
                                     HorizontalAlignment="Center" Margin="5">
@@ -184,23 +184,23 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <ui:FASettingsExpanderItem Content="海外地形の色" Description="縁の設定はできません。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.23}" Description="{loc:Tr WindowThemeEditWindow.24}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding OverseasLandColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="地形の色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.25}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding LandColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="海岸線の色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.26}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding LandStrokeColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="海岸線の太さ" Description="0 にすることで描画処理を軽量化できます。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.27}" Description="{loc:Tr WindowThemeEditWindow.28}">
                         <ui:FASettingsExpanderItem.Footer>
                             <DockPanel MinWidth="250">
                                 <TextBlock Text="{Binding LandStrokeThickness, StringFormat={}{0:0.00}}"
@@ -211,12 +211,12 @@
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="都道府県境界線の色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.29}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding PrefStrokeColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="都道府県境界線の太さ" Description="0 にすることで描画処理を軽量化できます。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.30}" Description="{loc:Tr WindowThemeEditWindow.28}">
                         <ui:FASettingsExpanderItem.Footer>
                             <DockPanel MinWidth="250">
                                 <TextBlock Text="{Binding PrefStrokeThickness, StringFormat={}{0:0.00}}"
@@ -227,12 +227,12 @@
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="地域境界線の色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.31}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AreaStrokeColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="地域境界線の太さ" Description="0 にすることで描画処理を軽量化できます。">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.32}" Description="{loc:Tr WindowThemeEditWindow.28}">
                         <ui:FASettingsExpanderItem.Footer>
                             <DockPanel MinWidth="250">
                                 <TextBlock Text="{Binding AreaStrokeThickness, StringFormat={}{0:0.00}}"
@@ -244,243 +244,243 @@
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="地震情報">
+                <ui:FASettingsExpander Header="{loc:Tr Series.Earthquake}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf05a;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
-                    <ui:FASettingsExpanderItem Content="震央アイコンの縁">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.33}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EarthquakeHypocenterBorderColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="震央アイコンの中央">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.34}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EarthquakeHypocenterColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="緊急地震速報">
+                <ui:FASettingsExpander Header="{loc:Tr Setting.Eew}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xe3b1;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
-                    <ui:FASettingsExpanderItem Content="震央アイコンの縁(予報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.35}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewForecastHypocenterBorderColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="震央アイコンの中央(予報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.36}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewForecastHypocenterColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="震央アイコンの縁(警報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.37}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewWarningHypocenterBorderColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="震央アイコンの中央(警報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.38}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewWarningHypocenterColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="震央アイコンの点滅アニメーション">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.39}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding IsEewHypocenterBlinkAnimation}" />
+                            <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding IsEewHypocenterBlinkAnimation}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="P波色(予報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.40}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewForecastPWaveColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="S波色(予報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.41}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewForecastSWaveColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="予報のS波色をグラデーションにする">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.42}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding IsEewForecastSWaveGradient}" />
+                            <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding IsEewForecastSWaveGradient}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="P波色(警報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.43}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewWarningPWaveColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="S波色(警報)">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.44}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding EewWarningSWaveColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="警報のS波色をグラデーションにする">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.45}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding IsEewWarningSWaveGradient}" />
+                            <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding IsEewWarningSWaveGradient}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="津波情報">
+                <ui:FASettingsExpander Header="{loc:Tr Series.Tsunami}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xe515;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
-                    <ui:FASettingsExpanderItem Content="津波予報背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.46}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiForecastColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="津波予報文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.47}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiForecastForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="津波注意報背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.48}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiAdvisoryColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="津波注意報文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.49}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiAdvisoryForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="津波警報背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.50}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiWarningColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="津波警報文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.51}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiWarningForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="大津波警報背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.52}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiMajorWarningColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="大津波警報文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.53}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding TsunamiMajorWarningForegroundColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="噴火情報" Description="現状災危通報のみで使用されています。">
+                <ui:FASettingsExpander Header="{loc:Tr WindowThemeEditWindow.54}" Description="{loc:Tr WindowThemeEditWindow.55}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf770;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     
-                    <ui:FASettingsExpanderItem Content="少量の降灰の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.56}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallLight, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="少量の降灰の文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.57}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallLightForeground, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="やや多量の降灰の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.58}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallModerate, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="やや多量の降灰の文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.59}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallModerateForeground, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="大量の降灰の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.60}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallHeavy, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="大量の降灰の文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.61}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding AshfallHeavyForeground, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="小さな噴石の落下の背景色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.62}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding SmallVolcanicBombFall, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
-                    <ui:FASettingsExpanderItem Content="小さな噴石の落下の文字色">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.63}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding SmallVolcanicBombFallForeground, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="気象警報" Description="現状災危通報のみで使用されています。">
+                <ui:FASettingsExpander Header="{loc:Tr WindowThemeEditWindow.64}" Description="{loc:Tr WindowThemeEditWindow.55}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf0c2;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
 
-                    <ui:FASettingsExpanderItem Content="警戒レベル5（特別警報）">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.65}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WeatherWarningLevel5Color, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="警戒レベル4（危険警報･土砂災害警戒情報）">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.66}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WeatherWarningLevel4Color, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="警戒レベル3（警報）">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.67}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WeatherWarningLevel3Color, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="警戒レベル2（注意報）">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.68}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding WeatherWarningLevel2Color, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="海上警報" Description="現状災危通報のみで使用されています。">
+                <ui:FASettingsExpander Header="{loc:Tr QzssView.14}" Description="{loc:Tr WindowThemeEditWindow.55}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf773;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
 
-                    <ui:FASettingsExpanderItem Content="海上台風警報">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.69}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding MarineWarningTyphoonColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="海上暴風警報">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.70}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding MarineWarningStormColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="海上強風警報">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.71}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding MarineWarningGaleColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="海上風警報">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr WindowThemeEditWindow.72}">
                         <ui:FASettingsExpanderItem.Footer>
                             <ColorPicker Color="{Binding MarineWarningWindColor, Mode=TwoWay, Converter={StaticResource ColorConverter}}" />
                         </ui:FASettingsExpanderItem.Footer>

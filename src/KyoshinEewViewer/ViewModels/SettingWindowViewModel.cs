@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
@@ -34,47 +35,47 @@ namespace KyoshinEewViewer.ViewModels;
 
 public partial class SettingWindowViewModel : ViewModelBase
 {
-	public static Dictionary<KyoshinEventLevel, string> KyoshinEventLevelNames { get; } = new()
+	public static LocMap<KyoshinEventLevel> KyoshinEventLevelNames { get; } = new()
 	{
-		{ KyoshinEventLevel.Weaker, "微弱(非推奨)" },
-		{ KyoshinEventLevel.Weak, "弱い(震度1未満)" },
-		{ KyoshinEventLevel.Medium, "普通(震度1程度以上)" },
-		{ KyoshinEventLevel.Strong, "強い(震度3程度以上)" },
-		{ KyoshinEventLevel.Stronger, "非常に強い(震度5弱程度以上)" },
-		{ KyoshinEventLevel.Disabled, "利用しない" },
+		{ KyoshinEventLevel.Weaker, "EventLevel.Weaker" },
+		{ KyoshinEventLevel.Weak, "EventLevel.Weak" },
+		{ KyoshinEventLevel.Medium, "EventLevel.Medium" },
+		{ KyoshinEventLevel.Strong, "EventLevel.Strong" },
+		{ KyoshinEventLevel.Stronger, "EventLevel.Stronger" },
+		{ KyoshinEventLevel.Disabled, "EventLevel.Disabled" },
 	};
 	/// <summary>
 	/// 地点予測を展開表示する震度のしきい値の選択肢
 	/// </summary>
-	public static Dictionary<JmaIntensity, string> PointForecastExpandIntensityNames { get; } = new()
+	public static LocMap<JmaIntensity> PointForecastExpandIntensityNames { get; } = new()
 	{
-		{ JmaIntensity.Int1, "震度1以上" },
-		{ JmaIntensity.Int2, "震度2以上" },
-		{ JmaIntensity.Int3, "震度3以上" },
-		{ JmaIntensity.Int4, "震度4以上" },
-		{ JmaIntensity.Int5Lower, "震度5弱以上" },
-		{ JmaIntensity.Int5Upper, "震度5強以上" },
-		{ JmaIntensity.Int6Lower, "震度6弱以上" },
-		{ JmaIntensity.Int6Upper, "震度6強以上" },
-		{ JmaIntensity.Int7, "震度7" },
+		{ JmaIntensity.Int1, "ShindoThreshold.Int1" },
+		{ JmaIntensity.Int2, "ShindoThreshold.Int2" },
+		{ JmaIntensity.Int3, "ShindoThreshold.Int3" },
+		{ JmaIntensity.Int4, "ShindoThreshold.Int4" },
+		{ JmaIntensity.Int5Lower, "ShindoThreshold.Int5Lower" },
+		{ JmaIntensity.Int5Upper, "ShindoThreshold.Int5Upper" },
+		{ JmaIntensity.Int6Lower, "ShindoThreshold.Int6Lower" },
+		{ JmaIntensity.Int6Upper, "ShindoThreshold.Int6Upper" },
+		{ JmaIntensity.Int7, "ShindoName.Int7" },
 	};
-	public static Dictionary<KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode, string> KyoshinMonitorModeNames { get; } = new()
+	public static LocMap<KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode> KyoshinMonitorModeNames { get; } = new()
 	{
-		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.None, "受信しない" },
-		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.Kmoni, "強震モニタ" },
-		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.Lmoni, "長周期地震動モニタ" },
+		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.None, "MonitorMode.None" },
+		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.Kmoni, "Series.KyoshinMonitor" },
+		{ KyoshinEewViewerConfiguration.KyoshinMonitorConfig.Mode.Lmoni, "MonitorMode.Lmoni" },
 	};
-	public static Dictionary<ShakeDetectionDisplayMode, string> ShakeDetectionDisplayModeNames { get; } = new()
+	public static LocMap<ShakeDetectionDisplayMode> ShakeDetectionDisplayModeNames { get; } = new()
 	{
-		{ ShakeDetectionDisplayMode.None, "表示しない" },
-		{ ShakeDetectionDisplayMode.Grid, "グリッド" },
-		{ ShakeDetectionDisplayMode.ConvexHull, "凸包(非推奨)" },
+		{ ShakeDetectionDisplayMode.None, "ShakeDisplay.None" },
+		{ ShakeDetectionDisplayMode.Grid, "ShakeDisplay.Grid" },
+		{ ShakeDetectionDisplayMode.ConvexHull, "ShakeDisplay.ConvexHull" },
 	};
-	public static Dictionary<ShakeDetectionAnimationMode, string> ShakeDetectionAnimationModeNames { get; } = new()
+	public static LocMap<ShakeDetectionAnimationMode> ShakeDetectionAnimationModeNames { get; } = new()
 	{
-		{ ShakeDetectionAnimationMode.None, "アニメーションなし" },
-		{ ShakeDetectionAnimationMode.Blink, "点滅" },
-		{ ShakeDetectionAnimationMode.Pulse, "明滅" },
+		{ ShakeDetectionAnimationMode.None, "ShakeAnimation.None" },
+		{ ShakeDetectionAnimationMode.Blink, "ShakeAnimation.Blink" },
+		{ ShakeDetectionAnimationMode.Pulse, "ShakeAnimation.Pulse" },
 	};
 
 	public KyoshinEewViewerConfiguration Config { get; }
@@ -136,7 +137,7 @@ public partial class SettingWindowViewModel : ViewModelBase
 				return;
 			var files = await KyoshinEewViewerApp.TopLevelControl.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 			{
-				Title = "音声ファイルを開く",
+				Title = Loc.Get("Dialog.OpenAudioFile"),
 				FileTypeFilter = new List<FilePickerFileType>()
 				{
 					FilePickerFileTypes.All,
@@ -180,28 +181,28 @@ public partial class SettingWindowViewModel : ViewModelBase
 				MultiStyleSpeaker ms => ms.Styles,
 				SingleStyleSpeaker ss => [ss],
 				_ => [],
-			}).FirstOrDefault(s => s.SpeakerId == config.Voicevox.SpeakerId)?.Name ?? "不明");
+			}).FirstOrDefault(s => s.SpeakerId == config.Voicevox.SpeakerId)?.Name ?? Loc.Get("Common.Unknown"));
 
 
-		UpdatePage = new BasicSettingPage<UpdatePage>("\xf071", "アプリの更新", []) { IsVisible = false };
+		UpdatePage = new BasicSettingPage<UpdatePage>("\xf071", "Setting.Update", []) { IsVisible = false };
 		SettingPages = [
 			UpdatePage,
-			new BasicSettingPage<GeneralPage>("\xf53f", "外観･基本設定", []),
-			new BasicSettingPage<FeaturePage>("\xf085", "機能設定", []),
-			new BasicSettingPage<NotifyPage>("\xf075", "通知", []),
-			new BasicSettingPage<MultiWindowPage>("\xf2d2", "マルチウィンドウ", []),
-			new BasicSettingPage<SoundPage>("\xf028", "音声", []),
-			new BasicSettingPage<WorkflowPage>("\xe289", "ワークフロー", []),
+			new BasicSettingPage<GeneralPage>("\xf53f", "Setting.General", []),
+			new BasicSettingPage<FeaturePage>("\xf085", "Feature.Title", []),
+			new BasicSettingPage<NotifyPage>("\xf075", "Notify.Title", []),
+			new BasicSettingPage<MultiWindowPage>("\xf2d2", "MultiWindow.Title", []),
+			new BasicSettingPage<SoundPage>("\xf028", "Setting.Sound", []),
+			new BasicSettingPage<WorkflowPage>("\xe289", "Setting.Workflow", []),
 			new BasicSettingPage<VoicevoxPage>("\xf075", "VOICEVOX", []),
 			..SeriesController.EnabledSeries.SelectMany(s => s.SettingPages),
-			new BasicSettingPage("\xf48b", "配信サービス", [
+			new BasicSettingPage("\xf48b", "Setting.Delivery", [
 				dmdataPage,
 				axisPage,
 			]),
-			new BasicSettingPage<MapPage>("\xf5a0", "地図", []),
+			new BasicSettingPage<MapPage>("\xf5a0", "Setting.Map", []),
 			feedbackPage,
-			new BasicSettingPage<AboutPage>("\xf129", "このアプリについて", []),
-			new BasicSettingPage<LicencePage>("\xf2c2", "ライセンス", []),
+			new BasicSettingPage<AboutPage>("\xf129", "Setting.About", []),
+			new BasicSettingPage<LicencePage>("\xf2c2", "Setting.License", []),
 #if DEBUG
 			new BasicSettingPage<DebugMenuPage>("\xf188", "デバッグメニュー", []),
 #endif
@@ -236,7 +237,7 @@ public partial class SettingWindowViewModel : ViewModelBase
 #endif
 	}
 
-	public string Title { get; } = "設定 - KyoshinEewViewer for ingen";
+	public string Title => Loc.Instance["Setting.WindowTitle"];
 
 	[ObservableProperty]
 	public partial bool IsDebug { get; set; }
@@ -282,7 +283,7 @@ public partial class SettingWindowViewModel : ViewModelBase
 	}
 	public void AddWorkflow()
 	{
-		var wf = new Workflow() { Name = "新しいワークフロー", Trigger = new DummyTrigger() };
+		var wf = new Workflow() { Name = Loc.Get("Workflow.NewName"), Trigger = new DummyTrigger() };
 		WorkflowService.Workflows.Add(wf);
 		SelectedWorkflow = wf;
 	}
@@ -291,8 +292,8 @@ public partial class SettingWindowViewModel : ViewModelBase
 		if (parameter is not Workflow workflow)
 			return;
 		var result = await DialogHelper.ShowSettingWindowConfirmationDialogAsync(
-			"ワークフローの削除",
-			$"ワークフロー「{workflow.Name}」を削除しますか？\nこの操作は元に戻すことができません。");
+			Loc.Get("Dialog.DeleteWorkflow.Title"),
+			Loc.Get("Dialog.DeleteWorkflow.Message", workflow.Name));
 		
 		if (result)
 		{
@@ -331,7 +332,7 @@ public partial class SettingWindowViewModel : ViewModelBase
 			return;
 		var files = await KyoshinEewViewerApp.TopLevelControl.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 		{
-			Title = "音声ファイルを開く",
+			Title = Loc.Get("Dialog.OpenAudioFile"),
 			FileTypeFilter = [FilePickerFileTypes.All],
 			AllowMultiple = false,
 		});
@@ -345,7 +346,7 @@ public partial class SettingWindowViewModel : ViewModelBase
 
 
 	[ObservableProperty]
-	public partial string VoicevoxSpeakerName { get; set; } = "話者一覧が読み込まれていません";
+	public partial string VoicevoxSpeakerName { get; set; } = Loc.Get("Voicevox.SpeakersNotLoaded");
 	[ObservableProperty]
 	public partial bool IsVoicevoxTestPlaying { get; set; }
 
@@ -429,8 +430,8 @@ public partial class SettingWindowViewModel : ViewModelBase
 	public async Task ResetMultiWindowPositions()
 	{
 		var result = await DialogHelper.ShowSettingWindowConfirmationDialogAsync(
-			"ウィンドウ位置のリセット",
-			"すべてのウィンドウの位置設定をリセットします。\n現在開いているウィンドウは閉じられます。\nよろしいですか？");
+			Loc.Get("Dialog.ResetWindows.Title"),
+			Loc.Get("Dialog.ResetWindows.Message"));
 
 		if (!result)
 			return;

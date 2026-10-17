@@ -1,7 +1,7 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+using KyoshinEewViewer.Localization;
 
 namespace KyoshinEewViewer.ViewModels;
 
-public class ViewModelBase : ObservableObject
+public class ViewModelBase : LocalizedObservableObject
 {
 }

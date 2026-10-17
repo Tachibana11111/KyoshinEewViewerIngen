@@ -5,24 +5,24 @@
 		     xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:actions="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinActions;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="actions:ExecuteFileAction" x:CompileBindings="True"
+             x:DataType="actions:ExecuteFileAction" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinActions.ExecuteFileActionControl">
     <StackPanel>
         <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,auto,auto">
-            <TextBlock Text="実行ファイル: " VerticalAlignment="Center" />
-            <TextBox Text="{Binding FilePath}" Grid.Column="1" ToolTip.Tip="テンプレートが利用できます。" />
-            <Button Grid.Column="2" Content="編集" Click="EditFilePathTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" />
-            <TextBlock Text="起動引数: " VerticalAlignment="Center" Grid.Row="1" IsVisible="{Binding !UseShellExecute}" />
-            <TextBox Text="{Binding Arguments}" Grid.Column="1" Grid.Row="1" IsVisible="{Binding !UseShellExecute}" ToolTip.Tip="テンプレートが利用できます。" />
-            <Button Grid.Column="2" Grid.Row="1" Content="編集" Click="EditArgumentsTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" IsVisible="{Binding !UseShellExecute}" />
-            <TextBlock Text="作業ディレクトリ: " VerticalAlignment="Center" Grid.Row="2" />
-            <TextBox Text="{Binding WorkingDirectory}" PlaceholderText="未指定の場合はこのアプリのディレクトリが使用されます。" Grid.Column="1" Grid.Row="2" ToolTip.Tip="テンプレートが利用できます。" />
-            <Button Grid.Column="2" Grid.Row="2" Content="編集" Click="EditWorkingDirectoryTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" />
+            <TextBlock Text="{loc:Tr ExecuteFileAction.01}" VerticalAlignment="Center" />
+            <TextBox Text="{Binding FilePath}" Grid.Column="1" ToolTip.Tip="{loc:Tr ExecuteFileAction.02}" />
+            <Button Grid.Column="2" Content="{loc:Tr Common.Edit}" Click="EditFilePathTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" />
+            <TextBlock Text="{loc:Tr ExecuteFileAction.03}" VerticalAlignment="Center" Grid.Row="1" IsVisible="{Binding !UseShellExecute}" />
+            <TextBox Text="{Binding Arguments}" Grid.Column="1" Grid.Row="1" IsVisible="{Binding !UseShellExecute}" ToolTip.Tip="{loc:Tr ExecuteFileAction.02}" />
+            <Button Grid.Column="2" Grid.Row="1" Content="{loc:Tr Common.Edit}" Click="EditArgumentsTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" IsVisible="{Binding !UseShellExecute}" />
+            <TextBlock Text="{loc:Tr ExecuteFileAction.04}" VerticalAlignment="Center" Grid.Row="2" />
+            <TextBox Text="{Binding WorkingDirectory}" PlaceholderText="未指定の場合はこのアプリのディレクトリが使用されます。" Grid.Column="1" Grid.Row="2" ToolTip.Tip="{loc:Tr ExecuteFileAction.02}" />
+            <Button Grid.Column="2" Grid.Row="2" Content="{loc:Tr Common.Edit}" Click="EditWorkingDirectoryTemplateButton_Click" Margin="8,0,0,0" VerticalAlignment="Center" />
         </Grid>
-        <CheckBox IsChecked="{Binding UseShellExecute}" Content="既定のアプリで開く"
-                  ToolTip.Tip="シェルを経由して既定のアプリを使用してファイルを開こうとします。" />
-        <CheckBox IsChecked="{Binding WaitToEnd}" Content="プロセス終了を待機する" />
-        <TextBlock Text="最新の実行結果" />
+        <CheckBox IsChecked="{Binding UseShellExecute}" Content="{loc:Tr ExecuteFileAction.05}"
+                  ToolTip.Tip="{loc:Tr ExecuteFileAction.06}" />
+        <CheckBox IsChecked="{Binding WaitToEnd}" Content="{loc:Tr ExecuteFileAction.07}" />
+        <TextBlock Text="{loc:Tr ExecuteFileAction.08}" />
         <TextBlock Text="{Binding LatestExecuteResult}" Margin="5,0" />
     </StackPanel>
 </UserControl>

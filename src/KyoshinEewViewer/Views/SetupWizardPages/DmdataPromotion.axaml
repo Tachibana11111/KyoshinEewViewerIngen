@@ -6,10 +6,10 @@
              xmlns:p="clr-namespace:KyoshinEewViewer.Properties;assembly=KyoshinEewViewer"
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-			 x:DataType="vm:SetupWizardWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SetupWizardWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SetupWizardPages.DmdataPromotion">
 	<StackPanel Margin="10">
-		<TextBlock Text="{x:Static p:Resources.StetupWizardDmdataPromotionTitle}" FontSize="32" HorizontalAlignment="Center" />
-		<control:MarkdownViewer HorizontalAlignment="Stretch" Markdown="{x:Static p:Resources.StetupWizardDmdataPromotionContent}" />
+		<TextBlock Text="{loc:Tr Wizard.StetupWizardDmdataPromotionTitle}" FontSize="32" HorizontalAlignment="Center" />
+		<control:MarkdownViewer HorizontalAlignment="Stretch" Markdown="{loc:Tr Wizard.StetupWizardDmdataPromotionContent}" />
 	</StackPanel>
 </UserControl>

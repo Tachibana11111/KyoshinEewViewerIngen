@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Core.Models;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.CustomControl;
 using KyoshinEewViewer.Map;
 using KyoshinEewViewer.Map.Layers;
@@ -372,7 +373,7 @@ public class EarthquakeLayer : MapLayer
 			if (!param.PixelBound.IntersectsWith(circleBound))
 				continue;
 
-			string[] lines = [points[i].Name];
+			string[] lines = [PlaceNames.Localize(points[i].Name)];
 			var (width, height) = MapLayerLabelRenderer.MeasureLines(lines);
 			var center = pixel.AsSkPoint();
 
@@ -400,8 +401,8 @@ public class EarthquakeLayer : MapLayer
 	/// </summary>
 	private static (string[] Lines, SKRect Rect) ComputeTooltip(IntensityPoint item, PointD pixel, LayerRenderParameter param, float circleSize)
 	{
-		var intensityText = item.Intensity == JmaIntensity.Unknown ? "震度不明" : item.Intensity.ToLongString();
-		string[] lines = [item.Name, intensityText];
+		var intensityText = item.Intensity == JmaIntensity.Unknown ? Loc.Get("ShindoName.Unknown") : IntensityNames.GetLongName(item.Intensity);
+		string[] lines = [PlaceNames.Localize(item.Name), intensityText];
 		var (width, height) = MapLayerLabelRenderer.MeasureLines(lines);
 		var center = pixel.AsSkPoint();
 

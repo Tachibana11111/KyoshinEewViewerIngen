@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:KyoshinEewViewer.Series.Radar;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-			 Foreground="{DynamicResource MainForegroundColor}"
+			 Foreground="{DynamicResource MainForegroundColor}" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Radar.RadarView"
 			 x:DataType="local:RadarSeries" x:CompileBindings="True">
   <Design.DataContext>
@@ -12,7 +12,7 @@
   </Design.DataContext>
   <Grid ColumnDefinitions="auto,*,auto" VerticalAlignment="Top" Background="{DynamicResource DockBackgroundColor}">
     <Border Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4" Margin="5">
-      <TextBlock Text="{Binding CurrentDateTime, StringFormat={}雨雲の動き{0:HH:mm}}" Margin="5,0" FontSize="24" VerticalAlignment="Center" />
+      <TextBlock Text="{loc:TrFormat Path=CurrentDateTime, Key=RadarView.F01}" Margin="5,0" FontSize="24" VerticalAlignment="Center" />
     </Border>
     <Grid Grid.Column="1" Margin="5,0">
       <!--<Grid ColumnDefinitions="36*,0,12*" Margin="10">
@@ -23,11 +23,11 @@
     <Button Grid.Column="2" Command="{Binding ReloadFromGui}" Margin="5">
       <StackPanel VerticalAlignment="Center">
         <TextBlock Text="&#xf021;" FontFamily="{StaticResource IconFont}" FontSize="20" HorizontalAlignment="Center" />
-        <TextBlock Text="更新" HorizontalAlignment="Center" />
+        <TextBlock Text="{loc:Tr ObservationPointsDataPage.09}" HorizontalAlignment="Center" />
       </StackPanel>
     </Button>
     <Grid IsVisible="{Binding IsLoading}" Grid.ColumnSpan="3" Background="{DynamicResource DockBackgroundColor}">
-      <TextBlock Text="読み込み中…" VerticalAlignment="Center" HorizontalAlignment="Center" />
+      <TextBlock Text="{loc:Tr RadarView.01}" VerticalAlignment="Center" HorizontalAlignment="Center" />
     </Grid>
   </Grid>
 </UserControl>

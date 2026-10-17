@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.Series.KyoshinMonitor.SettingPages"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
-			 x:DataType="vm:ObservationPointsDataPageViewModel"
+			 x:DataType="vm:ObservationPointsDataPageViewModel" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.SettingPages.ObservationPointsDataPage">
 	<UserControl.Styles>
 		<Style Selector="Label">
@@ -21,17 +21,17 @@
 	</UserControl.Styles>
 	<ScrollViewer>
 		<StackPanel>
-			<ui:FASettingsExpander Header="観測点情報の自動更新" Description="起動時に新しい観測点情報を自動的にダウンロードします。">
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.01}" Description="{loc:Tr ObservationPointsDataPage.02}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf021;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
 				<ui:FASettingsExpander.Footer>
-					<ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.AutoUpdateObservationPoints}" OnContent="有効" OffContent="無効" />
+					<ToggleSwitch IsChecked="{Binding Config.KyoshinMonitor.AutoUpdateObservationPoints}" OnContent="{loc:Tr Common.Enabled}" OffContent="{loc:Tr Common.Disabled}" />
 				</ui:FASettingsExpander.Footer>
 			</ui:FASettingsExpander>
 
-			<TextBlock Text="現在のデータ情報" FontWeight="Bold" Margin="10,20,10,5" />
-			<ui:FASettingsExpander Header="データバージョン" Description="使用中の観測点データのバージョンです。">
+			<TextBlock Text="{loc:Tr ObservationPointsDataPage.03}" FontWeight="Bold" Margin="10,20,10,5" />
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.04}" Description="{loc:Tr ObservationPointsDataPage.05}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf05a;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
@@ -40,13 +40,13 @@
 				</ui:FASettingsExpander.Footer>
 			</ui:FASettingsExpander>
 
-			<ui:FASettingsExpander Header="作成日時" Footer="{Binding PackedAt}">
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.06}" Footer="{Binding PackedAt}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf073;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
 			</ui:FASettingsExpander>
 
-			<ui:FASettingsExpander Header="データソース">
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.07}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf1c0;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
@@ -55,24 +55,24 @@
 				</ui:FASettingsExpander.Footer>
 			</ui:FASettingsExpander>
 
-			<ui:FASettingsExpander Header="観測点数" Footer="{Binding ObservationPointsCount, StringFormat={}{0}点}">
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.08}" Footer="{loc:TrFormat Path=ObservationPointsCount, Key=ObservationPointsDataPage.F01}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf279;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
 			</ui:FASettingsExpander>
 
-			<TextBlock Text="更新" FontWeight="Bold" Margin="10,20,10,5" />
-			<ui:FASettingsExpander Header="手動更新" Description="観測点情報を手動で更新します。">
+			<TextBlock Text="{loc:Tr ObservationPointsDataPage.09}" FontWeight="Bold" Margin="10,20,10,5" />
+			<ui:FASettingsExpander Header="{loc:Tr ObservationPointsDataPage.10}" Description="{loc:Tr ObservationPointsDataPage.11}">
 				<ui:FASettingsExpander.IconSource>
 					<ui:FAFontIconSource Glyph="&#xf2f1;" FontFamily="{StaticResource IconFont}" />
 				</ui:FASettingsExpander.IconSource>
 				<ui:FASettingsExpander.Footer>
-					<Button Content="更新" Command="{Binding ManualUpdateCommand}" IsEnabled="{Binding !IsUpdating}" />
+					<Button Content="{loc:Tr ObservationPointsDataPage.09}" Command="{Binding ManualUpdateCommand}" IsEnabled="{Binding !IsUpdating}" />
 				</ui:FASettingsExpander.Footer>
 
 				<StackPanel Spacing="5" Margin="0,5">
 					<TextBlock Text="{Binding UpdateStatus}" FontSize="12" Foreground="{DynamicResource SystemAccentColor}" />
-					<TextBlock Text="更新を適用するにはアプリケーションの再起動が必要です。" FontSize="11" Opacity="0.7" TextWrapping="Wrap" />
+					<TextBlock Text="{loc:Tr ObservationPointsDataPage.12}" FontSize="11" Opacity="0.7" TextWrapping="Wrap" />
 				</StackPanel>
 			</ui:FASettingsExpander>
 		</StackPanel>

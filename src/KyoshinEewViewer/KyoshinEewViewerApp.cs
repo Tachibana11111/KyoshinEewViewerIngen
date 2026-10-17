@@ -101,6 +101,7 @@ public static class KyoshinEewViewerApp
 	{
 		var config = ConfigurationLoader.Load();
 		configure?.Invoke(config);
+		Localization.Loc.Instance.Attach(config);
 		LoggingAdapter.Setup(config);
 		services.AddSingleton(config);
 		return config;

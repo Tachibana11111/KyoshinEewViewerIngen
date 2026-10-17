@@ -5,10 +5,10 @@
 		     xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:actions="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinActions;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="actions:LogOutputAction" x:CompileBindings="True"
+             x:DataType="actions:LogOutputAction" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinActions.LogOutputActionControl">
     <StackPanel>
-        <TextBlock Text="テンプレート" />
+        <TextBlock Text="{loc:Tr LogOutputAction.01}" />
         <Grid ColumnDefinitions="*,Auto">
             <TextBox Grid.Column="0" 
                      Text="{Binding TemplateText}" 
@@ -21,12 +21,12 @@
                      FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
                      FontSize="12" />
             <Button Grid.Column="1" 
-                    Content="編集" 
+                    Content="{loc:Tr Common.Edit}" 
                     Click="EditTemplateButton_Click"
                     Margin="8,0,0,0"
                     VerticalAlignment="Top" />
         </Grid>
-        <TextBlock Text="最新の実行結果" />
+        <TextBlock Text="{loc:Tr ExecuteFileAction.08}" />
         <TextBlock Text="{Binding LatestOutput}" Margin="5,0" />
     </StackPanel>
 </UserControl>

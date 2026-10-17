@@ -1,4 +1,5 @@
 using Avalonia.Data.Converters;
+using KyoshinEewViewer.Localization;
 using DmdataSharp.Redundancy;
 using System;
 using System.Globalization;
@@ -13,13 +14,13 @@ public class RedundancyStatusToStringConverter : IValueConverter
 	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
 	{
 		if (value is not RedundancyStatus status)
-			return "不明";
+			return Loc.Get("Common.Unknown");
 
 		return status switch
 		{
-			RedundancyStatus.FullyConnected => "完全接続",
-			RedundancyStatus.PartiallyConnected => "部分接続",
-			RedundancyStatus.Disconnected => "未接続",
+			RedundancyStatus.FullyConnected => Loc.Get("Redundancy.Full"),
+			RedundancyStatus.PartiallyConnected => Loc.Get("Redundancy.Partial"),
+			RedundancyStatus.Disconnected => Loc.Get("Redundancy.Disconnected"),
 			_ => status.ToString(),
 		};
 	}

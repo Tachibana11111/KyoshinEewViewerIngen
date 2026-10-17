@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using DmdataSharp.Redundancy;
 using KyoshinEewViewer.Core;
@@ -12,13 +13,13 @@ using Microsoft.Extensions.Logging;
 
 namespace KyoshinEewViewer.Services.TelegramPublishers.Dmdata;
 
-public partial class DmdataSettingPage : ObservableObject, ISettingPage
+public partial class DmdataSettingPage : LocalizedObservableObject, ISettingPage
 {
 	public bool IsVisible => true;
 
 	public string? Icon => null;
 
-	public string Title => "DM-D.S.S";
+	public string Title => Loc.Instance["DM-D.S.S"];
 
 	public Control DisplayControl => new DmdataPage() { DataContext = this };
 
@@ -30,7 +31,7 @@ public partial class DmdataSettingPage : ObservableObject, ISettingPage
 
 
 	[ObservableProperty]
-	public partial string DmdataStatusString { get; set; } = "未認証";
+	public partial string DmdataStatusString { get; set; } = Loc.Get("Dmdata.Status.NotAuth");
 
 	[ObservableProperty]
 	public partial CancellationTokenSource? AuthorizeCancellationTokenSource { get; set; } = null;
@@ -69,13 +70,13 @@ public partial class DmdataSettingPage : ObservableObject, ISettingPage
 		if (!string.IsNullOrEmpty(Config.Dmdata.RefreshToken))
 			return;
 
-		DmdataStatusString = "認証しています";
+		DmdataStatusString = Loc.Get("Dmdata.Status.Authenticating");
 
 		AuthorizeCancellationTokenSource = new CancellationTokenSource();
 		try
 		{
 			await DmdataRedundantTelegramPublisher.AuthorizeAsync(AuthorizeCancellationTokenSource.Token);
-			DmdataStatusString = "認証成功";
+			DmdataStatusString = Loc.Get("Dmdata.Status.AuthSuccess");
 		}
 		catch (Exception ex)
 		{
@@ -94,14 +95,14 @@ public partial class DmdataSettingPage : ObservableObject, ISettingPage
 		if (string.IsNullOrEmpty(Config.Dmdata.RefreshToken))
 			return;
 
-		DmdataStatusString = "認証を解除しています";
+		DmdataStatusString = Loc.Get("Dmdata.Status.Unlinking");
 		try
 		{
 			await DmdataRedundantTelegramPublisher.UnauthorizeAsync();
 		}
 		catch
 		{
-			DmdataStatusString = "トークン無効化失敗";
+			DmdataStatusString = Loc.Get("Dmdata.Status.RevokeFailed");
 		}
 
 		UpdateDmdataStatus();
@@ -115,12 +116,12 @@ public partial class DmdataSettingPage : ObservableObject, ISettingPage
 		try
 		{
 			await DmdataRedundantTelegramPublisher.ReconnectImmediatelyAsync();
-			DmdataStatusString = "再接続を開始しました";
+			DmdataStatusString = Loc.Get("Dmdata.Status.ReconnectStarted");
 		}
 		catch (Exception ex)
 		{
 			Logger.LogError(ex, "即時再接続に失敗しました");
-			DmdataStatusString = "再接続に失敗しました";
+			DmdataStatusString = Loc.Get("Dmdata.Status.ReconnectFailed");
 		}
 	}
 
@@ -134,14 +135,14 @@ public partial class DmdataSettingPage : ObservableObject, ISettingPage
 	{
 		if (!string.IsNullOrWhiteSpace(Config.Dmdata.OAuthClientSecret))
 		{
-			DmdataStatusString = "クライアント資格情報フローを利用中";
+			DmdataStatusString = Loc.Get("Dmdata.Status.ClientCredentials");
 			return;
 		}
 		if (string.IsNullOrEmpty(Config.Dmdata.RefreshToken))
 		{
-			DmdataStatusString = "未認証";
+			DmdataStatusString = Loc.Get("Dmdata.Status.NotAuth");
 			return;
 		}
-		DmdataStatusString = "認証済み";
+		DmdataStatusString = Loc.Get("Dmdata.Status.Authenticated");
 	}
 }

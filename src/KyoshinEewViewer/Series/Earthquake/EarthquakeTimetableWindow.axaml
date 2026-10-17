@@ -12,10 +12,10 @@
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource TitleBackgroundColor}"
         Foreground="{DynamicResource SubForegroundColor}"
-        Width="800" Height="600" MinWidth="800" MinHeight="600"
+        Width="800" Height="600" MinWidth="800" MinHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
         x:Class="KyoshinEewViewer.Series.Earthquake.EarthquakeTimetableWindow"
         x:DataType="local:EarthquakeTimetable"
-        Title="時刻表風地震情報履歴">
+        Title="{loc:Tr EarthquakeTimetableWindow.01}">
     <Window.Resources>
         <conv:IntensityToColorConverter x:Key="IntensityToColor" />
         <conv:LpgmIntensityToColorConverter x:Key="LpgmIntensityToColor" />
@@ -26,7 +26,7 @@
         </LayoutTransformControl.LayoutTransform>
         <Grid RowDefinitions="auto,*">
             <Grid ColumnDefinitions="*,auto">
-                <TextBlock FontSize="24" Text="{Binding Date, StringFormat=yyyy年MM月dd日}" Margin="0,5"
+                <TextBlock FontSize="24" Text="{loc:TrFormat Path=Date, Key=EarthquakeTimetableWindow.F01}" Margin="0,5"
                            HorizontalAlignment="Center" VerticalAlignment="Center"
                            Foreground="{DynamicResource MainForegroundColor}" FontWeight="Bold"/>
                 <Border Grid.Column="1" BorderThickness="1,0,0,0" Padding="5,0" Margin="0,0,5,0"
@@ -99,7 +99,7 @@
                                                         </StackPanel>
                                                         <StackPanel IsVisible="{Binding IsVeryShallow}"
                                                                     Orientation="Horizontal" Margin="0,-2.5,3,0" HorizontalAlignment="Right">
-                                                            <TextBlock Text="ごく浅い" FontSize="10" Margin="0,4,0,0" />
+                                                            <TextBlock Text="{loc:Tr EarthquakeTimetableWindow.02}" FontSize="10" Margin="0,4,0,0" />
                                                         </StackPanel>
                                                     </Panel>
                                                 </Panel>

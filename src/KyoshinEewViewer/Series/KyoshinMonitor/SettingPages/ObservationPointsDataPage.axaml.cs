@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Core.Models;
 using KyoshinEewViewer.Series.KyoshinMonitor.Services;
@@ -45,9 +46,9 @@ public class ObservationPointsDataPageViewModel : ObservableObject
 		UpdateHeaderInfo();
 	}
 
-	public string DataVersion => ObservationPointsUpdateService.CurrentHeader?.DataVersion ?? "不明";
-	public string PackedAt => ObservationPointsUpdateService.CurrentHeader?.PackedAt.ToLocalTime().ToString("yyyy/MM/dd HH:mm:ss") ?? "不明";
-	public string Source => ObservationPointsUpdateService.CurrentHeader?.Source ?? "不明";
+	public string DataVersion => ObservationPointsUpdateService.CurrentHeader?.DataVersion ?? Loc.Get("Common.Unknown");
+	public string PackedAt => ObservationPointsUpdateService.CurrentHeader?.PackedAt.ToLocalTime().ToString("yyyy/MM/dd HH:mm:ss") ?? Loc.Get("Common.Unknown");
+	public string Source => ObservationPointsUpdateService.CurrentHeader?.Source ?? Loc.Get("Common.Unknown");
 	public int ObservationPointsCount => ObservationPointsUpdateService.ObservationPointsCount;
 
 	public bool IsUpdating => ObservationPointsUpdateService.IsUpdating;

@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Services.Workflows.BuiltinActions;
 using System;
@@ -10,7 +11,13 @@ using KyoshinEewViewer.Core;
 
 namespace KyoshinEewViewer.Services.Workflows;
 
-public record WorkflowActionInfo(Type Type, string DisplayName, Func<WorkflowAction> Create);
+public record WorkflowActionInfo(Type Type, string DisplayNameKey, Func<WorkflowAction> Create)
+{
+	/// <summary>
+	/// 現在の表示言語での表示名
+	/// </summary>
+	public string DisplayName => Loc.Instance[DisplayNameKey];
+}
 
 [JsonDerivedType(typeof(DummyAction), typeDiscriminator: "Dummy")]
 [JsonDerivedType(typeof(MultipleAction), typeDiscriminator: "Multiple")]
@@ -27,17 +34,17 @@ public abstract class WorkflowAction : ObservableObject
 {
 	static WorkflowAction()
 	{
-		WorkflowService.RegisterAction<DummyAction>("何もしない");
-		WorkflowService.RegisterAction<MultipleAction>("複数アクション実行");
-		WorkflowService.RegisterAction<SendNotificationAction>("通知送信");
-		WorkflowService.RegisterAction<PlaySoundAction>("音声再生");
-		WorkflowService.RegisterAction<VoicevoxSpeechAction>("VOICEVOX でテキスト読み上げ");
-		WorkflowService.RegisterAction<WindowActivateAction>("メインウィンドウを最前面に表示");
-		WorkflowService.RegisterAction<SwitchTabAction>("タブを切り替える");
-		WorkflowService.RegisterAction<WaitAction>("指定時間待機");
-		WorkflowService.RegisterAction<LogOutputAction>("ログ出力");
-		WorkflowService.RegisterAction<WebhookAction>("指定したURLに内容をPOST");
-		WorkflowService.RegisterAction<ExecuteFileAction>("指定したファイルを開く(実行)");
+		WorkflowService.RegisterAction<DummyAction>("WfAction.Dummy");
+		WorkflowService.RegisterAction<MultipleAction>("WfAction.Multiple");
+		WorkflowService.RegisterAction<SendNotificationAction>("WfAction.Notify");
+		WorkflowService.RegisterAction<PlaySoundAction>("WfAction.PlaySound");
+		WorkflowService.RegisterAction<VoicevoxSpeechAction>("WfAction.Voicevox");
+		WorkflowService.RegisterAction<WindowActivateAction>("WfAction.Activate");
+		WorkflowService.RegisterAction<SwitchTabAction>("WfAction.SwitchTab");
+		WorkflowService.RegisterAction<WaitAction>("WfAction.Wait");
+		WorkflowService.RegisterAction<LogOutputAction>("WfAction.Log");
+		WorkflowService.RegisterAction<WebhookAction>("WfAction.Webhook");
+		WorkflowService.RegisterAction<ExecuteFileAction>("WfAction.ExecuteFile");
 	}
 
 	[JsonIgnore]
@@ -68,7 +75,7 @@ public abstract class WorkflowAction : ObservableObject
 public class DummyAction : WorkflowAction
 {
 	[JsonIgnore]
-	public override Control DisplayControl => new TextBlock { Text = "何もしないアクションです。\n何も実行されず、中断されることもありません。" };
+	public override Control DisplayControl => new TextBlock { Text = Loc.Get("WfAction.Dummy.Desc") };
 	public override Task ExecuteAsync(WorkflowEvent content)
 		=> Task.CompletedTask;
 }

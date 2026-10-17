@@ -1,9 +1,10 @@
 using FluentAvalonia.UI.Controls;
+using KyoshinEewViewer.Localization;
 using System;
 
 namespace KyoshinEewViewer.Series;
 
-public class SeriesMeta(Type type, string key, string name, FAIconSource icon, bool isDefaultEnabled, string detail = "")
+public class SeriesMeta(Type type, string key, string name, FAIconSource icon, bool isDefaultEnabled, string detail = "") : LocalizedObservableObject
 {
 	public Type Type { get; } = type;
 
@@ -15,7 +16,7 @@ public class SeriesMeta(Type type, string key, string name, FAIconSource icon, b
 	/// <summary>
 	/// 表示名
 	/// </summary>
-	public string Name { get; } = name;
+	public string Name => Loc.Instance[name];
 
 	/// <summary>
 	/// アイコン
@@ -30,5 +31,5 @@ public class SeriesMeta(Type type, string key, string name, FAIconSource icon, b
 	/// <summary>
 	/// 機能についての詳細
 	/// </summary>
-	public string Detail { get; } = detail;
+	public string Detail => Loc.Instance[detail];
 }

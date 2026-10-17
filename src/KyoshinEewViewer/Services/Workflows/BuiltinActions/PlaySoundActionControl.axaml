@@ -6,24 +6,24 @@
 		     xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:actions="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinActions;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="actions:PlaySoundAction" x:CompileBindings="True"
+             x:DataType="actions:PlaySoundAction" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinActions.PlaySoundActionControl">
     <StackPanel>
         <Grid ColumnDefinitions="auto,*,auto,auto">
-            <TextBlock Text="音量:" Grid.Column="0" />
+            <TextBlock Text="{loc:Tr Sound.VolumeLabel}" Grid.Column="0" />
             <Slider Value="{Binding Volume}" Minimum="0" Maximum="1" TickFrequency=".01" IsSnapToTickEnabled="True" Grid.Column="1" Margin="5,-10" />
             <TextBlock Text="{Binding Volume, StringFormat={}{0:P0}}" Width="50" Grid.Column="2" />
-            <CheckBox Content="待機" IsChecked="{Binding WaitToEnd}" Grid.Column="3"
-                      ToolTip.Tip="再生終了までワークフローの実行を中断します。再生完了後に別のアクションを続けて実行する場合に便利です。" />
+            <CheckBox Content="{loc:Tr PlaySoundAction.01}" IsChecked="{Binding WaitToEnd}" Grid.Column="3"
+                      ToolTip.Tip="{loc:Tr PlaySoundAction.02}" />
         </Grid>
         <Grid ColumnDefinitions="*,auto,auto">
-            <TextBox Text="{Binding FilePath}" ToolTip.Tip="ここに指定されたファイルを再生します。テンプレートが利用できます。" />
+            <TextBox Text="{Binding FilePath}" ToolTip.Tip="{loc:Tr PlaySoundAction.03}" />
             <Button Command="{Binding $parent[Window].((vm:SettingWindowViewModel)DataContext).OpenSoundFileForWorkflow}" CommandParameter="{Binding}"
                     Grid.Column="1" VerticalAlignment="Stretch" Width="30" Margin="5,0,0,0" Padding="5">
                 <ui:FASymbolIcon Symbol="Folder" />
             </Button>
             <Button Command="{Binding Play}" Grid.Column="2" VerticalAlignment="Stretch" Width="30" Padding="5" Margin="5,0,0,0"
-                    ToolTip.Tip="プレビューを再生する。変数は展開されません。">
+                    ToolTip.Tip="{loc:Tr PlaySoundAction.04}">
                 <ui:FASymbolIcon Symbol="Play" />
             </Button>
         </Grid>

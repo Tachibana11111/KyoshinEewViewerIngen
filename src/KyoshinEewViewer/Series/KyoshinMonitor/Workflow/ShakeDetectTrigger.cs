@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Core.Models;
 using KyoshinEewViewer.Core.Models.KyoshinMonitorObservationPoint;
@@ -33,20 +34,20 @@ public partial class ShakeDetectTrigger : WorkflowTrigger
 {
 	public override Type EventType => typeof(ShakeDetectedEvent);
 
-	public static Dictionary<KyoshinEventLevel, string> LevelNames { get; } = new()
+	public static LocMap<KyoshinEventLevel> LevelNames { get; } = new()
 	{
-		{ KyoshinEventLevel.Weaker, "微弱(非推奨)" },
-		{ KyoshinEventLevel.Weak, "弱い(震度1未満)" },
-		{ KyoshinEventLevel.Medium, "普通(震度1程度以上)" },
-		{ KyoshinEventLevel.Strong, "強い(震度3程度以上)" },
-		{ KyoshinEventLevel.Stronger, "非常に強い(震度5弱程度以上)" },
+		{ KyoshinEventLevel.Weaker, "EventLevel.Weaker" },
+		{ KyoshinEventLevel.Weak, "EventLevel.Weak" },
+		{ KyoshinEventLevel.Medium, "EventLevel.Medium" },
+		{ KyoshinEventLevel.Strong, "EventLevel.Strong" },
+		{ KyoshinEventLevel.Stronger, "EventLevel.Stronger" },
 	};
 
-	public static Dictionary<PeakRegionExpansionMode, string> PeakRegionExpansionModeNames { get; } = new()
+	public static LocMap<PeakRegionExpansionMode> PeakRegionExpansionModeNames { get; } = new()
 	{
-		{ PeakRegionExpansionMode.None, "なにもしない" },
-		{ PeakRegionExpansionMode.RegionOnly, "地域のみ" },
-		{ PeakRegionExpansionMode.IncludeSubRegion, "サブ地域も含む" },
+		{ PeakRegionExpansionMode.None, "PeakExpansion.None" },
+		{ PeakRegionExpansionMode.RegionOnly, "PeakExpansion.RegionOnly" },
+		{ PeakRegionExpansionMode.IncludeSubRegion, "PeakExpansion.IncludeSubRegion" },
 	};
 
 	[JsonIgnore]

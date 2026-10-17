@@ -11,7 +11,7 @@ namespace KyoshinEewViewer.Series.Lightning;
 
 public partial class LightningSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(LightningSeries), "lightning", "[TEST]落雷情報", new FAFontIconSource { Glyph = "\xf76c", FontFamily = new FontFamily(Utils.IconFontName) }, true, "落雷情報を表示します。(デバッグ用)");
+	public static SeriesMeta MetaData { get; } = new(typeof(LightningSeries), "lightning", "Series.Lightning", new FAFontIconSource { Glyph = "\xf76c", FontFamily = new FontFamily(Utils.IconFontName) }, true, "Series.Lightning.Detail");
 
 	private SoundCategory SoundCategory { get; } = new("Lightning", "落雷情報");
 	private Sound? ArrivalSound { get; set; }
@@ -28,7 +28,7 @@ public partial class LightningSeries : SeriesBase
 
 	public LightningSeries(SoundPlayerService soundPlayer, TimerService timer) : base(MetaData)
 	{
-		ArrivalSound = soundPlayer.RegisterSound(SoundCategory, "Arrival", "情報受信時");
+		ArrivalSound = soundPlayer.RegisterSound(SoundCategory, "Arrival", "Sound.LightningArrival");
 
 		Layer = new LightningLayer(timer);
 

@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Core;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Core.Models;
 using ManagedBass;
 using R3;
@@ -148,23 +149,28 @@ public class SoundPlayerService
 }
 
 public record struct SoundCategory(string Name, string DisplayName);
-public class Sound : IDisposable
+public class Sound : LocalizedObservableObject, IDisposable
 {
 	internal Sound(SoundPlayerService service, SoundCategory parentCategory, string name, string displayName, string? description, IDictionary<string, string>? exampleParameter)
 	{
 		Service = service;
 		ParentCategory = parentCategory;
 		Name = name;
-		DisplayName = displayName;
-		Description = description;
+		_displayName = displayName;
+		_description = description;
 		ExampleParameter = exampleParameter;
 	}
 
 	private SoundPlayerService Service { get; }
 	public SoundCategory ParentCategory { get; }
 	public string Name { get; }
-	public string DisplayName { get; }
-	public string? Description { get; }
+	private readonly string _displayName;
+	private readonly string? _description;
+	/// <summary>
+	/// 言語リソースのキーから取得した表示名
+	/// </summary>
+	public string DisplayName => Loc.Instance[_displayName];
+	public string? Description => _description is null ? null : Loc.Instance[_description];
 	public IDictionary<string, string>? ExampleParameter { get; }
 
 	// 設定を取得する 存在しなければ項目を作成する

@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls.ApplicationLifetimes;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Core;
@@ -167,7 +168,7 @@ public partial class UpdateCheckService : ObservableObject
 			return;
 
 		Logger.LogInformation(forceUpdate ? "強制更新を開始します" : "自己更新を開始します");
-		UpdateState = "更新ファイルをダウンロードします";
+		UpdateState = Loc.Get("Update.State.Downloading");
 
 		IsUpdating = true;
 		IsUpdateIndeterminate = true;
@@ -196,7 +197,7 @@ public partial class UpdateCheckService : ObservableObject
 				if (!isNewerVersion)
 				{
 					Logger.LogInformation("最新バージョンは既にインストールされています");
-					UpdateState = "最新バージョンは既にインストールされています";
+					UpdateState = Loc.Get("Update.State.Latest");
 					return;
 				}
 			}
@@ -212,7 +213,7 @@ public partial class UpdateCheckService : ObservableObject
 			var tempFile = await DownloadFileAsync(downloadUrl, expectedHash);
 
 			Logger.LogInformation("自己更新処理を実行します");
-			UpdateState = "更新を適用しています";
+			UpdateState = Loc.Get("Update.State.Applying");
 			IsUpdateIndeterminate = true;
 
 			// プラットフォーム別の更新処理
@@ -228,7 +229,7 @@ public partial class UpdateCheckService : ObservableObject
 		catch (Exception ex)
 		{
 			Logger.LogError(ex, "自己更新に失敗しました");
-			UpdateState = "更新に失敗しました。繰り返し失敗する場合は手動での更新をお願いします。";
+			UpdateState = Loc.Get("Update.State.Failed");
 		}
 		finally
 		{
@@ -336,7 +337,7 @@ public partial class UpdateCheckService : ObservableObject
 
 				total += read;
 				UpdateProgress = (double)total / contentLength * 100;
-				UpdateState = $"更新ファイルのダウンロード中: {total / 1024:#,0}kb / {contentLength / 1024:#,0}kb";
+				UpdateState = Loc.Get("Update.State.Progress", total / 1024, contentLength / 1024);
 
 				await fileStream.WriteAsync(buffer.AsMemory(0, read));
 			}
@@ -356,7 +357,7 @@ public partial class UpdateCheckService : ObservableObject
 		}
 
 		// ハッシュ検証
-		UpdateState = "ダウンロードしたファイルを検証中";
+		UpdateState = Loc.Get("Update.State.Verifying");
 		if (!await VerifyFileHashAsync(tempFile, expectedHash))
 		{
 			// ハッシュ検証失敗時は一時ファイルを削除
@@ -532,7 +533,7 @@ public partial class UpdateCheckService : ObservableObject
 
 			// macOSの隔離属性を削除
 			Logger.LogInformation("隔離属性を削除します");
-			UpdateState = "更新を適用しています";
+			UpdateState = Loc.Get("Update.State.Applying");
 
 			try
 			{

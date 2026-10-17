@@ -5,7 +5,7 @@
              xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="1000"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SettingPages.MapPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -21,52 +21,52 @@
     </UserControl.Styles>
     <ScrollViewer>
         <StackPanel>
-            <ui:FASettingsExpander Header="手動での移動操作を禁止する" Description="有効にするとメイン画面のホームボタンが消えます。">
+            <ui:FASettingsExpander Header="{loc:Tr Map.DisableManualMove}" Description="{loc:Tr Map.DisableManualMove.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0b2;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.DisableManualMapControl}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.DisableManualMapControl}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="グリッドを表示させる">
+            <ui:FASettingsExpander Header="{loc:Tr Map.ShowGrid}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf00a;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.ShowGrid}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.ShowGrid}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="ミニマップを表示する" Description="デフォルト表示範囲を表示中のとき、左上に沖縄･奄美地方のミニマップを表示します。パフォーマンスに影響を与えます。">
+            <ui:FASettingsExpander Header="{loc:Tr Map.ShowMiniMap}" Description="{loc:Tr Map.ShowMiniMap.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf146;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.UseMiniMap}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.UseMiniMap}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="慣性を有効にする" Description="地図の操作後･マウスホイールでのズーム操作時に慣性で滑らかにスクロールします。">
+            <ui:FASettingsExpander Header="{loc:Tr Map.Inertia}" Description="{loc:Tr Map.Inertia.Desc}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf70c;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.IsInertiaEnabled}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.IsInertiaEnabled}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="表示範囲" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="ウィンドウリサイズ時に表示範囲がすべて見えるようにズーム倍率を調整する">
+            <TextBlock Text="{loc:Tr Map.ViewRange}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr Map.FitOnResize}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf31e;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.KeepRegion}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.KeepRegion}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
             <Expander Margin="10,3,10,0" IsExpanded="True">
                 <Expander.Header>
                     <StackPanel Margin="0,10">
-                        <TextBlock Text="現在の表示範囲" />
+                        <TextBlock Text="{loc:Tr Map.CurrentRange}" />
                         <StackPanel Orientation="Horizontal" Spacing="5" TextElement.Foreground="{DynamicResource SubForegroundColor}">
                             <TextBlock Text="{Binding Config.Map.Location1, Mode=OneWay, StringFormat={}{{{0}}}}" />
                             <TextBlock Text="-" />
@@ -75,21 +75,21 @@
                     </StackPanel>
                 </Expander.Header>
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Spacing="10">
-                    <Button Content="現在の位置を記録する" Command="{Binding RegistMapPosition}" />
-                    <Button Content="初期範囲に戻す" Command="{Binding ResetMapPosition}" />
+                    <Button Content="{loc:Tr Map.SaveCurrent}" Command="{Binding RegistMapPosition}" />
+                    <Button Content="{loc:Tr Map.ResetRange}" Command="{Binding ResetMapPosition}" />
                 </StackPanel>
             </Expander>
 
-            <TextBlock Text="自動拡大" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="自動で地図を拡大する">
+            <TextBlock Text="{loc:Tr Map.AutoZoom}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr Map.AutoZoomEnable}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf31e;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.AutoFocus}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.AutoFocus}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="最大ズームを制限する" Description="小さい地震の際に狭い範囲が拡大されて場所がわかりづらくなることに対処できます。">
+            <ui:FASettingsExpander Header="{loc:Tr Map.LimitMaxZoom}" Description="{loc:Tr Map.LimitMaxZoom.Desc}">
                 <ui:FASettingsExpander.Footer>
                     <DockPanel Margin="0,5,0,0" MinWidth="300">
                         <TextBlock Text="{Binding Config.Map.MaxNavigateZoom, StringFormat={}{0:0.00}}"
@@ -101,9 +101,9 @@
                     </DockPanel>
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="自動で拡大させる際にアニメーションを行う">
+            <ui:FASettingsExpander Header="{loc:Tr Map.AutoZoomAnimation}">
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Map.AutoFocusAnimation}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Map.AutoFocusAnimation}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
         </StackPanel>

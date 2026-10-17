@@ -5,17 +5,17 @@
              xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:actions="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinActions;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="actions:WebhookAction" x:CompileBindings="True"
+             x:DataType="actions:WebhookAction" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinActions.WebhookActionControl">
     <StackPanel>
         <TextBlock Text="URL" />
         <TextBox Text="{Binding Url}" HorizontalAlignment="Stretch" />
         <StackPanel IsVisible="{Binding CanInjectPointForecast}" Margin="0,5,0,0">
-            <CheckBox Content="レスポンスを緊急地震速報の地点予測として取り込む" IsChecked="{Binding InjectPointForecast}" />
-            <TextBlock Text="緊急地震速報のトリガーでのみ動作します。レスポンスの JSON に含まれる計測震度と到達時刻をそのまま表示します。&#xA;推定の内容についてはレスポンスを返すアプリケーション側の責任となります。"
+            <CheckBox Content="{loc:Tr WebhookAction.01}" IsChecked="{Binding InjectPointForecast}" />
+            <TextBlock Text="{loc:Tr WebhookAction.02}"
                        FontSize="12" TextWrapping="Wrap" Margin="24,0,0,0" />
         </StackPanel>
-        <TextBlock Text="最新のレスポンス" />
+        <TextBlock Text="{loc:Tr WebhookAction.03}" />
         <TextBlock Text="{Binding LatestResponse}" Margin="5,0" />
     </StackPanel>
 </UserControl>

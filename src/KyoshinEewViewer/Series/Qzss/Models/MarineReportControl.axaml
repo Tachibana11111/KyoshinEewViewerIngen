@@ -6,19 +6,19 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:MarineReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.MarineReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
     </UserControl.Resources>
     <Grid RowDefinitions="auto,*" ColumnDefinitions="240,*">
         <StackPanel>
-            <local:DCReportHeaderControl Title="防災気象情報(海上)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr MarineReport.01}" ShowReportCount="True" />
 
             <Border Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0">
                 <StackPanel Orientation="Horizontal" Margin="10,0" Spacing="5" HorizontalAlignment="Center">
-                    <TextBlock Text="海上警報" FontWeight="Bold" FontSize="20" />
-                    <TextBlock Text="{Binding TotalAreaCount,StringFormat={}{0}地域}" Foreground="{DynamicResource SubForegroundColor}" VerticalAlignment="Bottom"/>
+                    <TextBlock Text="{loc:Tr QzssView.14}" FontWeight="Bold" FontSize="20" />
+                    <TextBlock Text="{loc:TrFormat Path=TotalAreaCount, Key=EewPanel.F08}" Foreground="{DynamicResource SubForegroundColor}" VerticalAlignment="Bottom"/>
                 </StackPanel>
             </Border>
         </StackPanel>

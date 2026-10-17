@@ -6,7 +6,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="1200"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.SettingPages.KyoshinMonitorEewPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -26,99 +26,99 @@
                 <Expander.Header>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xf05a;" Classes="icon" Margin="0,0,0,-5" />
-                        <TextBlock Text="緊急地震速報について(クリックで展開)" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.01}" />
                     </StackPanel>
                 </Expander.Header>
                 <control:MarkdownViewer HorizontalAlignment="Stretch" Source="avares://KyoshinEewViewer/Assets/EewAbout.md" Margin="-10" />
             </Expander>
 
-            <TextBlock Text="基本設定" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="発表時に自動でタブを切り替える">
+            <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.02}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.03}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0f3;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Eew.SwitchAtAnnounce}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Eew.SwitchAtAnnounce}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="強震モニタの緊急地震速報を受信する"
-                                 Description="オフにした場合、そのほかの緊急地震速報を受信できるソースの設定をしていない場合は緊急地震速報が表示できなくなります。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.04}"
+                                 Description="{loc:Tr KyoshinMonitorEewPage.05}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf390;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Eew.EnableKyoshinMonitor}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Eew.EnableKyoshinMonitor}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="表示設定" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="詳細な情報を表示する" Description="十分に知識があり、情報の活用ができる方のみご利用ください。" IsExpanded="True">
+            <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.06}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.07}" Description="{loc:Tr KyoshinMonitorEewPage.08}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf550;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Eew.ShowDetails}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Eew.ShowDetails}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
-                <TextBlock Text="1点検知のEEWや精度情報が表示されるようになります。&#xA;ただし、強震モニタのみでは取得できない情報のため、 DM-D.S.S. や SignalNowProfessional で取得できていない場合は表示できません。" FontSize="12" Margin="5,-9,0,0" />
+                <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.09}" FontSize="12" Margin="5,-9,0,0" />
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="P/S波の描画を強震モニタの遅延に合わせる" Description="揺れの広がりを強震モニタの表示時刻に合わせて描画します。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.10}" Description="{loc:Tr KyoshinMonitorEewPage.11}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf83e;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Eew.SyncKyoshinMonitorPsWave}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Eew.SyncKyoshinMonitorPsWave}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
-                <TextBlock Text="強震モニタの観測値と円の形が一致するようになりますが、実時間より遅れて表示されることになるため注意してください。" FontSize="12" Margin="5,-9,0,0" />
+                <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.12}" FontSize="12" Margin="5,-9,0,0" />
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="P/S波のアニメーションを無効化する" Description="負荷が軽減されます。" IsExpanded="True">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.13}" Description="{loc:Tr KyoshinMonitorEewPage.14}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf363;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Eew.DisableAnimation}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Eew.DisableAnimation}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="各地域のマッピング" IsExpanded="True">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.15}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf576;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
 
-                <ui:FASettingsExpanderItem Content="警報地域を地図上に表示する" Description="警報が発表されている地域を塗りつぶします。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.16}" Description="{loc:Tr KyoshinMonitorEewPage.17}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.FillWarningArea}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.FillWarningArea}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="各地域の予想最大震度を地図上に表示する" Description="各地域を予想最大震度で塗りつぶします。&#xa;警報地域よりも優先されます。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.18}" Description="{loc:Tr KyoshinMonitorEewPage.19}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.FillForecastIntensity}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.FillForecastIntensity}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
             <!-- 地点予測の取り込みが有効な場合のみ表示する -->
-            <ui:FASettingsExpander Header="地点予測の表示" Description="外部アプリから提供された地点ごとの予測震度と到達までのカウントダウンの表示方法です。" IsExpanded="True"
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorEewPage.20}" Description="{loc:Tr KyoshinMonitorEewPage.21}" IsExpanded="True"
                                    IsVisible="{Binding Config.Eew.EnableWebhookPointForecast}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf3c5;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
 
-                <ui:FASettingsExpanderItem Content="地点予測を地図上に表示する" Description="地点の位置に予測震度と残り秒数を表示します。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.22}" Description="{loc:Tr KyoshinMonitorEewPage.23}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.ShowPointForecastOnMap}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.ShowPointForecastOnMap}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="大きなカウントダウンに展開する" Description="しきい値以上の予測震度の地点を、パネル内で大きく表示します。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.24}" Description="{loc:Tr KyoshinMonitorEewPage.25}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.ExpandPointForecast}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.ExpandPointForecast}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="展開するしきい値" IsEnabled="{Binding Config.Eew.ExpandPointForecast}">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.26}" IsEnabled="{Binding Config.Eew.ExpandPointForecast}">
                     <ui:FASettingsExpanderItem.Footer>
                         <ComboBox ItemsSource="{x:Static vm:SettingWindowViewModel.PointForecastExpandIntensityNames}" SelectedValue="{Binding Config.Eew.PointForecastExpandIntensity}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}"
                                   MinWidth="160" />
@@ -126,38 +126,38 @@
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="外部連携" FontWeight="Bold" Margin="10,20,10,5" />
+            <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.27}" FontWeight="Bold" Margin="10,20,10,5" />
 
-            <ui:FASettingsExpander Description="別途ソフトウェアの購入+ソフトウェア本体のインストール･起動が必要です。" IsExpanded="True">
+            <ui:FASettingsExpander Description="{loc:Tr KyoshinMonitorEewPage.28}" IsExpanded="True">
                 <ui:FASettingsExpander.Header>
                     <StackPanel Orientation="Horizontal">
                         <control:HyperlinkTextBlock Text="SignalNow Professional" Uri="https://www.kobayashiyoko-com.jp/sn/" />
-                        <TextBlock Text="(クリックで製品ページを開く)" FontSize="12" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.29}" FontSize="12" />
                     </StackPanel>
                 </ui:FASettingsExpander.Header>
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf52e;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
 
-                <ui:FASettingsExpanderItem Content="利用可能であれば連携機能を利用する" Description="再起動後反映されます。">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.30}" Description="{loc:Tr KyoshinMonitorEewPage.31}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.EnableSignalNowProfessional}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.EnableSignalNowProfessional}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
-                <ui:FASettingsExpanderItem Content="設定された所在地(予想地点)を地図上に表示する">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.32}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Eew.EnableSignalNowProfessionalLocation}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Eew.EnableSignalNowProfessionalLocation}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
-                <ui:FASettingsExpanderItem Content="算出された到達予想時間を使用する(実装予定)">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.33}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsEnabled="False" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsEnabled="False" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="注意事項" Description="現在地の震度を計算する情報しか送信されない仕様上、地名と予想最大震度は表示されず不明扱いになります。" />
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorEewPage.34}" Description="{loc:Tr KyoshinMonitorEewPage.35}" />
                 <ui:FASettingsExpanderItem>
-                    <TextBlock Text="また、SignalNowProfessionalが起動していない場合でもログファイルが読み取れる場合受信中の表記になります。ご注意ください。"
+                    <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.36}"
                        Background="{DynamicResource WarningBackgroundColor}"
                        Foreground="{DynamicResource WarningForegroundColor}"
                        FontWeight="Bold" FontSize="12" />
@@ -166,7 +166,7 @@
 
             <Expander Header="DM-D.S.S" IsExpanded="True" Margin="10,3">
                 <StackPanel>
-                    <TextBlock Text="DM-D.S.Sでの受信は緊急地震速報のプランを契約しているかつ、WebSocketでの接続時に自動で開始されます。&#xA;接続状況はメインウィンドウの時刻情報の横に表示されます。&#xA;なかなか接続されない･PULL型に切り替わってしまうときは一度認証解除し再度認証し直してください。" FontSize="12" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorEewPage.37}" FontSize="12" />
                 </StackPanel>
             </Expander>
         </StackPanel>

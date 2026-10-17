@@ -1,4 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Core;
 using KyoshinEewViewer.JmaXmlParser;
 using KyoshinEewViewer.Services.TelegramPublishers;
@@ -31,16 +32,16 @@ public partial class EarthquakeEvent : ObservableObject
 			(only, sokuhou, volcano, foreign) =>
 			{
 				if (sokuhou && only)
-					return "震度速報+震源情報";
+					return Loc.Get("Quake.Title.FlashAndHypo");
 				if (sokuhou)
-					return "震度速報";
+					return Loc.Get("Quake.Title.Flash");
 				if (only)
-					return "震源情報";
+					return Loc.Get("Quake.Title.Hypo");
 				if (volcano)
-					return "大規模噴火";
+					return Loc.Get("Quake.Title.Volcano");
 				if (foreign)
-					return "遠地地震情報";
-				return "震源･震度情報";
+					return Loc.Get("Quake.Title.Foreign");
+				return Loc.Get("Quake.Title.HypoIntensity");
 			}
 		).Subscribe(x => Title = x);
 

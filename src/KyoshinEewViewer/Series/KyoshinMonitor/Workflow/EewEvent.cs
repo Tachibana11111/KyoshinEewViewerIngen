@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Series.KyoshinMonitor.Models;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Series.KyoshinMonitor.Services.Eew;
 using KyoshinEewViewer.Services.Workflows;
 using KyoshinMonitorLib;
@@ -32,7 +33,7 @@ public class EewEvent(KyoshinMonitorSeries? series, EewEventType subType) : Work
 	public JmaIntensity Intensity { get; init; }
 
 	[Description("最大予測震度の長い表記 (例: \"震度5強\")")]
-	public string IntensityLongName => Intensity.ToLongString();
+	public string IntensityLongName => IntensityNames.GetLongName(Intensity);
 
 	[Description("最大予測震度が震度5弱以上かどうか")]
 	public bool IsAtLeastInt5Lower => Intensity >= JmaIntensity.Int5Lower;
@@ -90,14 +91,14 @@ public class EewEvent(KyoshinMonitorSeries? series, EewEventType subType) : Work
 			IsTrueCancelled = eew.IsTrueCancelled,
 			Intensity = eew.MaxIntensity,
 			IsIntensityOver = eew.IsIntensityOver,
-			EpicenterPlaceName = eew.Hypocenter?.Place,
+			EpicenterPlaceName = eew.Hypocenter?.Place is { } place ? PlaceNames.Localize(place) : null,
 			EpicenterLocation = eew.Hypocenter?.Location,
 			Magnitude = eew.Hypocenter?.Magnitude,
 			Depth = eew.Hypocenter?.Depth,
 			IsTemporaryEpicenter = eew.Hypocenter?.IsTemporary,
 			IsWarning = eew.IsWarning,
 			WarningAreaCodes = eew.WarningAreas?.Codes,
-			WarningAreaNames = eew.WarningAreas?.Names,
+			WarningAreaNames = eew.WarningAreas?.Names is { } names ? Array.ConvertAll(names, PlaceNames.Localize) : null,
 			IsFinal = eew.IsFinal,
 			IsCancelled = eew.IsCancelled,
 			IsReplay = isReplay,

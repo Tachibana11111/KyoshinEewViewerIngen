@@ -1,4 +1,5 @@
 using System;
+using KyoshinEewViewer.Localization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -292,10 +293,10 @@ public partial class TemplateEditorDialog : Window
         {
             var result = await new FAContentDialog
             {
-                Title = "テンプレートシンタックスエラー",
-                Content = $"テンプレートにシンタックスエラーがあります:\n\n{ex.Message}\n\nこのままにしますか？",
-                PrimaryButtonText = "編集する",
-                SecondaryButtonText = "戻る"
+                Title = Loc.Get("Template.SyntaxError.Title"),
+                Content = Loc.Get("Template.SyntaxError.Message", ex.Message),
+                PrimaryButtonText = Loc.Get("Template.SyntaxError.Edit"),
+                SecondaryButtonText = Loc.Get("Template.SyntaxError.Back")
             }.ShowAsync(this);
 
             if (result != FAContentDialogResult.Primary)

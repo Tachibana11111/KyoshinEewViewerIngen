@@ -5,7 +5,7 @@
 			 xmlns:controls="clr-namespace:KyoshinEewViewer.CustomControl;assembly=KyoshinEewViewer.CustomControl"
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
              x:DataType="vm:SetupWizardWindowViewModel"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SetupWizardPages.SelectSeriesPage">
 	<StackPanel Margin="10">
 		<StackPanel.Styles>
@@ -13,31 +13,31 @@
 				<Setter Property="TextWrapping" Value="Wrap" />
 			</Style>
 		</StackPanel.Styles>
-		<TextBlock Text="取得･表示する情報の選択" FontSize="32" HorizontalAlignment="Center" />
-		<TextBlock Text="このアプリケーションで表示させたい情報を選びましょう。&#xA;適切に必要な情報のみ受け取ることで情報を提供しているサーバーの負荷を軽減することができます。" Margin="0,10,0,0" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr SelectSeriesPage.01}" FontSize="32" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr SelectSeriesPage.02}" Margin="0,10,0,0" HorizontalAlignment="Center" />
 		<StackPanel Margin="15">
-			<CheckBox IsChecked="{Binding IsKyoshinMonitorEnabled}" Content="強震モニタ･緊急地震速報" FontSize="20" />
+			<CheckBox IsChecked="{Binding IsKyoshinMonitorEnabled}" Content="{loc:Tr SelectSeriesPage.03}" FontSize="20" />
 			<Panel>
 				<StackPanel Margin="25,0,5,5">
-					<TextBlock>強震モニタからリアルタイム震度･緊急地震速報を受信し表示を行います。</TextBlock>
-					<CheckBox IsChecked="{Binding Config.Eew.EnableSignalNowProfessional}" Content="Signal Now Professional 連携機能を利用する" FontSize="18" />
-					<TextBlock Text="SignalNowProfessionalが起動していない場合でもログファイルが読み取れる場合受信中の表記になります。ご注意ください。"
+					<TextBlock Text="{loc:Tr SelectSeriesPage.06}" />
+					<CheckBox IsChecked="{Binding Config.Eew.EnableSignalNowProfessional}" Content="{loc:Tr SelectSeriesPage.04}" FontSize="18" />
+					<TextBlock Text="{loc:Tr SelectSeriesPage.05}"
 							   Background="{DynamicResource WarningBackgroundColor}"
 							   Foreground="{DynamicResource WarningForegroundColor}" FontWeight="Bold"
 							   FontSize="12" Padding="5" />
 				</StackPanel>
 			</Panel>
-			<CheckBox IsChecked="{Binding IsEarthquakeEnabled}" Content="地震情報" FontSize="20" Margin="0,10,0,0" />
+			<CheckBox IsChecked="{Binding IsEarthquakeEnabled}" Content="{loc:Tr Series.Earthquake}" FontSize="20" Margin="0,10,0,0" />
 			<StackPanel Margin="25,0,5,5">
-				<TextBlock>防災情報XMLを受信･解析し地震情報を表示します。</TextBlock>
+				<TextBlock Text="{loc:Tr SelectSeriesPage.07}" />
 			</StackPanel>
-			<CheckBox IsChecked="{Binding IsTsunamiEnabled}" Content="津波情報" FontSize="20" Margin="0,10,0,0" />
+			<CheckBox IsChecked="{Binding IsTsunamiEnabled}" Content="{loc:Tr Series.Tsunami}" FontSize="20" Margin="0,10,0,0" />
 			<StackPanel Margin="25,0,5,5">
-				<TextBlock>防災情報XMLを受信･解析し津波情報を表示します。</TextBlock>
+				<TextBlock Text="{loc:Tr SelectSeriesPage.08}" />
 			</StackPanel>
-            <CheckBox IsChecked="{Binding IsQzssEnabled}" Content="災危通報" FontSize="20" Margin="0,10,0,0" />
+            <CheckBox IsChecked="{Binding IsQzssEnabled}" Content="{loc:Tr Series.Qzss}" FontSize="20" Margin="0,10,0,0" />
             <StackPanel Margin="25,0,5,5">
-                <TextBlock>『みちびき』から配信される防災情報を表示します。対応受信機が必要です。</TextBlock>
+                <TextBlock Text="{loc:Tr SelectSeriesPage.09}" />
             </StackPanel>
 		</StackPanel>
 	</StackPanel>

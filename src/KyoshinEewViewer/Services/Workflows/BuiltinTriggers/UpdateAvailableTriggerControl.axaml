@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:triggers="clr-namespace:KyoshinEewViewer.Services.Workflows.BuiltinTriggers"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="triggers:UpdateAvailableTrigger" x:CompileBindings="True"
+             x:DataType="triggers:UpdateAvailableTrigger" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Services.Workflows.BuiltinTriggers.UpdateAvailableTriggerControl">
-    <CheckBox Content="繰り返しトリガーする" IsChecked="{Binding IsContinuous}"
-              ToolTip.Tip="オンの場合アップデートチェックの度(おおよそ10分ごと)にアップデートが存在する場合トリガーされます。&#xA;オフの場合アップデートが見つかった時に1回だけトリガーされます。" />
+    <CheckBox Content="{loc:Tr UpdateAvailableTrigger.01}" IsChecked="{Binding IsContinuous}"
+              ToolTip.Tip="{loc:Tr UpdateAvailableTrigger.02}" />
 </UserControl>

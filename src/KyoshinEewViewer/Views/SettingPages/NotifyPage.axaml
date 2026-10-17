@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="800"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SettingPages.NotifyPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -22,97 +22,97 @@
     <ScrollViewer>
         <StackPanel>
             <StackPanel IsVisible="{Binding IsDesktop}">
-                <TextBlock Text="トレイアイコン" FontWeight="Bold" Margin="10,20,10,5" />
-                <ui:FASettingsExpander Header="タスクトレイのアイコンを利用する" Description="(再起動後反映)通知領域にアイコンを常駐させ、右クリックメニューやウィンドウ格納を利用できます。">
+                <TextBlock Text="{loc:Tr Notify.Tray}" FontWeight="Bold" Margin="10,20,10,5" />
+                <ui:FASettingsExpander Header="{loc:Tr Notify.UseTray}" Description="{loc:Tr Notify.UseTray.Desc}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf86d;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     <ui:FASettingsExpander.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.TrayIconEnable}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.TrayIconEnable}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpander.Footer>
                 </ui:FASettingsExpander>
 
-                <ui:FASettingsExpander Header="ウィンドウ格納設定" IsExpanded="True">
+                <ui:FASettingsExpander Header="{loc:Tr Notify.WindowStore}" IsExpanded="True">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf2d2;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
 
-                    <ui:FASettingsExpanderItem Content="最小化時にタスクトレイに収納する" IsVisible="{Binding IsWindows}" IsEnabled="{Binding !Config.MultiWindow.Enable}">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr Notify.StoreOnMinimize}" IsVisible="{Binding IsWindows}" IsEnabled="{Binding !Config.MultiWindow.Enable}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideWhenMinimizeWindow}" OnContent="する" OffContent="しない" IsEnabled="{Binding !Config.MultiWindow.Enable}" />
+                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideWhenMinimizeWindow}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsEnabled="{Binding !Config.MultiWindow.Enable}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="ウィンドウを閉じようとした際にタスクトレイに収納する" IsEnabled="{Binding !Config.MultiWindow.Enable}">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr Notify.StoreOnClose}" IsEnabled="{Binding !Config.MultiWindow.Enable}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideWhenClosingWindow}" OnContent="する" OffContent="しない" IsEnabled="{Binding !Config.MultiWindow.Enable}" />
+                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideWhenClosingWindow}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsEnabled="{Binding !Config.MultiWindow.Enable}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
                     <ui:FAInfoBar IsOpen="{Binding Config.MultiWindow.Enable}"
                                 IsClosable="False"
                                 Severity="Informational"
-                                Title="マルチウィンドウ機能が有効です"
+                                Title="{loc:Tr Notify.MultiWindowEnabled}"
                                 Message="マルチウィンドウ機能が有効な場合、ウィンドウをタスクトレイに収納する機能は利用できません。"
                                 Margin="0,5,0,0" />
 
-                    <ui:FASettingsExpanderItem Content="起動時に最小化状態で起動する">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr Notify.StartMinimized}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch IsChecked="{Binding Config.Notification.MinimizeWindowOnStartup}" OnContent="する" OffContent="しない" />
+                            <ToggleSwitch IsChecked="{Binding Config.Notification.MinimizeWindowOnStartup}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
 
-                    <ui:FASettingsExpanderItem Content="タスクトレイ格納時に通知する">
+                    <ui:FASettingsExpanderItem Content="{loc:Tr Notify.NotifyOnStore}">
                         <ui:FASettingsExpanderItem.Footer>
-                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideToTrayNotify}" OnContent="通知する" OffContent="通知しない" />
+                            <ToggleSwitch IsChecked="{Binding Config.Notification.HideToTrayNotify}" OnContent="{loc:Tr Notify.On}" OffContent="{loc:Tr Notify.Off}" />
                         </ui:FASettingsExpanderItem.Footer>
                     </ui:FASettingsExpanderItem>
                 </ui:FASettingsExpander>
             </StackPanel>
 
-            <TextBlock Text="通知" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="通知機能を利用する" Description="試験的な実装のため、バージョンアップで利用できなくなる可能性があります。" IsExpanded="True">
+            <TextBlock Text="{loc:Tr Notify.Title}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr Notify.Use}" Description="{loc:Tr Notify.Use.Desc}" IsExpanded="True">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf075;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Notification.Enable}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Notification.Enable}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
 
-                <ui:FASettingsExpanderItem Content="地震情報ソース変更時">
+                <ui:FASettingsExpanderItem Content="{loc:Tr Notify.OnSourceChange}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.SwitchEqSource}" OnContent="通知する" OffContent="通知しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.SwitchEqSource}" OnContent="{loc:Tr Notify.On}" OffContent="{loc:Tr Notify.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="地震情報受信時">
+                <ui:FASettingsExpanderItem Content="{loc:Tr Notify.OnEarthquake}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.GotEq}" OnContent="通知する" OffContent="通知しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.GotEq}" OnContent="{loc:Tr Notify.On}" OffContent="{loc:Tr Notify.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="緊急地震速報更新時">
+                <ui:FASettingsExpanderItem Content="{loc:Tr Notify.OnEew}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.EewReceived}" OnContent="通知する" OffContent="通知しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.EewReceived}" OnContent="{loc:Tr Notify.On}" OffContent="{loc:Tr Notify.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
 
-                <ui:FASettingsExpanderItem Content="津波情報更新時">
+                <ui:FASettingsExpanderItem Content="{loc:Tr Notify.OnTsunami}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.Tsunami}" OnContent="通知する" OffContent="通知しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.Tsunami}" OnContent="{loc:Tr Notify.On}" OffContent="{loc:Tr Notify.Off}" />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
 
             <StackPanel IsVisible="{Binding IsLinux}">
-                <TextBlock Text="デスクトップ連携 (Linux)" FontWeight="Bold" Margin="10,20,10,5" />
-                <ui:FASettingsExpander Header="デスクトップエントリを自動登録する"
-                                       Description="(再起動後反映)KDE などで通知のアプリ名・アイコン・個別通知設定を有効にするため、~/.local/share にエントリとアイコンを生成します。">
+                <TextBlock Text="{loc:Tr Notify.Linux}" FontWeight="Bold" Margin="10,20,10,5" />
+                <ui:FASettingsExpander Header="{loc:Tr Notify.LinuxEntry}"
+                                       Description="{loc:Tr Notify.LinuxEntry.Desc}">
                     <ui:FASettingsExpander.IconSource>
                         <ui:FAFontIconSource Glyph="&#xf108;" FontFamily="{StaticResource IconFont}" />
                     </ui:FASettingsExpander.IconSource>
                     <ui:FASettingsExpander.Footer>
-                        <ToggleSwitch IsChecked="{Binding Config.Notification.RegisterDesktopEntry}" OnContent="する" OffContent="しない" />
+                        <ToggleSwitch IsChecked="{Binding Config.Notification.RegisterDesktopEntry}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                     </ui:FASettingsExpander.Footer>
                 </ui:FASettingsExpander>
             </StackPanel>

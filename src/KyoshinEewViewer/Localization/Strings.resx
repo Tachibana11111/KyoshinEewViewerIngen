@@ -1,0 +1,3477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accuracy.Epi.1" xml:space="preserve">
+    <value>P/S波レベル超え or IPF(1点) [気象庁]</value>
+  </data>
+  <data name="Accuracy.Epi.2" xml:space="preserve">
+    <value>IPF法(2点) [気象庁]</value>
+  </data>
+  <data name="Accuracy.Epi.3" xml:space="preserve">
+    <value>IPF法(3点/4点) [気象庁]</value>
+  </data>
+  <data name="Accuracy.Epi.4" xml:space="preserve">
+    <value>IPF法(5点以上) [気象庁]</value>
+  </data>
+  <data name="Accuracy.Epi.5" xml:space="preserve">
+    <value>Hi-net(4点以下or情報なし) [防災科研]</value>
+  </data>
+  <data name="Accuracy.Epi.6" xml:space="preserve">
+    <value>Hi-net(5点以上) [防災科研]</value>
+  </data>
+  <data name="Accuracy.Epi.7" xml:space="preserve">
+    <value>EPOS(海域[観測網外])</value>
+  </data>
+  <data name="Accuracy.Epi.8" xml:space="preserve">
+    <value>EPOS(内陸[観測網内])</value>
+  </data>
+  <data name="Accuracy.Mag.2" xml:space="preserve">
+    <value>Hi-net [防災科研]</value>
+  </data>
+  <data name="Accuracy.Mag.3" xml:space="preserve">
+    <value>全点P相</value>
+  </data>
+  <data name="Accuracy.Mag.4" xml:space="preserve">
+    <value>P相/全相混在</value>
+  </data>
+  <data name="Accuracy.Mag.5" xml:space="preserve">
+    <value>全点全相</value>
+  </data>
+  <data name="Accuracy.Mag.8" xml:space="preserve">
+    <value>P/S波レベル超え</value>
+  </data>
+  <data name="Accuracy.NoParameter" xml:space="preserve">
+    <value>パラメータが設定されていません</value>
+  </data>
+  <data name="Accuracy.UnknownValue" xml:space="preserve">
+    <value>不明({0})</value>
+  </data>
+  <data name="AshFallReport.01" xml:space="preserve">
+    <value>防災気象情報(降灰)</value>
+  </data>
+  <data name="AshFallReport.02" xml:space="preserve">
+    <value>火山名</value>
+  </data>
+  <data name="AshFallReport.03" xml:space="preserve">
+    <value>基点時刻</value>
+  </data>
+  <data name="AshFallReport.04" xml:space="preserve">
+    <value>基点から</value>
+  </data>
+  <data name="AshFallReport.05" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="AshFallReport.06" xml:space="preserve">
+    <value>地図操作</value>
+  </data>
+  <data name="AshFallReport.07" xml:space="preserve">
+    <value>時間後</value>
+  </data>
+  <data name="AshFallReport.F01" xml:space="preserve">
+    <value>{0:d日}</value>
+  </data>
+  <data name="AshFallReport.F02" xml:space="preserve">
+    <value>各地の情報({0})</value>
+  </data>
+  <data name="AshFallReport.F03" xml:space="preserve">
+    <value>{0:dd日 HH時}</value>
+  </data>
+  <data name="Axis.NoToken" xml:space="preserve">
+    <value>トークンが入力されていません。</value>
+  </data>
+  <data name="Axis.Status.ConnectFailed" xml:space="preserve">
+    <value>接続に失敗しました。自動でリトライされます…</value>
+  </data>
+  <data name="Axis.Status.Connected" xml:space="preserve">
+    <value>接続完了</value>
+  </data>
+  <data name="Axis.Status.ConnectedRtt" xml:space="preserve">
+    <value>接続完了 (RTT: {0:0.0}ms)</value>
+  </data>
+  <data name="Axis.Status.Connecting" xml:space="preserve">
+    <value>接続中…</value>
+  </data>
+  <data name="Axis.Status.DisconnectDone" xml:space="preserve">
+    <value>切断しました</value>
+  </data>
+  <data name="Axis.Status.Disconnected" xml:space="preserve">
+    <value>切断されました</value>
+  </data>
+  <data name="Axis.Status.DisconnectedRetry" xml:space="preserve">
+    <value>切断されました。{0:0}秒後に再接続を行います…</value>
+  </data>
+  <data name="Axis.Status.Disconnecting" xml:space="preserve">
+    <value>切断中…</value>
+  </data>
+  <data name="Axis.Status.Idle" xml:space="preserve">
+    <value>待機中</value>
+  </data>
+  <data name="Axis.TokenExpired" xml:space="preserve">
+    <value>トークンの有効期限が切れています。</value>
+  </data>
+  <data name="AxisPage.01" xml:space="preserve">
+    <value>AXIS とは</value>
+  </data>
+  <data name="AxisPage.02" xml:space="preserve">
+    <value>AXIS が利用できる機能が有効になっていない場合は接続されません。</value>
+  </data>
+  <data name="AxisPage.03" xml:space="preserve">
+    <value>アクセストークン</value>
+  </data>
+  <data name="AxisPage.04" xml:space="preserve">
+    <value>トークン情報</value>
+  </data>
+  <data name="AxisPage.05" xml:space="preserve">
+    <value>ユーザー名:</value>
+  </data>
+  <data name="AxisPage.06" xml:space="preserve">
+    <value>チャンネル:</value>
+  </data>
+  <data name="AxisPage.07" xml:space="preserve">
+    <value>有効期限:</value>
+  </data>
+  <data name="AxisPage.08" xml:space="preserve">
+    <value>受信開始</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Common.Disabled" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="Common.Enabled" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="Common.Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Common.None" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="Common.Off" xml:space="preserve">
+    <value>しない</value>
+  </data>
+  <data name="Common.On" xml:space="preserve">
+    <value>する</value>
+  </data>
+  <data name="Common.Unknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="Common.Volume" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="DC.Ash.Heavy" xml:space="preserve">
+    <value>多量の降灰</value>
+  </data>
+  <data name="DC.Ash.Light" xml:space="preserve">
+    <value>少量の降灰</value>
+  </data>
+  <data name="DC.Ash.Moderate" xml:space="preserve">
+    <value>やや多量の降灰</value>
+  </data>
+  <data name="DC.Ash.SmallRocks" xml:space="preserve">
+    <value>小さな噴石の落下</value>
+  </data>
+  <data name="DC.Class.Maximum" xml:space="preserve">
+    <value>最優先</value>
+  </data>
+  <data name="DC.Class.Priority" xml:space="preserve">
+    <value>優先</value>
+  </data>
+  <data name="DC.Class.Regular" xml:space="preserve">
+    <value>通常</value>
+  </data>
+  <data name="DC.Class.TrainingLong" xml:space="preserve">
+    <value>訓練･試験</value>
+  </data>
+  <data name="DC.Class.TrainingShort" xml:space="preserve">
+    <value>訓･試</value>
+  </data>
+  <data name="DC.Detail" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="DC.Flash" xml:space="preserve">
+    <value>速報</value>
+  </data>
+  <data name="DC.Flood.Danger" xml:space="preserve">
+    <value>氾濫危険情報</value>
+  </data>
+  <data name="DC.Flood.Occurred" xml:space="preserve">
+    <value>氾濫発生情報</value>
+  </data>
+  <data name="DC.Flood.Warning" xml:space="preserve">
+    <value>氾濫警戒情報</value>
+  </data>
+  <data name="DC.Info.Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="DC.Info.Correct" xml:space="preserve">
+    <value>訂正</value>
+  </data>
+  <data name="DC.Info.Issue" xml:space="preserve">
+    <value>発表</value>
+  </data>
+  <data name="DC.Information" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="DC.Magnitude.Huge" xml:space="preserve">
+    <value>巨大</value>
+  </data>
+  <data name="DC.Nankai.Advisory" xml:space="preserve">
+    <value>巨大地震注意</value>
+  </data>
+  <data name="DC.Nankai.Ended" xml:space="preserve">
+    <value>調査終了</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingA" xml:space="preserve">
+    <value>調査中(M6.8以上の地震発生)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingB" xml:space="preserve">
+    <value>調査中(みずみ計観測)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingC" xml:space="preserve">
+    <value>調査中(その他の事象観測)</value>
+  </data>
+  <data name="DC.Nankai.Warning" xml:space="preserve">
+    <value>巨大地震警戒</value>
+  </data>
+  <data name="DC.NoInformation" xml:space="preserve">
+    <value>情報なし</value>
+  </data>
+  <data name="DC.Other" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="DC.OtherValue" xml:space="preserve">
+    <value>その他({0})</value>
+  </data>
+  <data name="DC.OtherWarning" xml:space="preserve">
+    <value>その他の警報</value>
+  </data>
+  <data name="DC.Reserved" xml:space="preserve">
+    <value>予約済み</value>
+  </data>
+  <data name="DC.ReservedValue" xml:space="preserve">
+    <value>予約済み({0})</value>
+  </data>
+  <data name="DC.Special.All" xml:space="preserve">
+    <value>全ての気象特別警報</value>
+  </data>
+  <data name="DC.Special.Blizzard" xml:space="preserve">
+    <value>暴風雪特別警報</value>
+  </data>
+  <data name="DC.Special.HeavyRain" xml:space="preserve">
+    <value>大雨特別警報</value>
+  </data>
+  <data name="DC.Special.HeavySnow" xml:space="preserve">
+    <value>大雪特別警報</value>
+  </data>
+  <data name="DC.Special.HighWave" xml:space="preserve">
+    <value>波浪特別警報</value>
+  </data>
+  <data name="DC.Special.Storm" xml:space="preserve">
+    <value>暴風特別警報</value>
+  </data>
+  <data name="DC.Special.StormSurge" xml:space="preserve">
+    <value>高潮特別警報</value>
+  </data>
+  <data name="DC.Tsunami.LocalUnlikely" xml:space="preserve">
+    <value>破壊的な局地津波が発生する可能性は極めて低い</value>
+  </data>
+  <data name="DC.Tsunami.NearSource" xml:space="preserve">
+    <value>震源付近で破壊的な津波が発生する可能性あり</value>
+  </data>
+  <data name="DC.Tsunami.None" xml:space="preserve">
+    <value>津波の心配なし</value>
+  </data>
+  <data name="DC.Tsunami.Regional" xml:space="preserve">
+    <value>破壊的な地域津波が発生する可能性あり</value>
+  </data>
+  <data name="DC.Tsunami.Wide" xml:space="preserve">
+    <value>破壊的な広域津波が発生する可能性あり</value>
+  </data>
+  <data name="DC.Typhoon.Analysis" xml:space="preserve">
+    <value>実況</value>
+  </data>
+  <data name="DC.Typhoon.Estimate" xml:space="preserve">
+    <value>推定</value>
+  </data>
+  <data name="DC.Typhoon.Forecast" xml:space="preserve">
+    <value>予報</value>
+  </data>
+  <data name="DC.Typhoon.Large" xml:space="preserve">
+    <value>大型</value>
+  </data>
+  <data name="DC.Typhoon.Strong" xml:space="preserve">
+    <value>強い</value>
+  </data>
+  <data name="DC.Typhoon.VeryLarge" xml:space="preserve">
+    <value>超大型</value>
+  </data>
+  <data name="DC.Typhoon.VeryStrong" xml:space="preserve">
+    <value>非常に強い</value>
+  </data>
+  <data name="DC.Typhoon.Violent" xml:space="preserve">
+    <value>猛烈</value>
+  </data>
+  <data name="DC.Weather.Landslide" xml:space="preserve">
+    <value>土砂災害警戒情報</value>
+  </data>
+  <data name="DC.Weather.OtherElement" xml:space="preserve">
+    <value>その他の警報等情報要素</value>
+  </data>
+  <data name="DC.Weather.ShortRain" xml:space="preserve">
+    <value>記録的短時間大雨情報</value>
+  </data>
+  <data name="DC.Weather.Tornado" xml:space="preserve">
+    <value>竜巻注意情報</value>
+  </data>
+  <data name="DCReportHeader.01" xml:space="preserve">
+    <value>分類</value>
+  </data>
+  <data name="DCReportHeader.02" xml:space="preserve">
+    <value>統合</value>
+  </data>
+  <data name="DCReportHeader.F01" xml:space="preserve">
+    <value>{0:M月dd日 HH時mm分}</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Message" xml:space="preserve">
+    <value>ワークフロー「{0}」を削除しますか？
+この操作は元に戻すことができません。</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Title" xml:space="preserve">
+    <value>ワークフローの削除</value>
+  </data>
+  <data name="Dialog.OpenAudioFile" xml:space="preserve">
+    <value>音声ファイルを開く</value>
+  </data>
+  <data name="Dialog.OpenXml" xml:space="preserve">
+    <value>任意のXML電文を開く</value>
+  </data>
+  <data name="Dialog.ResetWindows.Message" xml:space="preserve">
+    <value>すべてのウィンドウの位置設定をリセットします。
+現在開いているウィンドウは閉じられます。
+よろしいですか？</value>
+  </data>
+  <data name="Dialog.ResetWindows.Title" xml:space="preserve">
+    <value>ウィンドウ位置のリセット</value>
+  </data>
+  <data name="Dmdata.Status.AuthSuccess" xml:space="preserve">
+    <value>認証成功</value>
+  </data>
+  <data name="Dmdata.Status.Authenticated" xml:space="preserve">
+    <value>認証済み</value>
+  </data>
+  <data name="Dmdata.Status.Authenticating" xml:space="preserve">
+    <value>認証しています</value>
+  </data>
+  <data name="Dmdata.Status.ClientCredentials" xml:space="preserve">
+    <value>クライアント資格情報フローを利用中</value>
+  </data>
+  <data name="Dmdata.Status.NotAuth" xml:space="preserve">
+    <value>未認証</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectFailed" xml:space="preserve">
+    <value>再接続に失敗しました</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectStarted" xml:space="preserve">
+    <value>再接続を開始しました</value>
+  </data>
+  <data name="Dmdata.Status.RevokeFailed" xml:space="preserve">
+    <value>トークン無効化失敗</value>
+  </data>
+  <data name="Dmdata.Status.Unlinking" xml:space="preserve">
+    <value>認証を解除しています</value>
+  </data>
+  <data name="DmdataPage.01" xml:space="preserve">
+    <value>Project DM-D.S.S とは</value>
+  </data>
+  <data name="DmdataPage.02" xml:space="preserve">
+    <value>アカウント連携する</value>
+  </data>
+  <data name="DmdataPage.03" xml:space="preserve">
+    <value>連携をキャンセル</value>
+  </data>
+  <data name="DmdataPage.04" xml:space="preserve">
+    <value>アカウント連携解除</value>
+  </data>
+  <data name="DmdataPage.05" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="DmdataPage.06" xml:space="preserve">
+    <value>WebSocketで受信する</value>
+  </data>
+  <data name="DmdataPage.07" xml:space="preserve">
+    <value>WebSocketの接続数を1消費し、リアルタイム性を向上します。</value>
+  </data>
+  <data name="DmdataPage.08" xml:space="preserve">
+    <value>PULL型の場合の取得間隔倍率</value>
+  </data>
+  <data name="DmdataPage.09" xml:space="preserve">
+    <value>伸ばすことでサーバーへの負荷を軽減することができます。</value>
+  </data>
+  <data name="DmdataPage.10" xml:space="preserve">
+    <value>訓練報(テスト等)の受信を行う</value>
+  </data>
+  <data name="DmdataPage.11" xml:space="preserve">
+    <value>WebSocketに接続中の場合、反映には再接続が必要です。</value>
+  </data>
+  <data name="DmdataPage.12" xml:space="preserve">
+    <value>接続の冗長化</value>
+  </data>
+  <data name="DmdataPage.13" xml:space="preserve">
+    <value>東京・大阪の複数エンドポイントに接続して信頼性を向上します。</value>
+  </data>
+  <data name="DmdataPage.14" xml:space="preserve">
+    <value>統計情報</value>
+  </data>
+  <data name="DmdataPage.15" xml:space="preserve">
+    <value>接続状態:</value>
+  </data>
+  <data name="DmdataPage.16" xml:space="preserve">
+    <value>アクティブ接続数:</value>
+  </data>
+  <data name="DmdataPage.17" xml:space="preserve">
+    <value>接続エンドポイント:</value>
+  </data>
+  <data name="DmdataPage.18" xml:space="preserve">
+    <value>受信メッセージ数:</value>
+  </data>
+  <data name="DmdataPage.19" xml:space="preserve">
+    <value>今すぐ再接続</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.01" xml:space="preserve">
+    <value>情報受信時</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.02" xml:space="preserve">
+    <value>情報の更新の有無にかかわらず情報を受信した時</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.03" xml:space="preserve">
+    <value>最大震度変更時</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.04" xml:space="preserve">
+    <value>最大震度が変更されたとき 新規に受信したときにもトリガーされます</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.05" xml:space="preserve">
+    <value>震度が上昇したときのみ</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.06" xml:space="preserve">
+    <value>震源情報</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.07" xml:space="preserve">
+    <value>顕著な地震の震源要素更新</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.08" xml:space="preserve">
+    <value>津波情報による震源情報更新</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.09" xml:space="preserve">
+    <value>長周期地震動観測情報</value>
+  </data>
+  <data name="EarthquakePage.01" xml:space="preserve">
+    <value>地震情報更新時に自動でタブを切り替える</value>
+  </data>
+  <data name="EarthquakePage.02" xml:space="preserve">
+    <value>震度の凡例を表示する</value>
+  </data>
+  <data name="EarthquakePage.03" xml:space="preserve">
+    <value>地図上へ描画されている観測震度の凡例を表示します。</value>
+  </data>
+  <data name="EarthquakePage.04" xml:space="preserve">
+    <value>震度速報</value>
+  </data>
+  <data name="EarthquakePage.05" xml:space="preserve">
+    <value>地域を塗りつぶす</value>
+  </data>
+  <data name="EarthquakePage.06" xml:space="preserve">
+    <value>震度速報の発表地域を塗りつぶします。</value>
+  </data>
+  <data name="EarthquakePage.07" xml:space="preserve">
+    <value>震源･震度情報</value>
+  </data>
+  <data name="EarthquakePage.08" xml:space="preserve">
+    <value>震源･震度情報の発表地域を塗りつぶします。
+大きな地震の場合重くなるため、性能の低いPCでは非推奨です。</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.01" xml:space="preserve">
+    <value>時刻表風地震情報履歴</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.02" xml:space="preserve">
+    <value>ごく浅い</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.F01" xml:space="preserve">
+    <value>{0:yyyy年MM月dd日}</value>
+  </data>
+  <data name="EarthquakeView.01" xml:space="preserve">
+    <value>リストから選択してください</value>
+  </data>
+  <data name="EarthquakeView.02" xml:space="preserve">
+    <value>長周期地震動階級</value>
+  </data>
+  <data name="EarthquakeView.03" xml:space="preserve">
+    <value>発生時刻</value>
+  </data>
+  <data name="EarthquakeView.04" xml:space="preserve">
+    <value>検知時刻</value>
+  </data>
+  <data name="EarthquakeView.05" xml:space="preserve">
+    <value>頃</value>
+  </data>
+  <data name="EarthquakeView.06" xml:space="preserve">
+    <value>震央</value>
+  </data>
+  <data name="EarthquakeView.07" xml:space="preserve">
+    <value>地域</value>
+  </data>
+  <data name="EarthquakeView.08" xml:space="preserve">
+    <value>規模</value>
+  </data>
+  <data name="EarthquakeView.09" xml:space="preserve">
+    <value>震源の深さ</value>
+  </data>
+  <data name="EarthquakeView.10" xml:space="preserve">
+    <value>各地の震度</value>
+  </data>
+  <data name="EarthquakeView.11" xml:space="preserve">
+    <value>震度1以上を観測した地点はありません</value>
+  </data>
+  <data name="EarthquakeView.12" xml:space="preserve">
+    <value>訓練</value>
+  </data>
+  <data name="EarthquakeView.13" xml:space="preserve">
+    <value>試験</value>
+  </data>
+  <data name="EarthquakeView.14" xml:space="preserve">
+    <value>震度</value>
+  </data>
+  <data name="EarthquakeView.15" xml:space="preserve">
+    <value>この情報は取り消されました。</value>
+  </data>
+  <data name="EarthquakeView.16" xml:space="preserve">
+    <value>この情報は訂正されました。</value>
+  </data>
+  <data name="EarthquakeView.17" xml:space="preserve">
+    <value>より新しい情報で訂正されています。</value>
+  </data>
+  <data name="EarthquakeView.18" xml:space="preserve">
+    <value>読み込みに失敗しました。</value>
+  </data>
+  <data name="EarthquakeView.19" xml:space="preserve">
+    <value>過去の地震</value>
+  </data>
+  <data name="EarthquakeView.20" xml:space="preserve">
+    <value>など</value>
+  </data>
+  <data name="EarthquakeView.21" xml:space="preserve">
+    <value>速報</value>
+  </data>
+  <data name="EarthquakeView.22" xml:space="preserve">
+    <value>震源</value>
+  </data>
+  <data name="EarthquakeView.23" xml:space="preserve">
+    <value>検知</value>
+  </data>
+  <data name="EarthquakeView.24" xml:space="preserve">
+    <value>取り消されました</value>
+  </data>
+  <data name="EarthquakeView.25" xml:space="preserve">
+    <value>表示中</value>
+  </data>
+  <data name="EarthquakeView.26" xml:space="preserve">
+    <value>取得中</value>
+  </data>
+  <data name="EarthquakeView.27" xml:space="preserve">
+    <value>情報の取得に問題が発生しました</value>
+  </data>
+  <data name="EarthquakeView.28" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="EarthquakeView.29" xml:space="preserve">
+    <value>時刻表を開く</value>
+  </data>
+  <data name="EarthquakeView.30" xml:space="preserve">
+    <value>外部のXMLファイルを開く(動作未保障)</value>
+  </data>
+  <data name="EarthquakeView.31" xml:space="preserve">
+    <value>過去の地震リストを表示する</value>
+  </data>
+  <data name="EarthquakeView.F01" xml:space="preserve">
+    <value>{0:HH時mm分}</value>
+  </data>
+  <data name="EarthquakeView.F02" xml:space="preserve">
+    <value>{0:d日HH:mm更新}</value>
+  </data>
+  <data name="EarthquakeView.F03" xml:space="preserve">
+    <value>取得元: {0}</value>
+  </data>
+  <data name="EewMap.Cancelled" xml:space="preserve">
+    <value>(取消)</value>
+  </data>
+  <data name="EewMap.CancelledMaybe" xml:space="preserve">
+    <value>(取消?)</value>
+  </data>
+  <data name="EewMap.Final" xml:space="preserve">
+    <value>(終)</value>
+  </data>
+  <data name="EewMap.MaxIntensity" xml:space="preserve">
+    <value>最大震度{0}{1}</value>
+  </data>
+  <data name="EewMap.Over" xml:space="preserve">
+    <value>以上</value>
+  </data>
+  <data name="EewMap.UnknownPlace" xml:space="preserve">
+    <value>震源地不明</value>
+  </data>
+  <data name="EewPanel.01" xml:space="preserve">
+    <value>発生</value>
+  </data>
+  <data name="EewPanel.02" xml:space="preserve">
+    <value>最大震度</value>
+  </data>
+  <data name="EewPanel.03" xml:space="preserve">
+    <value>深さ:</value>
+  </data>
+  <data name="EewPanel.04" xml:space="preserve">
+    <value>規模: </value>
+  </data>
+  <data name="EewPanel.05" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="EewPanel.06" xml:space="preserve">
+    <value>規模未受信</value>
+  </data>
+  <data name="EewPanel.07" xml:space="preserve">
+    <value>以上</value>
+  </data>
+  <data name="EewPanel.08" xml:space="preserve">
+    <value>精度</value>
+  </data>
+  <data name="EewPanel.09" xml:space="preserve">
+    <value>確定済</value>
+  </data>
+  <data name="EewPanel.10" xml:space="preserve">
+    <value>未確定</value>
+  </data>
+  <data name="EewPanel.11" xml:space="preserve">
+    <value>仮定震源要素</value>
+  </data>
+  <data name="EewPanel.12" xml:space="preserve">
+    <value>地点予測</value>
+  </data>
+  <data name="EewPanel.13" xml:space="preserve">
+    <value>外部アプリによる推定値</value>
+  </data>
+  <data name="EewPanel.14" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="EewPanel.15" xml:space="preserve">
+    <value>警報地域</value>
+  </data>
+  <data name="EewPanel.16" xml:space="preserve">
+    <value>警報受信元: </value>
+  </data>
+  <data name="EewPanel.17" xml:space="preserve">
+    <value>報)</value>
+  </data>
+  <data name="EewPanel.18" xml:space="preserve">
+    <value>キャンセルまたは受信範囲外</value>
+  </data>
+  <data name="EewPanel.19" xml:space="preserve">
+    <value>キャンセルされました</value>
+  </data>
+  <data name="EewPanel.F01" xml:space="preserve">
+    <value>緊急地震速報({0:00}報)</value>
+  </data>
+  <data name="EewPanel.F02" xml:space="preserve">
+    <value>緊急地震速報({0:00}報/最終)</value>
+  </data>
+  <data name="EewPanel.F03" xml:space="preserve">
+    <value>{0:dd日 HH:mm:ss}</value>
+  </data>
+  <data name="EewPanel.F04" xml:space="preserve">
+    <value>震央位置: {0}</value>
+  </data>
+  <data name="EewPanel.F05" xml:space="preserve">
+    <value>震源深さ: {0}</value>
+  </data>
+  <data name="EewPanel.F06" xml:space="preserve">
+    <value>　　規模: {0}</value>
+  </data>
+  <data name="EewPanel.F07" xml:space="preserve">
+    <value>{0}地点</value>
+  </data>
+  <data name="EewPanel.F08" xml:space="preserve">
+    <value>{0}地域</value>
+  </data>
+  <data name="EewPanel.F09" xml:space="preserve">
+    <value>受信元: {0}</value>
+  </data>
+  <data name="EewReport.01" xml:space="preserve">
+    <value>防災気象情報(緊急地震速報)</value>
+  </data>
+  <data name="EewReport.F01" xml:space="preserve">
+    <value>{0:dd日 HH時mm分}</value>
+  </data>
+  <data name="EewReport.F02" xml:space="preserve">
+    <value>{0:MM月dd日 HH時mm分 発表}</value>
+  </data>
+  <data name="EewTrigger.01" xml:space="preserve">
+    <value>条件(震度/M)</value>
+  </data>
+  <data name="EewTrigger.02" xml:space="preserve">
+    <value>震度とマグニチュードの条件を設定します。</value>
+  </data>
+  <data name="EewTrigger.03" xml:space="preserve">
+    <value>最大震度: </value>
+  </data>
+  <data name="EewTrigger.04" xml:space="preserve">
+    <value>以上を含む</value>
+  </data>
+  <data name="EewTrigger.05" xml:space="preserve">
+    <value>注: 仮定震源要素の場合はM1.0となります。</value>
+  </data>
+  <data name="EewTrigger.06" xml:space="preserve">
+    <value>マグニチュード: M</value>
+  </data>
+  <data name="EewTrigger.07" xml:space="preserve">
+    <value>両方の条件を満たす (AND)</value>
+  </data>
+  <data name="EewTrigger.08" xml:space="preserve">
+    <value>いずれかの条件を満たす (OR)</value>
+  </data>
+  <data name="EewTrigger.09" xml:space="preserve">
+    <value>条件(発表･更新)</value>
+  </data>
+  <data name="EewTrigger.10" xml:space="preserve">
+    <value>情報自体の発表や更新によるトリガーの条件です。</value>
+  </data>
+  <data name="EewTrigger.11" xml:space="preserve">
+    <value>新規発表</value>
+  </data>
+  <data name="EewTrigger.12" xml:space="preserve">
+    <value>続報発表</value>
+  </data>
+  <data name="EewTrigger.13" xml:space="preserve">
+    <value>より精度の高い情報ソースからの情報</value>
+  </data>
+  <data name="EewTrigger.14" xml:space="preserve">
+    <value>報数が更新されずにより精度の高い情報ソースから情報のみを更新した場合にトリガーされます。</value>
+  </data>
+  <data name="EewTrigger.15" xml:space="preserve">
+    <value>最終報</value>
+  </data>
+  <data name="EewTrigger.16" xml:space="preserve">
+    <value>キャンセル報</value>
+  </data>
+  <data name="EewTrigger.17" xml:space="preserve">
+    <value>警報新規発表</value>
+  </data>
+  <data name="EewTrigger.18" xml:space="preserve">
+    <value>現段階では DM-D.S.S の緊急地震(警報)契約がある場合のみトリガーされます。</value>
+  </data>
+  <data name="EewTrigger.19" xml:space="preserve">
+    <value>警報続報発表</value>
+  </data>
+  <data name="EewTrigger.20" xml:space="preserve">
+    <value>警報キャンセル</value>
+  </data>
+  <data name="EewTrigger.21" xml:space="preserve">
+    <value>条件(変更等)</value>
+  </data>
+  <data name="EewTrigger.22" xml:space="preserve">
+    <value>他の条件と重なる場合、条件ごとに重複してトリガーされます。</value>
+  </data>
+  <data name="EewTrigger.23" xml:space="preserve">
+    <value>警報レベル到達</value>
+  </data>
+  <data name="EewTrigger.24" xml:space="preserve">
+    <value>緊急地震速報(予報) が警報レベルになったときに1度だけトリガーされます。</value>
+  </data>
+  <data name="EewTrigger.25" xml:space="preserve">
+    <value>予想最大震度上昇</value>
+  </data>
+  <data name="EewTrigger.26" xml:space="preserve">
+    <value>予想震度が不明だったものに震度が設定された場合にもトリガーされます。
+SNP連携時には利用非推奨となります。</value>
+  </data>
+  <data name="EewTrigger.27" xml:space="preserve">
+    <value>予想最大震度低下</value>
+  </data>
+  <data name="EewTrigger.28" xml:space="preserve">
+    <value>予想震度が不明になった場合にもトリガーされます。
+SNP連携時には利用非推奨となります。</value>
+  </data>
+  <data name="Endpoint.Global" xml:space="preserve">
+    <value>グローバル</value>
+  </data>
+  <data name="Endpoint.Osaka" xml:space="preserve">
+    <value>大阪</value>
+  </data>
+  <data name="Endpoint.Tokyo" xml:space="preserve">
+    <value>東京</value>
+  </data>
+  <data name="EventLevel.Disabled" xml:space="preserve">
+    <value>利用しない</value>
+  </data>
+  <data name="EventLevel.Medium" xml:space="preserve">
+    <value>普通(震度1程度以上)</value>
+  </data>
+  <data name="EventLevel.Strong" xml:space="preserve">
+    <value>強い(震度3程度以上)</value>
+  </data>
+  <data name="EventLevel.Stronger" xml:space="preserve">
+    <value>非常に強い(震度5弱程度以上)</value>
+  </data>
+  <data name="EventLevel.Weak" xml:space="preserve">
+    <value>弱い(震度1未満)</value>
+  </data>
+  <data name="EventLevel.Weaker" xml:space="preserve">
+    <value>微弱(非推奨)</value>
+  </data>
+  <data name="ExecuteFileAction.01" xml:space="preserve">
+    <value>実行ファイル: </value>
+  </data>
+  <data name="ExecuteFileAction.02" xml:space="preserve">
+    <value>テンプレートが利用できます。</value>
+  </data>
+  <data name="ExecuteFileAction.03" xml:space="preserve">
+    <value>起動引数: </value>
+  </data>
+  <data name="ExecuteFileAction.04" xml:space="preserve">
+    <value>作業ディレクトリ: </value>
+  </data>
+  <data name="ExecuteFileAction.05" xml:space="preserve">
+    <value>既定のアプリで開く</value>
+  </data>
+  <data name="ExecuteFileAction.06" xml:space="preserve">
+    <value>シェルを経由して既定のアプリを使用してファイルを開こうとします。</value>
+  </data>
+  <data name="ExecuteFileAction.07" xml:space="preserve">
+    <value>プロセス終了を待機する</value>
+  </data>
+  <data name="ExecuteFileAction.08" xml:space="preserve">
+    <value>最新の実行結果</value>
+  </data>
+  <data name="Feature.Desc" xml:space="preserve">
+    <value>利用機能の選択ができます。有効でない場合、通知などは行われません。再起動後反映されます。</value>
+  </data>
+  <data name="Feature.Title" xml:space="preserve">
+    <value>機能設定</value>
+  </data>
+  <data name="Feedback.CannotAttach" xml:space="preserve">
+    <value>添付できないファイルがあります</value>
+  </data>
+  <data name="Feedback.Cat.Bug" xml:space="preserve">
+    <value>バグ報告</value>
+  </data>
+  <data name="Feedback.Cat.Feature" xml:space="preserve">
+    <value>機能要望</value>
+  </data>
+  <data name="Feedback.Cat.Other" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="Feedback.Cat.Question" xml:space="preserve">
+    <value>質問</value>
+  </data>
+  <data name="Feedback.Oversize" xml:space="preserve">
+    <value>合計サイズが上限（{0}MB）を超えるため添付できなかったファイル:</value>
+  </data>
+  <data name="Feedback.PickFiles" xml:space="preserve">
+    <value>添付するファイルを選択</value>
+  </data>
+  <data name="Feedback.ReadFailed" xml:space="preserve">
+    <value>読み取りに失敗したファイル:</value>
+  </data>
+  <data name="Feedback.SendFailed" xml:space="preserve">
+    <value>送信に失敗しました: {0}</value>
+  </data>
+  <data name="Feedback.Sending" xml:space="preserve">
+    <value>送信中...</value>
+  </data>
+  <data name="Feedback.SentMessage" xml:space="preserve">
+    <value>フィードバックを送信しました。ご協力ありがとうございました。</value>
+  </data>
+  <data name="Feedback.SentTitle" xml:space="preserve">
+    <value>フィードバック送信完了</value>
+  </data>
+  <data name="Feedback.TotalSize" xml:space="preserve">
+    <value>合計 {0} / {1}</value>
+  </data>
+  <data name="Feedback.Unavailable" xml:space="preserve">
+    <value>フィードバック機能を利用できません。</value>
+  </data>
+  <data name="FeedbackPage.01" xml:space="preserve">
+    <value>フィードバックを送信できません</value>
+  </data>
+  <data name="FeedbackPage.02" xml:space="preserve">
+    <value>フィードバックについて</value>
+  </data>
+  <data name="FeedbackPage.03" xml:space="preserve">
+    <value>種別</value>
+  </data>
+  <data name="FeedbackPage.04" xml:space="preserve">
+    <value>タイトル</value>
+  </data>
+  <data name="FeedbackPage.05" xml:space="preserve">
+    <value>本文</value>
+  </data>
+  <data name="FeedbackPage.06" xml:space="preserve">
+    <value>連絡先メールアドレス（任意）</value>
+  </data>
+  <data name="FeedbackPage.07" xml:space="preserve">
+    <value>返信が必要な場合のみご入力ください。</value>
+  </data>
+  <data name="FeedbackPage.08" xml:space="preserve">
+    <value>直近のログ（最大1000件）をテキストファイルとして添付する</value>
+  </data>
+  <data name="FeedbackPage.09" xml:space="preserve">
+    <value>ファイル添付</value>
+  </data>
+  <data name="FeedbackPage.10" xml:space="preserve">
+    <value>ファイルを追加</value>
+  </data>
+  <data name="FeedbackPage.11" xml:space="preserve">
+    <value>合計20MBまで。画像・ログ・設定ファイルなどを追加できます。</value>
+  </data>
+  <data name="FeedbackPage.12" xml:space="preserve">
+    <value>添付を削除</value>
+  </data>
+  <data name="FeedbackPage.13" xml:space="preserve">
+    <value>クラッシュレポートの送信が無効な状態でアプリを起動したため、フィードバックの送信機能を利用できません。設定を有効にしてから再起動してください。</value>
+  </data>
+  <data name="FeedbackPage.14" xml:space="preserve">
+    <value>ご意見・ご要望・不具合のご報告などを開発者へ送信できます。個人を特定できる情報の送信は避けてください。</value>
+  </data>
+  <data name="FeedbackPage.15" xml:space="preserve">
+    <value>例: 〇〇画面で△△が表示されない</value>
+  </data>
+  <data name="FeedbackPage.16" xml:space="preserve">
+    <value>内容を具体的にお書きください。
+バグの場合は発生手順・発生日時なども記載いただけると助かります。</value>
+  </data>
+  <data name="FloodReport.01" xml:space="preserve">
+    <value>防災気象情報(洪水)</value>
+  </data>
+  <data name="FloodReport.02" xml:space="preserve">
+    <value>指定河川洪水予報</value>
+  </data>
+  <data name="General.Appearance" xml:space="preserve">
+    <value>外観</value>
+  </data>
+  <data name="General.AutoUpdate" xml:space="preserve">
+    <value>自動更新を利用する(未実装)</value>
+  </data>
+  <data name="General.CheckUpdate" xml:space="preserve">
+    <value>定期的に更新情報をチェックする</value>
+  </data>
+  <data name="General.ColorSample" xml:space="preserve">
+    <value>配色サンプル</value>
+  </data>
+  <data name="General.DevFeatures" xml:space="preserve">
+    <value>開発者向け機能:</value>
+  </data>
+  <data name="General.FocusExisting" xml:space="preserve">
+    <value>重複起動時に既存のウィンドウを最前面に表示する</value>
+  </data>
+  <data name="General.FocusExisting.Desc" xml:space="preserve">
+    <value>警告画面の代わりに、既に起動しているウィンドウを最前面に表示します</value>
+  </data>
+  <data name="General.ForceUpdate" xml:space="preserve">
+    <value>強制更新（動作確認用）</value>
+  </data>
+  <data name="General.HighPriority" xml:space="preserve">
+    <value>プロセスの優先度を『高』にして起動する</value>
+  </data>
+  <data name="General.HighPriority.Desc" xml:space="preserve">
+    <value>他のアプリに処理を優先され情報が表示されないことを防ぎます</value>
+  </data>
+  <data name="General.IntensityTheme" xml:space="preserve">
+    <value>震度アイコンテーマ</value>
+  </data>
+  <data name="General.IntensityTheme.Desc" xml:space="preserve">
+    <value>震度アイコンのみの配色</value>
+  </data>
+  <data name="General.Language" xml:space="preserve">
+    <value>表示言語</value>
+  </data>
+  <data name="General.Language.Desc" xml:space="preserve">
+    <value>アプリケーションで使用する言語</value>
+  </data>
+  <data name="General.LogDir" xml:space="preserve">
+    <value>出力先ディレクトリ</value>
+  </data>
+  <data name="General.LogDir.Desc" xml:space="preserve">
+    <value>ファイル名は自動で決定されます。</value>
+  </data>
+  <data name="General.LogToExeDir" xml:space="preserve">
+    <value>実行ディレクトリに出力する</value>
+  </data>
+  <data name="General.LogToExeDir.Desc" xml:space="preserve">
+    <value>無効の場合はアプリケーションデータディレクトリに出力します。</value>
+  </data>
+  <data name="General.NtpFallbackHttp" xml:space="preserve">
+    <value>NTPが使用できない場合、HTTPで試行する</value>
+  </data>
+  <data name="General.NtpFallbackHttp.Desc" xml:space="preserve">
+    <value>HTTPの場合の接続先は現状選ぶことができません。</value>
+  </data>
+  <data name="General.NtpServer" xml:space="preserve">
+    <value>接続先</value>
+  </data>
+  <data name="General.NtpServer.Desc" xml:space="preserve">
+    <value>NTPサーバーのアドレス</value>
+  </data>
+  <data name="General.NtpSync" xml:space="preserve">
+    <value>インターネットを使用しての時刻同期を行う</value>
+  </data>
+  <data name="General.NtpSync.Desc" xml:space="preserve">
+    <value>使用しない場合の動作の保証はできません。</value>
+  </data>
+  <data name="General.OpenLogDir" xml:space="preserve">
+    <value>ログディレクトリを開く</value>
+  </data>
+  <data name="General.Other" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="General.SendReport" xml:space="preserve">
+    <value>動作レポートを開発者に送信する</value>
+  </data>
+  <data name="General.SendReport.Desc" xml:space="preserve">
+    <value>処理時間の統計･エラー内容が送信されます。
+送られた情報から開発者が個人を特定することはありません。
+アプリケーションの安定化にご協力をお願いいたします。</value>
+  </data>
+  <data name="General.TimeSettings" xml:space="preserve">
+    <value>時刻設定</value>
+  </data>
+  <data name="General.UsePreRelease" xml:space="preserve">
+    <value>正式公開前のビルドを利用する</value>
+  </data>
+  <data name="General.UsePreRelease.Desc" xml:space="preserve">
+    <value>開発中の新機能がご利用いただけますが、不安定の可能性があります。</value>
+  </data>
+  <data name="General.UseStable" xml:space="preserve">
+    <value>安定版を利用する</value>
+  </data>
+  <data name="General.UseStable.Desc" xml:space="preserve">
+    <value>機能追加が遅い代わりに安定して利用できるバージョンです。整備までお待ちください。</value>
+  </data>
+  <data name="General.WindowScale" xml:space="preserve">
+    <value>ウィンドウの拡大率</value>
+  </data>
+  <data name="General.WindowScale.Desc" xml:space="preserve">
+    <value>メインウィンドウの拡大･縮小を行います。</value>
+  </data>
+  <data name="General.WindowSettings" xml:space="preserve">
+    <value>ウィンドウ設定</value>
+  </data>
+  <data name="General.WindowSettings.Hint" xml:space="preserve">
+    <value>最小化時の非表示設定は通知設定にあります。</value>
+  </data>
+  <data name="General.WindowTheme" xml:space="preserve">
+    <value>ウィンドウテーマ</value>
+  </data>
+  <data name="General.WindowTheme.Desc" xml:space="preserve">
+    <value>全体的な配色</value>
+  </data>
+  <data name="General.WriteLog" xml:space="preserve">
+    <value>ログを出力する</value>
+  </data>
+  <data name="General.WriteLog.Desc" xml:space="preserve">
+    <value>不具合報告や動作確認に役立ちます(再起動後反映)</value>
+  </data>
+  <data name="Gps.Autonomous" xml:space="preserve">
+    <value>自律測位</value>
+  </data>
+  <data name="Gps.Differential" xml:space="preserve">
+    <value>干渉測位</value>
+  </data>
+  <data name="Gps.Estimated" xml:space="preserve">
+    <value>推定算出</value>
+  </data>
+  <data name="Gps.None" xml:space="preserve">
+    <value>データ無</value>
+  </data>
+  <data name="HypocenterReport.01" xml:space="preserve">
+    <value>防災気象情報(震源)</value>
+  </data>
+  <data name="IntensityThemeEditWindow.01" xml:space="preserve">
+    <value>震度アイコンテーマ編集</value>
+  </data>
+  <data name="IntensityThemeEditWindow.02" xml:space="preserve">
+    <value>縁の太さ</value>
+  </data>
+  <data name="IntensityThemeEditWindow.03" xml:space="preserve">
+    <value>文字:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.04" xml:space="preserve">
+    <value>背景:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.05" xml:space="preserve">
+    <value>縁:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.06" xml:space="preserve">
+    <value>異常</value>
+  </data>
+  <data name="IntensityThemeEditWindow.07" xml:space="preserve">
+    <value>階級0</value>
+  </data>
+  <data name="IntensityThemeEditWindow.08" xml:space="preserve">
+    <value>階級1</value>
+  </data>
+  <data name="IntensityThemeEditWindow.09" xml:space="preserve">
+    <value>階級2</value>
+  </data>
+  <data name="IntensityThemeEditWindow.10" xml:space="preserve">
+    <value>階級3</value>
+  </data>
+  <data name="IntensityThemeEditWindow.11" xml:space="preserve">
+    <value>階級4</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.01" xml:space="preserve">
+    <value>緊急地震速報について(クリックで展開)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.02" xml:space="preserve">
+    <value>基本設定</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.03" xml:space="preserve">
+    <value>発表時に自動でタブを切り替える</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.04" xml:space="preserve">
+    <value>強震モニタの緊急地震速報を受信する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.05" xml:space="preserve">
+    <value>オフにした場合、そのほかの緊急地震速報を受信できるソースの設定をしていない場合は緊急地震速報が表示できなくなります。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.06" xml:space="preserve">
+    <value>表示設定</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.07" xml:space="preserve">
+    <value>詳細な情報を表示する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.08" xml:space="preserve">
+    <value>十分に知識があり、情報の活用ができる方のみご利用ください。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.09" xml:space="preserve">
+    <value>1点検知のEEWや精度情報が表示されるようになります。
+ただし、強震モニタのみでは取得できない情報のため、 DM-D.S.S. や SignalNowProfessional で取得できていない場合は表示できません。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.10" xml:space="preserve">
+    <value>P/S波の描画を強震モニタの遅延に合わせる</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.11" xml:space="preserve">
+    <value>揺れの広がりを強震モニタの表示時刻に合わせて描画します。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.12" xml:space="preserve">
+    <value>強震モニタの観測値と円の形が一致するようになりますが、実時間より遅れて表示されることになるため注意してください。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.13" xml:space="preserve">
+    <value>P/S波のアニメーションを無効化する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.14" xml:space="preserve">
+    <value>負荷が軽減されます。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.15" xml:space="preserve">
+    <value>各地域のマッピング</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.16" xml:space="preserve">
+    <value>警報地域を地図上に表示する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.17" xml:space="preserve">
+    <value>警報が発表されている地域を塗りつぶします。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.18" xml:space="preserve">
+    <value>各地域の予想最大震度を地図上に表示する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.19" xml:space="preserve">
+    <value>各地域を予想最大震度で塗りつぶします。
+警報地域よりも優先されます。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.20" xml:space="preserve">
+    <value>地点予測の表示</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.21" xml:space="preserve">
+    <value>外部アプリから提供された地点ごとの予測震度と到達までのカウントダウンの表示方法です。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.22" xml:space="preserve">
+    <value>地点予測を地図上に表示する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.23" xml:space="preserve">
+    <value>地点の位置に予測震度と残り秒数を表示します。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.24" xml:space="preserve">
+    <value>大きなカウントダウンに展開する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.25" xml:space="preserve">
+    <value>しきい値以上の予測震度の地点を、パネル内で大きく表示します。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.26" xml:space="preserve">
+    <value>展開するしきい値</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.27" xml:space="preserve">
+    <value>外部連携</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.28" xml:space="preserve">
+    <value>別途ソフトウェアの購入+ソフトウェア本体のインストール･起動が必要です。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.29" xml:space="preserve">
+    <value>(クリックで製品ページを開く)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.30" xml:space="preserve">
+    <value>利用可能であれば連携機能を利用する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.31" xml:space="preserve">
+    <value>再起動後反映されます。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.32" xml:space="preserve">
+    <value>設定された所在地(予想地点)を地図上に表示する</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.33" xml:space="preserve">
+    <value>算出された到達予想時間を使用する(実装予定)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.34" xml:space="preserve">
+    <value>注意事項</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.35" xml:space="preserve">
+    <value>現在地の震度を計算する情報しか送信されない仕様上、地名と予想最大震度は表示されず不明扱いになります。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.36" xml:space="preserve">
+    <value>また、SignalNowProfessionalが起動していない場合でもログファイルが読み取れる場合受信中の表記になります。ご注意ください。</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.37" xml:space="preserve">
+    <value>DM-D.S.Sでの受信は緊急地震速報のプランを契約しているかつ、WebSocketでの接続時に自動で開始されます。
+接続状況はメインウィンドウの時刻情報の横に表示されます。
+なかなか接続されない･PULL型に切り替わってしまうときは一度認証解除し再度認証し直してください。</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.01" xml:space="preserve">
+    <value>地図上のアイテム</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.02" xml:space="preserve">
+    <value>一定未満の震度の観測点を表示しない</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.03" xml:space="preserve">
+    <value>情報が取得できなくなった観測点を表示する</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.04" xml:space="preserve">
+    <value>灰色の円で表示されます。優先度は一番低く表示されます。</value>
+  </data>
+  <data name="KyoshinMonitorPage.01" xml:space="preserve">
+    <value>取得元サーバー</value>
+  </data>
+  <data name="KyoshinMonitorPage.02" xml:space="preserve">
+    <value>基本は 強震モニタ をおすすめします。
+受信しない にすることで強震モニタからの受信を完全に停止します。</value>
+  </data>
+  <data name="KyoshinMonitorPage.03" xml:space="preserve">
+    <value>揺れの検出</value>
+  </data>
+  <data name="KyoshinMonitorPage.04" xml:space="preserve">
+    <value>強震モニタ上で揺れを検出し、自動ズームを行います。</value>
+  </data>
+  <data name="KyoshinMonitorPage.05" xml:space="preserve">
+    <value>揺れ検知時に自動でタブを切り替える</value>
+  </data>
+  <data name="KyoshinMonitorPage.06" xml:space="preserve">
+    <value>自動ズーム･タブ切り替え基準の揺れのレベル</value>
+  </data>
+  <data name="KyoshinMonitorPage.07" xml:space="preserve">
+    <value>揺れ検知範囲の表示モード</value>
+  </data>
+  <data name="KyoshinMonitorPage.08" xml:space="preserve">
+    <value>実験中のため、ウィンドウテーマによっては見えにくい配色になる可能性があります。</value>
+  </data>
+  <data name="KyoshinMonitorPage.09" xml:space="preserve">
+    <value>揺れ検知範囲のアニメーション</value>
+  </data>
+  <data name="KyoshinMonitorPage.10" xml:space="preserve">
+    <value>描画負荷が高い順に 明滅＞点滅＞なし です。</value>
+  </data>
+  <data name="KyoshinMonitorPage.11" xml:space="preserve">
+    <value>取得タイミング</value>
+  </data>
+  <data name="KyoshinMonitorPage.12" xml:space="preserve">
+    <value>データ取得タイミング調整</value>
+  </data>
+  <data name="KyoshinMonitorPage.13" xml:space="preserve">
+    <value>実際の時間から遅延させて強震モニタから取得します。</value>
+  </data>
+  <data name="KyoshinMonitorPage.14" xml:space="preserve">
+    <value>自動でオフセットを調整する</value>
+  </data>
+  <data name="KyoshinMonitorPage.15" xml:space="preserve">
+    <value>受信間隔設定</value>
+  </data>
+  <data name="KyoshinMonitorPage.16" xml:space="preserve">
+    <value>強震モニタの受信を指定した間隔で行います。
+通信量節約に効果があります。</value>
+  </data>
+  <data name="KyoshinMonitorPage.17" xml:space="preserve">
+    <value>EEW受信中は受信間隔を1秒毎にする</value>
+  </data>
+  <data name="KyoshinMonitorPage.18" xml:space="preserve">
+    <value>揺れ検知中は受信間隔を1秒毎にする</value>
+  </data>
+  <data name="KyoshinMonitorPage.19" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="KyoshinMonitorPage.20" xml:space="preserve">
+    <value>色の例を表示する</value>
+  </data>
+  <data name="KyoshinMonitorPage.21" xml:space="preserve">
+    <value>Rt震度 は リアルタイム震度 の省略表記です。</value>
+  </data>
+  <data name="KyoshinMonitorPage.F01" xml:space="preserve">
+    <value>{0}秒毎</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.01" xml:space="preserve">
+    <value>表示中の情報:</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.02" xml:space="preserve">
+    <value>リアルタイムに戻る</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.03" xml:space="preserve">
+    <value>リプレイ中もリアルタイム震度の受信を継続する</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.04" xml:space="preserve">
+    <value>リプレイ終了後も揺れの検知処理に影響がないように裏でリアルタイム震度の受信を続けます。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.05" xml:space="preserve">
+    <value>揺れの検知時にリアルタイムに戻す</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.06" xml:space="preserve">
+    <value>新たに緊急地震速報を受信した場合はリアルタイムに戻す</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.07" xml:space="preserve">
+    <value>上の設定でリアルタイム震度の受信を行っていない場合は強震モニタからのEEWの受信は停止します。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.08" xml:space="preserve">
+    <value>リプレイ開始</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.09" xml:space="preserve">
+    <value>タイムシフト</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.10" xml:space="preserve">
+    <value>過去の強震モニタのデータを最大3時間まで遡ることが可能です。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.11" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.12" xml:space="preserve">
+    <value>3時間前</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.13" xml:space="preserve">
+    <value>タイムシフト開始</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.14" xml:space="preserve">
+    <value>※タイムシフト中は強震モニタ以外の緊急地震速報のソースは利用できません。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.15" xml:space="preserve">
+    <value>リプレイファイルを再生</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.16" xml:space="preserve">
+    <value>過去の強震モニタと緊急地震速報のデータを保存したファイルを再生します。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.17" xml:space="preserve">
+    <value>ファイルを読み込む</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.18" xml:space="preserve">
+    <value>読み込んだファイルの情報</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.19" xml:space="preserve">
+    <value>バージョン: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.20" xml:space="preserve">
+    <value>作成アプリ: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.21" xml:space="preserve">
+    <value>開始: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.22" xml:space="preserve">
+    <value>終了: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.23" xml:space="preserve">
+    <value>圧縮モード: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.24" xml:space="preserve">
+    <value>再生設定</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.25" xml:space="preserve">
+    <value>※再生中に速度を変更すると表示が一時的におかしくなることがあります。</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.26" xml:space="preserve">
+    <value>再生開始</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.27" xml:space="preserve">
+    <value>1倍速に戻す</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.28" xml:space="preserve">
+    <value>再生中のファイルの情報</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.F01" xml:space="preserve">
+    <value>再生速度: {0:0.0}倍速</value>
+  </data>
+  <data name="KyoshinMonitorView.01" xml:space="preserve">
+    <value>Rt震度</value>
+  </data>
+  <data name="KyoshinMonitorView.02" xml:space="preserve">
+    <value>表示時刻</value>
+  </data>
+  <data name="KyoshinMonitorView.03" xml:space="preserve">
+    <value>SignalNowProfessionalから緊急地震速報を受信しています。
+SignalNowProfessionalが未起動の状態でもこのアイコンは表示されます。</value>
+  </data>
+  <data name="KyoshinMonitorView.04" xml:space="preserve">
+    <value>DM-D.S.Sから緊急地震速報を受信しています。</value>
+  </data>
+  <data name="KyoshinMonitorView.05" xml:space="preserve">
+    <value>DM-D.S.S (警報のみ)</value>
+  </data>
+  <data name="KyoshinMonitorView.06" xml:space="preserve">
+    <value>DM-D.S.Sから緊急地震速報（警報）のみを受信しています。</value>
+  </data>
+  <data name="KyoshinMonitorView.07" xml:space="preserve">
+    <value>AXISから緊急地震速報を受信しています。</value>
+  </data>
+  <data name="KyoshinMonitorView.08" xml:space="preserve">
+    <value>緊急地震速報を受信していません</value>
+  </data>
+  <data name="KyoshinMonitorView.09" xml:space="preserve">
+    <value>WebSocketが切断されています！再接続は自動で行われます。</value>
+  </data>
+  <data name="LightningView.01" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="LightningView.02" xml:space="preserve">
+    <value>これは実験目的のツールであり、常用するためのものではありません。</value>
+  </data>
+  <data name="LogOutputAction.01" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
+  <data name="MainView.01" xml:space="preserve">
+    <value>別ウィンドウで開く</value>
+  </data>
+  <data name="MainView.02" xml:space="preserve">
+    <value>アプリケーションの更新があります</value>
+  </data>
+  <data name="MainView.03" xml:space="preserve">
+    <value>設定画面から詳細の確認ができます</value>
+  </data>
+  <data name="MainView.04" xml:space="preserve">
+    <value>設定画面を開く</value>
+  </data>
+  <data name="MainView.05" xml:space="preserve">
+    <value>地図の座標を戻す</value>
+  </data>
+  <data name="Map.AutoZoom" xml:space="preserve">
+    <value>自動拡大</value>
+  </data>
+  <data name="Map.AutoZoomAnimation" xml:space="preserve">
+    <value>自動で拡大させる際にアニメーションを行う</value>
+  </data>
+  <data name="Map.AutoZoomEnable" xml:space="preserve">
+    <value>自動で地図を拡大する</value>
+  </data>
+  <data name="Map.CurrentRange" xml:space="preserve">
+    <value>現在の表示範囲</value>
+  </data>
+  <data name="Map.DisableManualMove" xml:space="preserve">
+    <value>手動での移動操作を禁止する</value>
+  </data>
+  <data name="Map.DisableManualMove.Desc" xml:space="preserve">
+    <value>有効にするとメイン画面のホームボタンが消えます。</value>
+  </data>
+  <data name="Map.FitOnResize" xml:space="preserve">
+    <value>ウィンドウリサイズ時に表示範囲がすべて見えるようにズーム倍率を調整する</value>
+  </data>
+  <data name="Map.Inertia" xml:space="preserve">
+    <value>慣性を有効にする</value>
+  </data>
+  <data name="Map.Inertia.Desc" xml:space="preserve">
+    <value>地図の操作後･マウスホイールでのズーム操作時に慣性で滑らかにスクロールします。</value>
+  </data>
+  <data name="Map.LimitMaxZoom" xml:space="preserve">
+    <value>最大ズームを制限する</value>
+  </data>
+  <data name="Map.LimitMaxZoom.Desc" xml:space="preserve">
+    <value>小さい地震の際に狭い範囲が拡大されて場所がわかりづらくなることに対処できます。</value>
+  </data>
+  <data name="Map.ResetRange" xml:space="preserve">
+    <value>初期範囲に戻す</value>
+  </data>
+  <data name="Map.SaveCurrent" xml:space="preserve">
+    <value>現在の位置を記録する</value>
+  </data>
+  <data name="Map.ShowGrid" xml:space="preserve">
+    <value>グリッドを表示させる</value>
+  </data>
+  <data name="Map.ShowMiniMap" xml:space="preserve">
+    <value>ミニマップを表示する</value>
+  </data>
+  <data name="Map.ShowMiniMap.Desc" xml:space="preserve">
+    <value>デフォルト表示範囲を表示中のとき、左上に沖縄･奄美地方のミニマップを表示します。パフォーマンスに影響を与えます。</value>
+  </data>
+  <data name="Map.ViewRange" xml:space="preserve">
+    <value>表示範囲</value>
+  </data>
+  <data name="MarineReport.01" xml:space="preserve">
+    <value>防災気象情報(海上)</value>
+  </data>
+  <data name="MonitorMode.Lmoni" xml:space="preserve">
+    <value>長周期地震動モニタ</value>
+  </data>
+  <data name="MonitorMode.None" xml:space="preserve">
+    <value>受信しない</value>
+  </data>
+  <data name="MultiWindow.About" xml:space="preserve">
+    <value>マルチウィンドウ機能について</value>
+  </data>
+  <data name="MultiWindow.AboutStore" xml:space="preserve">
+    <value>ウィンドウ格納設定について</value>
+  </data>
+  <data name="MultiWindow.Enable" xml:space="preserve">
+    <value>マルチウィンドウ機能を有効にする</value>
+  </data>
+  <data name="MultiWindow.FocusSub" xml:space="preserve">
+    <value>タブ切り替え時にサブウィンドウをフォーカスする</value>
+  </data>
+  <data name="MultiWindow.FocusSub.Desc" xml:space="preserve">
+    <value>ワークフローや設定によるタブ切り替え要求時、ウィンドウ分離済みの場合はそのウィンドウをフォーカスします</value>
+  </data>
+  <data name="MultiWindow.Reset" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="MultiWindow.ResetAll" xml:space="preserve">
+    <value>すべてのウィンドウを初期位置に戻す</value>
+  </data>
+  <data name="MultiWindow.ResetAll.Desc" xml:space="preserve">
+    <value>分離したウィンドウの位置･サイズ設定をリセットします</value>
+  </data>
+  <data name="MultiWindow.Title" xml:space="preserve">
+    <value>マルチウィンドウ</value>
+  </data>
+  <data name="MultipleAction.01" xml:space="preserve">
+    <value>同時実行を行う</value>
+  </data>
+  <data name="MultipleAction.02" xml:space="preserve">
+    <value>各アクションを並列に実行しようとします。待機や中断などは行われません。</value>
+  </data>
+  <data name="MultipleAction.03" xml:space="preserve">
+    <value>上に移動</value>
+  </data>
+  <data name="MultipleAction.04" xml:space="preserve">
+    <value>下に移動</value>
+  </data>
+  <data name="MultipleAction.05" xml:space="preserve">
+    <value>アクションを削除</value>
+  </data>
+  <data name="MultipleAction.06" xml:space="preserve">
+    <value>アクションを追加</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.01" xml:space="preserve">
+    <value>防災気象情報(南海トラフ地震)</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.02" xml:space="preserve">
+    <value>南海トラフ地震臨時情報</value>
+  </data>
+  <data name="NorthwestPacificTsunamiReport.01" xml:space="preserve">
+    <value>防災気象情報(北西太平洋津波)</value>
+  </data>
+  <data name="Notify.EqSource" xml:space="preserve">
+    <value>{0}で地震情報を受信しています。</value>
+  </data>
+  <data name="Notify.Linux" xml:space="preserve">
+    <value>デスクトップ連携 (Linux)</value>
+  </data>
+  <data name="Notify.LinuxEntry" xml:space="preserve">
+    <value>デスクトップエントリを自動登録する</value>
+  </data>
+  <data name="Notify.LinuxEntry.Desc" xml:space="preserve">
+    <value>(再起動後反映)KDE などで通知のアプリ名・アイコン・個別通知設定を有効にするため、~/.local/share にエントリとアイコンを生成します。</value>
+  </data>
+  <data name="Notify.MultiWindowEnabled" xml:space="preserve">
+    <value>マルチウィンドウ機能が有効です</value>
+  </data>
+  <data name="Notify.NotifyOnStore" xml:space="preserve">
+    <value>タスクトレイ格納時に通知する</value>
+  </data>
+  <data name="Notify.Off" xml:space="preserve">
+    <value>通知しない</value>
+  </data>
+  <data name="Notify.On" xml:space="preserve">
+    <value>通知する</value>
+  </data>
+  <data name="Notify.OnEarthquake" xml:space="preserve">
+    <value>地震情報受信時</value>
+  </data>
+  <data name="Notify.OnEew" xml:space="preserve">
+    <value>緊急地震速報更新時</value>
+  </data>
+  <data name="Notify.OnSourceChange" xml:space="preserve">
+    <value>地震情報ソース変更時</value>
+  </data>
+  <data name="Notify.OnTsunami" xml:space="preserve">
+    <value>津波情報更新時</value>
+  </data>
+  <data name="Notify.StartMinimized" xml:space="preserve">
+    <value>起動時に最小化状態で起動する</value>
+  </data>
+  <data name="Notify.StoreOnClose" xml:space="preserve">
+    <value>ウィンドウを閉じようとした際にタスクトレイに収納する</value>
+  </data>
+  <data name="Notify.StoreOnMinimize" xml:space="preserve">
+    <value>最小化時にタスクトレイに収納する</value>
+  </data>
+  <data name="Notify.Title" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="Notify.Tray" xml:space="preserve">
+    <value>トレイアイコン</value>
+  </data>
+  <data name="Notify.Use" xml:space="preserve">
+    <value>通知機能を利用する</value>
+  </data>
+  <data name="Notify.Use.Desc" xml:space="preserve">
+    <value>試験的な実装のため、バージョンアップで利用できなくなる可能性があります。</value>
+  </data>
+  <data name="Notify.UseTray" xml:space="preserve">
+    <value>タスクトレイのアイコンを利用する</value>
+  </data>
+  <data name="Notify.UseTray.Desc" xml:space="preserve">
+    <value>(再起動後反映)通知領域にアイコンを常駐させ、右クリックメニューやウィンドウ格納を利用できます。</value>
+  </data>
+  <data name="Notify.WindowStore" xml:space="preserve">
+    <value>ウィンドウ格納設定</value>
+  </data>
+  <data name="ObservationPointsDataPage.01" xml:space="preserve">
+    <value>観測点情報の自動更新</value>
+  </data>
+  <data name="ObservationPointsDataPage.02" xml:space="preserve">
+    <value>起動時に新しい観測点情報を自動的にダウンロードします。</value>
+  </data>
+  <data name="ObservationPointsDataPage.03" xml:space="preserve">
+    <value>現在のデータ情報</value>
+  </data>
+  <data name="ObservationPointsDataPage.04" xml:space="preserve">
+    <value>データバージョン</value>
+  </data>
+  <data name="ObservationPointsDataPage.05" xml:space="preserve">
+    <value>使用中の観測点データのバージョンです。</value>
+  </data>
+  <data name="ObservationPointsDataPage.06" xml:space="preserve">
+    <value>作成日時</value>
+  </data>
+  <data name="ObservationPointsDataPage.07" xml:space="preserve">
+    <value>データソース</value>
+  </data>
+  <data name="ObservationPointsDataPage.08" xml:space="preserve">
+    <value>観測点数</value>
+  </data>
+  <data name="ObservationPointsDataPage.09" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="ObservationPointsDataPage.10" xml:space="preserve">
+    <value>手動更新</value>
+  </data>
+  <data name="ObservationPointsDataPage.11" xml:space="preserve">
+    <value>観測点情報を手動で更新します。</value>
+  </data>
+  <data name="ObservationPointsDataPage.12" xml:space="preserve">
+    <value>更新を適用するにはアプリケーションの再起動が必要です。</value>
+  </data>
+  <data name="ObservationPointsDataPage.F01" xml:space="preserve">
+    <value>{0}点</value>
+  </data>
+  <data name="PeakExpansion.IncludeSubRegion" xml:space="preserve">
+    <value>サブ地域も含む</value>
+  </data>
+  <data name="PeakExpansion.None" xml:space="preserve">
+    <value>なにもしない</value>
+  </data>
+  <data name="PeakExpansion.RegionOnly" xml:space="preserve">
+    <value>地域のみ</value>
+  </data>
+  <data name="PlaySoundAction.01" xml:space="preserve">
+    <value>待機</value>
+  </data>
+  <data name="PlaySoundAction.02" xml:space="preserve">
+    <value>再生終了までワークフローの実行を中断します。再生完了後に別のアクションを続けて実行する場合に便利です。</value>
+  </data>
+  <data name="PlaySoundAction.03" xml:space="preserve">
+    <value>ここに指定されたファイルを再生します。テンプレートが利用できます。</value>
+  </data>
+  <data name="PlaySoundAction.04" xml:space="preserve">
+    <value>プレビューを再生する。変数は展開されません。</value>
+  </data>
+  <data name="Quake.Comment.Database" xml:space="preserve">
+    <value>出典: 気象庁 震度データベース</value>
+  </data>
+  <data name="Quake.Title.Flash" xml:space="preserve">
+    <value>震度速報</value>
+  </data>
+  <data name="Quake.Title.FlashAndHypo" xml:space="preserve">
+    <value>震度速報+震源情報</value>
+  </data>
+  <data name="Quake.Title.Foreign" xml:space="preserve">
+    <value>遠地地震情報</value>
+  </data>
+  <data name="Quake.Title.Hypo" xml:space="preserve">
+    <value>震源情報</value>
+  </data>
+  <data name="Quake.Title.HypoIntensity" xml:space="preserve">
+    <value>震源･震度情報</value>
+  </data>
+  <data name="Quake.Title.Volcano" xml:space="preserve">
+    <value>大規模噴火</value>
+  </data>
+  <data name="Qzss.AutoDetect" xml:space="preserve">
+    <value>自動検出</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Message" xml:space="preserve">
+    <value>自動検出中にエラーが発生しました。
+{0}</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Title" xml:space="preserve">
+    <value>ボーレート自動検出 エラー</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Message" xml:space="preserve">
+    <value>いずれのボーレートでも有効なセンテンスを受信できませんでした。
+ケーブル接続、デバイスの電源、デバイス側の設定を確認のうえ、手動でボーレートを選択してください。</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Title" xml:space="preserve">
+    <value>ボーレートを自動検出できませんでした</value>
+  </data>
+  <data name="Qzss.CancelWithRate" xml:space="preserve">
+    <value>キャンセル ({0})</value>
+  </data>
+  <data name="Qzss.NoSetting.Message" xml:space="preserve">
+    <value>送信する設定項目が選択されていません。</value>
+  </data>
+  <data name="Qzss.NoSetting.Title" xml:space="preserve">
+    <value>設定項目なし</value>
+  </data>
+  <data name="Qzss.NotConnected" xml:space="preserve">
+    <value>ポートに接続されていません。接続してから再度お試しください。</value>
+  </data>
+  <data name="Qzss.SendDone" xml:space="preserve">
+    <value>設定を送信しました。</value>
+  </data>
+  <data name="Qzss.SendDone.Reconnect" xml:space="preserve">
+    <value>設定を送信しました。ボーレートを {0} に変更して再接続しています。</value>
+  </data>
+  <data name="Qzss.SendDone.Title" xml:space="preserve">
+    <value>設定完了</value>
+  </data>
+  <data name="Qzss.SendFailed.Message" xml:space="preserve">
+    <value>一部の設定送信に失敗しました。詳細は進捗表示をご確認ください。</value>
+  </data>
+  <data name="Qzss.SendFailed.Title" xml:space="preserve">
+    <value>設定送信失敗</value>
+  </data>
+  <data name="Qzss.Step.Baud" xml:space="preserve">
+    <value>UART1 のボーレートを {0} に変更</value>
+  </data>
+  <data name="Qzss.Step.L1s" xml:space="preserve">
+    <value>QZSS L1S (災危通報) 受信を有効化</value>
+  </data>
+  <data name="Qzss.Step.Qzss" xml:space="preserve">
+    <value>QZSS 受信を有効化</value>
+  </data>
+  <data name="Qzss.Step.Rate" xml:space="preserve">
+    <value>更新レートを {0}ms に変更</value>
+  </data>
+  <data name="Qzss.Step.Rmc" xml:space="preserve">
+    <value>UART1 に NMEA RMC 出力を有効化</value>
+  </data>
+  <data name="Qzss.Step.Sfrbx" xml:space="preserve">
+    <value>UART1 に UBX-RXM-SFRBX (衛星航法データ) 出力を有効化</value>
+  </data>
+  <data name="QzssConn.Serial" xml:space="preserve">
+    <value>シリアルポート</value>
+  </data>
+  <data name="QzssPage.01" xml:space="preserve">
+    <value>災危通報とは</value>
+  </data>
+  <data name="QzssPage.02" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="QzssPage.03" xml:space="preserve">
+    <value>接続情報</value>
+  </data>
+  <data name="QzssPage.04" xml:space="preserve">
+    <value>接続方式</value>
+  </data>
+  <data name="QzssPage.05" xml:space="preserve">
+    <value>接続先ホスト</value>
+  </data>
+  <data name="QzssPage.06" xml:space="preserve">
+    <value>NMEA / UBX を出力する TCP サーバーを指定してください。</value>
+  </data>
+  <data name="QzssPage.07" xml:space="preserve">
+    <value>ポート番号</value>
+  </data>
+  <data name="QzssPage.08" xml:space="preserve">
+    <value>接続ポート</value>
+  </data>
+  <data name="QzssPage.09" xml:space="preserve">
+    <value>ボーレート</value>
+  </data>
+  <data name="QzssPage.10" xml:space="preserve">
+    <value>現在のポートに対し各ボーレートを順に試し、有効なセンテンスを受信できたボーレートで接続します。検出中に押下するとキャンセルします。</value>
+  </data>
+  <data name="QzssPage.11" xml:space="preserve">
+    <value>接続開始</value>
+  </data>
+  <data name="QzssPage.12" xml:space="preserve">
+    <value>u-blox 機器 初期設定</value>
+  </data>
+  <data name="QzssPage.13" xml:space="preserve">
+    <value>u-blox 製機器に UBX-CFG-VALSET を送信して各種設定を行います。シリアル接続中のみ利用可能です。</value>
+  </data>
+  <data name="QzssPage.14" xml:space="preserve">
+    <value>UART1 に UBX-RXM-SFRBX (衛星航法データ) 出力を有効化</value>
+  </data>
+  <data name="QzssPage.15" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="QzssPage.16" xml:space="preserve">
+    <value>送信しない</value>
+  </data>
+  <data name="QzssPage.17" xml:space="preserve">
+    <value>UART1 に NMEA RMC (位置情報) 出力を有効化</value>
+  </data>
+  <data name="QzssPage.18" xml:space="preserve">
+    <value>QZSS 受信を有効化</value>
+  </data>
+  <data name="QzssPage.19" xml:space="preserve">
+    <value>更新レートを変更</value>
+  </data>
+  <data name="QzssPage.20" xml:space="preserve">
+    <value>UART1 のボーレートを変更</value>
+  </data>
+  <data name="QzssPage.21" xml:space="preserve">
+    <value>応答を受信できないため最後に送信されます。</value>
+  </data>
+  <data name="QzssPage.22" xml:space="preserve">
+    <value>設定を送信し、デバイスの応答を確認しながら順次反映します。</value>
+  </data>
+  <data name="QzssPage.23" xml:space="preserve">
+    <value>設定を送信</value>
+  </data>
+  <data name="QzssPage.24" xml:space="preserve">
+    <value>GPS情報から(座標)緯度経度を消す</value>
+  </data>
+  <data name="QzssPage.25" xml:space="preserve">
+    <value>スクショや録画などから現在地が特定されることを防ぎます。</value>
+  </data>
+  <data name="QzssPage.26" xml:space="preserve">
+    <value>消す</value>
+  </data>
+  <data name="QzssPage.27" xml:space="preserve">
+    <value>消さない</value>
+  </data>
+  <data name="QzssPage.28" xml:space="preserve">
+    <value>地図上に現在位置を表示する</value>
+  </data>
+  <data name="QzssPage.29" xml:space="preserve">
+    <value>気象庁以外からの電文を無視する</value>
+  </data>
+  <data name="QzssPage.30" xml:space="preserve">
+    <value>訓練･試験の電文を無視する</value>
+  </data>
+  <data name="QzssPage.31" xml:space="preserve">
+    <value>タイムゾーンオフセット</value>
+  </data>
+  <data name="QzssPage.32" xml:space="preserve">
+    <value>電文の時刻をUTCから指定した時間分オフセットして表示します。日本標準時(JST)は-9時間です。</value>
+  </data>
+  <data name="QzssPage.33" xml:space="preserve">
+    <value>受信設定</value>
+  </data>
+  <data name="QzssPage.34" xml:space="preserve">
+    <value>強震モニタタブに地震の発生時刻、発生場所（震源）の推定値、地震発生場所の震央地名･強い揺れが予想される地域などは表示されますが、発生時刻が取得できないという問題から揺れの広がりを示す円は表示されません。</value>
+  </data>
+  <data name="QzssPage.35" xml:space="preserve">
+    <value>津波情報タブに情報が表示されます。</value>
+  </data>
+  <data name="QzssPage.36" xml:space="preserve">
+    <value>以下の情報は基本『災危通報』タブに表示されるため、タブを表示していない場合機能しません。</value>
+  </data>
+  <data name="QzssPage.37" xml:space="preserve">
+    <value>地震情報(震源･震度)</value>
+  </data>
+  <data name="QzssPage.38" xml:space="preserve">
+    <value>完全な情報ではないため、地震情報タブには表示されません。</value>
+  </data>
+  <data name="QzssPage.39" xml:space="preserve">
+    <value>南海トラフ地震情報</value>
+  </data>
+  <data name="QzssPage.40" xml:space="preserve">
+    <value>北西太平洋津波情報</value>
+  </data>
+  <data name="QzssPage.41" xml:space="preserve">
+    <value>火山情報</value>
+  </data>
+  <data name="QzssPage.42" xml:space="preserve">
+    <value>降灰情報</value>
+  </data>
+  <data name="QzssPage.43" xml:space="preserve">
+    <value>気象情報</value>
+  </data>
+  <data name="QzssPage.44" xml:space="preserve">
+    <value>洪水情報</value>
+  </data>
+  <data name="QzssPage.45" xml:space="preserve">
+    <value>台風情報</value>
+  </data>
+  <data name="QzssPage.46" xml:space="preserve">
+    <value>海上情報</value>
+  </data>
+  <data name="QzssTrigger.01" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="QzssTrigger.02" xml:space="preserve">
+    <value>新規受信</value>
+  </data>
+  <data name="QzssTrigger.03" xml:space="preserve">
+    <value>重複しない災危通報を受信した場合</value>
+  </data>
+  <data name="QzssTrigger.04" xml:space="preserve">
+    <value>新規グループ作成</value>
+  </data>
+  <data name="QzssTrigger.05" xml:space="preserve">
+    <value>グループ更新</value>
+  </data>
+  <data name="QzssTrigger.06" xml:space="preserve">
+    <value>南海トラフ地震臨時情報受信完了</value>
+  </data>
+  <data name="QzssTrigger.07" xml:space="preserve">
+    <value>種類 で 南海トラフ地震情報 が有効になっていない場合はトリガーされません</value>
+  </data>
+  <data name="QzssTrigger.08" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="QzssTrigger.09" xml:space="preserve">
+    <value>トリガー対象とする災危通報。</value>
+  </data>
+  <data name="QzssTrigger.10" xml:space="preserve">
+    <value>南海トラフ地震</value>
+  </data>
+  <data name="QzssTrigger.11" xml:space="preserve">
+    <value>津波</value>
+  </data>
+  <data name="QzssTrigger.12" xml:space="preserve">
+    <value>火山</value>
+  </data>
+  <data name="QzssTrigger.13" xml:space="preserve">
+    <value>降灰</value>
+  </data>
+  <data name="QzssTrigger.14" xml:space="preserve">
+    <value>天気</value>
+  </data>
+  <data name="QzssTrigger.15" xml:space="preserve">
+    <value>洪水</value>
+  </data>
+  <data name="QzssTrigger.16" xml:space="preserve">
+    <value>台風</value>
+  </data>
+  <data name="QzssTrigger.17" xml:space="preserve">
+    <value>海上</value>
+  </data>
+  <data name="QzssView.01" xml:space="preserve">
+    <value>現地時刻</value>
+  </data>
+  <data name="QzssView.02" xml:space="preserve">
+    <value>緯度</value>
+  </data>
+  <data name="QzssView.03" xml:space="preserve">
+    <value>経度</value>
+  </data>
+  <data name="QzssView.04" xml:space="preserve">
+    <value>切断されています</value>
+  </data>
+  <data name="QzssView.05" xml:space="preserve">
+    <value>災危通報受信履歴</value>
+  </data>
+  <data name="QzssView.06" xml:space="preserve">
+    <value>最終受信:</value>
+  </data>
+  <data name="QzssView.07" xml:space="preserve">
+    <value>EEW(警報)</value>
+  </data>
+  <data name="QzssView.08" xml:space="preserve">
+    <value>震度情報</value>
+  </data>
+  <data name="QzssView.09" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="QzssView.10" xml:space="preserve">
+    <value>南海トラフ</value>
+  </data>
+  <data name="QzssView.11" xml:space="preserve">
+    <value>北西太平洋津波</value>
+  </data>
+  <data name="QzssView.12" xml:space="preserve">
+    <value>降灰予報</value>
+  </data>
+  <data name="QzssView.13" xml:space="preserve">
+    <value>洪水予報</value>
+  </data>
+  <data name="QzssView.14" xml:space="preserve">
+    <value>海上警報</value>
+  </data>
+  <data name="QzssView.15" xml:space="preserve">
+    <value>未実装</value>
+  </data>
+  <data name="QzssView.16" xml:space="preserve">
+    <value>訓練･試験</value>
+  </data>
+  <data name="QzssView.17" xml:space="preserve">
+    <value>テストなカラム</value>
+  </data>
+  <data name="QzssView.18" xml:space="preserve">
+    <value>テストなコンテンツ</value>
+  </data>
+  <data name="QzssView.F01" xml:space="preserve">
+    <value>{0}号</value>
+  </data>
+  <data name="RadarPage.01" xml:space="preserve">
+    <value>自動更新を行う</value>
+  </data>
+  <data name="RadarPage.02" xml:space="preserve">
+    <value>毎分自動で更新を行います。</value>
+  </data>
+  <data name="RadarPage.03" xml:space="preserve">
+    <value>情報のソース</value>
+  </data>
+  <data name="RadarPage.04" xml:space="preserve">
+    <value>気象庁HP</value>
+  </data>
+  <data name="RadarView.01" xml:space="preserve">
+    <value>読み込み中…</value>
+  </data>
+  <data name="RadarView.F01" xml:space="preserve">
+    <value>雨雲の動き{0:HH:mm}</value>
+  </data>
+  <data name="Redundancy.Disconnected" xml:space="preserve">
+    <value>未接続</value>
+  </data>
+  <data name="Redundancy.Full" xml:space="preserve">
+    <value>完全接続</value>
+  </data>
+  <data name="Redundancy.Partial" xml:space="preserve">
+    <value>部分接続</value>
+  </data>
+  <data name="Replay.Ago" xml:space="preserve">
+    <value>前</value>
+  </data>
+  <data name="Replay.Hours" xml:space="preserve">
+    <value>{0}時間</value>
+  </data>
+  <data name="Replay.LoadFailed" xml:space="preserve">
+    <value>リプレイファイルの読み込みに失敗しました</value>
+  </data>
+  <data name="Replay.Minutes" xml:space="preserve">
+    <value>{0}分</value>
+  </data>
+  <data name="Replay.OpenFile" xml:space="preserve">
+    <value>リプレイファイルを開く</value>
+  </data>
+  <data name="Replay.RealTime" xml:space="preserve">
+    <value>リアルタイム</value>
+  </data>
+  <data name="Replay.Seconds" xml:space="preserve">
+    <value>{0}秒</value>
+  </data>
+  <data name="Replay.Separator" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SeismicIntensityReport.01" xml:space="preserve">
+    <value>防災気象情報(震度)</value>
+  </data>
+  <data name="SeismicIntensityReport.02" xml:space="preserve">
+    <value>以下</value>
+  </data>
+  <data name="SelectSeriesPage.01" xml:space="preserve">
+    <value>取得･表示する情報の選択</value>
+  </data>
+  <data name="SelectSeriesPage.02" xml:space="preserve">
+    <value>このアプリケーションで表示させたい情報を選びましょう。
+適切に必要な情報のみ受け取ることで情報を提供しているサーバーの負荷を軽減することができます。</value>
+  </data>
+  <data name="SelectSeriesPage.03" xml:space="preserve">
+    <value>強震モニタ･緊急地震速報</value>
+  </data>
+  <data name="SelectSeriesPage.04" xml:space="preserve">
+    <value>Signal Now Professional 連携機能を利用する</value>
+  </data>
+  <data name="SelectSeriesPage.05" xml:space="preserve">
+    <value>SignalNowProfessionalが起動していない場合でもログファイルが読み取れる場合受信中の表記になります。ご注意ください。</value>
+  </data>
+  <data name="SelectSeriesPage.06" xml:space="preserve">
+    <value>強震モニタからリアルタイム震度･緊急地震速報を受信し表示を行います。</value>
+  </data>
+  <data name="SelectSeriesPage.07" xml:space="preserve">
+    <value>防災情報XMLを受信･解析し地震情報を表示します。</value>
+  </data>
+  <data name="SelectSeriesPage.08" xml:space="preserve">
+    <value>防災情報XMLを受信･解析し津波情報を表示します。</value>
+  </data>
+  <data name="SelectSeriesPage.09" xml:space="preserve">
+    <value>『みちびき』から配信される防災情報を表示します。対応受信機が必要です。</value>
+  </data>
+  <data name="SelectThemePage.01" xml:space="preserve">
+    <value>テーマを選択することで配色を変更することができます。</value>
+  </data>
+  <data name="SendNotificationAction.01" xml:space="preserve">
+    <value>通知タイトル</value>
+  </data>
+  <data name="SendNotificationAction.02" xml:space="preserve">
+    <value>通知本文テンプレート</value>
+  </data>
+  <data name="SendNotificationAction.03" xml:space="preserve">
+    <value>緊急度</value>
+  </data>
+  <data name="SendNotificationAction.04" xml:space="preserve">
+    <value>通知の優先度を設定できます。
+『重要』は対応環境では非表示設定を貫通して表示しようとします。</value>
+  </data>
+  <data name="Series.Earthquake" xml:space="preserve">
+    <value>地震情報</value>
+  </data>
+  <data name="Series.Earthquake.Detail" xml:space="preserve">
+    <value>震源･震度情報を受信･表示します。</value>
+  </data>
+  <data name="Series.KyoshinMonitor" xml:space="preserve">
+    <value>強震モニタ</value>
+  </data>
+  <data name="Series.KyoshinMonitor.Detail" xml:space="preserve">
+    <value>強震モニタ･緊急地震速報を表示します。</value>
+  </data>
+  <data name="Series.Lightning" xml:space="preserve">
+    <value>[TEST]落雷情報</value>
+  </data>
+  <data name="Series.Lightning.Detail" xml:space="preserve">
+    <value>落雷情報を表示します。(デバッグ用)</value>
+  </data>
+  <data name="Series.ObservationPointEditor" xml:space="preserve">
+    <value>観測点編集</value>
+  </data>
+  <data name="Series.ObservationPointEditor.Detail" xml:space="preserve">
+    <value>強震観測点データの編集・管理機能を提供します。</value>
+  </data>
+  <data name="Series.Qzss" xml:space="preserve">
+    <value>災危通報</value>
+  </data>
+  <data name="Series.Qzss.Detail" xml:space="preserve">
+    <value>"みちびき" から配信される防災情報を表示します。</value>
+  </data>
+  <data name="Series.Radar" xml:space="preserve">
+    <value>雨雲(β)</value>
+  </data>
+  <data name="Series.Radar.Detail" xml:space="preserve">
+    <value>雨雲レーダー画像を表示します。(試験機能)</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier" xml:space="preserve">
+    <value>揺れ検知</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier.Detail" xml:space="preserve">
+    <value>揺れ検知のパラメータを調整し、比較検証を行います。</value>
+  </data>
+  <data name="Series.Tsunami" xml:space="preserve">
+    <value>津波情報</value>
+  </data>
+  <data name="Series.Tsunami.Detail" xml:space="preserve">
+    <value>津波情報を表示します。</value>
+  </data>
+  <data name="Series.Typhoon" xml:space="preserve">
+    <value>台風情報α</value>
+  </data>
+  <data name="Series.Typhoon.Detail" xml:space="preserve">
+    <value>台風の実況･予報円を表示します。</value>
+  </data>
+  <data name="Setting.About" xml:space="preserve">
+    <value>このアプリについて</value>
+  </data>
+  <data name="Setting.Axis" xml:space="preserve">
+    <value>AXIS(試験中)</value>
+  </data>
+  <data name="Setting.Delivery" xml:space="preserve">
+    <value>配信サービス</value>
+  </data>
+  <data name="Setting.Eew" xml:space="preserve">
+    <value>緊急地震速報</value>
+  </data>
+  <data name="Setting.Feedback" xml:space="preserve">
+    <value>フィードバック</value>
+  </data>
+  <data name="Setting.General" xml:space="preserve">
+    <value>外観･基本設定</value>
+  </data>
+  <data name="Setting.License" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+  <data name="Setting.Map" xml:space="preserve">
+    <value>地図</value>
+  </data>
+  <data name="Setting.MapIcon" xml:space="preserve">
+    <value>地図アイコン</value>
+  </data>
+  <data name="Setting.ObsPoints" xml:space="preserve">
+    <value>観測点データ</value>
+  </data>
+  <data name="Setting.Qzss" xml:space="preserve">
+    <value>みちびき 災危通報</value>
+  </data>
+  <data name="Setting.Radar" xml:space="preserve">
+    <value>雨雲レーダー</value>
+  </data>
+  <data name="Setting.Replay" xml:space="preserve">
+    <value>リプレイ</value>
+  </data>
+  <data name="Setting.Sound" xml:space="preserve">
+    <value>音声</value>
+  </data>
+  <data name="Setting.Update" xml:space="preserve">
+    <value>アプリの更新</value>
+  </data>
+  <data name="Setting.WindowTitle" xml:space="preserve">
+    <value>設定 - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Setting.Workflow" xml:space="preserve">
+    <value>ワークフロー</value>
+  </data>
+  <data name="SetupWizardWindow.01" xml:space="preserve">
+    <value>セットアップウィザード - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Shake.Title.Medium" xml:space="preserve">
+    <value>揺れを検知</value>
+  </data>
+  <data name="Shake.Title.Strong" xml:space="preserve">
+    <value>強い揺れを検知</value>
+  </data>
+  <data name="Shake.Title.Stronger" xml:space="preserve">
+    <value>非常に強い揺れを検知</value>
+  </data>
+  <data name="Shake.Title.Weak" xml:space="preserve">
+    <value>弱い揺れを検知</value>
+  </data>
+  <data name="Shake.Title.Weaker" xml:space="preserve">
+    <value>微弱な揺れを検知</value>
+  </data>
+  <data name="ShakeAnimation.Blink" xml:space="preserve">
+    <value>点滅</value>
+  </data>
+  <data name="ShakeAnimation.None" xml:space="preserve">
+    <value>アニメーションなし</value>
+  </data>
+  <data name="ShakeAnimation.Pulse" xml:space="preserve">
+    <value>明滅</value>
+  </data>
+  <data name="ShakeDetectTrigger.01" xml:space="preserve">
+    <value>検知レベル: </value>
+  </data>
+  <data name="ShakeDetectTrigger.02" xml:space="preserve">
+    <value>レベルが一致しているときのみ実行する</value>
+  </data>
+  <data name="ShakeDetectTrigger.03" xml:space="preserve">
+    <value>デフォルトではより高いレベルのイベントもトリガ対象となります。
+このオプションを有効にするとそのレベルの時のみでアクションを実行することが可能です。</value>
+  </data>
+  <data name="ShakeDetectTrigger.04" xml:space="preserve">
+    <value>最大レベル地域拡大時: </value>
+  </data>
+  <data name="ShakeDetectTrigger.05" xml:space="preserve">
+    <value>最大の揺れレベルを観測している地域が増加した場合の動作を設定します。
+・なにもしない: 地域拡大時はトリガーを発火しません
+・地域のみ: 新しい地域が追加された場合のみ発火します
+・サブ地域も含む: サブ地域が増加した場合も発火します</value>
+  </data>
+  <data name="ShakeDetectedRegionPanel.01" xml:space="preserve">
+    <value>(全域)</value>
+  </data>
+  <data name="ShakeDisplay.ConvexHull" xml:space="preserve">
+    <value>凸包(非推奨)</value>
+  </data>
+  <data name="ShakeDisplay.Grid" xml:space="preserve">
+    <value>グリッド</value>
+  </data>
+  <data name="ShakeDisplay.None" xml:space="preserve">
+    <value>表示しない</value>
+  </data>
+  <data name="ShindoName.Int0" xml:space="preserve">
+    <value>震度0</value>
+  </data>
+  <data name="ShindoName.Int1" xml:space="preserve">
+    <value>震度1</value>
+  </data>
+  <data name="ShindoName.Int2" xml:space="preserve">
+    <value>震度2</value>
+  </data>
+  <data name="ShindoName.Int3" xml:space="preserve">
+    <value>震度3</value>
+  </data>
+  <data name="ShindoName.Int4" xml:space="preserve">
+    <value>震度4</value>
+  </data>
+  <data name="ShindoName.Int5Lower" xml:space="preserve">
+    <value>震度5弱</value>
+  </data>
+  <data name="ShindoName.Int5Upper" xml:space="preserve">
+    <value>震度5強</value>
+  </data>
+  <data name="ShindoName.Int6Lower" xml:space="preserve">
+    <value>震度6弱</value>
+  </data>
+  <data name="ShindoName.Int6Upper" xml:space="preserve">
+    <value>震度6強</value>
+  </data>
+  <data name="ShindoName.Int7" xml:space="preserve">
+    <value>震度7</value>
+  </data>
+  <data name="ShindoName.Unknown" xml:space="preserve">
+    <value>震度不明</value>
+  </data>
+  <data name="ShindoThreshold.Int1" xml:space="preserve">
+    <value>震度1以上</value>
+  </data>
+  <data name="ShindoThreshold.Int2" xml:space="preserve">
+    <value>震度2以上</value>
+  </data>
+  <data name="ShindoThreshold.Int3" xml:space="preserve">
+    <value>震度3以上</value>
+  </data>
+  <data name="ShindoThreshold.Int4" xml:space="preserve">
+    <value>震度4以上</value>
+  </data>
+  <data name="ShindoThreshold.Int5Lower" xml:space="preserve">
+    <value>震度5弱以上</value>
+  </data>
+  <data name="ShindoThreshold.Int5Upper" xml:space="preserve">
+    <value>震度5強以上</value>
+  </data>
+  <data name="ShindoThreshold.Int6Lower" xml:space="preserve">
+    <value>震度6弱以上</value>
+  </data>
+  <data name="ShindoThreshold.Int6Upper" xml:space="preserve">
+    <value>震度6強以上</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityDash" xml:space="preserve">
+    <value>{int}: 最大震度 [-,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQ" xml:space="preserve">
+    <value>{int}: 最大震度 [？,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQMode" xml:space="preserve">
+    <value>{int}: 最大震度 [？,0,1,...,6-,6+,7]
+{mode}: 再生モード [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.QzssGroup" xml:space="preserve">
+    <value>同時発表の情報と統合された場合には鳴動しません。</value>
+  </data>
+  <data name="Sound.Desc.QzssNankai" xml:space="preserve">
+    <value>南海トラフに関する情報の受信が完了した場合に鳴動します。</value>
+  </data>
+  <data name="Sound.Desc.QzssReceived" xml:space="preserve">
+    <value>同時発表の情報に統合された場合でも鳴動しますが、完全に同じ情報では鳴動しません。</value>
+  </data>
+  <data name="Sound.Desc.ShakeRise" xml:space="preserve">
+    <value>震度上昇時にも鳴動します。
+鳴動させるためには揺れ検出の設定を有効にしている必要があります。
+{mode}: 再生モード [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.ShakeWeak" xml:space="preserve">
+    <value>鳴動させるためには揺れ検出の設定を有効にしている必要があります。
+{mode}: 再生モード [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiDowngrade" xml:space="preserve">
+    <value>最大の警報レベルが下がった時に鳴動します。
+{lv}: 解除後の警報種別 [none, fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiNew" xml:space="preserve">
+    <value>未発表状態から受信した際に鳴動します。
+{lv}: 警報種別 [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpdated" xml:space="preserve">
+    <value>他の津波関連の音声が再生されなかった場合、この音声が鳴動します。
+{lv}: 最大の警報種別 [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpgrade" xml:space="preserve">
+    <value>より上位の警報/注意報が発表された際に鳴動します。
+{lv}: 更新後の警報種別 [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Duplicate" xml:space="preserve">
+    <value>重複</value>
+  </data>
+  <data name="Sound.EewCancel" xml:space="preserve">
+    <value>緊急地震速報受信(キャンセル)</value>
+  </data>
+  <data name="Sound.EewFinal" xml:space="preserve">
+    <value>緊急地震速報受信(最終)</value>
+  </data>
+  <data name="Sound.EewFirst" xml:space="preserve">
+    <value>緊急地震速報受信(初回)</value>
+  </data>
+  <data name="Sound.EewReceived" xml:space="preserve">
+    <value>緊急地震速報受信</value>
+  </data>
+  <data name="Sound.EewWarning" xml:space="preserve">
+    <value>緊急地震速報(警報)発表･レベル到達時</value>
+  </data>
+  <data name="Sound.EqIntensityUpdated" xml:space="preserve">
+    <value>震度の更新</value>
+  </data>
+  <data name="Sound.EqTrainingUpdated" xml:space="preserve">
+    <value>地震情報の更新(訓練)</value>
+  </data>
+  <data name="Sound.EqUpdated" xml:space="preserve">
+    <value>地震情報の更新</value>
+  </data>
+  <data name="Sound.LightningArrival" xml:space="preserve">
+    <value>情報受信時</value>
+  </data>
+  <data name="Sound.Master" xml:space="preserve">
+    <value>全体音量</value>
+  </data>
+  <data name="Sound.Mute" xml:space="preserve">
+    <value>ミュート</value>
+  </data>
+  <data name="Sound.QzssGroup" xml:space="preserve">
+    <value>新規グループ受信</value>
+  </data>
+  <data name="Sound.QzssNankai" xml:space="preserve">
+    <value>南海トラフ情報受信完了</value>
+  </data>
+  <data name="Sound.QzssReceived" xml:space="preserve">
+    <value>新規情報の受信</value>
+  </data>
+  <data name="Sound.ShakeMedium" xml:space="preserve">
+    <value>揺れ検出(震度1以上3未満)</value>
+  </data>
+  <data name="Sound.ShakeStrong" xml:space="preserve">
+    <value>揺れ検出(震度3以上5弱未満)</value>
+  </data>
+  <data name="Sound.ShakeStronger" xml:space="preserve">
+    <value>揺れ検出(震度5弱以上)</value>
+  </data>
+  <data name="Sound.ShakeWeak" xml:space="preserve">
+    <value>揺れ検出(震度1未満)</value>
+  </data>
+  <data name="Sound.ShowButton" xml:space="preserve">
+    <value>メインウィンドウに音量ボタンを表示する</value>
+  </data>
+  <data name="Sound.TsunamiDowngrade" xml:space="preserve">
+    <value>警報/注意報の解除</value>
+  </data>
+  <data name="Sound.TsunamiNew" xml:space="preserve">
+    <value>津波情報の発表</value>
+  </data>
+  <data name="Sound.TsunamiUpdated" xml:space="preserve">
+    <value>津波情報の更新</value>
+  </data>
+  <data name="Sound.TsunamiUpgrade" xml:space="preserve">
+    <value>警報/注意報の更新</value>
+  </data>
+  <data name="Sound.Unavailable" xml:space="preserve">
+    <value>音声再生機能が利用できません</value>
+  </data>
+  <data name="Sound.Unavailable.Desc" xml:space="preserve">
+    <value>再生デバイスが存在しない可能性があります。再起動が必要です。</value>
+  </data>
+  <data name="Sound.VolumeLabel" xml:space="preserve">
+    <value>音量:</value>
+  </data>
+  <data name="Source.JmaXml" xml:space="preserve">
+    <value>防災情報XML</value>
+  </data>
+  <data name="Template.SyntaxError.Back" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="Template.SyntaxError.Edit" xml:space="preserve">
+    <value>編集する</value>
+  </data>
+  <data name="Template.SyntaxError.Message" xml:space="preserve">
+    <value>テンプレートにシンタックスエラーがあります:
+
+{0}
+
+このままにしますか？</value>
+  </data>
+  <data name="Template.SyntaxError.Title" xml:space="preserve">
+    <value>テンプレートシンタックスエラー</value>
+  </data>
+  <data name="TemplateEditorDialog.01" xml:space="preserve">
+    <value>テンプレート編集</value>
+  </data>
+  <data name="TemplateEditorDialog.02" xml:space="preserve">
+    <value>Scribanテンプレート言語を使用して動的なコンテンツを作成できます</value>
+  </data>
+  <data name="TemplateEditorDialog.03" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Theme.BuiltIn" xml:space="preserve">
+    <value>組み込みテーマ</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Message" xml:space="preserve">
+    <value>組み込みテーマは変更できないため、外部テーマとして保存します。
+{0}.json として保存します。ファイル名に使用できない文字が含まれていないか確認してください。</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Title" xml:space="preserve">
+    <value>組み込みテーマの保存</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Message" xml:space="preserve">
+    <value>ウィンドウを閉じて編集中のテーマの変更を破棄しますか？</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Title" xml:space="preserve">
+    <value>テーマの変更を破棄</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Message" xml:space="preserve">
+    <value>{0} にテーマを上書き保存しますか？</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Title" xml:space="preserve">
+    <value>外部テーマの保存</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Edit" xml:space="preserve">
+    <value>編集中のテーマの変更を破棄しますか？</value>
+  </data>
+  <data name="Theme.Dialog.Restore.File" xml:space="preserve">
+    <value>ファイルからテーマを読み込み直しますか？</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Title" xml:space="preserve">
+    <value>復元する</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Message" xml:space="preserve">
+    <value>テーマの保存に失敗しました: {0}</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Title" xml:space="preserve">
+    <value>保存に失敗</value>
+  </data>
+  <data name="Theme.External" xml:space="preserve">
+    <value>外部テーマ: {0}</value>
+  </data>
+  <data name="Theme.Temporary" xml:space="preserve">
+    <value>編集中のテーマ</value>
+  </data>
+  <data name="Tpl.Eew.Message" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tpl.Eew.Title" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tpl.Eq.Message" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tpl.Eq.Title" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tpl.Tsunami.Message" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tpl.Tsunami.Title" xml:space="preserve">
+    <value>(see the Japanese constant in code)</value>
+  </data>
+  <data name="Tray.Stored.Message" xml:space="preserve">
+    <value>アプリケーションは実行中です</value>
+  </data>
+  <data name="Tray.Stored.Title" xml:space="preserve">
+    <value>タスクトレイに格納しました</value>
+  </data>
+  <data name="Tsunami.ExpectedArrival" xml:space="preserve">
+    <value>{0:HH:mm} 到達見込み</value>
+  </data>
+  <data name="TsunamiInformationTrigger.01" xml:space="preserve">
+    <value>発表レベル: </value>
+  </data>
+  <data name="TsunamiInformationTrigger.02" xml:space="preserve">
+    <value>一致しているときのみ実行する</value>
+  </data>
+  <data name="TsunamiInformationTrigger.03" xml:space="preserve">
+    <value>発表</value>
+  </data>
+  <data name="TsunamiInformationTrigger.04" xml:space="preserve">
+    <value>未発表状態から津波情報が発表されたとき</value>
+  </data>
+  <data name="TsunamiInformationTrigger.05" xml:space="preserve">
+    <value>警報レベル上昇</value>
+  </data>
+  <data name="TsunamiInformationTrigger.06" xml:space="preserve">
+    <value>より上位の警報に切り替えられたとき</value>
+  </data>
+  <data name="TsunamiInformationTrigger.07" xml:space="preserve">
+    <value>警報レベル下降・解除</value>
+  </data>
+  <data name="TsunamiInformationTrigger.08" xml:space="preserve">
+    <value>警報レベルが下がったり解除されたとき</value>
+  </data>
+  <data name="TsunamiInformationTrigger.09" xml:space="preserve">
+    <value>その他更新</value>
+  </data>
+  <data name="TsunamiInformationTrigger.10" xml:space="preserve">
+    <value>地域の増減など、上記以外の情報更新時</value>
+  </data>
+  <data name="TsunamiLevel.Advisory" xml:space="preserve">
+    <value>津波注意報</value>
+  </data>
+  <data name="TsunamiLevel.Forecast" xml:space="preserve">
+    <value>津波予報</value>
+  </data>
+  <data name="TsunamiLevel.MajorWarning" xml:space="preserve">
+    <value>大津波警報</value>
+  </data>
+  <data name="TsunamiLevel.None" xml:space="preserve">
+    <value>津波なし(すべて)</value>
+  </data>
+  <data name="TsunamiLevel.Warning" xml:space="preserve">
+    <value>津波警報</value>
+  </data>
+  <data name="TsunamiPage.01" xml:space="preserve">
+    <value>津波情報更新時に自動でタブを切り替える</value>
+  </data>
+  <data name="TsunamiPage.02" xml:space="preserve">
+    <value>解除･期限切れ時には切り替わりません。</value>
+  </data>
+  <data name="TsunamiReport.01" xml:space="preserve">
+    <value>防災気象情報(津波)</value>
+  </data>
+  <data name="TsunamiReport.02" xml:space="preserve">
+    <value>警報解除</value>
+  </data>
+  <data name="TsunamiView.01" xml:space="preserve">
+    <value>津波情報</value>
+  </data>
+  <data name="TsunamiView.02" xml:space="preserve">
+    <value>観測値</value>
+  </data>
+  <data name="TsunamiView.03" xml:space="preserve">
+    <value>上昇中</value>
+  </data>
+  <data name="TsunamiView.04" xml:space="preserve">
+    <value>これより高い津波が押し寄せています。</value>
+  </data>
+  <data name="TsunamiView.05" xml:space="preserve">
+    <value>満潮時刻</value>
+  </data>
+  <data name="TsunamiView.06" xml:space="preserve">
+    <value>大津波警報</value>
+  </data>
+  <data name="TsunamiView.07" xml:space="preserve">
+    <value>津波警報</value>
+  </data>
+  <data name="TsunamiView.08" xml:space="preserve">
+    <value>津波注意報</value>
+  </data>
+  <data name="TsunamiView.09" xml:space="preserve">
+    <value>津波予報</value>
+  </data>
+  <data name="TsunamiView.10" xml:space="preserve">
+    <value>津波警報・注意報・予報は解除されました。</value>
+  </data>
+  <data name="TsunamiView.11" xml:space="preserve">
+    <value>津波なし</value>
+  </data>
+  <data name="TsunamiView.12" xml:space="preserve">
+    <value>津波情報は発表されていません</value>
+  </data>
+  <data name="TsunamiView.13" xml:space="preserve">
+    <value>読み込み中</value>
+  </data>
+  <data name="TsunamiView.F01" xml:space="preserve">
+    <value>津波情報({0})</value>
+  </data>
+  <data name="TsunamiView.F02" xml:space="preserve">
+    <value>{0:d日 HH:mm発表}</value>
+  </data>
+  <data name="TsunamiView.F03" xml:space="preserve">
+    <value>予想高さ {0}</value>
+  </data>
+  <data name="TsunamiView.F04" xml:space="preserve">
+    <value>{0:d日 HH時mm分}</value>
+  </data>
+  <data name="TsunamiView.F05" xml:space="preserve">
+    <value>{0:d日HH時mm分}</value>
+  </data>
+  <data name="TsunamiView.F06" xml:space="preserve">
+    <value>{0:d日 HH:mmまで有効}</value>
+  </data>
+  <data name="TsunamiView.F07" xml:space="preserve">
+    <value>接続中: {0}</value>
+  </data>
+  <data name="Typhoon.TropicalDepression" xml:space="preserve">
+    <value>熱帯低気圧</value>
+  </data>
+  <data name="TyphoonReport.01" xml:space="preserve">
+    <value>防災気象情報(台風)</value>
+  </data>
+  <data name="TyphoonReport.02" xml:space="preserve">
+    <value>大きさ / 勢力</value>
+  </data>
+  <data name="TyphoonReport.03" xml:space="preserve">
+    <value>中心気圧</value>
+  </data>
+  <data name="TyphoonReport.04" xml:space="preserve">
+    <value>最大風速</value>
+  </data>
+  <data name="TyphoonReport.05" xml:space="preserve">
+    <value>最大瞬間風速</value>
+  </data>
+  <data name="TyphoonReport.F01" xml:space="preserve">
+    <value>台風{0}号</value>
+  </data>
+  <data name="TyphoonView.01" xml:space="preserve">
+    <value>中心位置</value>
+  </data>
+  <data name="TyphoonView.02" xml:space="preserve">
+    <value>中心付近の最大風速</value>
+  </data>
+  <data name="TyphoonView.03" xml:space="preserve">
+    <value>台風は消滅しました</value>
+  </data>
+  <data name="TyphoonView.04" xml:space="preserve">
+    <value>台風情報は発表されていません</value>
+  </data>
+  <data name="TyphoonView.F01" xml:space="preserve">
+    <value>{0:yyyy年MM月}</value>
+  </data>
+  <data name="TyphoonView.F02" xml:space="preserve">
+    <value>{0:dd日HH時}</value>
+  </data>
+  <data name="Update.Apply" xml:space="preserve">
+    <value>更新を適用する</value>
+  </data>
+  <data name="Update.Apply.Desc" xml:space="preserve">
+    <value>更新ファイルをダウンロードして自動で適用します。</value>
+  </data>
+  <data name="Update.Available" xml:space="preserve">
+    <value>アプリケーションの更新があります。</value>
+  </data>
+  <data name="Update.History" xml:space="preserve">
+    <value>更新履歴</value>
+  </data>
+  <data name="Update.OpenDownload" xml:space="preserve">
+    <value>ダウンロードページを開く</value>
+  </data>
+  <data name="Update.State.Applying" xml:space="preserve">
+    <value>更新を適用しています</value>
+  </data>
+  <data name="Update.State.Downloading" xml:space="preserve">
+    <value>更新ファイルをダウンロードします</value>
+  </data>
+  <data name="Update.State.Failed" xml:space="preserve">
+    <value>更新に失敗しました。繰り返し失敗する場合は手動での更新をお願いします。</value>
+  </data>
+  <data name="Update.State.Latest" xml:space="preserve">
+    <value>最新バージョンは既にインストールされています</value>
+  </data>
+  <data name="Update.State.Progress" xml:space="preserve">
+    <value>更新ファイルのダウンロード中: {0:#,0}kb / {1:#,0}kb</value>
+  </data>
+  <data name="Update.State.Verifying" xml:space="preserve">
+    <value>ダウンロードしたファイルを検証中</value>
+  </data>
+  <data name="Update.Status" xml:space="preserve">
+    <value>更新状況</value>
+  </data>
+  <data name="UpdateAvailableTrigger.01" xml:space="preserve">
+    <value>繰り返しトリガーする</value>
+  </data>
+  <data name="UpdateAvailableTrigger.02" xml:space="preserve">
+    <value>オンの場合アップデートチェックの度(おおよそ10分ごと)にアップデートが存在する場合トリガーされます。
+オフの場合アップデートが見つかった時に1回だけトリガーされます。</value>
+  </data>
+  <data name="Voicevox.About" xml:space="preserve">
+    <value>VOICEVOX とは</value>
+  </data>
+  <data name="Voicevox.AutoDelete" xml:space="preserve">
+    <value>古いキャッシュの自動削除</value>
+  </data>
+  <data name="Voicevox.AutoDelete.Desc" xml:space="preserve">
+    <value>自動削除しない場合、キャッシュの削除はOSの自動削除期間に依存します。</value>
+  </data>
+  <data name="Voicevox.BaseUrl" xml:space="preserve">
+    <value>ベースURL</value>
+  </data>
+  <data name="Voicevox.BaseUrl.Desc" xml:space="preserve">
+    <value>意味がわからない方は変更しないでください！
+ここの値を変更することで、別の PC に置いた VOICEVOX を使用して音声を合成したり、VOICEVOX 互換のAPIを持つ VOICEVOX Nemo などの音声が利用できます。
+別の PC で合成された音声でも音声自体はこのアプリから出力されます。</value>
+  </data>
+  <data name="Voicevox.CacheManage" xml:space="preserve">
+    <value>キャッシュ管理</value>
+  </data>
+  <data name="Voicevox.ClearCache" xml:space="preserve">
+    <value>キャッシュクリア</value>
+  </data>
+  <data name="Voicevox.ClearCache.Desc" xml:space="preserve">
+    <value>すべての音声キャッシュを削除</value>
+  </data>
+  <data name="Voicevox.Intonation" xml:space="preserve">
+    <value>抑揚</value>
+  </data>
+  <data name="Voicevox.NoCache" xml:space="preserve">
+    <value>音声をキャッシュしない</value>
+  </data>
+  <data name="Voicevox.NoCache.Desc" xml:space="preserve">
+    <value>音声をキャッシュしない場合でも音声合成のために一時ファイルの利用は行われます。</value>
+  </data>
+  <data name="Voicevox.NoCache.Off" xml:space="preserve">
+    <value>キャッシュする</value>
+  </data>
+  <data name="Voicevox.NoCache.On" xml:space="preserve">
+    <value>キャッシュしない</value>
+  </data>
+  <data name="Voicevox.PauseLength" xml:space="preserve">
+    <value>間の長さ</value>
+  </data>
+  <data name="Voicevox.Pitch" xml:space="preserve">
+    <value>音高</value>
+  </data>
+  <data name="Voicevox.PlayTest" xml:space="preserve">
+    <value>テスト音声を再生</value>
+  </data>
+  <data name="Voicevox.RefreshSpeakers" xml:space="preserve">
+    <value>話者一覧を更新</value>
+  </data>
+  <data name="Voicevox.RetentionDays" xml:space="preserve">
+    <value>キャッシュ保持期間（日数）</value>
+  </data>
+  <data name="Voicevox.RetentionDays.Desc" xml:space="preserve">
+    <value>キャッシュが利用された場合、キャッシュの保持期間は延長されます。</value>
+  </data>
+  <data name="Voicevox.Speaker" xml:space="preserve">
+    <value>話者選択</value>
+  </data>
+  <data name="Voicevox.SpeakersNotLoaded" xml:space="preserve">
+    <value>話者一覧が読み込まれていません</value>
+  </data>
+  <data name="Voicevox.Speed" xml:space="preserve">
+    <value>話速</value>
+  </data>
+  <data name="Voicevox.Use" xml:space="preserve">
+    <value>この機能を利用する</value>
+  </data>
+  <data name="VoicevoxSpeechAction.01" xml:space="preserve">
+    <value>読み上げ終了までワークフローの実行を中断します。読み上げ完了後に別のアクションを続けて実行する場合に便利です。</value>
+  </data>
+  <data name="VoicevoxSpeechAction.02" xml:space="preserve">
+    <value>順次読み上げ</value>
+  </data>
+  <data name="VoicevoxSpeechAction.03" xml:space="preserve">
+    <value>改行でテキストを分割し、一括合成後に順番に読み上げます。合成が追いつかない場合分割単位で読み上げが途切れる可能性がありますが、キャッシュが活用されやすくなります。</value>
+  </data>
+  <data name="VoicevoxSpeechAction.04" xml:space="preserve">
+    <value>前の再生を中断</value>
+  </data>
+  <data name="VoicevoxSpeechAction.05" xml:space="preserve">
+    <value>このアクションで再生中の音声があるときに新たな再生要求が来た場合、進行中の再生を中断して新しい音声を再生します。順次読み上げの場合は、現在のセグメントを中断後、残りのセグメントもキャンセルします。</value>
+  </data>
+  <data name="VoicevoxSpeechAction.06" xml:space="preserve">
+    <value>読み上げ内容</value>
+  </data>
+  <data name="VolcanoReport.01" xml:space="preserve">
+    <value>防災気象情報(火山)</value>
+  </data>
+  <data name="VolcanoReport.02" xml:space="preserve">
+    <value>時刻</value>
+  </data>
+  <data name="VolcanoReport.03" xml:space="preserve">
+    <value>現象</value>
+  </data>
+  <data name="WaitAction.01" xml:space="preserve">
+    <value>待機時間(ミリ秒): </value>
+  </data>
+  <data name="WeatherReport.01" xml:space="preserve">
+    <value>防災気象情報(気象)</value>
+  </data>
+  <data name="WeatherReport.02" xml:space="preserve">
+    <value>(発表)</value>
+  </data>
+  <data name="WeatherReport.03" xml:space="preserve">
+    <value>(解除)</value>
+  </data>
+  <data name="WebhookAction.01" xml:space="preserve">
+    <value>レスポンスを緊急地震速報の地点予測として取り込む</value>
+  </data>
+  <data name="WebhookAction.02" xml:space="preserve">
+    <value>緊急地震速報のトリガーでのみ動作します。レスポンスの JSON に含まれる計測震度と到達時刻をそのまま表示します。
+推定の内容についてはレスポンスを返すアプリケーション側の責任となります。</value>
+  </data>
+  <data name="WebhookAction.03" xml:space="preserve">
+    <value>最新のレスポンス</value>
+  </data>
+  <data name="Wf.ChangeAction.Message" xml:space="preserve">
+    <value>現在の設定「{0}」から「{1}」に変更しますか？
+
+変更すると現在のアクションに設定されている内容は失われます。</value>
+  </data>
+  <data name="Wf.ChangeAction.Title" xml:space="preserve">
+    <value>アクション変更の確認</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Message" xml:space="preserve">
+    <value>現在の設定「{0}」から「{1}」に変更しますか？
+
+変更すると現在設定されているトリガーの内容は失われます。</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Title" xml:space="preserve">
+    <value>トリガー変更の確認</value>
+  </data>
+  <data name="Wf.DeleteAction.Message" xml:space="preserve">
+    <value>アクション「{0}」を削除しますか？
+この操作は元に戻すことができません。</value>
+  </data>
+  <data name="Wf.DeleteAction.Title" xml:space="preserve">
+    <value>アクションの削除</value>
+  </data>
+  <data name="Wf.Exec.Exception" xml:space="preserve">
+    <value>実行中に例外が発生しました。
+</value>
+  </data>
+  <data name="Wf.Exec.Exit" xml:space="preserve">
+    <value>終了コード: {0}
+実行時間:{1}ms</value>
+  </data>
+  <data name="Wf.Exec.Running" xml:space="preserve">
+    <value>実行中...</value>
+  </data>
+  <data name="Wf.Exec.StartFailed" xml:space="preserve">
+    <value>プロセスの起動に失敗しました</value>
+  </data>
+  <data name="Wf.Inject.NoController" xml:space="preserve">
+    <value>地点予測の取り込み: 発火元のEEWコントローラーを特定できませんでした。</value>
+  </data>
+  <data name="Wf.Inject.Skip" xml:space="preserve">
+    <value>地点予測の取り込み: ステータスコードが成功以外のためスキップしました。</value>
+  </data>
+  <data name="Wf.Inject.TooLarge" xml:space="preserve">
+    <value>地点予測の取り込み: レスポンスが大きすぎます({0}KiB以内)。</value>
+  </data>
+  <data name="Wf.Webhook.Exception" xml:space="preserve">
+    <value>例外が発生しました。
+{0}</value>
+  </data>
+  <data name="Wf.Webhook.Result" xml:space="preserve">
+    <value>レスポンスタイム: {0}ms
+ステータスコード: {1}
+レスポンス: {2}</value>
+  </data>
+  <data name="Wf.Webhook.Timeout" xml:space="preserve">
+    <value>地点予測の取り込みのタイムアウト({0:0.#}秒)に達したため中断しました。</value>
+  </data>
+  <data name="WfAction.Activate" xml:space="preserve">
+    <value>メインウィンドウを最前面に表示</value>
+  </data>
+  <data name="WfAction.Activate.Desc" xml:space="preserve">
+    <value>メインウィンドウを最前面に表示します。</value>
+  </data>
+  <data name="WfAction.Dummy" xml:space="preserve">
+    <value>何もしない</value>
+  </data>
+  <data name="WfAction.Dummy.Desc" xml:space="preserve">
+    <value>何もしないアクションです。
+何も実行されず、中断されることもありません。</value>
+  </data>
+  <data name="WfAction.ExecuteFile" xml:space="preserve">
+    <value>指定したファイルを開く(実行)</value>
+  </data>
+  <data name="WfAction.Log" xml:space="preserve">
+    <value>ログ出力</value>
+  </data>
+  <data name="WfAction.Multiple" xml:space="preserve">
+    <value>複数アクション実行</value>
+  </data>
+  <data name="WfAction.Notify" xml:space="preserve">
+    <value>通知送信</value>
+  </data>
+  <data name="WfAction.PlaySound" xml:space="preserve">
+    <value>音声再生</value>
+  </data>
+  <data name="WfAction.SwitchTab" xml:space="preserve">
+    <value>タブを切り替える</value>
+  </data>
+  <data name="WfAction.SwitchTab.Desc" xml:space="preserve">
+    <value>イベントを発生させたタブに切り替えます。
+タブに依存しないイベントの場合は何も起こりません。</value>
+  </data>
+  <data name="WfAction.Voicevox" xml:space="preserve">
+    <value>VOICEVOX でテキスト読み上げ</value>
+  </data>
+  <data name="WfAction.Wait" xml:space="preserve">
+    <value>指定時間待機</value>
+  </data>
+  <data name="WfAction.Webhook" xml:space="preserve">
+    <value>指定したURLに内容をPOST</value>
+  </data>
+  <data name="WfTrigger.All" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="WfTrigger.All.Desc" xml:space="preserve">
+    <value>すべてのイベントに対しトリガーされます。</value>
+  </data>
+  <data name="WfTrigger.Dummy" xml:space="preserve">
+    <value>何もしない</value>
+  </data>
+  <data name="WfTrigger.Dummy.Desc" xml:space="preserve">
+    <value>何もしないトリガーです。
+テスト実行以外で実行されることはありません。</value>
+  </data>
+  <data name="WfTrigger.Earthquake" xml:space="preserve">
+    <value>(地震情報)地震情報受信</value>
+  </data>
+  <data name="WfTrigger.Eew" xml:space="preserve">
+    <value>(強震モニタ)緊急地震速報</value>
+  </data>
+  <data name="WfTrigger.Qzss" xml:space="preserve">
+    <value>(災危通報)受信･更新時</value>
+  </data>
+  <data name="WfTrigger.ShakeDetect" xml:space="preserve">
+    <value>(強震モニタ)揺れ検知</value>
+  </data>
+  <data name="WfTrigger.Startup" xml:space="preserve">
+    <value>アプリケーション起動時</value>
+  </data>
+  <data name="WfTrigger.Startup.Desc" xml:space="preserve">
+    <value>アプリケーション起動完了時に一度だけトリガーされます。</value>
+  </data>
+  <data name="WfTrigger.Tsunami" xml:space="preserve">
+    <value>(津波情報)津波情報更新時</value>
+  </data>
+  <data name="WfTrigger.UpdateAvailable" xml:space="preserve">
+    <value>アプリケーションの更新存在時</value>
+  </data>
+  <data name="WindowThemeEditWindow.01" xml:space="preserve">
+    <value>ウィンドウテーマ編集</value>
+  </data>
+  <data name="WindowThemeEditWindow.02" xml:space="preserve">
+    <value>復元する(ファイルの状態を読み戻す)</value>
+  </data>
+  <data name="WindowThemeEditWindow.03" xml:space="preserve">
+    <value>テーマを保存する</value>
+  </data>
+  <data name="WindowThemeEditWindow.04" xml:space="preserve">
+    <value>テーマ名</value>
+  </data>
+  <data name="WindowThemeEditWindow.05" xml:space="preserve">
+    <value>ウィンドウ全体</value>
+  </data>
+  <data name="WindowThemeEditWindow.06" xml:space="preserve">
+    <value>タイトル･サイドバーの色</value>
+  </data>
+  <data name="WindowThemeEditWindow.07" xml:space="preserve">
+    <value>タイトルバー部分はWindowsでのみ反映されます。</value>
+  </data>
+  <data name="WindowThemeEditWindow.08" xml:space="preserve">
+    <value>ダークテーマをベースとする</value>
+  </data>
+  <data name="WindowThemeEditWindow.09" xml:space="preserve">
+    <value>ボタンなどの汎用コントロールがダークテーマ基準になります。</value>
+  </data>
+  <data name="WindowThemeEditWindow.10" xml:space="preserve">
+    <value>メイン背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.11" xml:space="preserve">
+    <value>メイン文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.12" xml:space="preserve">
+    <value>サブ文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.13" xml:space="preserve">
+    <value>強調文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.14" xml:space="preserve">
+    <value>現状では強震モニタリプレイ時の時刻色でのみ使用しています。</value>
+  </data>
+  <data name="WindowThemeEditWindow.15" xml:space="preserve">
+    <value>エラー･警告文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.16" xml:space="preserve">
+    <value>エラー･警告サブ文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.17" xml:space="preserve">
+    <value>エラー･警告背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.18" xml:space="preserve">
+    <value>内部ウィンドウ(ウィジェット)</value>
+  </data>
+  <data name="WindowThemeEditWindow.19" xml:space="preserve">
+    <value>背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.20" xml:space="preserve">
+    <value>見出し部分の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.21" xml:space="preserve">
+    <value>エラー･警告の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.22" xml:space="preserve">
+    <value>エラー･警告の見出し部分の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.23" xml:space="preserve">
+    <value>海外地形の色</value>
+  </data>
+  <data name="WindowThemeEditWindow.24" xml:space="preserve">
+    <value>縁の設定はできません。</value>
+  </data>
+  <data name="WindowThemeEditWindow.25" xml:space="preserve">
+    <value>地形の色</value>
+  </data>
+  <data name="WindowThemeEditWindow.26" xml:space="preserve">
+    <value>海岸線の色</value>
+  </data>
+  <data name="WindowThemeEditWindow.27" xml:space="preserve">
+    <value>海岸線の太さ</value>
+  </data>
+  <data name="WindowThemeEditWindow.28" xml:space="preserve">
+    <value>0 にすることで描画処理を軽量化できます。</value>
+  </data>
+  <data name="WindowThemeEditWindow.29" xml:space="preserve">
+    <value>都道府県境界線の色</value>
+  </data>
+  <data name="WindowThemeEditWindow.30" xml:space="preserve">
+    <value>都道府県境界線の太さ</value>
+  </data>
+  <data name="WindowThemeEditWindow.31" xml:space="preserve">
+    <value>地域境界線の色</value>
+  </data>
+  <data name="WindowThemeEditWindow.32" xml:space="preserve">
+    <value>地域境界線の太さ</value>
+  </data>
+  <data name="WindowThemeEditWindow.33" xml:space="preserve">
+    <value>震央アイコンの縁</value>
+  </data>
+  <data name="WindowThemeEditWindow.34" xml:space="preserve">
+    <value>震央アイコンの中央</value>
+  </data>
+  <data name="WindowThemeEditWindow.35" xml:space="preserve">
+    <value>震央アイコンの縁(予報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.36" xml:space="preserve">
+    <value>震央アイコンの中央(予報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.37" xml:space="preserve">
+    <value>震央アイコンの縁(警報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.38" xml:space="preserve">
+    <value>震央アイコンの中央(警報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.39" xml:space="preserve">
+    <value>震央アイコンの点滅アニメーション</value>
+  </data>
+  <data name="WindowThemeEditWindow.40" xml:space="preserve">
+    <value>P波色(予報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.41" xml:space="preserve">
+    <value>S波色(予報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.42" xml:space="preserve">
+    <value>予報のS波色をグラデーションにする</value>
+  </data>
+  <data name="WindowThemeEditWindow.43" xml:space="preserve">
+    <value>P波色(警報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.44" xml:space="preserve">
+    <value>S波色(警報)</value>
+  </data>
+  <data name="WindowThemeEditWindow.45" xml:space="preserve">
+    <value>警報のS波色をグラデーションにする</value>
+  </data>
+  <data name="WindowThemeEditWindow.46" xml:space="preserve">
+    <value>津波予報背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.47" xml:space="preserve">
+    <value>津波予報文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.48" xml:space="preserve">
+    <value>津波注意報背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.49" xml:space="preserve">
+    <value>津波注意報文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.50" xml:space="preserve">
+    <value>津波警報背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.51" xml:space="preserve">
+    <value>津波警報文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.52" xml:space="preserve">
+    <value>大津波警報背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.53" xml:space="preserve">
+    <value>大津波警報文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.54" xml:space="preserve">
+    <value>噴火情報</value>
+  </data>
+  <data name="WindowThemeEditWindow.55" xml:space="preserve">
+    <value>現状災危通報のみで使用されています。</value>
+  </data>
+  <data name="WindowThemeEditWindow.56" xml:space="preserve">
+    <value>少量の降灰の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.57" xml:space="preserve">
+    <value>少量の降灰の文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.58" xml:space="preserve">
+    <value>やや多量の降灰の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.59" xml:space="preserve">
+    <value>やや多量の降灰の文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.60" xml:space="preserve">
+    <value>大量の降灰の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.61" xml:space="preserve">
+    <value>大量の降灰の文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.62" xml:space="preserve">
+    <value>小さな噴石の落下の背景色</value>
+  </data>
+  <data name="WindowThemeEditWindow.63" xml:space="preserve">
+    <value>小さな噴石の落下の文字色</value>
+  </data>
+  <data name="WindowThemeEditWindow.64" xml:space="preserve">
+    <value>気象警報</value>
+  </data>
+  <data name="WindowThemeEditWindow.65" xml:space="preserve">
+    <value>警戒レベル5（特別警報）</value>
+  </data>
+  <data name="WindowThemeEditWindow.66" xml:space="preserve">
+    <value>警戒レベル4（危険警報･土砂災害警戒情報）</value>
+  </data>
+  <data name="WindowThemeEditWindow.67" xml:space="preserve">
+    <value>警戒レベル3（警報）</value>
+  </data>
+  <data name="WindowThemeEditWindow.68" xml:space="preserve">
+    <value>警戒レベル2（注意報）</value>
+  </data>
+  <data name="WindowThemeEditWindow.69" xml:space="preserve">
+    <value>海上台風警報</value>
+  </data>
+  <data name="WindowThemeEditWindow.70" xml:space="preserve">
+    <value>海上暴風警報</value>
+  </data>
+  <data name="WindowThemeEditWindow.71" xml:space="preserve">
+    <value>海上強風警報</value>
+  </data>
+  <data name="WindowThemeEditWindow.72" xml:space="preserve">
+    <value>海上風警報</value>
+  </data>
+  <data name="Wizard.SetupWizardBefore" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageContent" xml:space="preserve">
+    <value>これで一通りの初期設定は完了です。
+
+右下の『起動』ボタンからアプリの起動が可能です。  
+設定ウィンドウは右上の歯車アイコンのボタンを押すことで開くことができます。  
+このウィザードで設定した内容はごく一部で、かなり設定できる項目が多いので、自分好みにカスタマイズしてみてください。
+
+KyoshinEewViewer for ingen はまだまだ開発中です。  
+不具合や違和感がある場所がありましたら気軽に作者までお問い合わせください。  
+問い合わせ先は設定ウィンドウの一番下のタブに記載があります。
+
+---
+
+## ご利用にあたってのTips
+### 音声を鳴らしたい
+
+設定ウィンドウの『音声』タブより可能です。  
+`{int}: 最大震度` のような表記がある項目に対しては最大震度などに応じて再生するファイル名を変更することができます。  
+`C:\Sound\{int}.wav` のように指定すると震度5弱のときには `C:\Sound\5+.wav` が再生されます。
+
+### 録画などで利用したい
+
+配信や録画で使用する場合、上のタブ部分が邪魔になるかもしれません。  
+そういった場合はコマンドラインで引数を指定して起動することで特定のタブのみを表示させる特殊なモードとして起動することができます。(以下はWindowsの例です)
+
+- `KyoshinEewViewer.exe -s 種別` で起動することができます。種別は
+    - `kyoshin-monitor` 強震モニタ
+    - `earthquake` 地震情報
+    - `radar` 雨雲レーダー
+    - `qzss` 災危通報
+  のように指定できます。
+
+このモードで起動した場合、左下のボタンが表示されませんが存在自体はしていますのでクリックすることでマップ位置を元に戻したり、設定画面を開くことができます。</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageTitle" xml:space="preserve">
+    <value>さいごに</value>
+  </data>
+  <data name="Wizard.SetupWizardNext" xml:space="preserve">
+    <value>進む</value>
+  </data>
+  <data name="Wizard.SetupWizardRun" xml:space="preserve">
+    <value>起動</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapJapan" xml:space="preserve">
+    <value>地図(日本国内)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapOther" xml:space="preserve">
+    <value>地図(海外)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockContent" xml:space="preserve">
+    <value>通常ウィジェット中身</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockTitle" xml:space="preserve">
+    <value>通常ウィジェット</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewTitle" xml:space="preserve">
+    <value>サンプル</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockContent" xml:space="preserve">
+    <value>緊急ウィジェット中身</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockTitle" xml:space="preserve">
+    <value>緊急ウィジェット</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePageTitle" xml:space="preserve">
+    <value>テーマ設定</value>
+  </data>
+  <data name="Wizard.SetupWizardSkipAndRun" xml:space="preserve">
+    <value>スキップして起動</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageFunctionDetail" xml:space="preserve">
+    <value>このアプリケーションは
+
+- 強震モニタによるリアルタイム震度
+- 強震モニタ･SignalNowProfessional･DM-D.S.S経由での緊急地震速報
+- 気象庁HP･DM-D.S.S経由による地震情報
+
+などの受信･表示などを行うことができます。
+
+アプリケーションの利用を始める前に、利用したい機能･外観に合わせてアプリケーションをカスタマイズしてみましょう。
+
+これらの設定はこのウィザードが終了しても設定ウィンドウから再度変更することが可能です。  
+お急ぎの方は『スキップして起動』ボタンをご利用ください。</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitle" xml:space="preserve">
+    <value>KyoshinEewViewer for ingen へようこそ</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitleAlt" xml:space="preserve">
+    <value>KyoshinEewViewer for ingen へよこそう</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionContent" xml:space="preserve">
+    <value>## [Project DM-D.S.S](https://dmdata.jp/)とは
+
+WebSocketなどを利用してリアルタイムに地震情報などの配信を行うサービスです。(有料)  
+KyoshinEewViewer for ingen ではデフォルトの状態で[防災情報XML(PULL型)](http://xml.kishou.go.jp/xmlpull.html)を使用して地震情報の受信を行いますが、この方法では発表から受信までに**1～3分程度**ラグが発生します。  
+そこを DM-D.S.S を使用することで**数秒程度**に抑えることができ、テレビや企業が提供しているアプリと同等もしくはそれ以上の速度で情報の受信が可能になります。
+
+## 価格
+
+|区分|価格(月最大)|価格(日割り)|
+|---|---|---|
+|緊急地震（予報）|1650円/月|75円/日|
+|緊急地震（警報）|440円/月|20円/日|
+|地震・津波関連|550円/月|25円/日|
+
+(2022年7月時点/このソフトで使用可能なもののみ)
+
+ご利用の際はアカウント登録･契約の上アプリ起動後、設定ウィンドウの『DM-D.S.S』タブよりアカウント連携をお願いします。</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionTitle" xml:space="preserve">
+    <value>Project DM-D.S.S のご紹介</value>
+  </data>
+  <data name="Wizard.StetupWizardWindowTitle" xml:space="preserve">
+    <value>セットアップウィザード</value>
+  </data>
+  <data name="Workflow.Action" xml:space="preserve">
+    <value>アクション</value>
+  </data>
+  <data name="Workflow.Delete" xml:space="preserve">
+    <value>削除する</value>
+  </data>
+  <data name="Workflow.Disabled" xml:space="preserve">
+    <value>(無効)</value>
+  </data>
+  <data name="Workflow.Help" xml:space="preserve">
+    <value>ワークフロー機能の解説</value>
+  </data>
+  <data name="Workflow.New" xml:space="preserve">
+    <value>新しいワークフローを作成</value>
+  </data>
+  <data name="Workflow.NewName" xml:space="preserve">
+    <value>新しいワークフロー</value>
+  </data>
+  <data name="Workflow.None" xml:space="preserve">
+    <value>ワークフローがまだありません。</value>
+  </data>
+  <data name="Workflow.Restore" xml:space="preserve">
+    <value>保存した状態を復元する(ファイルの状態を読み戻す)</value>
+  </data>
+  <data name="Workflow.Save" xml:space="preserve">
+    <value>ワークフローを保存する</value>
+  </data>
+  <data name="Workflow.TestRun" xml:space="preserve">
+    <value>テスト実行</value>
+  </data>
+  <data name="Workflow.TestRunning" xml:space="preserve">
+    <value>テスト実行中です。</value>
+  </data>
+  <data name="Workflow.Trigger" xml:space="preserve">
+    <value>トリガー</value>
+  </data>
+  <data name="Workflow.Warning" xml:space="preserve">
+    <value>ワークフロー機能は高度かつ、試験中の機能です。
+左上の解説をよくお読みになった上でご利用ください。</value>
+  </data>
+</root>

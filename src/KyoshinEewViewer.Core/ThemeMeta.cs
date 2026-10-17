@@ -14,9 +14,9 @@ public record ThemeMeta(ThemeType Type, string Identifier)
 	[JsonIgnore]
 	public string DisplayName => Type switch
 	{
-		ThemeType.BuiltIn => "組み込みテーマ",
-		ThemeType.ExternalFile => $"外部テーマ: {Identifier}",
-		ThemeType.Temporary => "編集中のテーマ",
+		ThemeType.BuiltIn => CoreLocalization.Get("Theme.BuiltIn", "組み込みテーマ"),
+		ThemeType.ExternalFile => string.Format(CoreLocalization.Get("Theme.External", "外部テーマ: {0}"), Identifier),
+		ThemeType.Temporary => CoreLocalization.Get("Theme.Temporary", "編集中のテーマ"),
 		_ => throw new ArgumentOutOfRangeException(nameof(Type), Type, null),
 	};
 }

@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Series.KyoshinMonitor.Services.Eew;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Series.KyoshinMonitor.Services;
 using KyoshinEewViewer.Series.KyoshinMonitor.Models;
 using KyoshinEewViewer.Services;
@@ -48,7 +49,7 @@ public class RealtimeEarthquakeInformationHost : EarthquakeInformationHost
 		ObservationPointsUpdateService observationPointsUpdateService
 	) : base(false, config)
 	{
-		ReplayDescription = "リアルタイム";
+		ReplayDescription = Loc.Get("Replay.RealTime");
 
 		Logger = logger;
 		TimerService = timerService;

@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
 using FluentAvalonia.UI.Controls;
@@ -26,7 +27,7 @@ namespace KyoshinEewViewer.Series.KyoshinMonitor;
 
 public partial class KyoshinMonitorSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(KyoshinMonitorSeries), "kyoshin-monitor", "強震モニタ", new FAFontIconSource { Glyph = "\xe3b1", FontFamily = new(Utils.IconFontName) }, true, "強震モニタ･緊急地震速報を表示します。");
+	public static SeriesMeta MetaData { get; } = new(typeof(KyoshinMonitorSeries), "kyoshin-monitor", "Series.KyoshinMonitor", new FAFontIconSource { Glyph = "\xe3b1", FontFamily = new(Utils.IconFontName) }, true, "Series.KyoshinMonitor.Detail");
 
 	public override Size MinViewSize { get; } = new(500, 600);
 
@@ -48,11 +49,11 @@ public partial class KyoshinMonitorSeries : SeriesBase
 
 	private KyoshinMonitorReplaySettingPage ReplaySettingPage { get; }
 	public override ISettingPage[] SettingPages => [
-		new BasicSettingPage<KyoshinMonitorPage>("\xf108", "強震モニタ", [
+		new BasicSettingPage<KyoshinMonitorPage>("\xf108", "Series.KyoshinMonitor", [
 			ReplaySettingPage,
-			new BasicSettingPage<KyoshinMonitorMapPage>(null, "地図アイコン", []),
-			new BasicSettingPage<KyoshinMonitorEewPage>(null, "緊急地震速報", []),
-			new BasicSettingPage<ObservationPointsDataPage>(null, "観測点データ", []),
+			new BasicSettingPage<KyoshinMonitorMapPage>(null, "Setting.MapIcon", []),
+			new BasicSettingPage<KyoshinMonitorEewPage>(null, "Setting.Eew", []),
+			new BasicSettingPage<ObservationPointsDataPage>(null, "Setting.ObsPoints", []),
 		]),
 	];
 
@@ -194,10 +195,10 @@ public partial class KyoshinMonitorSeries : SeriesBase
 		Config = config;
 		WorkflowService = workflowService;
 
-		WeakShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "WeakShakeDetected", "揺れ検出(震度1未満)", "鳴動させるためには揺れ検出の設定を有効にしている必要があります。\n{mode}: 再生モード [replay, realtime]", new() { { "mode", "realtime" }, });
-		MediumShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "MediumShakeDetected", "揺れ検出(震度1以上3未満)", "震度上昇時にも鳴動します。\n鳴動させるためには揺れ検出の設定を有効にしている必要があります。\n{mode}: 再生モード [replay, realtime]", new() { { "mode", "realtime" }, });
-		StrongShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "StrongShakeDetected", "揺れ検出(震度3以上5弱未満)", "震度上昇時にも鳴動します。\n鳴動させるためには揺れ検出の設定を有効にしている必要があります。\n{mode}: 再生モード [replay, realtime]", new() { { "mode", "replay" }, });
-		StrongerShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "StrongerShakeDetected", "揺れ検出(震度5弱以上)", "震度上昇時にも鳴動します。\n鳴動させるためには揺れ検出の設定を有効にしている必要があります。\n{mode}: 再生モード [replay, realtime]", new() { { "mode", "replay" }, });
+		WeakShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "WeakShakeDetected", "Sound.ShakeWeak", "Sound.Desc.ShakeWeak", new() { { "mode", "realtime" }, });
+		MediumShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "MediumShakeDetected", "Sound.ShakeMedium", "Sound.Desc.ShakeRise", new() { { "mode", "realtime" }, });
+		StrongShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "StrongShakeDetected", "Sound.ShakeStrong", "Sound.Desc.ShakeRise", new() { { "mode", "replay" }, });
+		StrongerShakeDetectedSound = soundPlayer.RegisterSound(SoundCategory, "StrongerShakeDetected", "Sound.ShakeStronger", "Sound.Desc.ShakeRise", new() { { "mode", "replay" }, });
 
 		ReplaySettingPage = new KyoshinMonitorReplaySettingPage(Config, this, timerService, subWindowService);
 
@@ -342,8 +343,8 @@ public partial class KyoshinMonitorSeries : SeriesBase
 					{
 						Action = new SendNotificationAction
 						{
-							Title = KyoshinMonitorNotificationTemplates.EewNotificationTitle,
-							TemplateText = KyoshinMonitorNotificationTemplates.EewNotificationMessage,
+							Title = TemplateLocalizer.Get("Tpl.Eew.Title", KyoshinMonitorNotificationTemplates.EewNotificationTitle),
+							TemplateText = TemplateLocalizer.Get("Tpl.Eew.Message", KyoshinMonitorNotificationTemplates.EewNotificationMessage),
 							// 震度5弱以上は重要 (おやすみ中も表示)
 							Urgency = "{{ if IsAtLeastInt5Lower }}critical{{ else }}normal{{ end }}",
 						}

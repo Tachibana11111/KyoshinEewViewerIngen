@@ -7,31 +7,31 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:AshFallReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.AshFallReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
     </UserControl.Resources>
     <Grid RowDefinitions="auto,*" ColumnDefinitions="230,*">
         <StackPanel>
-            <local:DCReportHeaderControl Title="防災気象情報(降灰)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr AshFallReport.01}" ShowReportCount="True" />
 
             <Border CornerRadius="4,4,0,0" Background="{DynamicResource DockTitleBackgroundColor}">
-                <TextBlock Text="降灰情報" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" />
+                <TextBlock Text="{loc:Tr QzssPage.42}" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" />
             </Border>
             <Border CornerRadius="0,0,4,4" Background="{DynamicResource DockBackgroundColor}">
                 <StackPanel Margin="5,0,5,5">
                     <Panel>
-                        <TextBlock Text="火山名" FontSize="16" />
+                        <TextBlock Text="{loc:Tr AshFallReport.02}" FontSize="16" />
                         <Viewbox Stretch="Fill" StretchDirection="DownOnly" Height="40" MaxWidth="170" HorizontalAlignment="Right" Margin="0,5,0,0">
                             <TextBlock Text="{Binding VolcanoNameCode, Converter={StaticResource DCReportConverter}, ConverterParameter=Volcano}" FontWeight="Bold" FontSize="28" />
                         </Viewbox>
                     </Panel>
                     <Panel>
-                        <TextBlock Text="基点時刻" FontSize="16" />
+                        <TextBlock Text="{loc:Tr AshFallReport.03}" FontSize="16" />
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Right">
-                            <TextBlock Text="{Binding ActivityTime, StringFormat={}{0:d日}}" Margin="0,0,0,-2" FontSize="18" VerticalAlignment="Bottom" />
-                            <TextBlock Text="{Binding ActivityTime, StringFormat={}{0:HH時mm分}}" Margin="0,0,0,-3" FontSize="23" VerticalAlignment="Bottom" />
+                            <TextBlock Text="{loc:TrFormat Path=ActivityTime, Key=AshFallReport.F01}" Margin="0,0,0,-2" FontSize="18" VerticalAlignment="Bottom" />
+                            <TextBlock Text="{loc:TrFormat Path=ActivityTime, Key=EarthquakeView.F01}" Margin="0,0,0,-3" FontSize="23" VerticalAlignment="Bottom" />
                         </StackPanel>
                     </Panel>
                 </StackPanel>
@@ -39,7 +39,7 @@
         </StackPanel>
         <Grid Grid.Row="1" RowDefinitions="auto,*" Margin="0,5,0,0">
             <Border CornerRadius="4,4,0,0" Background="{DynamicResource DockTitleBackgroundColor}">
-                <TextBlock Text="{Binding WarningType, Converter={StaticResource DCReportConverter}, ConverterParameter=AshFallWarningType, StringFormat={}各地の情報({0})}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" />
+                <TextBlock Text="{loc:TrFormat Path=WarningType, Key=AshFallReport.F02, Converter={StaticResource DCReportConverter}, ConverterParameter=AshFallWarningType}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" />
             </Border>
             <Border Grid.Row="1" CornerRadius="0,0,4,4" Background="{DynamicResource DockBackgroundColor}">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
@@ -48,11 +48,11 @@
                             <DataTemplate>
                                 <StackPanel>
                                     <Panel Margin="5,0">
-                                        <TextBlock Text="{Binding Time, StringFormat={}{0:dd日 HH時}}" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                        <TextBlock Text="{loc:TrFormat Path=Time, Key=AshFallReport.F03}" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                         <TextBlock TextElement.Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Right">
-                                            <TextBlock Text="基点から" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="{loc:Tr AshFallReport.04}" VerticalAlignment="Bottom" />
                                             <TextBlock Text="{Binding ExpectedTime}" FontSize="20" Margin="0,0,0,-2" />
-                                            <TextBlock Text="時間" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="{loc:Tr AshFallReport.05}" VerticalAlignment="Bottom" />
                                         </TextBlock>
                                     </Panel>
                                     <Rectangle Height="1" Fill="{DynamicResource DockTitleBackgroundColor}" />
@@ -94,13 +94,13 @@
         </Grid>
         <StackPanel Grid.Column="1" Width="150" HorizontalAlignment="Right">
             <Border CornerRadius="4,4,0,0" Background="{DynamicResource DockTitleBackgroundColor}">
-                <TextBlock Text="地図操作" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" />
+                <TextBlock Text="{loc:Tr AshFallReport.06}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" />
             </Border>
             <Border Grid.Column="1" CornerRadius="0,0,4,4" Background="{DynamicResource DockBackgroundColor}">
                 <StackPanel Margin="5,0" Spacing="-10">
                     <TextBlock Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Center">
                         <TextBlock Text="{Binding MapCursor}" FontSize="18" FontWeight="Bold" Margin="0,0,0,-1" />
-                        <TextBlock Text="時間後" VerticalAlignment="Bottom" />
+                        <TextBlock Text="{loc:Tr AshFallReport.07}" VerticalAlignment="Bottom" />
                     </TextBlock>
                     <Slider Value="{Binding MapCursor}" Minimum="1" Maximum="{Binding MaxMapTime}" TickFrequency="1" IsSnapToTickEnabled="True" Margin="0,-5" />
                 </StackPanel>

@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using System;
 
 namespace KyoshinEewViewer.Views;
@@ -31,19 +32,19 @@ public partial class SetupWizardWindow : Window
 		{
 			BeforeButton.IsEnabled = false;
 			NextButton.IsEnabled = true;
-			SkipButtonText.Text = Properties.Resources.SetupWizardSkipAndRun;
+			SkipButtonText.Text = Loc.Get("Wizard.SetupWizardSkipAndRun");
 		}
 		else if (Index >= Pages.Length - 1)
 		{
 			BeforeButton.IsEnabled = true;
 			NextButton.IsEnabled = false;
-			SkipButtonText.Text = Properties.Resources.SetupWizardRun;
+			SkipButtonText.Text = Loc.Get("Wizard.SetupWizardRun");
 		}
 		else
 		{
 			BeforeButton.IsEnabled = true;
 			NextButton.IsEnabled = true;
-			SkipButtonText.Text = Properties.Resources.SetupWizardSkipAndRun;
+			SkipButtonText.Text = Loc.Get("Wizard.SetupWizardSkipAndRun");
 		}
 		SkipButtonText.HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center;
 		ContentControl.Content = Pages[Index];

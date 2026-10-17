@@ -5,16 +5,16 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Tsunami.SettingPages.TsunamiPage">
     <ScrollViewer>
         <StackPanel>
-            <ui:FASettingsExpander Header="津波情報更新時に自動でタブを切り替える" Description="解除･期限切れ時には切り替わりません。">
+            <ui:FASettingsExpander Header="{loc:Tr TsunamiPage.01}" Description="{loc:Tr TsunamiPage.02}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0f3;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Tsunami.SwitchAtUpdate}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Tsunami.SwitchAtUpdate}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
         </StackPanel>

@@ -8,7 +8,7 @@
 			 xmlns:controls="clr-namespace:KyoshinEewViewer.CustomControl;assembly=KyoshinEewViewer.CustomControl"
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
              x:DataType="vm:SetupWizardWindowViewModel"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SetupWizardPages.SelectThemePage">
 	<StackPanel Margin="10">
 		<StackPanel.Styles>
@@ -16,10 +16,10 @@
 				<Setter Property="TextWrapping" Value="Wrap" />
 			</Style>
 		</StackPanel.Styles>
-		<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePageTitle}" FontSize="32" HorizontalAlignment="Center" />
-		<TextBlock Text="テーマを選択することで配色を変更することができます。" Margin="0,20" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePageTitle}" FontSize="32" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr SelectThemePage.01}" Margin="0,20" HorizontalAlignment="Center" />
 		<Panel>
-			<Label Content="{x:Static p:Resources.SettingsWindowTheme}" FontSize="20" />
+			<Label Content="{loc:Tr General.WindowTheme}" FontSize="20" />
 			<ComboBox HorizontalAlignment="Right" Margin="0,1.5" Width="200" FontSize="24"
                       x:DataType="core:ThemeSelector"
 					  DataContext="{x:Static app:KyoshinEewViewerApp.Selector}" ItemsSource="{Binding WindowThemes}"
@@ -31,10 +31,10 @@
 				</ComboBox.ItemTemplate>
 			</ComboBox>
 		</Panel>
-		<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewTitle}" FontSize="24" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewTitle}" FontSize="24" HorizontalAlignment="Center" />
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
 			<StackPanel>
-				<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewMapJapan}" />
+				<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewMapJapan}" />
 				<Border BorderBrush="{DynamicResource MainForegroundColor}"
 						Background="{DynamicResource BackgroundColor}" BorderThickness="1"
 						HorizontalAlignment="Center" Margin="5">
@@ -46,7 +46,7 @@
 				</Border>
 			</StackPanel>
 			<StackPanel>
-				<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewMapOther}" />
+				<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewMapOther}" />
 				<Border BorderBrush="{DynamicResource MainForegroundColor}"
 						Background="{DynamicResource BackgroundColor}" BorderThickness="1"
 						HorizontalAlignment="Center" Margin="5">
@@ -57,24 +57,24 @@
 			</StackPanel>
 			<Grid Margin="5" RowDefinitions="24,*">
 				<Border Grid.Row="0" Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0">
-					<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewNormalDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Center" />
+					<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewNormalDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Center" />
 				</Border>
 				<Border Grid.Row="1" Background="{DynamicResource DockBackgroundColor}" CornerRadius="0,0,4,4" ClipToBounds="True">
-					<TextBlock Margin="5" Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewNormalDockContent}" />
+					<TextBlock Margin="5" Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewNormalDockContent}" />
 				</Border>
 			</Grid>
 			<Grid Margin="5" RowDefinitions="24,*">
 				<Border Grid.Row="0" Background="{DynamicResource DockWarningTitleBackgroundColor}" CornerRadius="4,4,0,0">
-					<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewWarningDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource WarningSubForegroundColor}" HorizontalAlignment="Center" />
+					<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewWarningDockTitle}" Margin="10,0" FontSize="18" Foreground="{DynamicResource WarningSubForegroundColor}" HorizontalAlignment="Center" />
 				</Border>
 				<Border Grid.Row="1" Background="{DynamicResource DockWarningBackgroundColor}" CornerRadius="0,0,4,4"
 						ClipToBounds="True">
-					<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewWarningDockContent}" Margin="5" Foreground="{DynamicResource WarningForegroundColor}"/>
+					<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewWarningDockContent}" Margin="5" Foreground="{DynamicResource WarningForegroundColor}"/>
 				</Border>
 			</Grid>
 		</StackPanel>
 		<Panel>
-			<Label Content="{x:Static p:Resources.SettingsIntensityTheme}" FontSize="20" />
+			<Label Content="{loc:Tr General.IntensityTheme}" FontSize="20" />
 			<ComboBox HorizontalAlignment="Right" Margin="0,1.5" Width="200"
                       x:DataType="core:ThemeSelector"
 					  DataContext="{x:Static app:KyoshinEewViewerApp.Selector}" ItemsSource="{Binding IntensityThemes}"
@@ -86,7 +86,7 @@
 				</ComboBox.ItemTemplate>
 			</ComboBox>
 		</Panel>
-		<TextBlock Text="{x:Static p:Resources.SetupWizardSelectThemePagePreviewTitle}" FontSize="24" HorizontalAlignment="Center" />
+		<TextBlock Text="{loc:Tr Wizard.SetupWizardSelectThemePagePreviewTitle}" FontSize="24" HorizontalAlignment="Center" />
 		<Border BorderBrush="{DynamicResource MainForegroundColor}"
 				Background="{DynamicResource DockBackgroundColor}" BorderThickness="1"
 				HorizontalAlignment="Center" Margin="5">

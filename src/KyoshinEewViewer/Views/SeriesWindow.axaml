@@ -7,7 +7,7 @@
         xmlns:vm="using:KyoshinEewViewer.ViewModels"
         xmlns:converter="clr-namespace:KyoshinEewViewer.Converters"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-        x:DataType="vm:SeriesWindowViewModel" x:CompileBindings="True"
+        x:DataType="vm:SeriesWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
         x:Class="KyoshinEewViewer.Views.SeriesWindow"
         Title="{Binding Series.Meta.Name, StringFormat='{}{0} - KyoshinEewViewer'}"
         Width="800" Height="600"
@@ -73,7 +73,7 @@
                         Command="{Binding ReturnToHomeMap}"
                         Padding="10,7"
                         Theme="{StaticResource TransparentButton}"
-                        ToolTip.Tip="地図の座標を戻す">
+                        ToolTip.Tip="{loc:Tr MainView.05}">
                     <Viewbox Height="28" Margin="0,2">
                         <ui:FASymbolIcon Symbol="Home" />
                     </Viewbox>

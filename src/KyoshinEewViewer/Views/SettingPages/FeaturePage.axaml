@@ -5,18 +5,18 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SettingPages.FeaturePage">
     <ScrollViewer>
         <StackPanel>
-            <TextBlock Text="機能設定" FontWeight="Bold" Margin="10,20,10,5" />
-            <TextBlock Text="利用機能の選択ができます。有効でない場合、通知などは行われません。再起動後反映されます。" Margin="10,0,10,5" />
+            <TextBlock Text="{loc:Tr Feature.Title}" FontWeight="Bold" Margin="10,20,10,5" />
+            <TextBlock Text="{loc:Tr Feature.Desc}" Margin="10,0,10,5" />
             <ItemsControl ItemsSource="{Binding Series}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate x:DataType="vm:SeriesViewModel">
                         <ui:FASettingsExpander Header="{Binding Meta.Name}" IconSource="{Binding Meta.Icon}" Description="{Binding Meta.Detail}">
                             <ui:FASettingsExpander.Footer>
-                                <ToggleSwitch IsChecked="{Binding IsEnabled}" OnContent="有効" OffContent="無効" />
+                                <ToggleSwitch IsChecked="{Binding IsEnabled}" OnContent="{loc:Tr Common.Enabled}" OffContent="{loc:Tr Common.Disabled}" />
                             </ui:FASettingsExpander.Footer>
                         </ui:FASettingsExpander>
                     </DataTemplate>

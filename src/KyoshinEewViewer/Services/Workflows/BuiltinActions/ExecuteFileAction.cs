@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Scriban;
 using System;
@@ -67,16 +68,16 @@ public partial class ExecuteFileAction : WorkflowAction
 				var process = Process.Start(info);
 				if (process == null)
 				{
-					LatestExecuteResult = "プロセスの起動に失敗しました";
+					LatestExecuteResult = Loc.Get("Wf.Exec.StartFailed");
 					return;
 				}
-				LatestExecuteResult = "実行中...";
+				LatestExecuteResult = Loc.Get("Wf.Exec.Running");
 				process.WaitForExit();
-				LatestExecuteResult = $"終了コード: {process.ExitCode}\n実行時間:{sw.ElapsedMilliseconds}ms";
+				LatestExecuteResult = Loc.Get("Wf.Exec.Exit", process.ExitCode, sw.ElapsedMilliseconds);
 			}
 			catch (Exception ex)
 			{
-				LatestExecuteResult = "実行中に例外が発生しました。\n" + ex;
+				LatestExecuteResult = Loc.Get("Wf.Exec.Exception") + ex;
 			}
 		});
 

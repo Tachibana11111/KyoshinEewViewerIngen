@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Series.Tsunami.Models;
 using KyoshinEewViewer.Services.Workflows;
@@ -12,13 +13,13 @@ public partial class TsunamiInformationTrigger : WorkflowTrigger
 {
 	public override Type EventType => typeof(TsunamiInformationEvent);
 
-	public static Dictionary<TsunamiLevel, string> LevelNames { get; } = new()
+	public static LocMap<TsunamiLevel> LevelNames { get; } = new()
 	{
-		{ TsunamiLevel.None, "津波なし(すべて)" },
-		{ TsunamiLevel.Forecast, "津波予報" },
-		{ TsunamiLevel.Advisory, "津波注意報" },
-		{ TsunamiLevel.Warning, "津波警報" },
-		{ TsunamiLevel.MajorWarning, "大津波警報" },
+		{ TsunamiLevel.None, "TsunamiLevel.None" },
+		{ TsunamiLevel.Forecast, "TsunamiLevel.Forecast" },
+		{ TsunamiLevel.Advisory, "TsunamiLevel.Advisory" },
+		{ TsunamiLevel.Warning, "TsunamiLevel.Warning" },
+		{ TsunamiLevel.MajorWarning, "TsunamiLevel.MajorWarning" },
 	};
 
 	[JsonIgnore]

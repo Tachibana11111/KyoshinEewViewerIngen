@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.Series.KyoshinMonitor.SettingPages"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="1500"
-			 x:DataType="vm:KyoshinMonitorReplaySettingPage"
+			 x:DataType="vm:KyoshinMonitorReplaySettingPage" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.SettingPages.KyoshinMonitorReplayPage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -30,43 +30,43 @@
                 <Grid ColumnDefinitions="45,*,auto" VerticalAlignment="Center">
                     <ui:FAFontIcon Glyph="&#xf201;" FontFamily="{StaticResource IconFont}" FontSize="20" HorizontalAlignment="Left" />
                     <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="5">
-                        <TextBlock Text="表示中の情報:" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.01}" />
                         <TextBlock Text="{Binding Series.CurrentInformationHost.ReplayDescription}" Foreground="{DynamicResource SubForegroundColor}" />
                     </StackPanel>
-                    <Button Grid.Column="2" Classes="accent" Content="リアルタイムに戻る" HorizontalAlignment="Center"
+                    <Button Grid.Column="2" Classes="accent" Content="{loc:Tr KyoshinMonitorReplayPage.02}" HorizontalAlignment="Center"
                             IsVisible="{Binding Series.NowReplaying}" Command="{Binding Series.ReturnToRealtime}" />
                 </Grid>
             </Border>
-            <ui:FASettingsExpander Header="リプレイ中もリアルタイム震度の受信を継続する"
-                                 Description="リプレイ終了後も揺れの検知処理に影響がないように裏でリアルタイム震度の受信を続けます。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorReplayPage.03}"
+                                 Description="{loc:Tr KyoshinMonitorReplayPage.04}">
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding Config.KyoshinMonitor.KeepReceiveDuringReplay}" />
+                    <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding Config.KyoshinMonitor.KeepReceiveDuringReplay}" />
                 </ui:FASettingsExpander.Footer>
-                <ui:FASettingsExpanderItem Content="揺れの検知時にリアルタイムに戻す">
+                <ui:FASettingsExpanderItem Content="{loc:Tr KyoshinMonitorReplayPage.05}">
                     <ui:FASettingsExpanderItem.Footer>
-                        <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding Config.KyoshinMonitor.ReturnToRealtimeAtShakeDetected}"  />
+                        <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding Config.KyoshinMonitor.ReturnToRealtimeAtShakeDetected}"  />
                     </ui:FASettingsExpanderItem.Footer>
                 </ui:FASettingsExpanderItem>
             </ui:FASettingsExpander>
-            <ui:FASettingsExpander Header="新たに緊急地震速報を受信した場合はリアルタイムに戻す"
-                                 Description="上の設定でリアルタイム震度の受信を行っていない場合は強震モニタからのEEWの受信は停止します。">
+            <ui:FASettingsExpander Header="{loc:Tr KyoshinMonitorReplayPage.06}"
+                                 Description="{loc:Tr KyoshinMonitorReplayPage.07}">
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch OnContent="する" OffContent="しない" IsChecked="{Binding Config.KyoshinMonitor.ReturnToRealtimeAtEewReceived}" />
+                    <ToggleSwitch OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" IsChecked="{Binding Config.KyoshinMonitor.ReturnToRealtimeAtEewReceived}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
-            <TextBlock Text="リプレイ開始" FontWeight="Bold" Margin="10,20,10,5" />
+            <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.08}" FontWeight="Bold" Margin="10,20,10,5" />
             <Expander IsExpanded="True" Margin="10,3,10,0">
                 <Expander.Header>
                     <Grid ColumnDefinitions="40,*" RowDefinitions="*,auto" Margin="0,15">
                         <ui:FAFontIcon Glyph="&#xf1da;" FontFamily="{StaticResource IconFont}" FontSize="20" HorizontalAlignment="Left" Grid.RowSpan="2" />
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="タイムシフト" FontSize="14" />
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="過去の強震モニタのデータを最大3時間まで遡ることが可能です。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{loc:Tr KyoshinMonitorReplayPage.09}" FontSize="14" />
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{loc:Tr KyoshinMonitorReplayPage.10}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
                     </Grid>
                 </Expander.Header>
                 <StackPanel HorizontalAlignment="Stretch">
                     <Panel Margin="0,5,0,-5">
-                        <TextBlock Text="現在" FontSize="14" HorizontalAlignment="Left" />
-                        <TextBlock Text="3時間前" FontSize="14" HorizontalAlignment="Right" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.11}" FontSize="14" HorizontalAlignment="Left" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.12}" FontSize="14" HorizontalAlignment="Right" />
                         <TextBlock Text="{Binding TimeshiftSecondsString}" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding TimeshiftedDateTime, StringFormat={}yyyy/MM/dd HH:mm:ss}" HorizontalAlignment="Center" Margin="0,-28,0,0" Foreground="{DynamicResource SubForegroundColor}" FontSize="14" />
                     </Panel>
@@ -89,9 +89,9 @@
                         <Button Content="-1m" CommandParameter="60" />
                         <Button Content="-10m" CommandParameter="600" />
                     </StackPanel>
-                    <Button Content="タイムシフト開始" Command="{Binding Series.StartTimeshift}"
+                    <Button Content="{loc:Tr KyoshinMonitorReplayPage.13}" Command="{Binding Series.StartTimeshift}"
                             HorizontalAlignment="Center" Margin="0,5" />
-                    <TextBlock Text="※タイムシフト中は強震モニタ以外の緊急地震速報のソースは利用できません。" FontSize="12" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.14}" FontSize="12" />
                 </StackPanel>
             </Expander>
             
@@ -99,47 +99,47 @@
                 <Expander.Header>
                     <Grid ColumnDefinitions="40,*" RowDefinitions="*,auto" Margin="0,15">
                         <ui:FAFontIcon Glyph="&#xf15b;" FontFamily="{StaticResource IconFont}" FontSize="20" HorizontalAlignment="Left" Grid.RowSpan="2" />
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="リプレイファイルを再生" FontSize="14" />
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="過去の強震モニタと緊急地震速報のデータを保存したファイルを再生します。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{loc:Tr KyoshinMonitorReplayPage.15}" FontSize="14" />
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{loc:Tr KyoshinMonitorReplayPage.16}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
                     </Grid>
                 </Expander.Header>
                 <StackPanel HorizontalAlignment="Stretch" Spacing="5">
-                    <Button Content="ファイルを読み込む" HorizontalAlignment="Center" Command="{Binding OpenReplayFile}" />
-                    <TextBlock Text="読み込んだファイルの情報" FontWeight="Bold" Margin="10,20,10,5" />
+                    <Button Content="{loc:Tr KyoshinMonitorReplayPage.17}" HorizontalAlignment="Center" Command="{Binding OpenReplayFile}" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.18}" FontWeight="Bold" Margin="10,20,10,5" />
                     <Grid ColumnDefinitions="auto,*" RowDefinitions="auto,auto,auto,auto,auto">
-                        <TextBlock Text="バージョン: " />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.19}" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.LoadedHeader.Version}" Grid.Column="1" />
-                        <TextBlock Text="作成アプリ: " Grid.Row="1" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.20}" Grid.Row="1" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.LoadedHeader.SoftwareName}" Grid.Row="1" Grid.Column="1" />
-                        <TextBlock Text="開始: " Grid.Row="2" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.21}" Grid.Row="2" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.LoadedHeader.StartTime, StringFormat=yyyy/MM/dd HH:mm:ss.fff}" Grid.Row="2" Grid.Column="1" />
-                        <TextBlock Text="終了: " Grid.Row="3" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.22}" Grid.Row="3" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.LoadedHeader.EndTime, StringFormat=yyyy/MM/dd HH:mm:ss.fff}" Grid.Row="3" Grid.Column="1" />
-                        <TextBlock Text="圧縮モード: " Grid.Row="4" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.23}" Grid.Row="4" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.LoadedHeader.CompressionMode}" Grid.Row="4" Grid.Column="1" />
                     </Grid>
                     
-                    <TextBlock Text="再生設定" FontWeight="Bold" Margin="10,20,10,5" />
-                    <TextBlock Text="{Binding Series.ReplayFileInformationHost.SpeedMultiplier,StringFormat={}再生速度: {0:0.0}倍速}" />
-                    <TextBlock Text="※再生中に速度を変更すると表示が一時的におかしくなることがあります。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.24}" FontWeight="Bold" Margin="10,20,10,5" />
+                    <TextBlock Text="{loc:TrFormat Path=Series.ReplayFileInformationHost.SpeedMultiplier, Key=KyoshinMonitorReplayPage.F01}" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.25}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
                     <Slider Value="{Binding Series.ReplayFileInformationHost.SpeedMultiplier}" Minimum="0.1" Maximum="30" TickFrequency="0.1" IsSnapToTickEnabled="True" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                        <Button Content="再生開始" HorizontalAlignment="Center" IsEnabled="{Binding Series.ReplayFileInformationHost.LoadedData, Converter={x:Static ObjectConverters.IsNotNull}}"
+                        <Button Content="{loc:Tr KyoshinMonitorReplayPage.26}" HorizontalAlignment="Center" IsEnabled="{Binding Series.ReplayFileInformationHost.LoadedData, Converter={x:Static ObjectConverters.IsNotNull}}"
                                 Command="{Binding Series.StartReplayFile}" />
-                        <Button Content="1倍速に戻す" Command="{Binding Series.ReplayFileInformationHost.ResetSpeedMultiplier}" />
+                        <Button Content="{loc:Tr KyoshinMonitorReplayPage.27}" Command="{Binding Series.ReplayFileInformationHost.ResetSpeedMultiplier}" />
                     </StackPanel>
                     
-                    <TextBlock Text="再生中のファイルの情報" FontWeight="Bold" Margin="10,20,10,5" />
+                    <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.28}" FontWeight="Bold" Margin="10,20,10,5" />
                     <Grid ColumnDefinitions="auto,*" RowDefinitions="auto,auto,auto,auto,auto">
-                        <TextBlock Text="バージョン: " />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.19}" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.CurrentHeader.Version}" Grid.Column="1" />
-                        <TextBlock Text="作成アプリ: " Grid.Row="1" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.20}" Grid.Row="1" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.CurrentHeader.SoftwareName}" Grid.Row="1" Grid.Column="1" />
-                        <TextBlock Text="開始: " Grid.Row="2" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.21}" Grid.Row="2" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.CurrentHeader.StartTime, StringFormat=yyyy/MM/dd HH:mm:ss.fff}" Grid.Row="2" Grid.Column="1" />
-                        <TextBlock Text="終了: " Grid.Row="3" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.22}" Grid.Row="3" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.CurrentHeader.EndTime, StringFormat=yyyy/MM/dd HH:mm:ss.fff}" Grid.Row="3" Grid.Column="1" />
-                        <TextBlock Text="圧縮モード: " Grid.Row="4" />
+                        <TextBlock Text="{loc:Tr KyoshinMonitorReplayPage.23}" Grid.Row="4" />
                         <TextBlock Text="{Binding Series.ReplayFileInformationHost.CurrentHeader.CompressionMode}" Grid.Row="4" Grid.Column="1" />
                     </Grid>
                 </StackPanel>

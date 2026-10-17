@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using Avalonia.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FluentAvalonia.UI.Controls;
@@ -18,13 +19,13 @@ using KyoshinEewViewer.Core;
 
 namespace KyoshinEewViewer.Series.Qzss.SettingPages;
 
-public partial class QzssSettingPage : ObservableObject, ISettingPage
+public partial class QzssSettingPage : LocalizedObservableObject, ISettingPage
 {
 	public bool IsVisible => true;
 
 	public string? Icon => "\xf7bf";
 
-	public string Title => "みちびき 災危通報";
+	public string Title => Loc.Instance["Setting.Qzss"];
 
 	public Control DisplayControl => new QzssPage() { DataContext = this };
 
@@ -33,9 +34,9 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 	public KyoshinEewViewerConfiguration Config { get; }
 	public QzssConnector Connector { get; }
 
-	public static Dictionary<QzssConnectionType, string> ConnectionTypeNames { get; } = new()
+	public static LocMap<QzssConnectionType> ConnectionTypeNames { get; } = new()
 	{
-		{ QzssConnectionType.Serial, "シリアルポート" },
+		{ QzssConnectionType.Serial, "QzssConn.Serial" },
 		{ QzssConnectionType.Tcp, "TCP" },
 	};
 
@@ -97,8 +98,8 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 	}
 
 	public string DetectBaudRateButtonLabel => IsDetectingBaudRate
-		? (CurrentDetectingBaudRate is { } rate ? $"キャンセル ({rate})" : "キャンセル")
-		: "自動検出";
+		? (CurrentDetectingBaudRate is { } rate ? Loc.Get("Qzss.CancelWithRate", rate) : Loc.Get("Common.Cancel"))
+		: Loc.Get("Qzss.AutoDetect");
 
 	// 未接続かつポート選択済み、かつ検出中でない場合のみボタンを有効化
 	// (検出中はキャンセル動作のため別途有効化する。CanDetectBaudRate は「新規に押下可能か」のみを表す)
@@ -201,8 +202,8 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 			if (settingWindow != null)
 				await new FAContentDialog
 				{
-					Title = "ボーレート自動検出 エラー",
-					Content = $"自動検出中にエラーが発生しました。\n{error.Message}",
+					Title = Loc.Get("Qzss.AutoDetectError.Title"),
+					Content = Loc.Get("Qzss.AutoDetectError.Message", error.Message),
 					CloseButtonText = "OK"
 				}.ShowAsync(settingWindow);
 			return;
@@ -220,9 +221,8 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 		if (settingWindow != null)
 			await new FAContentDialog
 			{
-				Title = "ボーレートを自動検出できませんでした",
-				Content = "いずれのボーレートでも有効なセンテンスを受信できませんでした。\n" +
-					"ケーブル接続、デバイスの電源、デバイス側の設定を確認のうえ、手動でボーレートを選択してください。",
+				Title = Loc.Get("Qzss.AutoDetectFailed.Title"),
+				Content = Loc.Get("Qzss.AutoDetectFailed.Message"),
 				CloseButtonText = "OK"
 			}.ShowAsync(settingWindow);
 	}
@@ -250,8 +250,8 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 		{
 			await new FAContentDialog
 			{
-				Title = "エラー",
-				Content = "ポートに接続されていません。接続してから再度お試しください。",
+				Title = Loc.Get("Common.Error"),
+				Content = Loc.Get("Qzss.NotConnected"),
 				CloseButtonText = "OK"
 			}.ShowAsync(settingWindow);
 			return;
@@ -262,25 +262,25 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 
 		if (Config.Qzss.SetupSendSfrbx)
 		{
-			var step = new SetupStep("UART1 に UBX-RXM-SFRBX (衛星航法データ) 出力を有効化");
+			var step = new SetupStep(Loc.Get("Qzss.Step.Sfrbx"));
 			steps.Add((step, () => Connector.SendCfgValSetAsync(CfgMsgOutSfrbxUart1, [0x01])));
 		}
 		if (Config.Qzss.SetupSendRmc)
 		{
-			var step = new SetupStep("UART1 に NMEA RMC 出力を有効化");
+			var step = new SetupStep(Loc.Get("Qzss.Step.Rmc"));
 			steps.Add((step, () => Connector.SendCfgValSetAsync(CfgMsgOutRmcUart1, [0x01])));
 		}
 		if (Config.Qzss.SetupEnableQzss)
 		{
-			var enableStep = new SetupStep("QZSS 受信を有効化");
+			var enableStep = new SetupStep(Loc.Get("Qzss.Step.Qzss"));
 			steps.Add((enableStep, () => Connector.SendCfgValSetAsync(CfgSignalQzssEna, [0x01])));
-			var l1sStep = new SetupStep("QZSS L1S (災危通報) 受信を有効化");
+			var l1sStep = new SetupStep(Loc.Get("Qzss.Step.L1s"));
 			steps.Add((l1sStep, () => Connector.SendCfgValSetAsync(CfgSignalQzssL1sEna, [0x01])));
 		}
 		if (Config.Qzss.SetupChangeUpdateRate)
 		{
 			var rate = (ushort)Config.Qzss.SetupUpdateRateMs;
-			var step = new SetupStep($"更新レートを {rate}ms に変更");
+			var step = new SetupStep(Loc.Get("Qzss.Step.Rate", rate));
 			steps.Add((step, () => Connector.SendCfgValSetAsync(CfgRateMeas, [(byte)(rate & 0xFF), (byte)(rate >> 8)])));
 		}
 
@@ -290,15 +290,15 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 		if (changeBaudRate)
 		{
 			var baud = (uint)Config.Qzss.SetupBaudRate;
-			baudRateStep = new SetupStep($"UART1 のボーレートを {baud} に変更");
+			baudRateStep = new SetupStep(Loc.Get("Qzss.Step.Baud", baud));
 		}
 
 		if (steps.Count == 0 && baudRateStep == null)
 		{
 			await new FAContentDialog
 			{
-				Title = "設定項目なし",
-				Content = "送信する設定項目が選択されていません。",
+				Title = Loc.Get("Qzss.NoSetting.Title"),
+				Content = Loc.Get("Qzss.NoSetting.Message"),
 				CloseButtonText = "OK"
 			}.ShowAsync(settingWindow);
 			return;
@@ -373,19 +373,19 @@ public partial class QzssSettingPage : ObservableObject, ISettingPage
 			{
 				await new FAContentDialog
 				{
-					Title = "設定送信失敗",
-					Content = "一部の設定送信に失敗しました。詳細は進捗表示をご確認ください。",
+					Title = Loc.Get("Qzss.SendFailed.Title"),
+					Content = Loc.Get("Qzss.SendFailed.Message"),
 					CloseButtonText = "OK"
 				}.ShowAsync(settingWindow);
 			}
 			else
 			{
 				var msg = changeBaudRate
-					? $"設定を送信しました。ボーレートを {Config.Qzss.SetupBaudRate} に変更して再接続しています。"
-					: "設定を送信しました。";
+					? Loc.Get("Qzss.SendDone.Reconnect", Config.Qzss.SetupBaudRate)
+					: Loc.Get("Qzss.SendDone");
 				await new FAContentDialog
 				{
-					Title = "設定完了",
+					Title = Loc.Get("Qzss.SendDone.Title"),
 					Content = msg,
 					CloseButtonText = "OK"
 				}.ShowAsync(settingWindow);

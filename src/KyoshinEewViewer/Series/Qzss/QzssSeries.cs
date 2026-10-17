@@ -25,7 +25,7 @@ namespace KyoshinEewViewer.Series.Qzss;
 
 public partial class QzssSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(QzssSeries), "qzss", "災危通報", new FAFontIconSource { Glyph = "\xf7bf", FontFamily = new FontFamily(Utils.IconFontName) }, false, "\"みちびき\" から配信される防災情報を表示します。");
+	public static SeriesMeta MetaData { get; } = new(typeof(QzssSeries), "qzss", "Series.Qzss", new FAFontIconSource { Glyph = "\xf7bf", FontFamily = new FontFamily(Utils.IconFontName) }, false, "Series.Qzss.Detail");
 
 	private MapData? MapData { get; set; }
 
@@ -49,9 +49,9 @@ public partial class QzssSeries : SeriesBase
 
 		WorkflowService = workflowService;
 
-		ReceivedSound = soundPlayer.RegisterSound(SoundCategory, "Received", "新規情報の受信", "同時発表の情報に統合された場合でも鳴動しますが、完全に同じ情報では鳴動しません。");
-		GroupAddedSound = soundPlayer.RegisterSound(SoundCategory, "GroupAdded", "新規グループ受信", "同時発表の情報と統合された場合には鳴動しません。");
-		NankaiTroughCompletedSound = soundPlayer.RegisterSound(SoundCategory, "NankaiTroughCompleted", "南海トラフ情報受信完了", "南海トラフに関する情報の受信が完了した場合に鳴動します。");
+		ReceivedSound = soundPlayer.RegisterSound(SoundCategory, "Received", "Sound.QzssReceived", "Sound.Desc.QzssReceived");
+		GroupAddedSound = soundPlayer.RegisterSound(SoundCategory, "GroupAdded", "Sound.QzssGroup", "Sound.Desc.QzssGroup");
+		NankaiTroughCompletedSound = soundPlayer.RegisterSound(SoundCategory, "NankaiTroughCompleted", "Sound.QzssNankai", "Sound.Desc.QzssNankai");
 
 		Connector = connector;
 		Connector.ObservePropertyChanged(s => s.CurrentLocation).Subscribe(s =>

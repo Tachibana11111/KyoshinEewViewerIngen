@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:p="clr-namespace:KyoshinEewViewer.Properties;assembly=KyoshinEewViewer"
+        xmlns:p="clr-namespace:KyoshinEewViewer.Properties;assembly=KyoshinEewViewer" xmlns:loc="using:KyoshinEewViewer.Localization"
         x:Class="KyoshinEewViewer.Views.SetupWizardWindow"
 
         xmlns:vm="using:KyoshinEewViewer.ViewModels"
@@ -17,7 +17,7 @@
         Background="{DynamicResource MainBackgroundColor}" Foreground="{DynamicResource SubForegroundColor}"
         FontFamily="{StaticResource MainFont}" FontWeight="Regular"
         Icon="/Assets/logo.ico"
-        Title="セットアップウィザード - KyoshinEewViewer for ingen">
+        Title="{loc:Tr SetupWizardWindow.01}">
 	<Grid RowDefinitions="*,1,auto">
 		<Border Background="{DynamicResource DockTitleBackgroundColor}">
 			<ScrollViewer>
@@ -30,17 +30,17 @@
 			<Button x:Name="BeforeButton" MinWidth="100" Margin="5">
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 					<TextBlock Text="&#xf177;" FontFamily="{StaticResource IconFont}" Margin="5" VerticalAlignment="Center" />
-					<TextBlock Text="{x:Static p:Resources.SetupWizardBefore}" VerticalAlignment="Center" />
+					<TextBlock Text="{loc:Tr Wizard.SetupWizardBefore}" VerticalAlignment="Center" />
 				</StackPanel>
 			</Button>
 			<Button x:Name="NextButton" MinWidth="100" Margin="5">
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-					<TextBlock Text="{x:Static p:Resources.SetupWizardNext}" VerticalAlignment="Center" />
+					<TextBlock Text="{loc:Tr Wizard.SetupWizardNext}" VerticalAlignment="Center" />
 					<TextBlock Text="&#xf061;" FontFamily="{StaticResource IconFont}" Margin="5" VerticalAlignment="Center" />
 				</StackPanel>
 			</Button>
 			<Button x:Name="SkipButton" MinWidth="160" Margin="15,5,5,5">
-				<TextBlock x:Name="SkipButtonText" Text="{x:Static p:Resources.SetupWizardSkipAndRun}" VerticalAlignment="Center" />
+				<TextBlock x:Name="SkipButtonText" Text="{loc:Tr Wizard.SetupWizardSkipAndRun}" VerticalAlignment="Center" />
 			</Button>
 		</StackPanel>
 	</Grid>

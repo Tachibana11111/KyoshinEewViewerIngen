@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using Avalonia.Data.Converters;
 using Avalonia.Media;
 using KyoshinEewViewer.DCReportParser;
@@ -16,25 +17,25 @@ public class DCReportConverters : IValueConverter
 		{
 			"ReportClassification" => value switch
 			{
-				ReportClassification.Maximum => "最優先",
-				ReportClassification.Priority => "優先",
-				ReportClassification.Regular => "通常",
-				ReportClassification.TrainingOrTest => "訓･試",
-				_ => $"不明({value})"
+				ReportClassification.Maximum => Loc.Get("DC.Class.Maximum"),
+				ReportClassification.Priority => Loc.Get("DC.Class.Priority"),
+				ReportClassification.Regular => Loc.Get("DC.Class.Regular"),
+				ReportClassification.TrainingOrTest => Loc.Get("DC.Class.TrainingShort"),
+				_ => Loc.Get("Accuracy.UnknownValue", value)
 			},
 			"ReportClassificationLong" => value switch
 			{
-				ReportClassification.Maximum => "最優先",
-				ReportClassification.Priority => "優先",
-				ReportClassification.Regular => "通常",
-				ReportClassification.TrainingOrTest => "訓練･試験",
-				_ => $"不明({value})"
+				ReportClassification.Maximum => Loc.Get("DC.Class.Maximum"),
+				ReportClassification.Priority => Loc.Get("DC.Class.Priority"),
+				ReportClassification.Regular => Loc.Get("DC.Class.Regular"),
+				ReportClassification.TrainingOrTest => Loc.Get("DC.Class.TrainingLong"),
+				_ => Loc.Get("Accuracy.UnknownValue", value)
 			},
 			"InformationType" => value switch
 			{
-				InformationType.Issue => "発表",
-				InformationType.Cancellation => "取消",
-				InformationType.Correction => "訂正",
+				InformationType.Issue => Loc.Get("DC.Info.Issue"),
+				InformationType.Cancellation => Loc.Get("DC.Info.Cancel"),
+				InformationType.Correction => Loc.Get("DC.Info.Correct"),
 				_ => "-",
 			},
 			"EewSeismicIntensity" => EewSeismicIntensityToJmaIntensity(value),
@@ -50,58 +51,58 @@ public class DCReportConverters : IValueConverter
 			},
 			"Magnitude" => value switch
 			{
-				(byte)127 => "不明",
-				(byte)101 => "巨大",
+				(byte)127 => Loc.Get("Common.Unknown"),
+				(byte)101 => Loc.Get("DC.Magnitude.Huge"),
 				byte m => $"M{m / 10.0:F1}",
 				_ => throw new NotImplementedException($"不明な Magnitude {value}")
 			},
 			"InformationSerialCode" => value switch
 			{
-				InformationSerialCode.InvestigatingA => "調査中(M6.8以上の地震発生)",
-				InformationSerialCode.InvestigatingB => "調査中(みずみ計観測)",
-				InformationSerialCode.InvestigatingC => "調査中(その他の事象観測)",
-				InformationSerialCode.HugeEarthquakeWarning => "巨大地震警戒",
-				InformationSerialCode.HugeEarthquakeCaution => "巨大地震注意",
-				InformationSerialCode.InvestigateEnded => "調査終了",
-				_ => "その他"
+				InformationSerialCode.InvestigatingA => Loc.Get("DC.Nankai.InvestigatingA"),
+				InformationSerialCode.InvestigatingB => Loc.Get("DC.Nankai.InvestigatingB"),
+				InformationSerialCode.InvestigatingC => Loc.Get("DC.Nankai.InvestigatingC"),
+				InformationSerialCode.HugeEarthquakeWarning => Loc.Get("DC.Nankai.Warning"),
+				InformationSerialCode.HugeEarthquakeCaution => Loc.Get("DC.Nankai.Advisory"),
+				InformationSerialCode.InvestigateEnded => Loc.Get("DC.Nankai.Ended"),
+				_ => Loc.Get("DC.Other")
 			},
 			"TsunamiWarningCode" => value switch
 			{
-				(byte)1 => "津波なし",
-				(byte)2 => "警報解除",
-				(byte)3 => "津波警報",
-				(byte)4 or (byte)5 => "大津波警報",
-				(byte)15 => "その他の警報",
-				_ => $"その他({value})",
+				(byte)1 => Loc.Get("TsunamiView.11"),
+				(byte)2 => Loc.Get("TsunamiReport.02"),
+				(byte)3 => Loc.Get("TsunamiLevel.Warning"),
+				(byte)4 or (byte)5 => Loc.Get("TsunamiLevel.MajorWarning"),
+				(byte)15 => Loc.Get("DC.OtherWarning"),
+				_ => Loc.Get("DC.OtherValue", value),
 			},
-			"ReferenceTimeType" => value is ReferenceTimeType referenceTimeType ? GetReferenceTimeTypeText(referenceTimeType, "情報") : "情報",
+			"ReferenceTimeType" => value is ReferenceTimeType referenceTimeType ? GetReferenceTimeTypeText(referenceTimeType, Loc.Get("DC.Information")) : Loc.Get("DC.Information"),
 			"Epicenter" => value switch {
-				0 => "情報なし",
-				int v => CsvDictionary.AreaEpicenter.TryGetValue(v, out var area) ? area : $"その他({v})",
-				_ => "不明",
+				0 => Loc.Get("DC.NoInformation"),
+				int v => CsvDictionary.AreaEpicenter.TryGetValue(v, out var area) ? area : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"Volcano" => value switch
 			{
-				int v => CsvDictionary.PointVolcano.TryGetValue(v, out var volcano) ? volcano : $"その他({v})",
-				_ => "不明",
+				int v => CsvDictionary.PointVolcano.TryGetValue(v, out var volcano) ? volcano : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"VolcanicWarningCode" => value switch
 			{
-				(byte)127 => "その他",
-				byte v => CsvDictionary.VolcanicWarning.TryGetValue(v, out var volcanicWarning) ? volcanicWarning : $"その他({v})",
-				_ => "不明",
+				(byte)127 => Loc.Get("DC.Other"),
+				byte v => CsvDictionary.VolcanicWarning.TryGetValue(v, out var volcanicWarning) ? volcanicWarning : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"Marine" => value switch
 			{
-				10000 => "その他",
-				int v => CsvDictionary.AreaMarineJ.TryGetValue(v, out var marine) ? marine : $"その他({v})",
-				_ => "不明",
+				10000 => Loc.Get("DC.Other"),
+				int v => CsvDictionary.AreaMarineJ.TryGetValue(v, out var marine) ? marine : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"MarineWarningCode" => value switch
 			{
-				(byte)31 => "その他",
-				byte v => CsvDictionary.MarineWarning.TryGetValue(v, out var marineWarning) ? marineWarning : $"その他({v})",
-				_ => "不明",
+				(byte)31 => Loc.Get("DC.Other"),
+				byte v => CsvDictionary.MarineWarning.TryGetValue(v, out var marineWarning) ? marineWarning : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"EewSeismicIntensityToForegroundColor" => GetColorFromIntensity(EewSeismicIntensityToJmaIntensity(value), true),
 			"EewSeismicIntensityToBackgroundColor" => GetColorFromIntensity(EewSeismicIntensityToJmaIntensity(value), false),
@@ -109,45 +110,45 @@ public class DCReportConverters : IValueConverter
 			"IntensityToForegroundColor" => GetColorFromIntensity(value is JmaIntensity i ? i : JmaIntensity.Error, true),
 			"TsunamiArea" => value switch
 			{
-				990 => "予約済み",
-				1000 => "その他",
-				int v => CsvDictionary.AreaTsunami.TryGetValue(v, out var name) ? name : $"その他({v})",
-				_ => "不明",
+				990 => Loc.Get("DC.Reserved"),
+				1000 => Loc.Get("DC.Other"),
+				int v => CsvDictionary.AreaTsunami.TryGetValue(v, out var name) ? name : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"WeatherDisasterSubCategory" => value switch
 			{
-				(byte)1 => "暴風雪特別警報",
-				(byte)2 => "大雨特別警報",
-				(byte)3 => "暴風特別警報",
-				(byte)4 => "大雪特別警報",
-				(byte)5 => "波浪特別警報",
-				(byte)6 => "高潮特別警報",
-				(byte)7 => "全ての気象特別警報",
-				(byte)21 => "記録的短時間大雨情報",
-				(byte)22 => "竜巻注意情報",
-				(byte)23 => "土砂災害警戒情報",
-				(byte)31 => "その他の警報等情報要素",
-				byte b => $"その他({b})",
-				_ => "不明",
+				(byte)1 => Loc.Get("DC.Special.Blizzard"),
+				(byte)2 => Loc.Get("DC.Special.HeavyRain"),
+				(byte)3 => Loc.Get("DC.Special.Storm"),
+				(byte)4 => Loc.Get("DC.Special.HeavySnow"),
+				(byte)5 => Loc.Get("DC.Special.HighWave"),
+				(byte)6 => Loc.Get("DC.Special.StormSurge"),
+				(byte)7 => Loc.Get("DC.Special.All"),
+				(byte)21 => Loc.Get("DC.Weather.ShortRain"),
+				(byte)22 => Loc.Get("DC.Weather.Tornado"),
+				(byte)23 => Loc.Get("DC.Weather.Landslide"),
+				(byte)31 => Loc.Get("DC.Weather.OtherElement"),
+				byte b => Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"AreaForecastLocalM" => value switch
 			{
-				500000 => "その他",
-				int v => CsvDictionary.AreaForecastLocalM.TryGetValue(v, out var name) ? name : $"その他({v})",
-				_ => "不明",
+				500000 => Loc.Get("DC.Other"),
+				int v => CsvDictionary.AreaForecastLocalM.TryGetValue(v, out var name) ? name : Loc.Get("DC.OtherValue", v),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TsunamigenicPotential" => value switch
 			{
-				(byte)0 => "津波の心配なし",
-				(byte)1 => "破壊的な広域津波が発生する可能性あり",
-				(byte)2 => "破壊的な地域津波が発生する可能性あり",
-				(byte)3 => "震源付近で破壊的な津波が発生する可能性あり",
-				(byte)4 => "破壊的な局地津波が発生する可能性は極めて低い",
-				byte b => $"その他({b})",
-				_ => "不明",
+				(byte)0 => Loc.Get("DC.Tsunami.None"),
+				(byte)1 => Loc.Get("DC.Tsunami.Wide"),
+				(byte)2 => Loc.Get("DC.Tsunami.Regional"),
+				(byte)3 => Loc.Get("DC.Tsunami.NearSource"),
+				(byte)4 => Loc.Get("DC.Tsunami.LocalUnlikely"),
+				byte b => Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
-			"NPTCoastalRegionArea" => value is byte areaCode ? GetNPTCoastalRegionAreaText(areaCode) : "不明",
-			"NPTCoastalRegion" => value is byte regionCode ? GetNPTCoastalRegionText(regionCode) : "不明",
+			"NPTCoastalRegionArea" => value is byte areaCode ? GetNPTCoastalRegionAreaText(areaCode) : Loc.Get("Common.Unknown"),
+			"NPTCoastalRegion" => value is byte regionCode ? GetNPTCoastalRegionText(regionCode) : Loc.Get("Common.Unknown"),
 			"AreaInformationCity" => value switch 
 			{
 				199999 => "北海道その他市町村",
@@ -197,15 +198,15 @@ public class DCReportConverters : IValueConverter
 				4599999 => "宮崎県その他市町村",
 				4699999 => "鹿児島県その他市町村",
 				4799999 => "沖縄県その他市町村",
-				int i => CsvDictionary.AreaInformationCity.TryGetValue(i, out var name) ? name : $"その他({i})",
-				_ => "不明",
+				int i => CsvDictionary.AreaInformationCity.TryGetValue(i, out var name) ? name : Loc.Get("DC.OtherValue", i),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"AshFallWarningType" => value switch
 			{
-				(byte)1 => "速報",
-				(byte)2 => "詳細",
-				byte b => $"その他({b})",
-				_ => "不明",
+				(byte)1 => Loc.Get("DC.Flash"),
+				(byte)2 => Loc.Get("DC.Detail"),
+				byte b => Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"AshFallWarningColor" => value switch
 			{
@@ -225,12 +226,12 @@ public class DCReportConverters : IValueConverter
 			},
 			"AshFallWarningCode" => value switch
 			{
-				(byte)1 => "少量の降灰",
-				(byte)2 => "やや多量の降灰",
-				(byte)3 => "多量の降灰",
-				(byte)4 => "小さな噴石の落下",
-				byte b => $"その他({b})",
-				_ => "不明",
+				(byte)1 => Loc.Get("DC.Ash.Light"),
+				(byte)2 => Loc.Get("DC.Ash.Moderate"),
+				(byte)3 => Loc.Get("DC.Ash.Heavy"),
+				(byte)4 => Loc.Get("DC.Ash.SmallRocks"),
+				byte b => Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"AreaFloodForecast" => value switch 
 			{
@@ -289,8 +290,8 @@ public class DCReportConverters : IValueConverter
 				879999999999 => "中国地方のその他河川",
 				889999999999 => "四国地方のその他河川",
 				899999999999 => "九州地方のその他河川",
-				long i => CsvDictionary.AreaFloodForecast.TryGetValue(i, out var name) ? name : $"その他({i})",
-				_ => "不明",
+				long i => CsvDictionary.AreaFloodForecast.TryGetValue(i, out var name) ? name : Loc.Get("DC.OtherValue", i),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"FloodWarningColor" => value switch
 			{
@@ -312,30 +313,30 @@ public class DCReportConverters : IValueConverter
 			},
 			"FloodWarningLevel" => value switch
 			{
-				(byte)1 => "警報解除",
-				(byte)2 => "氾濫警戒情報",
-				(byte)3 => "氾濫危険情報",
-				(byte)4 => "氾濫発生情報",
-				byte b => $"その他({b})",
-				_ => "不明",
+				(byte)1 => Loc.Get("TsunamiReport.02"),
+				(byte)2 => Loc.Get("DC.Flood.Warning"),
+				(byte)3 => Loc.Get("DC.Flood.Danger"),
+				(byte)4 => Loc.Get("DC.Flood.Occurred"),
+				byte b => Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TyphoonScale" => value switch
 			{
 				(byte)0 => "-",
-				byte b => GetTyphoonScaleText(b) ?? $"その他({value})",
-				_ => "不明",
+				byte b => GetTyphoonScaleText(b) ?? Loc.Get("DC.OtherValue", value),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TyphoonIntensity" => value switch
 			{
 				(byte)0 => "-",
-				byte b => GetTyphoonIntensityText(b) ?? $"その他({b})",
-				_ => "不明",
+				byte b => GetTyphoonIntensityText(b) ?? Loc.Get("DC.OtherValue", b),
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TyphoonMaximumWindSpeed" => value switch
 			{
-				(byte)0 => "不明",
+				(byte)0 => Loc.Get("Common.Unknown"),
 				byte b => b.ToString(),
-				_ => "不明",
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TyphoonMaximumWindSpeedHasValue" => value switch
 			{
@@ -345,9 +346,9 @@ public class DCReportConverters : IValueConverter
 			},
 			"TyphoonMaximumWindGustSpeed" => value switch
 			{
-				(byte)0 => "不明",
+				(byte)0 => Loc.Get("Common.Unknown"),
 				byte b => b.ToString(),
-				_ => "不明",
+				_ => Loc.Get("Common.Unknown"),
 			},
 			"TyphoonMaximumWindGustSpeedHasValue" => value switch
 			{
@@ -355,7 +356,7 @@ public class DCReportConverters : IValueConverter
 				byte => true,
 				_ => false,
 			},
-			"TyphoonReferenceTimeType" => value is ReferenceTimeType typhoonReferenceTimeType ? GetReferenceTimeTypeText(typhoonReferenceTimeType) : "不明",
+			"TyphoonReferenceTimeType" => value is ReferenceTimeType typhoonReferenceTimeType ? GetReferenceTimeTypeText(typhoonReferenceTimeType) : Loc.Get("Common.Unknown"),
 			_ => throw new NotImplementedException($"不明な targetType {targetType}")
 		};
 
@@ -364,8 +365,8 @@ public class DCReportConverters : IValueConverter
 	/// </summary>
 	public static string? GetTyphoonScaleText(byte scale) => scale switch
 	{
-		1 => "大型",
-		2 => "超大型",
+		1 => Loc.Get("DC.Typhoon.Large"),
+		2 => Loc.Get("DC.Typhoon.VeryLarge"),
 		_ => null,
 	};
 
@@ -374,9 +375,9 @@ public class DCReportConverters : IValueConverter
 	/// </summary>
 	public static string? GetTyphoonIntensityText(byte intensity) => intensity switch
 	{
-		1 => "強い",
-		2 => "非常に強い",
-		3 => "猛烈",
+		1 => Loc.Get("DC.Typhoon.Strong"),
+		2 => Loc.Get("DC.Typhoon.VeryStrong"),
+		3 => Loc.Get("DC.Typhoon.Violent"),
 		_ => null,
 	};
 
@@ -384,12 +385,12 @@ public class DCReportConverters : IValueConverter
 	/// 基準時刻種別の文字列を取得する
 	/// </summary>
 	/// <param name="unknownText">未知の種別の場合に返す文字列</param>
-	public static string GetReferenceTimeTypeText(ReferenceTimeType type, string unknownText = "不明") => type switch
+	public static string GetReferenceTimeTypeText(ReferenceTimeType type, string? unknownText = null) => type switch
 	{
-		ReferenceTimeType.Analysis => "実況",
-		ReferenceTimeType.Estimate => "推定",
-		ReferenceTimeType.Forecast => "予報",
-		_ => unknownText,
+		ReferenceTimeType.Analysis => Loc.Get("DC.Typhoon.Analysis"),
+		ReferenceTimeType.Estimate => Loc.Get("DC.Typhoon.Estimate"),
+		ReferenceTimeType.Forecast => Loc.Get("DC.Typhoon.Forecast"),
+		_ => unknownText ?? Loc.Get("Common.Unknown"),
 	};
 
 	/// <summary>
@@ -461,7 +462,7 @@ public class DCReportConverters : IValueConverter
 		39 => "キラキラ",
 		40 => "ムンダ",
 		41 => "ホニアラ",
-		73 or (>= 42 and <= 65) or (>= 87 and <= 96) => $"予約済み({code})",
+		73 or (>= 42 and <= 65) or (>= 87 and <= 96) => Loc.Get("DC.ReservedValue", code),
 		66 => "カラギンスキー島",
 		67 => "ニコリスコエ",
 		68 => "統営",
@@ -483,7 +484,7 @@ public class DCReportConverters : IValueConverter
 		85 => "舟山",
 		86 => "温州",
 		99 => "不明(99)",
-		_ => $"その他({code})",
+		_ => Loc.Get("DC.OtherValue", code),
 	};
 
 	private JmaIntensity EewSeismicIntensityToJmaIntensity(object? value)

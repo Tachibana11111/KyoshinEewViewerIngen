@@ -1,0 +1,3591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accuracy.Epi.1" xml:space="preserve">
+    <value>Vượt mức sóng P/S hoặc IPF (1 trạm) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.2" xml:space="preserve">
+    <value>Phương pháp IPF (2 trạm) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.3" xml:space="preserve">
+    <value>Phương pháp IPF (3-4 trạm) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.4" xml:space="preserve">
+    <value>Phương pháp IPF (từ 5 trạm) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.5" xml:space="preserve">
+    <value>Hi-net (tối đa 4 trạm hoặc không có dữ liệu) [NIED]</value>
+  </data>
+  <data name="Accuracy.Epi.6" xml:space="preserve">
+    <value>Hi-net (từ 5 trạm) [NIED]</value>
+  </data>
+  <data name="Accuracy.Epi.7" xml:space="preserve">
+    <value>EPOS (ngoài khơi [ngoài mạng lưới])</value>
+  </data>
+  <data name="Accuracy.Epi.8" xml:space="preserve">
+    <value>EPOS (nội địa [trong mạng lưới])</value>
+  </data>
+  <data name="Accuracy.Mag.2" xml:space="preserve">
+    <value>Hi-net [NIED]</value>
+  </data>
+  <data name="Accuracy.Mag.3" xml:space="preserve">
+    <value>Tất cả trạm pha P</value>
+  </data>
+  <data name="Accuracy.Mag.4" xml:space="preserve">
+    <value>Hỗn hợp pha P / mọi pha</value>
+  </data>
+  <data name="Accuracy.Mag.5" xml:space="preserve">
+    <value>Tất cả trạm mọi pha</value>
+  </data>
+  <data name="Accuracy.Mag.8" xml:space="preserve">
+    <value>Vượt mức sóng P/S</value>
+  </data>
+  <data name="Accuracy.NoParameter" xml:space="preserve">
+    <value>Chưa đặt tham số</value>
+  </data>
+  <data name="Accuracy.UnknownValue" xml:space="preserve">
+    <value>Không rõ ({0})</value>
+  </data>
+  <data name="AshFallReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (tro bụi)</value>
+  </data>
+  <data name="AshFallReport.02" xml:space="preserve">
+    <value>Tên núi lửa</value>
+  </data>
+  <data name="AshFallReport.03" xml:space="preserve">
+    <value>Thời điểm gốc</value>
+  </data>
+  <data name="AshFallReport.04" xml:space="preserve">
+    <value>Từ thời điểm gốc</value>
+  </data>
+  <data name="AshFallReport.05" xml:space="preserve">
+    <value>giờ</value>
+  </data>
+  <data name="AshFallReport.06" xml:space="preserve">
+    <value>Điều khiển bản đồ</value>
+  </data>
+  <data name="AshFallReport.07" xml:space="preserve">
+    <value>giờ sau</value>
+  </data>
+  <data name="AshFallReport.F01" xml:space="preserve">
+    <value>{0:dd}</value>
+  </data>
+  <data name="AshFallReport.F02" xml:space="preserve">
+    <value>Thông tin theo địa điểm ({0})</value>
+  </data>
+  <data name="AshFallReport.F03" xml:space="preserve">
+    <value>{0:dd HH:00}</value>
+  </data>
+  <data name="Axis.NoToken" xml:space="preserve">
+    <value>Chưa nhập token.</value>
+  </data>
+  <data name="Axis.Status.ConnectFailed" xml:space="preserve">
+    <value>Kết nối thất bại. Sẽ tự động thử lại…</value>
+  </data>
+  <data name="Axis.Status.Connected" xml:space="preserve">
+    <value>Đã kết nối</value>
+  </data>
+  <data name="Axis.Status.ConnectedRtt" xml:space="preserve">
+    <value>Đã kết nối (RTT: {0:0.0}ms)</value>
+  </data>
+  <data name="Axis.Status.Connecting" xml:space="preserve">
+    <value>Đang kết nối…</value>
+  </data>
+  <data name="Axis.Status.DisconnectDone" xml:space="preserve">
+    <value>Đã ngắt kết nối</value>
+  </data>
+  <data name="Axis.Status.Disconnected" xml:space="preserve">
+    <value>Đã bị ngắt kết nối</value>
+  </data>
+  <data name="Axis.Status.DisconnectedRetry" xml:space="preserve">
+    <value>Đã bị ngắt kết nối. Sẽ kết nối lại sau {0:0} giây…</value>
+  </data>
+  <data name="Axis.Status.Disconnecting" xml:space="preserve">
+    <value>Đang ngắt kết nối…</value>
+  </data>
+  <data name="Axis.Status.Idle" xml:space="preserve">
+    <value>Đang chờ</value>
+  </data>
+  <data name="Axis.TokenExpired" xml:space="preserve">
+    <value>Token đã hết hạn.</value>
+  </data>
+  <data name="AxisPage.01" xml:space="preserve">
+    <value>Về AXIS</value>
+  </data>
+  <data name="AxisPage.02" xml:space="preserve">
+    <value>Sẽ không kết nối nếu các tính năng AXIS có thể dùng chưa được bật.</value>
+  </data>
+  <data name="AxisPage.03" xml:space="preserve">
+    <value>Access token</value>
+  </data>
+  <data name="AxisPage.04" xml:space="preserve">
+    <value>Thông tin token</value>
+  </data>
+  <data name="AxisPage.05" xml:space="preserve">
+    <value>Tên người dùng:</value>
+  </data>
+  <data name="AxisPage.06" xml:space="preserve">
+    <value>Kênh:</value>
+  </data>
+  <data name="AxisPage.07" xml:space="preserve">
+    <value>Hết hạn:</value>
+  </data>
+  <data name="AxisPage.08" xml:space="preserve">
+    <value>Bắt đầu nhận</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Common.Disabled" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="Common.Enabled" xml:space="preserve">
+    <value>Bật</value>
+  </data>
+  <data name="Common.Error" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="Common.None" xml:space="preserve">
+    <value>Không có</value>
+  </data>
+  <data name="Common.Off" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="Common.On" xml:space="preserve">
+    <value>Bật</value>
+  </data>
+  <data name="Common.Unknown" xml:space="preserve">
+    <value>Không rõ</value>
+  </data>
+  <data name="Common.Volume" xml:space="preserve">
+    <value>Âm lượng</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>Có</value>
+  </data>
+  <data name="DC.Ash.Heavy" xml:space="preserve">
+    <value>Tro bụi nặng</value>
+  </data>
+  <data name="DC.Ash.Light" xml:space="preserve">
+    <value>Tro bụi nhẹ</value>
+  </data>
+  <data name="DC.Ash.Moderate" xml:space="preserve">
+    <value>Tro bụi vừa</value>
+  </data>
+  <data name="DC.Ash.SmallRocks" xml:space="preserve">
+    <value>Đá núi lửa nhỏ rơi</value>
+  </data>
+  <data name="DC.Class.Maximum" xml:space="preserve">
+    <value>Ưu tiên cao nhất</value>
+  </data>
+  <data name="DC.Class.Priority" xml:space="preserve">
+    <value>Ưu tiên</value>
+  </data>
+  <data name="DC.Class.Regular" xml:space="preserve">
+    <value>Thường</value>
+  </data>
+  <data name="DC.Class.TrainingLong" xml:space="preserve">
+    <value>Diễn tập / thử nghiệm</value>
+  </data>
+  <data name="DC.Class.TrainingShort" xml:space="preserve">
+    <value>Diễn tập/Thử</value>
+  </data>
+  <data name="DC.Detail" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="DC.Flash" xml:space="preserve">
+    <value>Tin nhanh</value>
+  </data>
+  <data name="DC.Flood.Danger" xml:space="preserve">
+    <value>Thông tin nguy hiểm lũ</value>
+  </data>
+  <data name="DC.Flood.Occurred" xml:space="preserve">
+    <value>Thông tin lũ đã xảy ra</value>
+  </data>
+  <data name="DC.Flood.Warning" xml:space="preserve">
+    <value>Thông tin cảnh báo lũ</value>
+  </data>
+  <data name="DC.Info.Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="DC.Info.Correct" xml:space="preserve">
+    <value>Đính chính</value>
+  </data>
+  <data name="DC.Info.Issue" xml:space="preserve">
+    <value>Công bố</value>
+  </data>
+  <data name="DC.Information" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="DC.Magnitude.Huge" xml:space="preserve">
+    <value>Cực lớn</value>
+  </data>
+  <data name="DC.Nankai.Advisory" xml:space="preserve">
+    <value>Khuyến cáo siêu động đất</value>
+  </data>
+  <data name="DC.Nankai.Ended" xml:space="preserve">
+    <value>Kết thúc điều tra</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingA" xml:space="preserve">
+    <value>Đang điều tra (xảy ra động đất từ M6.8)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingB" xml:space="preserve">
+    <value>Đang điều tra (quan trắc bằng máy đo biến dạng)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingC" xml:space="preserve">
+    <value>Đang điều tra (quan sát hiện tượng khác)</value>
+  </data>
+  <data name="DC.Nankai.Warning" xml:space="preserve">
+    <value>Cảnh báo siêu động đất</value>
+  </data>
+  <data name="DC.NoInformation" xml:space="preserve">
+    <value>Không có thông tin</value>
+  </data>
+  <data name="DC.Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="DC.OtherValue" xml:space="preserve">
+    <value>Khác ({0})</value>
+  </data>
+  <data name="DC.OtherWarning" xml:space="preserve">
+    <value>Cảnh báo khác</value>
+  </data>
+  <data name="DC.Reserved" xml:space="preserve">
+    <value>Dự phòng</value>
+  </data>
+  <data name="DC.ReservedValue" xml:space="preserve">
+    <value>Dự phòng ({0})</value>
+  </data>
+  <data name="DC.Special.All" xml:space="preserve">
+    <value>Tất cả cảnh báo đặc biệt về thời tiết</value>
+  </data>
+  <data name="DC.Special.Blizzard" xml:space="preserve">
+    <value>Cảnh báo đặc biệt bão tuyết</value>
+  </data>
+  <data name="DC.Special.HeavyRain" xml:space="preserve">
+    <value>Cảnh báo đặc biệt mưa lớn</value>
+  </data>
+  <data name="DC.Special.HeavySnow" xml:space="preserve">
+    <value>Cảnh báo đặc biệt tuyết lớn</value>
+  </data>
+  <data name="DC.Special.HighWave" xml:space="preserve">
+    <value>Cảnh báo đặc biệt sóng lớn</value>
+  </data>
+  <data name="DC.Special.Storm" xml:space="preserve">
+    <value>Cảnh báo đặc biệt bão gió</value>
+  </data>
+  <data name="DC.Special.StormSurge" xml:space="preserve">
+    <value>Cảnh báo đặc biệt triều cường</value>
+  </data>
+  <data name="DC.Tsunami.LocalUnlikely" xml:space="preserve">
+    <value>Khả năng xảy ra sóng thần phá hoại cục bộ là rất thấp</value>
+  </data>
+  <data name="DC.Tsunami.NearSource" xml:space="preserve">
+    <value>Có thể xảy ra sóng thần phá hoại gần chấn tiêu</value>
+  </data>
+  <data name="DC.Tsunami.None" xml:space="preserve">
+    <value>Không lo ngại sóng thần</value>
+  </data>
+  <data name="DC.Tsunami.Regional" xml:space="preserve">
+    <value>Có thể xảy ra sóng thần phá hoại khu vực</value>
+  </data>
+  <data name="DC.Tsunami.Wide" xml:space="preserve">
+    <value>Có thể xảy ra sóng thần phá hoại diện rộng</value>
+  </data>
+  <data name="DC.Typhoon.Analysis" xml:space="preserve">
+    <value>Thực trạng</value>
+  </data>
+  <data name="DC.Typhoon.Estimate" xml:space="preserve">
+    <value>Ước tính</value>
+  </data>
+  <data name="DC.Typhoon.Forecast" xml:space="preserve">
+    <value>Dự báo</value>
+  </data>
+  <data name="DC.Typhoon.Large" xml:space="preserve">
+    <value>Lớn</value>
+  </data>
+  <data name="DC.Typhoon.Strong" xml:space="preserve">
+    <value>Mạnh</value>
+  </data>
+  <data name="DC.Typhoon.VeryLarge" xml:space="preserve">
+    <value>Rất lớn</value>
+  </data>
+  <data name="DC.Typhoon.VeryStrong" xml:space="preserve">
+    <value>Rất mạnh</value>
+  </data>
+  <data name="DC.Typhoon.Violent" xml:space="preserve">
+    <value>Cực mạnh</value>
+  </data>
+  <data name="DC.Weather.Landslide" xml:space="preserve">
+    <value>Thông tin cảnh giác sạt lở đất</value>
+  </data>
+  <data name="DC.Weather.OtherElement" xml:space="preserve">
+    <value>Yếu tố thông tin cảnh báo khác</value>
+  </data>
+  <data name="DC.Weather.ShortRain" xml:space="preserve">
+    <value>Thông tin mưa lớn ngắn hạn kỷ lục</value>
+  </data>
+  <data name="DC.Weather.Tornado" xml:space="preserve">
+    <value>Thông tin chú ý lốc xoáy</value>
+  </data>
+  <data name="DCReportHeader.01" xml:space="preserve">
+    <value>Phân loại</value>
+  </data>
+  <data name="DCReportHeader.02" xml:space="preserve">
+    <value>Đã gộp</value>
+  </data>
+  <data name="DCReportHeader.F01" xml:space="preserve">
+    <value>{0:dd/MM HH:mm}</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Message" xml:space="preserve">
+    <value>Xóa workflow "{0}"?
+Thao tác này không thể hoàn tác.</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Title" xml:space="preserve">
+    <value>Xóa workflow</value>
+  </data>
+  <data name="Dialog.OpenAudioFile" xml:space="preserve">
+    <value>Mở tệp âm thanh</value>
+  </data>
+  <data name="Dialog.OpenXml" xml:space="preserve">
+    <value>Mở điện văn XML bất kỳ</value>
+  </data>
+  <data name="Dialog.ResetWindows.Message" xml:space="preserve">
+    <value>Thao tác này sẽ đặt lại vị trí của tất cả cửa sổ.
+Các cửa sổ đang mở sẽ bị đóng.
+Bạn có chắc không?</value>
+  </data>
+  <data name="Dialog.ResetWindows.Title" xml:space="preserve">
+    <value>Đặt lại vị trí cửa sổ</value>
+  </data>
+  <data name="Dmdata.Status.AuthSuccess" xml:space="preserve">
+    <value>Xác thực thành công</value>
+  </data>
+  <data name="Dmdata.Status.Authenticated" xml:space="preserve">
+    <value>Đã xác thực</value>
+  </data>
+  <data name="Dmdata.Status.Authenticating" xml:space="preserve">
+    <value>Đang xác thực</value>
+  </data>
+  <data name="Dmdata.Status.ClientCredentials" xml:space="preserve">
+    <value>Đang dùng luồng client credentials</value>
+  </data>
+  <data name="Dmdata.Status.NotAuth" xml:space="preserve">
+    <value>Chưa xác thực</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectFailed" xml:space="preserve">
+    <value>Kết nối lại thất bại</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectStarted" xml:space="preserve">
+    <value>Đã bắt đầu kết nối lại</value>
+  </data>
+  <data name="Dmdata.Status.RevokeFailed" xml:space="preserve">
+    <value>Hủy token thất bại</value>
+  </data>
+  <data name="Dmdata.Status.Unlinking" xml:space="preserve">
+    <value>Đang hủy xác thực</value>
+  </data>
+  <data name="DmdataPage.01" xml:space="preserve">
+    <value>Về Project DM-D.S.S</value>
+  </data>
+  <data name="DmdataPage.02" xml:space="preserve">
+    <value>Liên kết tài khoản</value>
+  </data>
+  <data name="DmdataPage.03" xml:space="preserve">
+    <value>Hủy liên kết</value>
+  </data>
+  <data name="DmdataPage.04" xml:space="preserve">
+    <value>Hủy liên kết tài khoản</value>
+  </data>
+  <data name="DmdataPage.05" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="DmdataPage.06" xml:space="preserve">
+    <value>Nhận qua WebSocket</value>
+  </data>
+  <data name="DmdataPage.07" xml:space="preserve">
+    <value>Dùng một kết nối WebSocket để tăng tính thời gian thực.</value>
+  </data>
+  <data name="DmdataPage.08" xml:space="preserve">
+    <value>Hệ số khoảng thời gian lấy dữ liệu với kiểu PULL</value>
+  </data>
+  <data name="DmdataPage.09" xml:space="preserve">
+    <value>Tăng giá trị này giúp giảm tải cho máy chủ.</value>
+  </data>
+  <data name="DmdataPage.10" xml:space="preserve">
+    <value>Nhận bản tin diễn tập (thử nghiệm, v.v.)</value>
+  </data>
+  <data name="DmdataPage.11" xml:space="preserve">
+    <value>Khi đang kết nối WebSocket, cần kết nối lại để áp dụng.</value>
+  </data>
+  <data name="DmdataPage.12" xml:space="preserve">
+    <value>Dự phòng kết nối</value>
+  </data>
+  <data name="DmdataPage.13" xml:space="preserve">
+    <value>Tăng độ tin cậy bằng cách kết nối tới nhiều endpoint ở Tokyo và Osaka.</value>
+  </data>
+  <data name="DmdataPage.14" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="DmdataPage.15" xml:space="preserve">
+    <value>Trạng thái kết nối:</value>
+  </data>
+  <data name="DmdataPage.16" xml:space="preserve">
+    <value>Số kết nối đang hoạt động:</value>
+  </data>
+  <data name="DmdataPage.17" xml:space="preserve">
+    <value>Endpoint đang kết nối:</value>
+  </data>
+  <data name="DmdataPage.18" xml:space="preserve">
+    <value>Số tin nhắn đã nhận:</value>
+  </data>
+  <data name="DmdataPage.19" xml:space="preserve">
+    <value>Kết nối lại ngay</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.01" xml:space="preserve">
+    <value>Khi nhận thông tin</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.02" xml:space="preserve">
+    <value>Khi nhận thông tin, dù có cập nhật hay không</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.03" xml:space="preserve">
+    <value>Khi cường độ tối đa thay đổi</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.04" xml:space="preserve">
+    <value>Khi cường độ tối đa thay đổi. Cũng được kích hoạt khi nhận mới.</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.05" xml:space="preserve">
+    <value>Chỉ khi cường độ tăng</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.06" xml:space="preserve">
+    <value>Thông tin chấn tiêu</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.07" xml:space="preserve">
+    <value>Cập nhật chấn tiêu của động đất đáng chú ý</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.08" xml:space="preserve">
+    <value>Cập nhật chấn tiêu từ thông tin sóng thần</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.09" xml:space="preserve">
+    <value>Thông tin quan trắc chuyển động nền chu kỳ dài</value>
+  </data>
+  <data name="EarthquakePage.01" xml:space="preserve">
+    <value>Tự động chuyển tab khi thông tin động đất được cập nhật</value>
+  </data>
+  <data name="EarthquakePage.02" xml:space="preserve">
+    <value>Hiển thị chú giải cường độ</value>
+  </data>
+  <data name="EarthquakePage.03" xml:space="preserve">
+    <value>Hiển thị chú giải cho các cường độ quan trắc được vẽ trên bản đồ.</value>
+  </data>
+  <data name="EarthquakePage.04" xml:space="preserve">
+    <value>Tin nhanh cường độ địa chấn</value>
+  </data>
+  <data name="EarthquakePage.05" xml:space="preserve">
+    <value>Tô màu khu vực</value>
+  </data>
+  <data name="EarthquakePage.06" xml:space="preserve">
+    <value>Tô màu các khu vực được công bố trong tin nhanh cường độ địa chấn.</value>
+  </data>
+  <data name="EarthquakePage.07" xml:space="preserve">
+    <value>Thông tin chấn tiêu và cường độ</value>
+  </data>
+  <data name="EarthquakePage.08" xml:space="preserve">
+    <value>Tô màu các khu vực được công bố trong thông tin chấn tiêu và cường độ.
+Với động đất lớn sẽ nặng máy nên không khuyến nghị trên máy tính cấu hình thấp.</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.01" xml:space="preserve">
+    <value>Lịch sử động đất dạng bảng giờ</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.02" xml:space="preserve">
+    <value>Rất nông</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.F01" xml:space="preserve">
+    <value>{0:dd/MM/yyyy}</value>
+  </data>
+  <data name="EarthquakeView.01" xml:space="preserve">
+    <value>Vui lòng chọn từ danh sách</value>
+  </data>
+  <data name="EarthquakeView.02" xml:space="preserve">
+    <value>Cấp chuyển động nền chu kỳ dài</value>
+  </data>
+  <data name="EarthquakeView.03" xml:space="preserve">
+    <value>Thời điểm xảy ra</value>
+  </data>
+  <data name="EarthquakeView.04" xml:space="preserve">
+    <value>Thời điểm phát hiện</value>
+  </data>
+  <data name="EarthquakeView.05" xml:space="preserve">
+    <value>khoảng</value>
+  </data>
+  <data name="EarthquakeView.06" xml:space="preserve">
+    <value>Tâm chấn</value>
+  </data>
+  <data name="EarthquakeView.07" xml:space="preserve">
+    <value>Khu vực</value>
+  </data>
+  <data name="EarthquakeView.08" xml:space="preserve">
+    <value>Độ lớn</value>
+  </data>
+  <data name="EarthquakeView.09" xml:space="preserve">
+    <value>Độ sâu chấn tiêu</value>
+  </data>
+  <data name="EarthquakeView.10" xml:space="preserve">
+    <value>Cường độ theo địa điểm</value>
+  </data>
+  <data name="EarthquakeView.11" xml:space="preserve">
+    <value>Không có địa điểm nào quan sát được cường độ 1 trở lên</value>
+  </data>
+  <data name="EarthquakeView.12" xml:space="preserve">
+    <value>Diễn tập</value>
+  </data>
+  <data name="EarthquakeView.13" xml:space="preserve">
+    <value>Thử nghiệm</value>
+  </data>
+  <data name="EarthquakeView.14" xml:space="preserve">
+    <value>Cường độ</value>
+  </data>
+  <data name="EarthquakeView.15" xml:space="preserve">
+    <value>Thông tin này đã bị hủy.</value>
+  </data>
+  <data name="EarthquakeView.16" xml:space="preserve">
+    <value>Thông tin này đã được đính chính.</value>
+  </data>
+  <data name="EarthquakeView.17" xml:space="preserve">
+    <value>Đã được đính chính bằng thông tin mới hơn.</value>
+  </data>
+  <data name="EarthquakeView.18" xml:space="preserve">
+    <value>Tải thất bại.</value>
+  </data>
+  <data name="EarthquakeView.19" xml:space="preserve">
+    <value>Lịch sử</value>
+  </data>
+  <data name="EarthquakeView.20" xml:space="preserve">
+    <value>v.v.</value>
+  </data>
+  <data name="EarthquakeView.21" xml:space="preserve">
+    <value>Tin nhanh</value>
+  </data>
+  <data name="EarthquakeView.22" xml:space="preserve">
+    <value>Chấn tiêu</value>
+  </data>
+  <data name="EarthquakeView.23" xml:space="preserve">
+    <value>Phát hiện</value>
+  </data>
+  <data name="EarthquakeView.24" xml:space="preserve">
+    <value>Đã hủy</value>
+  </data>
+  <data name="EarthquakeView.25" xml:space="preserve">
+    <value>Đang hiển thị</value>
+  </data>
+  <data name="EarthquakeView.26" xml:space="preserve">
+    <value>Đang lấy</value>
+  </data>
+  <data name="EarthquakeView.27" xml:space="preserve">
+    <value>Đã xảy ra sự cố khi lấy thông tin</value>
+  </data>
+  <data name="EarthquakeView.28" xml:space="preserve">
+    <value>Thử lại</value>
+  </data>
+  <data name="EarthquakeView.29" xml:space="preserve">
+    <value>Mở bảng giờ</value>
+  </data>
+  <data name="EarthquakeView.30" xml:space="preserve">
+    <value>Mở tệp XML bên ngoài (không đảm bảo hoạt động)</value>
+  </data>
+  <data name="EarthquakeView.31" xml:space="preserve">
+    <value>Hiển thị danh sách động đất trong quá khứ</value>
+  </data>
+  <data name="EarthquakeView.F01" xml:space="preserve">
+    <value>{0:HH:mm}</value>
+  </data>
+  <data name="EarthquakeView.F02" xml:space="preserve">
+    <value>Cập nhật {0:dd HH:mm}</value>
+  </data>
+  <data name="EarthquakeView.F03" xml:space="preserve">
+    <value>Nguồn: {0}</value>
+  </data>
+  <data name="EewMap.Cancelled" xml:space="preserve">
+    <value>(hủy)</value>
+  </data>
+  <data name="EewMap.CancelledMaybe" xml:space="preserve">
+    <value>(hủy?)</value>
+  </data>
+  <data name="EewMap.Final" xml:space="preserve">
+    <value>(cuối)</value>
+  </data>
+  <data name="EewMap.MaxIntensity" xml:space="preserve">
+    <value>Tối đa {0}{1}</value>
+  </data>
+  <data name="EewMap.Over" xml:space="preserve">
+    <value> trở lên</value>
+  </data>
+  <data name="EewMap.UnknownPlace" xml:space="preserve">
+    <value>Không rõ tâm chấn</value>
+  </data>
+  <data name="EewPanel.01" xml:space="preserve">
+    <value>Xảy ra</value>
+  </data>
+  <data name="EewPanel.02" xml:space="preserve">
+    <value>Cường độ tối đa</value>
+  </data>
+  <data name="EewPanel.03" xml:space="preserve">
+    <value>Độ sâu:</value>
+  </data>
+  <data name="EewPanel.04" xml:space="preserve">
+    <value>Cường độ (M): </value>
+  </data>
+  <data name="EewPanel.05" xml:space="preserve">
+    <value>Không rõ</value>
+  </data>
+  <data name="EewPanel.06" xml:space="preserve">
+    <value>Chưa nhận độ lớn</value>
+  </data>
+  <data name="EewPanel.07" xml:space="preserve">
+    <value>trở lên</value>
+  </data>
+  <data name="EewPanel.08" xml:space="preserve">
+    <value>Độ chính xác</value>
+  </data>
+  <data name="EewPanel.09" xml:space="preserve">
+    <value>Đã xác định</value>
+  </data>
+  <data name="EewPanel.10" xml:space="preserve">
+    <value>Chưa xác định</value>
+  </data>
+  <data name="EewPanel.11" xml:space="preserve">
+    <value>Chấn tiêu giả định</value>
+  </data>
+  <data name="EewPanel.12" xml:space="preserve">
+    <value>Dự báo theo địa điểm</value>
+  </data>
+  <data name="EewPanel.13" xml:space="preserve">
+    <value>Giá trị ước tính từ ứng dụng ngoài</value>
+  </data>
+  <data name="EewPanel.14" xml:space="preserve">
+    <value>giây</value>
+  </data>
+  <data name="EewPanel.15" xml:space="preserve">
+    <value>Khu vực cảnh báo</value>
+  </data>
+  <data name="EewPanel.16" xml:space="preserve">
+    <value>Nguồn cảnh báo: </value>
+  </data>
+  <data name="EewPanel.17" xml:space="preserve">
+    <value>)</value>
+  </data>
+  <data name="EewPanel.18" xml:space="preserve">
+    <value>Đã hủy hoặc ngoài vùng nhận</value>
+  </data>
+  <data name="EewPanel.19" xml:space="preserve">
+    <value>Đã hủy</value>
+  </data>
+  <data name="EewPanel.F01" xml:space="preserve">
+    <value>Cảnh báo động đất sớm (bản tin {0:00})</value>
+  </data>
+  <data name="EewPanel.F02" xml:space="preserve">
+    <value>Cảnh báo động đất sớm (bản tin {0:00} / cuối)</value>
+  </data>
+  <data name="EewPanel.F03" xml:space="preserve">
+    <value>{0:dd HH:mm:ss}</value>
+  </data>
+  <data name="EewPanel.F04" xml:space="preserve">
+    <value>Vị trí tâm chấn: {0}</value>
+  </data>
+  <data name="EewPanel.F05" xml:space="preserve">
+    <value>Độ sâu chấn tiêu: {0}</value>
+  </data>
+  <data name="EewPanel.F06" xml:space="preserve">
+    <value>  Độ lớn: {0}</value>
+  </data>
+  <data name="EewPanel.F07" xml:space="preserve">
+    <value>{0} địa điểm</value>
+  </data>
+  <data name="EewPanel.F08" xml:space="preserve">
+    <value>{0} khu vực</value>
+  </data>
+  <data name="EewPanel.F09" xml:space="preserve">
+    <value>Nhận từ: {0}</value>
+  </data>
+  <data name="EewReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (Cảnh báo động đất sớm)</value>
+  </data>
+  <data name="EewReport.F01" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="EewReport.F02" xml:space="preserve">
+    <value>Phát lúc {0:dd/MM HH:mm}</value>
+  </data>
+  <data name="EewTrigger.01" xml:space="preserve">
+    <value>Điều kiện (cường độ / M)</value>
+  </data>
+  <data name="EewTrigger.02" xml:space="preserve">
+    <value>Đặt điều kiện về cường độ và độ lớn.</value>
+  </data>
+  <data name="EewTrigger.03" xml:space="preserve">
+    <value>Cường độ tối đa: </value>
+  </data>
+  <data name="EewTrigger.04" xml:space="preserve">
+    <value>trở lên (bao gồm)</value>
+  </data>
+  <data name="EewTrigger.05" xml:space="preserve">
+    <value>Lưu ý: với chấn tiêu giả định, M được coi là 1.0.</value>
+  </data>
+  <data name="EewTrigger.06" xml:space="preserve">
+    <value>Độ lớn: M</value>
+  </data>
+  <data name="EewTrigger.07" xml:space="preserve">
+    <value>Thỏa mãn cả hai điều kiện (AND)</value>
+  </data>
+  <data name="EewTrigger.08" xml:space="preserve">
+    <value>Thỏa mãn một trong hai điều kiện (OR)</value>
+  </data>
+  <data name="EewTrigger.09" xml:space="preserve">
+    <value>Điều kiện (thông báo / cập nhật)</value>
+  </data>
+  <data name="EewTrigger.10" xml:space="preserve">
+    <value>Điều kiện kích hoạt dựa trên việc thông báo hoặc cập nhật chính thông tin.</value>
+  </data>
+  <data name="EewTrigger.11" xml:space="preserve">
+    <value>Thông báo mới</value>
+  </data>
+  <data name="EewTrigger.12" xml:space="preserve">
+    <value>Thông báo tiếp theo</value>
+  </data>
+  <data name="EewTrigger.13" xml:space="preserve">
+    <value>Thông tin từ nguồn chính xác hơn</value>
+  </data>
+  <data name="EewTrigger.14" xml:space="preserve">
+    <value>Được kích hoạt khi chỉ thông tin được cập nhật từ nguồn chính xác hơn mà số bản tin không đổi.</value>
+  </data>
+  <data name="EewTrigger.15" xml:space="preserve">
+    <value>Bản tin cuối</value>
+  </data>
+  <data name="EewTrigger.16" xml:space="preserve">
+    <value>Bản tin hủy</value>
+  </data>
+  <data name="EewTrigger.17" xml:space="preserve">
+    <value>Thông báo cảnh báo mới</value>
+  </data>
+  <data name="EewTrigger.18" xml:space="preserve">
+    <value>Hiện tại chỉ được kích hoạt nếu bạn có hợp đồng Cảnh báo động đất sớm (cảnh báo) với DM-D.S.S.</value>
+  </data>
+  <data name="EewTrigger.19" xml:space="preserve">
+    <value>Thông báo cảnh báo tiếp theo</value>
+  </data>
+  <data name="EewTrigger.20" xml:space="preserve">
+    <value>Hủy cảnh báo</value>
+  </data>
+  <data name="EewTrigger.21" xml:space="preserve">
+    <value>Điều kiện (thay đổi, v.v.)</value>
+  </data>
+  <data name="EewTrigger.22" xml:space="preserve">
+    <value>Nếu trùng với điều kiện khác, sẽ được kích hoạt riêng cho từng điều kiện.</value>
+  </data>
+  <data name="EewTrigger.23" xml:space="preserve">
+    <value>Đạt mức cảnh báo</value>
+  </data>
+  <data name="EewTrigger.24" xml:space="preserve">
+    <value>Chỉ kích hoạt một lần khi Cảnh báo động đất sớm (dự báo) đạt mức cảnh báo.</value>
+  </data>
+  <data name="EewTrigger.25" xml:space="preserve">
+    <value>Cường độ tối đa dự báo tăng</value>
+  </data>
+  <data name="EewTrigger.26" xml:space="preserve">
+    <value>Cũng được kích hoạt khi cường độ được đặt cho mục trước đó chưa rõ.
+Không khuyến nghị khi dùng tích hợp SNP.</value>
+  </data>
+  <data name="EewTrigger.27" xml:space="preserve">
+    <value>Cường độ tối đa dự báo giảm</value>
+  </data>
+  <data name="EewTrigger.28" xml:space="preserve">
+    <value>Cũng được kích hoạt khi cường độ dự báo trở thành không rõ.
+Không khuyến nghị khi dùng tích hợp SNP.</value>
+  </data>
+  <data name="Endpoint.Global" xml:space="preserve">
+    <value>Toàn cầu</value>
+  </data>
+  <data name="Endpoint.Osaka" xml:space="preserve">
+    <value>Osaka</value>
+  </data>
+  <data name="Endpoint.Tokyo" xml:space="preserve">
+    <value>Tokyo</value>
+  </data>
+  <data name="EventLevel.Disabled" xml:space="preserve">
+    <value>Không dùng</value>
+  </data>
+  <data name="EventLevel.Medium" xml:space="preserve">
+    <value>Trung bình (khoảng cường độ 1 trở lên)</value>
+  </data>
+  <data name="EventLevel.Strong" xml:space="preserve">
+    <value>Mạnh (khoảng cường độ 3 trở lên)</value>
+  </data>
+  <data name="EventLevel.Stronger" xml:space="preserve">
+    <value>Rất mạnh (khoảng cường độ 5 yếu trở lên)</value>
+  </data>
+  <data name="EventLevel.Weak" xml:space="preserve">
+    <value>Yếu (dưới cường độ 1)</value>
+  </data>
+  <data name="EventLevel.Weaker" xml:space="preserve">
+    <value>Rất yếu (không khuyến nghị)</value>
+  </data>
+  <data name="ExecuteFileAction.01" xml:space="preserve">
+    <value>Tệp thực thi: </value>
+  </data>
+  <data name="ExecuteFileAction.02" xml:space="preserve">
+    <value>Có thể dùng template.</value>
+  </data>
+  <data name="ExecuteFileAction.03" xml:space="preserve">
+    <value>Tham số khởi chạy: </value>
+  </data>
+  <data name="ExecuteFileAction.04" xml:space="preserve">
+    <value>Thư mục làm việc: </value>
+  </data>
+  <data name="ExecuteFileAction.05" xml:space="preserve">
+    <value>Mở bằng ứng dụng mặc định</value>
+  </data>
+  <data name="ExecuteFileAction.06" xml:space="preserve">
+    <value>Thử mở tệp bằng ứng dụng mặc định thông qua shell.</value>
+  </data>
+  <data name="ExecuteFileAction.07" xml:space="preserve">
+    <value>Chờ tiến trình kết thúc</value>
+  </data>
+  <data name="ExecuteFileAction.08" xml:space="preserve">
+    <value>Kết quả thực thi gần nhất</value>
+  </data>
+  <data name="Feature.Desc" xml:space="preserve">
+    <value>Chọn các tính năng sẽ sử dụng. Tính năng không được bật sẽ không gửi thông báo, v.v. Áp dụng sau khi khởi động lại.</value>
+  </data>
+  <data name="Feature.Title" xml:space="preserve">
+    <value>Cài đặt tính năng</value>
+  </data>
+  <data name="Feedback.CannotAttach" xml:space="preserve">
+    <value>Có tệp không thể đính kèm</value>
+  </data>
+  <data name="Feedback.Cat.Bug" xml:space="preserve">
+    <value>Báo lỗi</value>
+  </data>
+  <data name="Feedback.Cat.Feature" xml:space="preserve">
+    <value>Đề xuất tính năng</value>
+  </data>
+  <data name="Feedback.Cat.Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="Feedback.Cat.Question" xml:space="preserve">
+    <value>Câu hỏi</value>
+  </data>
+  <data name="Feedback.Oversize" xml:space="preserve">
+    <value>Các tệp không thể đính kèm vì tổng dung lượng vượt giới hạn ({0}MB):</value>
+  </data>
+  <data name="Feedback.PickFiles" xml:space="preserve">
+    <value>Chọn tệp đính kèm</value>
+  </data>
+  <data name="Feedback.ReadFailed" xml:space="preserve">
+    <value>Các tệp không đọc được:</value>
+  </data>
+  <data name="Feedback.SendFailed" xml:space="preserve">
+    <value>Gửi thất bại: {0}</value>
+  </data>
+  <data name="Feedback.Sending" xml:space="preserve">
+    <value>Đang gửi...</value>
+  </data>
+  <data name="Feedback.SentMessage" xml:space="preserve">
+    <value>Phản hồi của bạn đã được gửi. Cảm ơn bạn đã hỗ trợ.</value>
+  </data>
+  <data name="Feedback.SentTitle" xml:space="preserve">
+    <value>Đã gửi phản hồi</value>
+  </data>
+  <data name="Feedback.TotalSize" xml:space="preserve">
+    <value>Tổng {0} / {1}</value>
+  </data>
+  <data name="Feedback.Unavailable" xml:space="preserve">
+    <value>Không thể dùng tính năng phản hồi.</value>
+  </data>
+  <data name="FeedbackPage.01" xml:space="preserve">
+    <value>Không thể gửi phản hồi</value>
+  </data>
+  <data name="FeedbackPage.02" xml:space="preserve">
+    <value>Về phản hồi</value>
+  </data>
+  <data name="FeedbackPage.03" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="FeedbackPage.04" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="FeedbackPage.05" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="FeedbackPage.06" xml:space="preserve">
+    <value>Địa chỉ email liên hệ (không bắt buộc)</value>
+  </data>
+  <data name="FeedbackPage.07" xml:space="preserve">
+    <value>Chỉ nhập nếu bạn cần được trả lời.</value>
+  </data>
+  <data name="FeedbackPage.08" xml:space="preserve">
+    <value>Đính kèm log gần nhất (tối đa 1000 dòng) dưới dạng tệp văn bản</value>
+  </data>
+  <data name="FeedbackPage.09" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="FeedbackPage.10" xml:space="preserve">
+    <value>Thêm tệp</value>
+  </data>
+  <data name="FeedbackPage.11" xml:space="preserve">
+    <value>Tối đa tổng 20 MB. Có thể thêm hình ảnh, log, tệp cài đặt, v.v.</value>
+  </data>
+  <data name="FeedbackPage.12" xml:space="preserve">
+    <value>Xóa tệp đính kèm</value>
+  </data>
+  <data name="FeedbackPage.13" xml:space="preserve">
+    <value>Ứng dụng được khởi động khi tính năng gửi báo cáo sự cố bị tắt nên không thể dùng tính năng phản hồi. Hãy bật trong cài đặt rồi khởi động lại.</value>
+  </data>
+  <data name="FeedbackPage.14" xml:space="preserve">
+    <value>Bạn có thể gửi ý kiến, yêu cầu và báo lỗi cho nhà phát triển. Vui lòng tránh gửi thông tin có thể xác định danh tính cá nhân.</value>
+  </data>
+  <data name="FeedbackPage.15" xml:space="preserve">
+    <value>VD: △△ không hiển thị trên màn hình ○○</value>
+  </data>
+  <data name="FeedbackPage.16" xml:space="preserve">
+    <value>Hãy mô tả cụ thể nội dung.
+Với lỗi, sẽ hữu ích nếu bạn ghi cả các bước tái hiện và thời điểm xảy ra.</value>
+  </data>
+  <data name="FloodReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (lũ)</value>
+  </data>
+  <data name="FloodReport.02" xml:space="preserve">
+    <value>Dự báo lũ sông chỉ định</value>
+  </data>
+  <data name="General.Appearance" xml:space="preserve">
+    <value>Giao diện</value>
+  </data>
+  <data name="General.AutoUpdate" xml:space="preserve">
+    <value>Dùng tự động cập nhật (chưa triển khai)</value>
+  </data>
+  <data name="General.CheckUpdate" xml:space="preserve">
+    <value>Kiểm tra cập nhật định kỳ</value>
+  </data>
+  <data name="General.ColorSample" xml:space="preserve">
+    <value>Mẫu màu</value>
+  </data>
+  <data name="General.DevFeatures" xml:space="preserve">
+    <value>Tính năng cho nhà phát triển:</value>
+  </data>
+  <data name="General.FocusExisting" xml:space="preserve">
+    <value>Đưa cửa sổ đang chạy lên trên cùng khi mở trùng</value>
+  </data>
+  <data name="General.FocusExisting.Desc" xml:space="preserve">
+    <value>Hiển thị cửa sổ đang chạy thay cho màn hình cảnh báo</value>
+  </data>
+  <data name="General.ForceUpdate" xml:space="preserve">
+    <value>Cập nhật bắt buộc (để kiểm tra)</value>
+  </data>
+  <data name="General.HighPriority" xml:space="preserve">
+    <value>Khởi động với mức ưu tiên tiến trình "Cao"</value>
+  </data>
+  <data name="General.HighPriority.Desc" xml:space="preserve">
+    <value>Tránh việc ứng dụng khác chiếm ưu tiên khiến thông tin không được hiển thị</value>
+  </data>
+  <data name="General.IntensityTheme" xml:space="preserve">
+    <value>Chủ đề biểu tượng cường độ</value>
+  </data>
+  <data name="General.IntensityTheme.Desc" xml:space="preserve">
+    <value>Bảng màu chỉ dành cho biểu tượng cường độ</value>
+  </data>
+  <data name="General.Language" xml:space="preserve">
+    <value>Ngôn ngữ hiển thị</value>
+  </data>
+  <data name="General.Language.Desc" xml:space="preserve">
+    <value>Ngôn ngữ dùng trong ứng dụng</value>
+  </data>
+  <data name="General.LogDir" xml:space="preserve">
+    <value>Thư mục lưu</value>
+  </data>
+  <data name="General.LogDir.Desc" xml:space="preserve">
+    <value>Tên tệp được đặt tự động.</value>
+  </data>
+  <data name="General.LogToExeDir" xml:space="preserve">
+    <value>Ghi vào thư mục chạy ứng dụng</value>
+  </data>
+  <data name="General.LogToExeDir.Desc" xml:space="preserve">
+    <value>Nếu tắt, log được ghi vào thư mục dữ liệu ứng dụng.</value>
+  </data>
+  <data name="General.NtpFallbackHttp" xml:space="preserve">
+    <value>Thử bằng HTTP khi không dùng được NTP</value>
+  </data>
+  <data name="General.NtpFallbackHttp.Desc" xml:space="preserve">
+    <value>Hiện chưa thể chọn máy chủ khi dùng HTTP.</value>
+  </data>
+  <data name="General.NtpServer" xml:space="preserve">
+    <value>Máy chủ</value>
+  </data>
+  <data name="General.NtpServer.Desc" xml:space="preserve">
+    <value>Địa chỉ máy chủ NTP</value>
+  </data>
+  <data name="General.NtpSync" xml:space="preserve">
+    <value>Đồng bộ thời gian qua Internet</value>
+  </data>
+  <data name="General.NtpSync.Desc" xml:space="preserve">
+    <value>Không đảm bảo hoạt động đúng nếu tắt tính năng này.</value>
+  </data>
+  <data name="General.OpenLogDir" xml:space="preserve">
+    <value>Mở thư mục log</value>
+  </data>
+  <data name="General.Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="General.SendReport" xml:space="preserve">
+    <value>Gửi báo cáo hoạt động cho nhà phát triển</value>
+  </data>
+  <data name="General.SendReport.Desc" xml:space="preserve">
+    <value>Thống kê thời gian xử lý và nội dung lỗi sẽ được gửi.
+Nhà phát triển không thể xác định cá nhân từ thông tin được gửi.
+Xin hãy giúp chúng tôi làm ứng dụng ổn định hơn.</value>
+  </data>
+  <data name="General.TimeSettings" xml:space="preserve">
+    <value>Cài đặt thời gian</value>
+  </data>
+  <data name="General.UsePreRelease" xml:space="preserve">
+    <value>Dùng bản build trước khi phát hành chính thức</value>
+  </data>
+  <data name="General.UsePreRelease.Desc" xml:space="preserve">
+    <value>Có thể dùng các tính năng mới đang phát triển nhưng có thể không ổn định.</value>
+  </data>
+  <data name="General.UseStable" xml:space="preserve">
+    <value>Dùng bản ổn định</value>
+  </data>
+  <data name="General.UseStable.Desc" xml:space="preserve">
+    <value>Phiên bản ổn định nhưng thêm tính năng chậm hơn. Vui lòng chờ đến khi được chuẩn bị.</value>
+  </data>
+  <data name="General.WindowScale" xml:space="preserve">
+    <value>Tỷ lệ phóng đại cửa sổ</value>
+  </data>
+  <data name="General.WindowScale.Desc" xml:space="preserve">
+    <value>Phóng to hoặc thu nhỏ cửa sổ chính.</value>
+  </data>
+  <data name="General.WindowSettings" xml:space="preserve">
+    <value>Cài đặt cửa sổ</value>
+  </data>
+  <data name="General.WindowSettings.Hint" xml:space="preserve">
+    <value>Cài đặt ẩn khi thu nhỏ nằm trong phần cài đặt thông báo.</value>
+  </data>
+  <data name="General.WindowTheme" xml:space="preserve">
+    <value>Chủ đề cửa sổ</value>
+  </data>
+  <data name="General.WindowTheme.Desc" xml:space="preserve">
+    <value>Bảng màu chung</value>
+  </data>
+  <data name="General.WriteLog" xml:space="preserve">
+    <value>Ghi log</value>
+  </data>
+  <data name="General.WriteLog.Desc" xml:space="preserve">
+    <value>Hữu ích khi báo lỗi và kiểm tra hoạt động (áp dụng sau khi khởi động lại)</value>
+  </data>
+  <data name="Gps.Autonomous" xml:space="preserve">
+    <value>Tự định vị</value>
+  </data>
+  <data name="Gps.Differential" xml:space="preserve">
+    <value>Định vị vi sai</value>
+  </data>
+  <data name="Gps.Estimated" xml:space="preserve">
+    <value>Ước tính</value>
+  </data>
+  <data name="Gps.None" xml:space="preserve">
+    <value>Không có dữ liệu</value>
+  </data>
+  <data name="HypocenterReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (chấn tiêu)</value>
+  </data>
+  <data name="IntensityThemeEditWindow.01" xml:space="preserve">
+    <value>Chỉnh sửa chủ đề biểu tượng cường độ</value>
+  </data>
+  <data name="IntensityThemeEditWindow.02" xml:space="preserve">
+    <value>Độ dày viền</value>
+  </data>
+  <data name="IntensityThemeEditWindow.03" xml:space="preserve">
+    <value>Chữ:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.04" xml:space="preserve">
+    <value>Nền:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.05" xml:space="preserve">
+    <value>Viền:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.06" xml:space="preserve">
+    <value>Bất thường</value>
+  </data>
+  <data name="IntensityThemeEditWindow.07" xml:space="preserve">
+    <value>Cấp 0</value>
+  </data>
+  <data name="IntensityThemeEditWindow.08" xml:space="preserve">
+    <value>Cấp 1</value>
+  </data>
+  <data name="IntensityThemeEditWindow.09" xml:space="preserve">
+    <value>Cấp 2</value>
+  </data>
+  <data name="IntensityThemeEditWindow.10" xml:space="preserve">
+    <value>Cấp 3</value>
+  </data>
+  <data name="IntensityThemeEditWindow.11" xml:space="preserve">
+    <value>Cấp 4</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.01" xml:space="preserve">
+    <value>Về Cảnh báo động đất sớm (nhấp để mở rộng)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.02" xml:space="preserve">
+    <value>Cài đặt cơ bản</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.03" xml:space="preserve">
+    <value>Tự động chuyển tab khi có thông báo</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.04" xml:space="preserve">
+    <value>Nhận Cảnh báo động đất sớm từ Kyoshin Monitor</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.05" xml:space="preserve">
+    <value>Nếu tắt và chưa cấu hình nguồn nào khác có thể nhận Cảnh báo động đất sớm, bạn sẽ không thể hiển thị cảnh báo.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.06" xml:space="preserve">
+    <value>Cài đặt hiển thị</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.07" xml:space="preserve">
+    <value>Hiển thị thông tin chi tiết</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.08" xml:space="preserve">
+    <value>Chỉ dùng nếu bạn có đủ kiến thức để tận dụng thông tin này.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.09" xml:space="preserve">
+    <value>Sẽ hiển thị EEW phát hiện bởi một trạm và thông tin về độ chính xác.
+Tuy nhiên, thông tin này không thể lấy chỉ từ Kyoshin Monitor, nên sẽ không hiển thị nếu DM-D.S.S. hoặc SignalNowProfessional không cung cấp được.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.10" xml:space="preserve">
+    <value>Vẽ sóng P/S theo độ trễ của Kyoshin Monitor</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.11" xml:space="preserve">
+    <value>Vẽ sự lan truyền của rung chấn theo thời gian hiển thị của Kyoshin Monitor.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.12" xml:space="preserve">
+    <value>Các vòng tròn sẽ khớp với giá trị quan trắc của Kyoshin Monitor, nhưng sẽ hiển thị chậm hơn thời gian thực, vì vậy hãy lưu ý.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.13" xml:space="preserve">
+    <value>Tắt hiệu ứng chuyển động của sóng P/S</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.14" xml:space="preserve">
+    <value>Giảm tải cho máy.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.15" xml:space="preserve">
+    <value>Hiển thị theo từng khu vực</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.16" xml:space="preserve">
+    <value>Hiển thị khu vực cảnh báo trên bản đồ</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.17" xml:space="preserve">
+    <value>Tô màu các khu vực đang có cảnh báo.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.18" xml:space="preserve">
+    <value>Hiển thị cường độ tối đa dự báo của từng khu vực trên bản đồ</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.19" xml:space="preserve">
+    <value>Tô màu từng khu vực theo cường độ tối đa dự báo.
+Được ưu tiên hơn khu vực cảnh báo.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.20" xml:space="preserve">
+    <value>Hiển thị dự báo theo địa điểm</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.21" xml:space="preserve">
+    <value>Cách hiển thị cường độ dự báo tại từng địa điểm và bộ đếm ngược đến lúc sóng đến, do ứng dụng ngoài cung cấp.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.22" xml:space="preserve">
+    <value>Hiển thị dự báo theo địa điểm trên bản đồ</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.23" xml:space="preserve">
+    <value>Hiển thị cường độ dự báo và số giây còn lại tại địa điểm.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.24" xml:space="preserve">
+    <value>Mở rộng thành bộ đếm ngược lớn</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.25" xml:space="preserve">
+    <value>Các địa điểm có cường độ dự báo từ ngưỡng trở lên sẽ được hiển thị lớn trong bảng.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.26" xml:space="preserve">
+    <value>Ngưỡng mở rộng</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.27" xml:space="preserve">
+    <value>Tích hợp ngoài</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.28" xml:space="preserve">
+    <value>Cần mua phần mềm riêng, cài đặt và chạy phần mềm đó.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.29" xml:space="preserve">
+    <value>(Nhấp để mở trang sản phẩm)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.30" xml:space="preserve">
+    <value>Dùng tính năng tích hợp nếu có</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.31" xml:space="preserve">
+    <value>Áp dụng sau khi khởi động lại.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.32" xml:space="preserve">
+    <value>Hiển thị vị trí đã cài đặt (điểm dự báo) trên bản đồ</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.33" xml:space="preserve">
+    <value>Dùng thời gian đến dự kiến đã tính (dự kiến triển khai)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.34" xml:space="preserve">
+    <value>Lưu ý</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.35" xml:space="preserve">
+    <value>Do chỉ gửi thông tin để tính cường độ tại vị trí hiện tại, tên địa danh và cường độ tối đa dự báo sẽ không hiển thị và được coi là không rõ.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.36" xml:space="preserve">
+    <value>Ngoài ra, ngay cả khi SignalNowProfessional không chạy, trạng thái vẫn hiển thị là đang nhận nếu đọc được tệp log. Hãy lưu ý điều này.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.37" xml:space="preserve">
+    <value>Việc nhận qua DM-D.S.S. tự động bắt đầu khi bạn có gói Cảnh báo động đất sớm và kết nối bằng WebSocket.
+Trạng thái kết nối được hiển thị bên cạnh thông tin thời gian trong cửa sổ chính.
+Nếu không kết nối được hoặc chuyển sang kiểu PULL, hãy hủy xác thực một lần rồi xác thực lại.</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.01" xml:space="preserve">
+    <value>Các mục trên bản đồ</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.02" xml:space="preserve">
+    <value>Ẩn các trạm quan trắc có cường độ dưới một mức nhất định</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.03" xml:space="preserve">
+    <value>Hiển thị các trạm quan trắc không còn lấy được dữ liệu</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.04" xml:space="preserve">
+    <value>Hiển thị bằng vòng tròn màu xám với mức ưu tiên thấp nhất.</value>
+  </data>
+  <data name="KyoshinMonitorPage.01" xml:space="preserve">
+    <value>Máy chủ nguồn</value>
+  </data>
+  <data name="KyoshinMonitorPage.02" xml:space="preserve">
+    <value>Nên dùng Kyoshin Monitor trong hầu hết trường hợp.
+Chọn Không nhận sẽ dừng hoàn toàn việc nhận từ Kyoshin Monitor.</value>
+  </data>
+  <data name="KyoshinMonitorPage.03" xml:space="preserve">
+    <value>Phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorPage.04" xml:space="preserve">
+    <value>Phát hiện rung chấn trên Kyoshin Monitor và tự động phóng to.</value>
+  </data>
+  <data name="KyoshinMonitorPage.05" xml:space="preserve">
+    <value>Tự động chuyển tab khi phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorPage.06" xml:space="preserve">
+    <value>Mức rung chấn làm chuẩn để tự động phóng to và chuyển tab</value>
+  </data>
+  <data name="KyoshinMonitorPage.07" xml:space="preserve">
+    <value>Chế độ hiển thị phạm vi phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorPage.08" xml:space="preserve">
+    <value>Đây là tính năng thử nghiệm, nên tùy chủ đề cửa sổ mà màu có thể khó nhìn.</value>
+  </data>
+  <data name="KyoshinMonitorPage.09" xml:space="preserve">
+    <value>Hiệu ứng chuyển động của phạm vi phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorPage.10" xml:space="preserve">
+    <value>Theo mức tải vẽ từ cao đến thấp: Nhấp nháy mờ &gt; Nhấp nháy &gt; Không.</value>
+  </data>
+  <data name="KyoshinMonitorPage.11" xml:space="preserve">
+    <value>Thời điểm lấy dữ liệu</value>
+  </data>
+  <data name="KyoshinMonitorPage.12" xml:space="preserve">
+    <value>Điều chỉnh thời điểm lấy dữ liệu</value>
+  </data>
+  <data name="KyoshinMonitorPage.13" xml:space="preserve">
+    <value>Dữ liệu được lấy từ Kyoshin Monitor với độ trễ so với thời gian thực.</value>
+  </data>
+  <data name="KyoshinMonitorPage.14" xml:space="preserve">
+    <value>Tự động điều chỉnh độ lệch</value>
+  </data>
+  <data name="KyoshinMonitorPage.15" xml:space="preserve">
+    <value>Khoảng thời gian nhận</value>
+  </data>
+  <data name="KyoshinMonitorPage.16" xml:space="preserve">
+    <value>Nhận dữ liệu từ Kyoshin Monitor theo khoảng thời gian đã chọn.
+Giúp tiết kiệm lưu lượng mạng.</value>
+  </data>
+  <data name="KyoshinMonitorPage.17" xml:space="preserve">
+    <value>Đặt khoảng nhận là 1 giây khi đang nhận EEW</value>
+  </data>
+  <data name="KyoshinMonitorPage.18" xml:space="preserve">
+    <value>Đặt khoảng nhận là 1 giây khi đang phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorPage.19" xml:space="preserve">
+    <value>Hiển thị</value>
+  </data>
+  <data name="KyoshinMonitorPage.20" xml:space="preserve">
+    <value>Hiển thị mẫu màu</value>
+  </data>
+  <data name="KyoshinMonitorPage.21" xml:space="preserve">
+    <value>Cường độ Rt là cách viết tắt của cường độ thời gian thực.</value>
+  </data>
+  <data name="KyoshinMonitorPage.F01" xml:space="preserve">
+    <value>mỗi {0} giây</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.01" xml:space="preserve">
+    <value>Đang hiển thị:</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.02" xml:space="preserve">
+    <value>Quay lại thời gian thực</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.03" xml:space="preserve">
+    <value>Tiếp tục nhận cường độ thời gian thực khi đang phát lại</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.04" xml:space="preserve">
+    <value>Tiếp tục nhận cường độ thời gian thực ở chế độ nền để việc phát hiện rung chấn không bị ảnh hưởng sau khi phát lại kết thúc.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.05" xml:space="preserve">
+    <value>Quay lại thời gian thực khi phát hiện rung chấn</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.06" xml:space="preserve">
+    <value>Quay lại thời gian thực khi nhận Cảnh báo động đất sớm mới</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.07" xml:space="preserve">
+    <value>Nếu theo các cài đặt ở trên không nhận cường độ thời gian thực, việc nhận EEW từ Kyoshin Monitor sẽ dừng.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.08" xml:space="preserve">
+    <value>Phát lại</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.09" xml:space="preserve">
+    <value>Dịch chuyển thời gian</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.10" xml:space="preserve">
+    <value>Bạn có thể quay lại dữ liệu Kyoshin Monitor trong quá khứ tối đa 3 giờ.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.11" xml:space="preserve">
+    <value>Hiện tại</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.12" xml:space="preserve">
+    <value>3 giờ trước</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.13" xml:space="preserve">
+    <value>Bắt đầu dịch chuyển thời gian</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.14" xml:space="preserve">
+    <value>* Trong khi dịch chuyển thời gian, các nguồn Cảnh báo động đất sớm ngoài Kyoshin Monitor không dùng được.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.15" xml:space="preserve">
+    <value>Phát tệp phát lại</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.16" xml:space="preserve">
+    <value>Phát tệp lưu dữ liệu Kyoshin Monitor và Cảnh báo động đất sớm trong quá khứ.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.17" xml:space="preserve">
+    <value>Tải tệp</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.18" xml:space="preserve">
+    <value>Thông tin tệp đã tải</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.19" xml:space="preserve">
+    <value>Phiên bản: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.20" xml:space="preserve">
+    <value>Ứng dụng tạo: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.21" xml:space="preserve">
+    <value>Bắt đầu: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.22" xml:space="preserve">
+    <value>Kết thúc: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.23" xml:space="preserve">
+    <value>Chế độ nén: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.24" xml:space="preserve">
+    <value>Cài đặt phát lại</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.25" xml:space="preserve">
+    <value>* Đổi tốc độ trong khi phát có thể làm hiển thị tạm thời bị lỗi.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.26" xml:space="preserve">
+    <value>Bắt đầu phát</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.27" xml:space="preserve">
+    <value>Về tốc độ 1x</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.28" xml:space="preserve">
+    <value>Thông tin tệp đang phát</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.F01" xml:space="preserve">
+    <value>Tốc độ phát: {0:0.0}x</value>
+  </data>
+  <data name="KyoshinMonitorView.01" xml:space="preserve">
+    <value>Rt</value>
+  </data>
+  <data name="KyoshinMonitorView.02" xml:space="preserve">
+    <value>Giờ hiển thị</value>
+  </data>
+  <data name="KyoshinMonitorView.03" xml:space="preserve">
+    <value>Đang nhận Cảnh báo động đất sớm từ SignalNowProfessional.
+Biểu tượng này vẫn hiển thị khi SignalNowProfessional chưa chạy.</value>
+  </data>
+  <data name="KyoshinMonitorView.04" xml:space="preserve">
+    <value>Đang nhận Cảnh báo động đất sớm từ DM-D.S.S.</value>
+  </data>
+  <data name="KyoshinMonitorView.05" xml:space="preserve">
+    <value>DM-D.S.S (chỉ cảnh báo)</value>
+  </data>
+  <data name="KyoshinMonitorView.06" xml:space="preserve">
+    <value>Chỉ đang nhận Cảnh báo động đất sớm (loại cảnh báo) từ DM-D.S.S.</value>
+  </data>
+  <data name="KyoshinMonitorView.07" xml:space="preserve">
+    <value>Đang nhận Cảnh báo động đất sớm từ AXIS.</value>
+  </data>
+  <data name="KyoshinMonitorView.08" xml:space="preserve">
+    <value>Không nhận Cảnh báo động đất sớm</value>
+  </data>
+  <data name="KyoshinMonitorView.09" xml:space="preserve">
+    <value>WebSocket đã ngắt kết nối! Sẽ tự động kết nối lại.</value>
+  </data>
+  <data name="LightningView.01" xml:space="preserve">
+    <value>Độ trễ</value>
+  </data>
+  <data name="LightningView.02" xml:space="preserve">
+    <value>Đây là công cụ thử nghiệm, không dành cho dùng thường xuyên.</value>
+  </data>
+  <data name="LogOutputAction.01" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="MainView.01" xml:space="preserve">
+    <value>Mở trong cửa sổ riêng</value>
+  </data>
+  <data name="MainView.02" xml:space="preserve">
+    <value>Có bản cập nhật ứng dụng</value>
+  </data>
+  <data name="MainView.03" xml:space="preserve">
+    <value>Bạn có thể xem chi tiết trong màn hình cài đặt</value>
+  </data>
+  <data name="MainView.04" xml:space="preserve">
+    <value>Mở cài đặt</value>
+  </data>
+  <data name="MainView.05" xml:space="preserve">
+    <value>Đặt lại vị trí bản đồ</value>
+  </data>
+  <data name="Map.AutoZoom" xml:space="preserve">
+    <value>Tự động phóng to</value>
+  </data>
+  <data name="Map.AutoZoomAnimation" xml:space="preserve">
+    <value>Dùng hiệu ứng chuyển động khi tự động phóng to</value>
+  </data>
+  <data name="Map.AutoZoomEnable" xml:space="preserve">
+    <value>Tự động phóng to bản đồ</value>
+  </data>
+  <data name="Map.CurrentRange" xml:space="preserve">
+    <value>Phạm vi hiển thị hiện tại</value>
+  </data>
+  <data name="Map.DisableManualMove" xml:space="preserve">
+    <value>Cấm di chuyển bản đồ thủ công</value>
+  </data>
+  <data name="Map.DisableManualMove.Desc" xml:space="preserve">
+    <value>Khi bật, nút Home trên màn hình chính sẽ bị ẩn.</value>
+  </data>
+  <data name="Map.FitOnResize" xml:space="preserve">
+    <value>Điều chỉnh mức phóng to khi đổi kích thước cửa sổ để thấy toàn bộ phạm vi hiển thị</value>
+  </data>
+  <data name="Map.Inertia" xml:space="preserve">
+    <value>Bật quán tính</value>
+  </data>
+  <data name="Map.Inertia.Desc" xml:space="preserve">
+    <value>Sau khi kéo bản đồ hoặc phóng to bằng con lăn chuột, bản đồ tiếp tục cuộn mượt theo quán tính.</value>
+  </data>
+  <data name="Map.LimitMaxZoom" xml:space="preserve">
+    <value>Giới hạn mức phóng to tối đa</value>
+  </data>
+  <data name="Map.LimitMaxZoom.Desc" xml:space="preserve">
+    <value>Tránh việc động đất nhỏ làm bản đồ phóng vào vùng quá hẹp khiến khó nhận ra vị trí.</value>
+  </data>
+  <data name="Map.ResetRange" xml:space="preserve">
+    <value>Đặt lại phạm vi mặc định</value>
+  </data>
+  <data name="Map.SaveCurrent" xml:space="preserve">
+    <value>Lưu vị trí hiện tại</value>
+  </data>
+  <data name="Map.ShowGrid" xml:space="preserve">
+    <value>Hiển thị lưới</value>
+  </data>
+  <data name="Map.ShowMiniMap" xml:space="preserve">
+    <value>Hiển thị bản đồ nhỏ</value>
+  </data>
+  <data name="Map.ShowMiniMap.Desc" xml:space="preserve">
+    <value>Khi đang hiển thị phạm vi mặc định, bản đồ nhỏ của vùng Okinawa và Amami được hiển thị ở góc trên bên trái. Việc này ảnh hưởng đến hiệu năng.</value>
+  </data>
+  <data name="Map.ViewRange" xml:space="preserve">
+    <value>Phạm vi hiển thị</value>
+  </data>
+  <data name="MarineReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (biển)</value>
+  </data>
+  <data name="MonitorMode.Lmoni" xml:space="preserve">
+    <value>Màn hình chuyển động nền chu kỳ dài</value>
+  </data>
+  <data name="MonitorMode.None" xml:space="preserve">
+    <value>Không nhận</value>
+  </data>
+  <data name="MultiWindow.About" xml:space="preserve">
+    <value>Về tính năng đa cửa sổ</value>
+  </data>
+  <data name="MultiWindow.AboutStore" xml:space="preserve">
+    <value>Về cài đặt thu gọn cửa sổ</value>
+  </data>
+  <data name="MultiWindow.Enable" xml:space="preserve">
+    <value>Bật tính năng đa cửa sổ</value>
+  </data>
+  <data name="MultiWindow.FocusSub" xml:space="preserve">
+    <value>Chuyển tiêu điểm sang cửa sổ phụ khi chuyển tab</value>
+  </data>
+  <data name="MultiWindow.FocusSub.Desc" xml:space="preserve">
+    <value>Khi workflow hoặc cài đặt yêu cầu chuyển tab và tab đó đã được tách ra, cửa sổ của tab sẽ được đưa lên tiêu điểm</value>
+  </data>
+  <data name="MultiWindow.Reset" xml:space="preserve">
+    <value>Đặt lại</value>
+  </data>
+  <data name="MultiWindow.ResetAll" xml:space="preserve">
+    <value>Đặt tất cả cửa sổ về vị trí ban đầu</value>
+  </data>
+  <data name="MultiWindow.ResetAll.Desc" xml:space="preserve">
+    <value>Đặt lại vị trí và kích thước của các cửa sổ đã tách</value>
+  </data>
+  <data name="MultiWindow.Title" xml:space="preserve">
+    <value>Đa cửa sổ</value>
+  </data>
+  <data name="MultipleAction.01" xml:space="preserve">
+    <value>Chạy đồng thời</value>
+  </data>
+  <data name="MultipleAction.02" xml:space="preserve">
+    <value>Thử chạy các hành động song song. Không có chờ đợi hay ngắt giữa chừng.</value>
+  </data>
+  <data name="MultipleAction.03" xml:space="preserve">
+    <value>Di chuyển lên</value>
+  </data>
+  <data name="MultipleAction.04" xml:space="preserve">
+    <value>Di chuyển xuống</value>
+  </data>
+  <data name="MultipleAction.05" xml:space="preserve">
+    <value>Xóa hành động</value>
+  </data>
+  <data name="MultipleAction.06" xml:space="preserve">
+    <value>Thêm hành động</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (động đất rãnh Nankai)</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.02" xml:space="preserve">
+    <value>Thông tin khẩn động đất rãnh Nankai</value>
+  </data>
+  <data name="NorthwestPacificTsunamiReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (sóng thần Tây Bắc Thái Bình Dương)</value>
+  </data>
+  <data name="Notify.EqSource" xml:space="preserve">
+    <value>Đang nhận thông tin động đất từ {0}.</value>
+  </data>
+  <data name="Notify.Linux" xml:space="preserve">
+    <value>Tích hợp màn hình nền (Linux)</value>
+  </data>
+  <data name="Notify.LinuxEntry" xml:space="preserve">
+    <value>Tự động đăng ký desktop entry</value>
+  </data>
+  <data name="Notify.LinuxEntry.Desc" xml:space="preserve">
+    <value>(Áp dụng sau khi khởi động lại) Tạo entry và biểu tượng trong ~/.local/share để tên ứng dụng, biểu tượng và cài đặt thông báo riêng hoạt động trên KDE và các môi trường tương tự.</value>
+  </data>
+  <data name="Notify.MultiWindowEnabled" xml:space="preserve">
+    <value>Tính năng đa cửa sổ đang bật</value>
+  </data>
+  <data name="Notify.NotifyOnStore" xml:space="preserve">
+    <value>Thông báo khi thu vào khay hệ thống</value>
+  </data>
+  <data name="Notify.Off" xml:space="preserve">
+    <value>Không thông báo</value>
+  </data>
+  <data name="Notify.On" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="Notify.OnEarthquake" xml:space="preserve">
+    <value>Khi nhận thông tin động đất</value>
+  </data>
+  <data name="Notify.OnEew" xml:space="preserve">
+    <value>Khi Cảnh báo động đất sớm được cập nhật</value>
+  </data>
+  <data name="Notify.OnSourceChange" xml:space="preserve">
+    <value>Khi nguồn thông tin động đất thay đổi</value>
+  </data>
+  <data name="Notify.OnTsunami" xml:space="preserve">
+    <value>Khi thông tin sóng thần được cập nhật</value>
+  </data>
+  <data name="Notify.StartMinimized" xml:space="preserve">
+    <value>Khởi động ở trạng thái thu nhỏ</value>
+  </data>
+  <data name="Notify.StoreOnClose" xml:space="preserve">
+    <value>Thu vào khay hệ thống khi đóng cửa sổ</value>
+  </data>
+  <data name="Notify.StoreOnMinimize" xml:space="preserve">
+    <value>Thu vào khay hệ thống khi thu nhỏ</value>
+  </data>
+  <data name="Notify.Title" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="Notify.Tray" xml:space="preserve">
+    <value>Biểu tượng khay hệ thống</value>
+  </data>
+  <data name="Notify.Use" xml:space="preserve">
+    <value>Dùng tính năng thông báo</value>
+  </data>
+  <data name="Notify.Use.Desc" xml:space="preserve">
+    <value>Đây là bản triển khai thử nghiệm và có thể không còn dùng được ở phiên bản sau.</value>
+  </data>
+  <data name="Notify.UseTray" xml:space="preserve">
+    <value>Dùng biểu tượng ở khay hệ thống</value>
+  </data>
+  <data name="Notify.UseTray.Desc" xml:space="preserve">
+    <value>(Áp dụng sau khi khởi động lại) Giữ biểu tượng trong vùng thông báo để dùng menu chuột phải và thu gọn cửa sổ.</value>
+  </data>
+  <data name="Notify.WindowStore" xml:space="preserve">
+    <value>Cài đặt thu gọn cửa sổ</value>
+  </data>
+  <data name="ObservationPointsDataPage.01" xml:space="preserve">
+    <value>Tự động cập nhật dữ liệu trạm quan trắc</value>
+  </data>
+  <data name="ObservationPointsDataPage.02" xml:space="preserve">
+    <value>Tự động tải dữ liệu trạm quan trắc mới khi khởi động.</value>
+  </data>
+  <data name="ObservationPointsDataPage.03" xml:space="preserve">
+    <value>Thông tin dữ liệu hiện tại</value>
+  </data>
+  <data name="ObservationPointsDataPage.04" xml:space="preserve">
+    <value>Phiên bản dữ liệu</value>
+  </data>
+  <data name="ObservationPointsDataPage.05" xml:space="preserve">
+    <value>Phiên bản dữ liệu trạm quan trắc đang dùng.</value>
+  </data>
+  <data name="ObservationPointsDataPage.06" xml:space="preserve">
+    <value>Thời điểm tạo</value>
+  </data>
+  <data name="ObservationPointsDataPage.07" xml:space="preserve">
+    <value>Nguồn dữ liệu</value>
+  </data>
+  <data name="ObservationPointsDataPage.08" xml:space="preserve">
+    <value>Số trạm quan trắc</value>
+  </data>
+  <data name="ObservationPointsDataPage.09" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="ObservationPointsDataPage.10" xml:space="preserve">
+    <value>Cập nhật thủ công</value>
+  </data>
+  <data name="ObservationPointsDataPage.11" xml:space="preserve">
+    <value>Cập nhật dữ liệu trạm quan trắc thủ công.</value>
+  </data>
+  <data name="ObservationPointsDataPage.12" xml:space="preserve">
+    <value>Cần khởi động lại ứng dụng để áp dụng cập nhật.</value>
+  </data>
+  <data name="ObservationPointsDataPage.F01" xml:space="preserve">
+    <value>{0} trạm</value>
+  </data>
+  <data name="PeakExpansion.IncludeSubRegion" xml:space="preserve">
+    <value>Bao gồm khu vực phụ</value>
+  </data>
+  <data name="PeakExpansion.None" xml:space="preserve">
+    <value>Không làm gì</value>
+  </data>
+  <data name="PeakExpansion.RegionOnly" xml:space="preserve">
+    <value>Chỉ khu vực</value>
+  </data>
+  <data name="PlaySoundAction.01" xml:space="preserve">
+    <value>Chờ</value>
+  </data>
+  <data name="PlaySoundAction.02" xml:space="preserve">
+    <value>Tạm dừng workflow cho đến khi phát xong. Hữu ích khi muốn chạy hành động khác sau khi phát xong.</value>
+  </data>
+  <data name="PlaySoundAction.03" xml:space="preserve">
+    <value>Phát tệp được chỉ định ở đây. Có thể dùng template.</value>
+  </data>
+  <data name="PlaySoundAction.04" xml:space="preserve">
+    <value>Phát bản xem trước. Biến sẽ không được thay thế.</value>
+  </data>
+  <data name="Quake.Comment.Database" xml:space="preserve">
+    <value>Nguồn: cơ sở dữ liệu cường độ của JMA</value>
+  </data>
+  <data name="Quake.Title.Flash" xml:space="preserve">
+    <value>Tin nhanh cường độ</value>
+  </data>
+  <data name="Quake.Title.FlashAndHypo" xml:space="preserve">
+    <value>Tin nhanh + chấn tiêu</value>
+  </data>
+  <data name="Quake.Title.Foreign" xml:space="preserve">
+    <value>Động đất ở xa</value>
+  </data>
+  <data name="Quake.Title.Hypo" xml:space="preserve">
+    <value>Thông tin chấn tiêu</value>
+  </data>
+  <data name="Quake.Title.HypoIntensity" xml:space="preserve">
+    <value>Chấn tiêu &amp; cường độ</value>
+  </data>
+  <data name="Quake.Title.Volcano" xml:space="preserve">
+    <value>Phun trào lớn</value>
+  </data>
+  <data name="Qzss.AutoDetect" xml:space="preserve">
+    <value>Tự động dò</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Message" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi tự động dò.
+{0}</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Title" xml:space="preserve">
+    <value>Lỗi tự động dò tốc độ baud</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Message" xml:space="preserve">
+    <value>Không nhận được câu lệnh hợp lệ ở bất kỳ tốc độ baud nào.
+Hãy kiểm tra cáp kết nối, nguồn thiết bị và cài đặt trên thiết bị, rồi chọn tốc độ baud thủ công.</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Title" xml:space="preserve">
+    <value>Không thể tự động dò tốc độ baud</value>
+  </data>
+  <data name="Qzss.CancelWithRate" xml:space="preserve">
+    <value>Hủy ({0})</value>
+  </data>
+  <data name="Qzss.NoSetting.Message" xml:space="preserve">
+    <value>Chưa chọn mục cài đặt nào để gửi.</value>
+  </data>
+  <data name="Qzss.NoSetting.Title" xml:space="preserve">
+    <value>Không có mục cài đặt</value>
+  </data>
+  <data name="Qzss.NotConnected" xml:space="preserve">
+    <value>Chưa kết nối với cổng. Hãy kết nối rồi thử lại.</value>
+  </data>
+  <data name="Qzss.SendDone" xml:space="preserve">
+    <value>Đã gửi cài đặt.</value>
+  </data>
+  <data name="Qzss.SendDone.Reconnect" xml:space="preserve">
+    <value>Đã gửi cài đặt. Đang đổi tốc độ baud thành {0} và kết nối lại.</value>
+  </data>
+  <data name="Qzss.SendDone.Title" xml:space="preserve">
+    <value>Hoàn tất cài đặt</value>
+  </data>
+  <data name="Qzss.SendFailed.Message" xml:space="preserve">
+    <value>Một số cài đặt không gửi được. Xem chi tiết ở phần tiến trình.</value>
+  </data>
+  <data name="Qzss.SendFailed.Title" xml:space="preserve">
+    <value>Gửi cài đặt thất bại</value>
+  </data>
+  <data name="Qzss.Step.Baud" xml:space="preserve">
+    <value>Đổi tốc độ baud của UART1 thành {0}</value>
+  </data>
+  <data name="Qzss.Step.L1s" xml:space="preserve">
+    <value>Bật nhận QZSS L1S (DC Report)</value>
+  </data>
+  <data name="Qzss.Step.Qzss" xml:space="preserve">
+    <value>Bật nhận QZSS</value>
+  </data>
+  <data name="Qzss.Step.Rate" xml:space="preserve">
+    <value>Đổi tốc độ cập nhật thành {0}ms</value>
+  </data>
+  <data name="Qzss.Step.Rmc" xml:space="preserve">
+    <value>Bật xuất NMEA RMC trên UART1</value>
+  </data>
+  <data name="Qzss.Step.Sfrbx" xml:space="preserve">
+    <value>Bật xuất UBX-RXM-SFRBX (dữ liệu dẫn đường vệ tinh) trên UART1</value>
+  </data>
+  <data name="QzssConn.Serial" xml:space="preserve">
+    <value>Cổng serial</value>
+  </data>
+  <data name="QzssPage.01" xml:space="preserve">
+    <value>Về Báo cáo khủng hoảng (DC Report)</value>
+  </data>
+  <data name="QzssPage.02" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="QzssPage.03" xml:space="preserve">
+    <value>Thông tin kết nối</value>
+  </data>
+  <data name="QzssPage.04" xml:space="preserve">
+    <value>Kiểu kết nối</value>
+  </data>
+  <data name="QzssPage.05" xml:space="preserve">
+    <value>Máy chủ kết nối</value>
+  </data>
+  <data name="QzssPage.06" xml:space="preserve">
+    <value>Chỉ định máy chủ TCP xuất NMEA / UBX.</value>
+  </data>
+  <data name="QzssPage.07" xml:space="preserve">
+    <value>Số cổng</value>
+  </data>
+  <data name="QzssPage.08" xml:space="preserve">
+    <value>Cổng kết nối</value>
+  </data>
+  <data name="QzssPage.09" xml:space="preserve">
+    <value>Tốc độ baud</value>
+  </data>
+  <data name="QzssPage.10" xml:space="preserve">
+    <value>Lần lượt thử từng tốc độ baud trên cổng hiện tại và kết nối bằng tốc độ nhận được câu lệnh hợp lệ. Nhấn trong lúc đang dò để hủy.</value>
+  </data>
+  <data name="QzssPage.11" xml:space="preserve">
+    <value>Bắt đầu kết nối</value>
+  </data>
+  <data name="QzssPage.12" xml:space="preserve">
+    <value>Cài đặt ban đầu thiết bị u-blox</value>
+  </data>
+  <data name="QzssPage.13" xml:space="preserve">
+    <value>Gửi UBX-CFG-VALSET tới thiết bị u-blox để áp dụng các cài đặt. Chỉ dùng được với kết nối serial.</value>
+  </data>
+  <data name="QzssPage.14" xml:space="preserve">
+    <value>Bật xuất UBX-RXM-SFRBX (dữ liệu dẫn đường vệ tinh) trên UART1</value>
+  </data>
+  <data name="QzssPage.15" xml:space="preserve">
+    <value>Gửi</value>
+  </data>
+  <data name="QzssPage.16" xml:space="preserve">
+    <value>Không gửi</value>
+  </data>
+  <data name="QzssPage.17" xml:space="preserve">
+    <value>Bật xuất NMEA RMC (vị trí) trên UART1</value>
+  </data>
+  <data name="QzssPage.18" xml:space="preserve">
+    <value>Bật nhận QZSS</value>
+  </data>
+  <data name="QzssPage.19" xml:space="preserve">
+    <value>Đổi tốc độ cập nhật</value>
+  </data>
+  <data name="QzssPage.20" xml:space="preserve">
+    <value>Đổi tốc độ baud của UART1</value>
+  </data>
+  <data name="QzssPage.21" xml:space="preserve">
+    <value>Được gửi cuối cùng vì không thể nhận phản hồi.</value>
+  </data>
+  <data name="QzssPage.22" xml:space="preserve">
+    <value>Gửi cài đặt và áp dụng lần lượt trong khi kiểm tra phản hồi của thiết bị.</value>
+  </data>
+  <data name="QzssPage.23" xml:space="preserve">
+    <value>Gửi cài đặt</value>
+  </data>
+  <data name="QzssPage.24" xml:space="preserve">
+    <value>Xóa vĩ độ/kinh độ (tọa độ) khỏi thông tin GPS</value>
+  </data>
+  <data name="QzssPage.25" xml:space="preserve">
+    <value>Ngăn việc vị trí hiện tại bị lộ qua ảnh chụp màn hình hoặc bản ghi.</value>
+  </data>
+  <data name="QzssPage.26" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="QzssPage.27" xml:space="preserve">
+    <value>Không xóa</value>
+  </data>
+  <data name="QzssPage.28" xml:space="preserve">
+    <value>Hiển thị vị trí hiện tại trên bản đồ</value>
+  </data>
+  <data name="QzssPage.29" xml:space="preserve">
+    <value>Bỏ qua điện văn không phải của JMA</value>
+  </data>
+  <data name="QzssPage.30" xml:space="preserve">
+    <value>Bỏ qua điện văn diễn tập và thử nghiệm</value>
+  </data>
+  <data name="QzssPage.31" xml:space="preserve">
+    <value>Độ lệch múi giờ</value>
+  </data>
+  <data name="QzssPage.32" xml:space="preserve">
+    <value>Hiển thị thời gian điện văn lệch so với UTC theo số giờ chỉ định. Giờ chuẩn Nhật Bản (JST) là -9 giờ.</value>
+  </data>
+  <data name="QzssPage.33" xml:space="preserve">
+    <value>Cài đặt nhận</value>
+  </data>
+  <data name="QzssPage.34" xml:space="preserve">
+    <value>Tab Kyoshin Monitor hiển thị thời điểm xảy ra, chấn tiêu ước tính, tên địa danh tâm chấn và các khu vực dự kiến rung mạnh, nhưng không hiển thị các vòng tròn thể hiện sự lan truyền của rung chấn vì không lấy được thời điểm xảy ra.</value>
+  </data>
+  <data name="QzssPage.35" xml:space="preserve">
+    <value>Thông tin được hiển thị trong tab Sóng thần.</value>
+  </data>
+  <data name="QzssPage.36" xml:space="preserve">
+    <value>Các thông tin sau về cơ bản được hiển thị ở tab DC Report, nên sẽ không hoạt động nếu tab đó không được hiển thị.</value>
+  </data>
+  <data name="QzssPage.37" xml:space="preserve">
+    <value>Thông tin động đất (chấn tiêu / cường độ)</value>
+  </data>
+  <data name="QzssPage.38" xml:space="preserve">
+    <value>Đây không phải thông tin đầy đủ nên không hiển thị trong tab Động đất.</value>
+  </data>
+  <data name="QzssPage.39" xml:space="preserve">
+    <value>Thông tin động đất rãnh Nankai</value>
+  </data>
+  <data name="QzssPage.40" xml:space="preserve">
+    <value>Thông tin sóng thần Tây Bắc Thái Bình Dương</value>
+  </data>
+  <data name="QzssPage.41" xml:space="preserve">
+    <value>Thông tin núi lửa</value>
+  </data>
+  <data name="QzssPage.42" xml:space="preserve">
+    <value>Thông tin tro bụi núi lửa</value>
+  </data>
+  <data name="QzssPage.43" xml:space="preserve">
+    <value>Thông tin thời tiết</value>
+  </data>
+  <data name="QzssPage.44" xml:space="preserve">
+    <value>Thông tin lũ lụt</value>
+  </data>
+  <data name="QzssPage.45" xml:space="preserve">
+    <value>Thông tin bão</value>
+  </data>
+  <data name="QzssPage.46" xml:space="preserve">
+    <value>Thông tin trên biển</value>
+  </data>
+  <data name="QzssTrigger.01" xml:space="preserve">
+    <value>Điều kiện</value>
+  </data>
+  <data name="QzssTrigger.02" xml:space="preserve">
+    <value>Nhận mới</value>
+  </data>
+  <data name="QzssTrigger.03" xml:space="preserve">
+    <value>Khi nhận DC Report không trùng lặp</value>
+  </data>
+  <data name="QzssTrigger.04" xml:space="preserve">
+    <value>Tạo nhóm mới</value>
+  </data>
+  <data name="QzssTrigger.05" xml:space="preserve">
+    <value>Nhóm được cập nhật</value>
+  </data>
+  <data name="QzssTrigger.06" xml:space="preserve">
+    <value>Đã nhận đủ thông tin khẩn động đất rãnh Nankai</value>
+  </data>
+  <data name="QzssTrigger.07" xml:space="preserve">
+    <value>Không được kích hoạt nếu thông tin động đất rãnh Nankai chưa được bật trong mục Loại</value>
+  </data>
+  <data name="QzssTrigger.08" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="QzssTrigger.09" xml:space="preserve">
+    <value>Các DC Report dùng làm điều kiện kích hoạt.</value>
+  </data>
+  <data name="QzssTrigger.10" xml:space="preserve">
+    <value>Động đất rãnh Nankai</value>
+  </data>
+  <data name="QzssTrigger.11" xml:space="preserve">
+    <value>Sóng thần</value>
+  </data>
+  <data name="QzssTrigger.12" xml:space="preserve">
+    <value>Núi lửa</value>
+  </data>
+  <data name="QzssTrigger.13" xml:space="preserve">
+    <value>Tro bụi</value>
+  </data>
+  <data name="QzssTrigger.14" xml:space="preserve">
+    <value>Thời tiết</value>
+  </data>
+  <data name="QzssTrigger.15" xml:space="preserve">
+    <value>Lũ</value>
+  </data>
+  <data name="QzssTrigger.16" xml:space="preserve">
+    <value>Bão</value>
+  </data>
+  <data name="QzssTrigger.17" xml:space="preserve">
+    <value>Biển</value>
+  </data>
+  <data name="QzssView.01" xml:space="preserve">
+    <value>Giờ địa phương</value>
+  </data>
+  <data name="QzssView.02" xml:space="preserve">
+    <value>Vĩ độ</value>
+  </data>
+  <data name="QzssView.03" xml:space="preserve">
+    <value>Kinh độ</value>
+  </data>
+  <data name="QzssView.04" xml:space="preserve">
+    <value>Đã ngắt kết nối</value>
+  </data>
+  <data name="QzssView.05" xml:space="preserve">
+    <value>Lịch sử nhận DC Report</value>
+  </data>
+  <data name="QzssView.06" xml:space="preserve">
+    <value>Nhận lần cuối:</value>
+  </data>
+  <data name="QzssView.07" xml:space="preserve">
+    <value>EEW (cảnh báo)</value>
+  </data>
+  <data name="QzssView.08" xml:space="preserve">
+    <value>Thông tin cường độ</value>
+  </data>
+  <data name="QzssView.09" xml:space="preserve">
+    <value>Tối đa</value>
+  </data>
+  <data name="QzssView.10" xml:space="preserve">
+    <value>Rãnh Nankai</value>
+  </data>
+  <data name="QzssView.11" xml:space="preserve">
+    <value>Sóng thần Tây Bắc Thái Bình Dương</value>
+  </data>
+  <data name="QzssView.12" xml:space="preserve">
+    <value>Dự báo tro bụi núi lửa</value>
+  </data>
+  <data name="QzssView.13" xml:space="preserve">
+    <value>Dự báo lũ</value>
+  </data>
+  <data name="QzssView.14" xml:space="preserve">
+    <value>Cảnh báo trên biển</value>
+  </data>
+  <data name="QzssView.15" xml:space="preserve">
+    <value>Chưa triển khai</value>
+  </data>
+  <data name="QzssView.16" xml:space="preserve">
+    <value>Diễn tập / thử nghiệm</value>
+  </data>
+  <data name="QzssView.17" xml:space="preserve">
+    <value>Cột thử nghiệm</value>
+  </data>
+  <data name="QzssView.18" xml:space="preserve">
+    <value>Nội dung thử nghiệm</value>
+  </data>
+  <data name="QzssView.F01" xml:space="preserve">
+    <value>Số {0}</value>
+  </data>
+  <data name="RadarPage.01" xml:space="preserve">
+    <value>Tự động cập nhật</value>
+  </data>
+  <data name="RadarPage.02" xml:space="preserve">
+    <value>Tự động cập nhật mỗi phút.</value>
+  </data>
+  <data name="RadarPage.03" xml:space="preserve">
+    <value>Nguồn thông tin</value>
+  </data>
+  <data name="RadarPage.04" xml:space="preserve">
+    <value>Trang web JMA</value>
+  </data>
+  <data name="RadarView.01" xml:space="preserve">
+    <value>Đang tải…</value>
+  </data>
+  <data name="RadarView.F01" xml:space="preserve">
+    <value>Chuyển động mây mưa {0:HH:mm}</value>
+  </data>
+  <data name="Redundancy.Disconnected" xml:space="preserve">
+    <value>Chưa kết nối</value>
+  </data>
+  <data name="Redundancy.Full" xml:space="preserve">
+    <value>Kết nối đầy đủ</value>
+  </data>
+  <data name="Redundancy.Partial" xml:space="preserve">
+    <value>Kết nối một phần</value>
+  </data>
+  <data name="Replay.Ago" xml:space="preserve">
+    <value> trước</value>
+  </data>
+  <data name="Replay.Hours" xml:space="preserve">
+    <value>{0} giờ</value>
+  </data>
+  <data name="Replay.LoadFailed" xml:space="preserve">
+    <value>Không tải được tệp phát lại</value>
+  </data>
+  <data name="Replay.Minutes" xml:space="preserve">
+    <value>{0} phút</value>
+  </data>
+  <data name="Replay.OpenFile" xml:space="preserve">
+    <value>Mở tệp phát lại</value>
+  </data>
+  <data name="Replay.RealTime" xml:space="preserve">
+    <value>Thời gian thực</value>
+  </data>
+  <data name="Replay.Seconds" xml:space="preserve">
+    <value>{0} giây</value>
+  </data>
+  <data name="Replay.Separator" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="SeismicIntensityReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (cường độ)</value>
+  </data>
+  <data name="SeismicIntensityReport.02" xml:space="preserve">
+    <value>trở xuống</value>
+  </data>
+  <data name="SelectSeriesPage.01" xml:space="preserve">
+    <value>Chọn thông tin để nhận và hiển thị</value>
+  </data>
+  <data name="SelectSeriesPage.02" xml:space="preserve">
+    <value>Hãy chọn thông tin bạn muốn hiển thị trong ứng dụng này.
+Chỉ nhận đúng thông tin cần thiết giúp giảm tải cho các máy chủ cung cấp thông tin.</value>
+  </data>
+  <data name="SelectSeriesPage.03" xml:space="preserve">
+    <value>Kyoshin Monitor / Cảnh báo động đất sớm</value>
+  </data>
+  <data name="SelectSeriesPage.04" xml:space="preserve">
+    <value>Dùng tính năng tích hợp Signal Now Professional</value>
+  </data>
+  <data name="SelectSeriesPage.05" xml:space="preserve">
+    <value>Ngay cả khi SignalNowProfessional không chạy, trạng thái vẫn hiển thị là đang nhận nếu đọc được tệp log. Hãy lưu ý điều này.</value>
+  </data>
+  <data name="SelectSeriesPage.06" xml:space="preserve">
+    <value>Nhận và hiển thị cường độ thời gian thực và Cảnh báo động đất sớm từ Kyoshin Monitor.</value>
+  </data>
+  <data name="SelectSeriesPage.07" xml:space="preserve">
+    <value>Nhận và phân tích XML phòng chống thiên tai, hiển thị thông tin động đất.</value>
+  </data>
+  <data name="SelectSeriesPage.08" xml:space="preserve">
+    <value>Nhận và phân tích XML phòng chống thiên tai, hiển thị thông tin sóng thần.</value>
+  </data>
+  <data name="SelectSeriesPage.09" xml:space="preserve">
+    <value>Hiển thị thông tin phòng chống thiên tai do "Michibiki" phát. Cần có bộ thu tương thích.</value>
+  </data>
+  <data name="SelectThemePage.01" xml:space="preserve">
+    <value>Bạn có thể đổi bảng màu bằng cách chọn chủ đề.</value>
+  </data>
+  <data name="SendNotificationAction.01" xml:space="preserve">
+    <value>Tiêu đề thông báo</value>
+  </data>
+  <data name="SendNotificationAction.02" xml:space="preserve">
+    <value>Template nội dung thông báo</value>
+  </data>
+  <data name="SendNotificationAction.03" xml:space="preserve">
+    <value>Mức khẩn cấp</value>
+  </data>
+  <data name="SendNotificationAction.04" xml:space="preserve">
+    <value>Bạn có thể đặt mức ưu tiên của thông báo.
+"Quan trọng" sẽ cố gắng hiển thị xuyên qua cả chế độ không làm phiền trên môi trường được hỗ trợ.</value>
+  </data>
+  <data name="Series.Earthquake" xml:space="preserve">
+    <value>Thông tin động đất</value>
+  </data>
+  <data name="Series.Earthquake.Detail" xml:space="preserve">
+    <value>Nhận và hiển thị thông tin chấn tiêu và cường độ.</value>
+  </data>
+  <data name="Series.KyoshinMonitor" xml:space="preserve">
+    <value>Kyoshin Monitor</value>
+  </data>
+  <data name="Series.KyoshinMonitor.Detail" xml:space="preserve">
+    <value>Hiển thị Kyoshin Monitor và Cảnh báo động đất sớm.</value>
+  </data>
+  <data name="Series.Lightning" xml:space="preserve">
+    <value>[TEST] Thông tin sét</value>
+  </data>
+  <data name="Series.Lightning.Detail" xml:space="preserve">
+    <value>Hiển thị thông tin sét. (để gỡ lỗi)</value>
+  </data>
+  <data name="Series.ObservationPointEditor" xml:space="preserve">
+    <value>Chỉnh sửa trạm quan trắc</value>
+  </data>
+  <data name="Series.ObservationPointEditor.Detail" xml:space="preserve">
+    <value>Cung cấp chức năng chỉnh sửa và quản lý dữ liệu trạm quan trắc động đất mạnh.</value>
+  </data>
+  <data name="Series.Qzss" xml:space="preserve">
+    <value>Báo cáo khủng hoảng</value>
+  </data>
+  <data name="Series.Qzss.Detail" xml:space="preserve">
+    <value>Hiển thị thông tin phòng chống thiên tai do "Michibiki" (QZSS) phát.</value>
+  </data>
+  <data name="Series.Radar" xml:space="preserve">
+    <value>Mây mưa (β)</value>
+  </data>
+  <data name="Series.Radar.Detail" xml:space="preserve">
+    <value>Hiển thị ảnh radar mây mưa. (tính năng thử nghiệm)</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier" xml:space="preserve">
+    <value>Phát hiện rung chấn</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier.Detail" xml:space="preserve">
+    <value>Điều chỉnh tham số phát hiện rung chấn và so sánh kiểm chứng.</value>
+  </data>
+  <data name="Series.Tsunami" xml:space="preserve">
+    <value>Thông tin sóng thần</value>
+  </data>
+  <data name="Series.Tsunami.Detail" xml:space="preserve">
+    <value>Hiển thị thông tin sóng thần.</value>
+  </data>
+  <data name="Series.Typhoon" xml:space="preserve">
+    <value>Thông tin bão (α)</value>
+  </data>
+  <data name="Series.Typhoon.Detail" xml:space="preserve">
+    <value>Hiển thị vị trí hiện tại và vòng tròn dự báo của bão.</value>
+  </data>
+  <data name="Setting.About" xml:space="preserve">
+    <value>Về ứng dụng này</value>
+  </data>
+  <data name="Setting.Axis" xml:space="preserve">
+    <value>AXIS (thử nghiệm)</value>
+  </data>
+  <data name="Setting.Delivery" xml:space="preserve">
+    <value>Nguồn dữ liệu</value>
+  </data>
+  <data name="Setting.Eew" xml:space="preserve">
+    <value>EEW</value>
+  </data>
+  <data name="Setting.Feedback" xml:space="preserve">
+    <value>Phản hồi</value>
+  </data>
+  <data name="Setting.General" xml:space="preserve">
+    <value>Giao diện &amp; cơ bản</value>
+  </data>
+  <data name="Setting.License" xml:space="preserve">
+    <value>Giấy phép</value>
+  </data>
+  <data name="Setting.Map" xml:space="preserve">
+    <value>Bản đồ</value>
+  </data>
+  <data name="Setting.MapIcon" xml:space="preserve">
+    <value>Biểu tượng bản đồ</value>
+  </data>
+  <data name="Setting.ObsPoints" xml:space="preserve">
+    <value>Trạm quan trắc</value>
+  </data>
+  <data name="Setting.Qzss" xml:space="preserve">
+    <value>Michibiki DC Report</value>
+  </data>
+  <data name="Setting.Radar" xml:space="preserve">
+    <value>Radar mây mưa</value>
+  </data>
+  <data name="Setting.Replay" xml:space="preserve">
+    <value>Phát lại</value>
+  </data>
+  <data name="Setting.Sound" xml:space="preserve">
+    <value>Âm thanh</value>
+  </data>
+  <data name="Setting.Update" xml:space="preserve">
+    <value>Cập nhật ứng dụng</value>
+  </data>
+  <data name="Setting.WindowTitle" xml:space="preserve">
+    <value>Cài đặt - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Setting.Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="SetupWizardWindow.01" xml:space="preserve">
+    <value>Trình hướng dẫn cài đặt - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Shake.Title.Medium" xml:space="preserve">
+    <value>Phát hiện rung chấn</value>
+  </data>
+  <data name="Shake.Title.Strong" xml:space="preserve">
+    <value>Phát hiện rung chấn mạnh</value>
+  </data>
+  <data name="Shake.Title.Stronger" xml:space="preserve">
+    <value>Phát hiện rung chấn rất mạnh</value>
+  </data>
+  <data name="Shake.Title.Weak" xml:space="preserve">
+    <value>Phát hiện rung chấn yếu</value>
+  </data>
+  <data name="Shake.Title.Weaker" xml:space="preserve">
+    <value>Phát hiện rung chấn rất yếu</value>
+  </data>
+  <data name="ShakeAnimation.Blink" xml:space="preserve">
+    <value>Nhấp nháy</value>
+  </data>
+  <data name="ShakeAnimation.None" xml:space="preserve">
+    <value>Không có hiệu ứng</value>
+  </data>
+  <data name="ShakeAnimation.Pulse" xml:space="preserve">
+    <value>Nhấp nháy mờ</value>
+  </data>
+  <data name="ShakeDetectTrigger.01" xml:space="preserve">
+    <value>Mức phát hiện: </value>
+  </data>
+  <data name="ShakeDetectTrigger.02" xml:space="preserve">
+    <value>Chỉ chạy khi mức trùng khớp</value>
+  </data>
+  <data name="ShakeDetectTrigger.03" xml:space="preserve">
+    <value>Mặc định, các sự kiện ở mức cao hơn cũng kích hoạt.
+Bật tùy chọn này để chỉ chạy hành động ở đúng mức đó.</value>
+  </data>
+  <data name="ShakeDetectTrigger.04" xml:space="preserve">
+    <value>Khi vùng mức tối đa mở rộng: </value>
+  </data>
+  <data name="ShakeDetectTrigger.05" xml:space="preserve">
+    <value>Đặt hành vi khi số khu vực quan sát được mức rung tối đa tăng lên.
+- Không làm gì: không kích hoạt khi khu vực mở rộng
+- Chỉ khu vực: chỉ kích hoạt khi có khu vực mới
+- Bao gồm khu vực phụ: cũng kích hoạt khi khu vực phụ tăng</value>
+  </data>
+  <data name="ShakeDetectedRegionPanel.01" xml:space="preserve">
+    <value>(toàn bộ khu vực)</value>
+  </data>
+  <data name="ShakeDisplay.ConvexHull" xml:space="preserve">
+    <value>Bao lồi (không khuyến nghị)</value>
+  </data>
+  <data name="ShakeDisplay.Grid" xml:space="preserve">
+    <value>Lưới</value>
+  </data>
+  <data name="ShakeDisplay.None" xml:space="preserve">
+    <value>Không hiển thị</value>
+  </data>
+  <data name="ShindoName.Int0" xml:space="preserve">
+    <value>Cường độ 0</value>
+  </data>
+  <data name="ShindoName.Int1" xml:space="preserve">
+    <value>Cường độ 1</value>
+  </data>
+  <data name="ShindoName.Int2" xml:space="preserve">
+    <value>Cường độ 2</value>
+  </data>
+  <data name="ShindoName.Int3" xml:space="preserve">
+    <value>Cường độ 3</value>
+  </data>
+  <data name="ShindoName.Int4" xml:space="preserve">
+    <value>Cường độ 4</value>
+  </data>
+  <data name="ShindoName.Int5Lower" xml:space="preserve">
+    <value>Cường độ 5 yếu</value>
+  </data>
+  <data name="ShindoName.Int5Upper" xml:space="preserve">
+    <value>Cường độ 5 mạnh</value>
+  </data>
+  <data name="ShindoName.Int6Lower" xml:space="preserve">
+    <value>Cường độ 6 yếu</value>
+  </data>
+  <data name="ShindoName.Int6Upper" xml:space="preserve">
+    <value>Cường độ 6 mạnh</value>
+  </data>
+  <data name="ShindoName.Int7" xml:space="preserve">
+    <value>Cường độ 7</value>
+  </data>
+  <data name="ShindoName.Unknown" xml:space="preserve">
+    <value>Cường độ không rõ</value>
+  </data>
+  <data name="ShindoThreshold.Int1" xml:space="preserve">
+    <value>Cường độ 1 trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int2" xml:space="preserve">
+    <value>Cường độ 2 trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int3" xml:space="preserve">
+    <value>Cường độ 3 trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int4" xml:space="preserve">
+    <value>Cường độ 4 trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int5Lower" xml:space="preserve">
+    <value>Cường độ 5 yếu trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int5Upper" xml:space="preserve">
+    <value>Cường độ 5 mạnh trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int6Lower" xml:space="preserve">
+    <value>Cường độ 6 yếu trở lên</value>
+  </data>
+  <data name="ShindoThreshold.Int6Upper" xml:space="preserve">
+    <value>Cường độ 6 mạnh trở lên</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityDash" xml:space="preserve">
+    <value>{int}: cường độ tối đa [-,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQ" xml:space="preserve">
+    <value>{int}: cường độ tối đa [?,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQMode" xml:space="preserve">
+    <value>{int}: cường độ tối đa [?,0,1,...,6-,6+,7]
+{mode}: chế độ phát [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.QzssGroup" xml:space="preserve">
+    <value>Không phát khi được gộp vào thông tin công bố đồng thời.</value>
+  </data>
+  <data name="Sound.Desc.QzssNankai" xml:space="preserve">
+    <value>Phát khi hoàn tất việc nhận thông tin về rãnh Nankai.</value>
+  </data>
+  <data name="Sound.Desc.QzssReceived" xml:space="preserve">
+    <value>Vẫn phát khi được gộp vào thông tin công bố đồng thời, nhưng không phát với thông tin hoàn toàn giống nhau.</value>
+  </data>
+  <data name="Sound.Desc.ShakeRise" xml:space="preserve">
+    <value>Cũng phát khi cường độ tăng.
+Cần bật phát hiện rung chấn trong cài đặt thì mới phát âm thanh này.
+{mode}: chế độ phát [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.ShakeWeak" xml:space="preserve">
+    <value>Cần bật phát hiện rung chấn trong cài đặt thì mới phát âm thanh này.
+{mode}: chế độ phát [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiDowngrade" xml:space="preserve">
+    <value>Phát khi mức cảnh báo tối đa giảm xuống.
+{lv}: loại cảnh báo sau khi dỡ bỏ [none, fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiNew" xml:space="preserve">
+    <value>Phát khi nhận từ trạng thái chưa có thông báo.
+{lv}: loại cảnh báo [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpdated" xml:space="preserve">
+    <value>Âm thanh này phát khi không có âm thanh liên quan sóng thần nào khác được phát.
+{lv}: loại cảnh báo tối đa [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpgrade" xml:space="preserve">
+    <value>Phát khi công bố cảnh báo / khuyến cáo mức cao hơn.
+{lv}: loại cảnh báo sau cập nhật [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Duplicate" xml:space="preserve">
+    <value>Trùng</value>
+  </data>
+  <data name="Sound.EewCancel" xml:space="preserve">
+    <value>Nhận Cảnh báo động đất sớm (hủy)</value>
+  </data>
+  <data name="Sound.EewFinal" xml:space="preserve">
+    <value>Nhận Cảnh báo động đất sớm (bản cuối)</value>
+  </data>
+  <data name="Sound.EewFirst" xml:space="preserve">
+    <value>Nhận Cảnh báo động đất sớm (lần đầu)</value>
+  </data>
+  <data name="Sound.EewReceived" xml:space="preserve">
+    <value>Nhận Cảnh báo động đất sớm</value>
+  </data>
+  <data name="Sound.EewWarning" xml:space="preserve">
+    <value>Cảnh báo động đất sớm (cảnh báo) được công bố / đạt mức</value>
+  </data>
+  <data name="Sound.EqIntensityUpdated" xml:space="preserve">
+    <value>Cập nhật cường độ</value>
+  </data>
+  <data name="Sound.EqTrainingUpdated" xml:space="preserve">
+    <value>Cập nhật thông tin động đất (diễn tập)</value>
+  </data>
+  <data name="Sound.EqUpdated" xml:space="preserve">
+    <value>Cập nhật thông tin động đất</value>
+  </data>
+  <data name="Sound.LightningArrival" xml:space="preserve">
+    <value>Khi nhận thông tin</value>
+  </data>
+  <data name="Sound.Master" xml:space="preserve">
+    <value>Âm lượng chung</value>
+  </data>
+  <data name="Sound.Mute" xml:space="preserve">
+    <value>Tắt tiếng</value>
+  </data>
+  <data name="Sound.QzssGroup" xml:space="preserve">
+    <value>Nhận nhóm mới</value>
+  </data>
+  <data name="Sound.QzssNankai" xml:space="preserve">
+    <value>Hoàn tất nhận thông tin rãnh Nankai</value>
+  </data>
+  <data name="Sound.QzssReceived" xml:space="preserve">
+    <value>Nhận thông tin mới</value>
+  </data>
+  <data name="Sound.ShakeMedium" xml:space="preserve">
+    <value>Phát hiện rung chấn (cường độ từ 1 đến dưới 3)</value>
+  </data>
+  <data name="Sound.ShakeStrong" xml:space="preserve">
+    <value>Phát hiện rung chấn (cường độ từ 3 đến dưới 5 yếu)</value>
+  </data>
+  <data name="Sound.ShakeStronger" xml:space="preserve">
+    <value>Phát hiện rung chấn (cường độ từ 5 yếu trở lên)</value>
+  </data>
+  <data name="Sound.ShakeWeak" xml:space="preserve">
+    <value>Phát hiện rung chấn (dưới cường độ 1)</value>
+  </data>
+  <data name="Sound.ShowButton" xml:space="preserve">
+    <value>Hiển thị nút âm lượng trên cửa sổ chính</value>
+  </data>
+  <data name="Sound.TsunamiDowngrade" xml:space="preserve">
+    <value>Dỡ bỏ cảnh báo / khuyến cáo</value>
+  </data>
+  <data name="Sound.TsunamiNew" xml:space="preserve">
+    <value>Công bố thông tin sóng thần</value>
+  </data>
+  <data name="Sound.TsunamiUpdated" xml:space="preserve">
+    <value>Cập nhật thông tin sóng thần</value>
+  </data>
+  <data name="Sound.TsunamiUpgrade" xml:space="preserve">
+    <value>Cập nhật cảnh báo / khuyến cáo</value>
+  </data>
+  <data name="Sound.Unavailable" xml:space="preserve">
+    <value>Không thể phát âm thanh</value>
+  </data>
+  <data name="Sound.Unavailable.Desc" xml:space="preserve">
+    <value>Có thể không có thiết bị phát âm thanh. Cần khởi động lại.</value>
+  </data>
+  <data name="Sound.VolumeLabel" xml:space="preserve">
+    <value>Âm lượng:</value>
+  </data>
+  <data name="Source.JmaXml" xml:space="preserve">
+    <value>XML JMA</value>
+  </data>
+  <data name="Template.SyntaxError.Back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="Template.SyntaxError.Edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="Template.SyntaxError.Message" xml:space="preserve">
+    <value>Template có lỗi cú pháp:
+
+{0}
+
+Giữ nguyên như vậy?</value>
+  </data>
+  <data name="Template.SyntaxError.Title" xml:space="preserve">
+    <value>Lỗi cú pháp template</value>
+  </data>
+  <data name="TemplateEditorDialog.01" xml:space="preserve">
+    <value>Chỉnh sửa template</value>
+  </data>
+  <data name="TemplateEditorDialog.02" xml:space="preserve">
+    <value>Bạn có thể tạo nội dung động bằng ngôn ngữ template Scriban</value>
+  </data>
+  <data name="TemplateEditorDialog.03" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Theme.BuiltIn" xml:space="preserve">
+    <value>Chủ đề tích hợp sẵn</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Message" xml:space="preserve">
+    <value>Chủ đề tích hợp sẵn không thể sửa đổi nên sẽ được lưu thành chủ đề ngoài.
+Sẽ lưu thành {0}.json. Hãy kiểm tra tên không chứa ký tự không dùng được trong tên tệp.</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Title" xml:space="preserve">
+    <value>Lưu chủ đề tích hợp sẵn</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Message" xml:space="preserve">
+    <value>Đóng cửa sổ và hủy các thay đổi của chủ đề đang chỉnh sửa?</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Title" xml:space="preserve">
+    <value>Hủy thay đổi chủ đề</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Message" xml:space="preserve">
+    <value>Ghi đè chủ đề vào {0}?</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Title" xml:space="preserve">
+    <value>Lưu chủ đề ngoài</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Edit" xml:space="preserve">
+    <value>Hủy các thay đổi của chủ đề đang chỉnh sửa?</value>
+  </data>
+  <data name="Theme.Dialog.Restore.File" xml:space="preserve">
+    <value>Đọc lại chủ đề từ tệp?</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Title" xml:space="preserve">
+    <value>Khôi phục</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Message" xml:space="preserve">
+    <value>Không lưu được chủ đề: {0}</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Title" xml:space="preserve">
+    <value>Lưu thất bại</value>
+  </data>
+  <data name="Theme.External" xml:space="preserve">
+    <value>Chủ đề ngoài: {0}</value>
+  </data>
+  <data name="Theme.Temporary" xml:space="preserve">
+    <value>Chủ đề đang chỉnh sửa</value>
+  </data>
+  <data name="Tpl.Eew.Message" xml:space="preserve">
+    <value>{{IntensityLongName
+if IsIntensityOver; " trở lên"; end
+
+if EpicenterPlaceName
+$"/{EpicenterPlaceName}"
+end
+
+if Magnitude
+$"/M{Magnitude | math.format "F1"}"
+end
+
+if Depth &amp;&amp; !IsTemporaryEpicenter
+$"/{Depth}km"
+end
+
+if IsWarning &amp;&amp; WarningAreaNames
+$" [{WarningAreaNames | array.join ", "}]"
+end}}</value>
+  </data>
+  <data name="Tpl.Eew.Title" xml:space="preserve">
+    <value>{{if IsCancelled; "[Hủy] "; end
+if IsReplay; "[Phát lại] "; end
+"Cảnh báo động đất sớm (bản tin "
+SerialNo | math.format "D2"
+if IsFinal; " / cuối"; end
+")"}}</value>
+  </data>
+  <data name="Tpl.Eq.Message" xml:space="preserve">
+    <value>{{
+# trạng thái
+if IsCancelled; "[Hủy] "; end
+if IsTrainingOrTest; "[Diễn tập/Thử] "; end
+if IsTest; "[Thử nghiệm] "; end
+
+$"Tối đa {MaxIntensityLongName}"
+
+if Hypocenter &amp;&amp; (IsHypocenterOnly || IsDetailIntensityApplied)
+$"/{Hypocenter.OccurrenceAt | date.to_string "%H:%M"}"
+$"/{Hypocenter.PlaceName}"
+
+if !Hypocenter.IsNoDepthData
+if Hypocenter.IsVeryShallow
+"/rất nông"
+else
+$"/{Hypocenter.Depth}km"
+end
+end
+
+if Hypocenter.MagnitudeAlternativeText
+$"/{Hypocenter.MagnitudeAlternativeText}"
+else
+$"/M{Hypocenter.Magnitude | math.format "F1"}"
+end
+end}}</value>
+  </data>
+  <data name="Tpl.Eq.Title" xml:space="preserve">
+    <value>{{if IsCancelled; "[Hủy] "; end
+if IsTrainingOrTest; "[Diễn tập/Thử] "; end
+if IsTest; "[Thử nghiệm] "; end
+LatestInformationName}}</value>
+  </data>
+  <data name="Tpl.Tsunami.Message" xml:space="preserve">
+    <value>{{
+case Level
+when "None"
+LevelString = "Không có sóng thần"
+when "Forecast"
+LevelString = "Dự báo sóng thần"
+when "Advisory"
+LevelString = "Khuyến cáo sóng thần"
+when "Warning"
+LevelString = "Cảnh báo sóng thần"
+when "MajorWarning"
+LevelString = "Cảnh báo sóng thần lớn"
+else
+LevelString = "Thông tin sóng thần"
+end
+case PreviousLevel
+when "None"
+PreviousLevelString = "Không có sóng thần"
+when "Forecast"
+PreviousLevelString = "Dự báo sóng thần"
+when "Advisory"
+PreviousLevelString = "Khuyến cáo sóng thần"
+when "Warning"
+PreviousLevelString = "Cảnh báo sóng thần"
+when "MajorWarning"
+PreviousLevelString = "Cảnh báo sóng thần lớn"
+else
+PreviousLevelString = "Thông tin sóng thần"
+end
+
+if PreviousLevel != Level
+if PreviousLevel == "None"
+LevelString + " đã được công bố."
+else if Level == "None"
+if PreviousLevel == "Forecast"
+"Dự báo sóng thần đã hết hạn."
+else
+PreviousLevelString + " đã được dỡ bỏ."
+end
+else
+PreviousLevelString + " đã chuyển sang " + LevelString + "."
+end
+end}}
+
+{{if TsunamiInfo &amp;&amp; Level != "None"
+if TsunamiInfo.MajorWarningAreas
+$" [{TsunamiInfo.MajorWarningAreas | array.map "Name" | array.join ", "}]"
+else if TsunamiInfo.WarningAreas
+$" [{TsunamiInfo.WarningAreas | array.map "Name" | array.join ", "}]"
+else if TsunamiInfo.AdvisoryAreas
+$" ({TsunamiInfo.AdvisoryAreas | array.map "Name" | array.join ", "})"
+end
+end}}</value>
+  </data>
+  <data name="Tpl.Tsunami.Title" xml:space="preserve">
+    <value>{{if TsunamiInfo &amp;&amp; TsunamiInfo.SpecialState; "[" + TsunamiInfo.SpecialState + "] "; end
+if Level == "None"
+"Dỡ bỏ sóng thần"
+else if Level == "Forecast"
+"Dự báo sóng thần"
+else if Level == "Advisory"
+"Khuyến cáo sóng thần"
+else if Level == "Warning"
+"Cảnh báo sóng thần"
+else if Level == "MajorWarning"
+"Cảnh báo sóng thần lớn"
+else
+"Thông tin sóng thần"
+end}}</value>
+  </data>
+  <data name="Tray.Stored.Message" xml:space="preserve">
+    <value>Ứng dụng vẫn đang chạy</value>
+  </data>
+  <data name="Tray.Stored.Title" xml:space="preserve">
+    <value>Đã thu vào khay hệ thống</value>
+  </data>
+  <data name="Tsunami.ExpectedArrival" xml:space="preserve">
+    <value>Dự kiến đến lúc {0:HH:mm}</value>
+  </data>
+  <data name="TsunamiInformationTrigger.01" xml:space="preserve">
+    <value>Mức thông báo: </value>
+  </data>
+  <data name="TsunamiInformationTrigger.02" xml:space="preserve">
+    <value>Chỉ chạy khi trùng khớp</value>
+  </data>
+  <data name="TsunamiInformationTrigger.03" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="TsunamiInformationTrigger.04" xml:space="preserve">
+    <value>Khi thông tin sóng thần được công bố từ trạng thái chưa có thông báo</value>
+  </data>
+  <data name="TsunamiInformationTrigger.05" xml:space="preserve">
+    <value>Mức cảnh báo tăng</value>
+  </data>
+  <data name="TsunamiInformationTrigger.06" xml:space="preserve">
+    <value>Khi chuyển sang cảnh báo mức cao hơn</value>
+  </data>
+  <data name="TsunamiInformationTrigger.07" xml:space="preserve">
+    <value>Mức cảnh báo giảm / dỡ bỏ</value>
+  </data>
+  <data name="TsunamiInformationTrigger.08" xml:space="preserve">
+    <value>Khi mức cảnh báo giảm hoặc được dỡ bỏ</value>
+  </data>
+  <data name="TsunamiInformationTrigger.09" xml:space="preserve">
+    <value>Cập nhật khác</value>
+  </data>
+  <data name="TsunamiInformationTrigger.10" xml:space="preserve">
+    <value>Khi thông tin được cập nhật theo cách khác với trên, ví dụ khu vực tăng hoặc giảm</value>
+  </data>
+  <data name="TsunamiLevel.Advisory" xml:space="preserve">
+    <value>Khuyến cáo sóng thần</value>
+  </data>
+  <data name="TsunamiLevel.Forecast" xml:space="preserve">
+    <value>Dự báo sóng thần</value>
+  </data>
+  <data name="TsunamiLevel.MajorWarning" xml:space="preserve">
+    <value>Cảnh báo sóng thần lớn</value>
+  </data>
+  <data name="TsunamiLevel.None" xml:space="preserve">
+    <value>Không có sóng thần (tất cả)</value>
+  </data>
+  <data name="TsunamiLevel.Warning" xml:space="preserve">
+    <value>Cảnh báo sóng thần</value>
+  </data>
+  <data name="TsunamiPage.01" xml:space="preserve">
+    <value>Tự động chuyển tab khi thông tin sóng thần được cập nhật</value>
+  </data>
+  <data name="TsunamiPage.02" xml:space="preserve">
+    <value>Tab sẽ không chuyển khi cảnh báo được dỡ bỏ hoặc hết hạn.</value>
+  </data>
+  <data name="TsunamiReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (sóng thần)</value>
+  </data>
+  <data name="TsunamiReport.02" xml:space="preserve">
+    <value>Đã dỡ bỏ cảnh báo</value>
+  </data>
+  <data name="TsunamiView.01" xml:space="preserve">
+    <value>Thông tin sóng thần</value>
+  </data>
+  <data name="TsunamiView.02" xml:space="preserve">
+    <value>Giá trị quan trắc</value>
+  </data>
+  <data name="TsunamiView.03" xml:space="preserve">
+    <value>Đang dâng</value>
+  </data>
+  <data name="TsunamiView.04" xml:space="preserve">
+    <value>Sóng thần cao hơn mức này đang tiến đến.</value>
+  </data>
+  <data name="TsunamiView.05" xml:space="preserve">
+    <value>Giờ triều cao</value>
+  </data>
+  <data name="TsunamiView.06" xml:space="preserve">
+    <value>Cảnh báo sóng thần lớn</value>
+  </data>
+  <data name="TsunamiView.07" xml:space="preserve">
+    <value>Cảnh báo sóng thần</value>
+  </data>
+  <data name="TsunamiView.08" xml:space="preserve">
+    <value>Khuyến cáo sóng thần</value>
+  </data>
+  <data name="TsunamiView.09" xml:space="preserve">
+    <value>Dự báo sóng thần</value>
+  </data>
+  <data name="TsunamiView.10" xml:space="preserve">
+    <value>Cảnh báo, khuyến cáo và dự báo sóng thần đã được dỡ bỏ.</value>
+  </data>
+  <data name="TsunamiView.11" xml:space="preserve">
+    <value>Không có sóng thần</value>
+  </data>
+  <data name="TsunamiView.12" xml:space="preserve">
+    <value>Chưa có thông tin sóng thần nào được công bố</value>
+  </data>
+  <data name="TsunamiView.13" xml:space="preserve">
+    <value>Đang tải</value>
+  </data>
+  <data name="TsunamiView.F01" xml:space="preserve">
+    <value>Thông tin sóng thần ({0})</value>
+  </data>
+  <data name="TsunamiView.F02" xml:space="preserve">
+    <value>Phát lúc {0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F03" xml:space="preserve">
+    <value>Độ cao dự kiến {0}</value>
+  </data>
+  <data name="TsunamiView.F04" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F05" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F06" xml:space="preserve">
+    <value>Có hiệu lực đến {0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F07" xml:space="preserve">
+    <value>Đang kết nối: {0}</value>
+  </data>
+  <data name="Typhoon.TropicalDepression" xml:space="preserve">
+    <value>Áp thấp nhiệt đới</value>
+  </data>
+  <data name="TyphoonReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (bão)</value>
+  </data>
+  <data name="TyphoonReport.02" xml:space="preserve">
+    <value>Kích cỡ / sức mạnh</value>
+  </data>
+  <data name="TyphoonReport.03" xml:space="preserve">
+    <value>Khí áp tâm bão</value>
+  </data>
+  <data name="TyphoonReport.04" xml:space="preserve">
+    <value>Tốc độ gió tối đa</value>
+  </data>
+  <data name="TyphoonReport.05" xml:space="preserve">
+    <value>Tốc độ gió giật tối đa</value>
+  </data>
+  <data name="TyphoonReport.F01" xml:space="preserve">
+    <value>Bão số {0}</value>
+  </data>
+  <data name="TyphoonView.01" xml:space="preserve">
+    <value>Vị trí tâm</value>
+  </data>
+  <data name="TyphoonView.02" xml:space="preserve">
+    <value>Tốc độ gió tối đa gần tâm</value>
+  </data>
+  <data name="TyphoonView.03" xml:space="preserve">
+    <value>Bão đã tan</value>
+  </data>
+  <data name="TyphoonView.04" xml:space="preserve">
+    <value>Chưa có thông tin bão nào được công bố</value>
+  </data>
+  <data name="TyphoonView.F01" xml:space="preserve">
+    <value>{0:MM/yyyy}</value>
+  </data>
+  <data name="TyphoonView.F02" xml:space="preserve">
+    <value>{0:dd HH:00}</value>
+  </data>
+  <data name="Update.Apply" xml:space="preserve">
+    <value>Áp dụng cập nhật</value>
+  </data>
+  <data name="Update.Apply.Desc" xml:space="preserve">
+    <value>Tải tệp cập nhật và tự động áp dụng.</value>
+  </data>
+  <data name="Update.Available" xml:space="preserve">
+    <value>Có bản cập nhật ứng dụng.</value>
+  </data>
+  <data name="Update.History" xml:space="preserve">
+    <value>Lịch sử cập nhật</value>
+  </data>
+  <data name="Update.OpenDownload" xml:space="preserve">
+    <value>Mở trang tải xuống</value>
+  </data>
+  <data name="Update.State.Applying" xml:space="preserve">
+    <value>Đang áp dụng cập nhật</value>
+  </data>
+  <data name="Update.State.Downloading" xml:space="preserve">
+    <value>Đang tải tệp cập nhật</value>
+  </data>
+  <data name="Update.State.Failed" xml:space="preserve">
+    <value>Cập nhật thất bại. Nếu thất bại nhiều lần, hãy cập nhật thủ công.</value>
+  </data>
+  <data name="Update.State.Latest" xml:space="preserve">
+    <value>Đã cài phiên bản mới nhất</value>
+  </data>
+  <data name="Update.State.Progress" xml:space="preserve">
+    <value>Đang tải tệp cập nhật: {0:#,0}kb / {1:#,0}kb</value>
+  </data>
+  <data name="Update.State.Verifying" xml:space="preserve">
+    <value>Đang kiểm tra tệp đã tải</value>
+  </data>
+  <data name="Update.Status" xml:space="preserve">
+    <value>Tình trạng cập nhật</value>
+  </data>
+  <data name="UpdateAvailableTrigger.01" xml:space="preserve">
+    <value>Kích hoạt lặp lại</value>
+  </data>
+  <data name="UpdateAvailableTrigger.02" xml:space="preserve">
+    <value>Khi bật, sẽ kích hoạt ở mỗi lần kiểm tra cập nhật (khoảng 10 phút một lần) nếu có bản cập nhật.
+Khi tắt, chỉ kích hoạt một lần khi tìm thấy bản cập nhật.</value>
+  </data>
+  <data name="Voicevox.About" xml:space="preserve">
+    <value>Giới thiệu về VOICEVOX</value>
+  </data>
+  <data name="Voicevox.AutoDelete" xml:space="preserve">
+    <value>Tự động xóa bộ nhớ đệm cũ</value>
+  </data>
+  <data name="Voicevox.AutoDelete.Desc" xml:space="preserve">
+    <value>Nếu không tự động xóa, bộ nhớ đệm sẽ được xóa theo chu kỳ dọn dẹp của hệ điều hành.</value>
+  </data>
+  <data name="Voicevox.BaseUrl" xml:space="preserve">
+    <value>URL cơ sở</value>
+  </data>
+  <data name="Voicevox.BaseUrl.Desc" xml:space="preserve">
+    <value>Đừng thay đổi nếu bạn không hiểu ý nghĩa!
+Khi thay đổi giá trị này, bạn có thể tổng hợp giọng nói bằng VOICEVOX chạy trên máy tính khác, hoặc dùng giọng của VOICEVOX Nemo và các dịch vụ có API tương thích VOICEVOX.
+Dù giọng nói được tổng hợp trên máy tính khác, âm thanh vẫn được phát từ ứng dụng này.</value>
+  </data>
+  <data name="Voicevox.CacheManage" xml:space="preserve">
+    <value>Quản lý bộ nhớ đệm</value>
+  </data>
+  <data name="Voicevox.ClearCache" xml:space="preserve">
+    <value>Xóa bộ nhớ đệm</value>
+  </data>
+  <data name="Voicevox.ClearCache.Desc" xml:space="preserve">
+    <value>Xóa toàn bộ âm thanh đã lưu đệm</value>
+  </data>
+  <data name="Voicevox.Intonation" xml:space="preserve">
+    <value>Ngữ điệu</value>
+  </data>
+  <data name="Voicevox.NoCache" xml:space="preserve">
+    <value>Không lưu đệm âm thanh</value>
+  </data>
+  <data name="Voicevox.NoCache.Desc" xml:space="preserve">
+    <value>Ngay cả khi không lưu đệm âm thanh, tệp tạm vẫn được dùng để tổng hợp giọng nói.</value>
+  </data>
+  <data name="Voicevox.NoCache.Off" xml:space="preserve">
+    <value>Lưu đệm</value>
+  </data>
+  <data name="Voicevox.NoCache.On" xml:space="preserve">
+    <value>Không lưu đệm</value>
+  </data>
+  <data name="Voicevox.PauseLength" xml:space="preserve">
+    <value>Độ dài khoảng nghỉ</value>
+  </data>
+  <data name="Voicevox.Pitch" xml:space="preserve">
+    <value>Cao độ</value>
+  </data>
+  <data name="Voicevox.PlayTest" xml:space="preserve">
+    <value>Phát giọng thử</value>
+  </data>
+  <data name="Voicevox.RefreshSpeakers" xml:space="preserve">
+    <value>Làm mới danh sách giọng đọc</value>
+  </data>
+  <data name="Voicevox.RetentionDays" xml:space="preserve">
+    <value>Thời gian giữ bộ nhớ đệm (ngày)</value>
+  </data>
+  <data name="Voicevox.RetentionDays.Desc" xml:space="preserve">
+    <value>Khi bộ nhớ đệm được sử dụng, thời gian giữ sẽ được kéo dài.</value>
+  </data>
+  <data name="Voicevox.Speaker" xml:space="preserve">
+    <value>Chọn giọng đọc</value>
+  </data>
+  <data name="Voicevox.SpeakersNotLoaded" xml:space="preserve">
+    <value>Danh sách giọng đọc chưa được tải</value>
+  </data>
+  <data name="Voicevox.Speed" xml:space="preserve">
+    <value>Tốc độ nói</value>
+  </data>
+  <data name="Voicevox.Use" xml:space="preserve">
+    <value>Dùng tính năng này</value>
+  </data>
+  <data name="VoicevoxSpeechAction.01" xml:space="preserve">
+    <value>Tạm dừng workflow cho đến khi đọc xong. Hữu ích khi muốn chạy hành động khác sau khi đọc xong.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.02" xml:space="preserve">
+    <value>Đọc lần lượt</value>
+  </data>
+  <data name="VoicevoxSpeechAction.03" xml:space="preserve">
+    <value>Chia văn bản theo dòng, tổng hợp một lượt rồi đọc lần lượt. Nếu tổng hợp không theo kịp, việc đọc có thể bị ngắt giữa các đoạn, nhưng bộ nhớ đệm dễ được tận dụng hơn.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.04" xml:space="preserve">
+    <value>Ngắt lần phát trước</value>
+  </data>
+  <data name="VoicevoxSpeechAction.05" xml:space="preserve">
+    <value>Nếu có yêu cầu phát mới khi hành động này đang phát âm thanh, lần phát đang chạy sẽ bị ngắt và âm thanh mới được phát. Với đọc lần lượt, đoạn hiện tại bị ngắt và các đoạn còn lại bị hủy.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.06" xml:space="preserve">
+    <value>Nội dung đọc</value>
+  </data>
+  <data name="VolcanoReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (núi lửa)</value>
+  </data>
+  <data name="VolcanoReport.02" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="VolcanoReport.03" xml:space="preserve">
+    <value>Hiện tượng</value>
+  </data>
+  <data name="WaitAction.01" xml:space="preserve">
+    <value>Thời gian chờ (mili giây): </value>
+  </data>
+  <data name="WeatherReport.01" xml:space="preserve">
+    <value>Thông tin khí tượng phòng chống thiên tai (thời tiết)</value>
+  </data>
+  <data name="WeatherReport.02" xml:space="preserve">
+    <value>(công bố)</value>
+  </data>
+  <data name="WeatherReport.03" xml:space="preserve">
+    <value>(dỡ bỏ)</value>
+  </data>
+  <data name="WebhookAction.01" xml:space="preserve">
+    <value>Nhập phản hồi làm dự báo theo địa điểm cho Cảnh báo động đất sớm</value>
+  </data>
+  <data name="WebhookAction.02" xml:space="preserve">
+    <value>Chỉ hoạt động với trigger Cảnh báo động đất sớm. Cường độ đo được và thời gian đến trong JSON phản hồi được hiển thị nguyên trạng.
+Độ chính xác của ước tính thuộc trách nhiệm của ứng dụng trả về phản hồi.</value>
+  </data>
+  <data name="WebhookAction.03" xml:space="preserve">
+    <value>Phản hồi gần nhất</value>
+  </data>
+  <data name="Wf.ChangeAction.Message" xml:space="preserve">
+    <value>Đổi từ cài đặt hiện tại "{0}" sang "{1}"?
+
+Nội dung đã đặt cho hành động hiện tại sẽ bị mất.</value>
+  </data>
+  <data name="Wf.ChangeAction.Title" xml:space="preserve">
+    <value>Xác nhận đổi hành động</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Message" xml:space="preserve">
+    <value>Đổi từ cài đặt hiện tại "{0}" sang "{1}"?
+
+Nội dung của trigger đang cài đặt sẽ bị mất.</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Title" xml:space="preserve">
+    <value>Xác nhận đổi trigger</value>
+  </data>
+  <data name="Wf.DeleteAction.Message" xml:space="preserve">
+    <value>Xóa hành động "{0}"?
+Thao tác này không thể hoàn tác.</value>
+  </data>
+  <data name="Wf.DeleteAction.Title" xml:space="preserve">
+    <value>Xóa hành động</value>
+  </data>
+  <data name="Wf.Exec.Exception" xml:space="preserve">
+    <value>Đã xảy ra ngoại lệ khi đang chạy.
+</value>
+  </data>
+  <data name="Wf.Exec.Exit" xml:space="preserve">
+    <value>Mã thoát: {0}
+Thời gian chạy: {1}ms</value>
+  </data>
+  <data name="Wf.Exec.Running" xml:space="preserve">
+    <value>Đang chạy...</value>
+  </data>
+  <data name="Wf.Exec.StartFailed" xml:space="preserve">
+    <value>Không khởi động được tiến trình</value>
+  </data>
+  <data name="Wf.Inject.NoController" xml:space="preserve">
+    <value>Nhập dự báo theo địa điểm: không xác định được bộ điều khiển EEW nguồn.</value>
+  </data>
+  <data name="Wf.Inject.Skip" xml:space="preserve">
+    <value>Nhập dự báo theo địa điểm: bỏ qua do mã trạng thái không thành công.</value>
+  </data>
+  <data name="Wf.Inject.TooLarge" xml:space="preserve">
+    <value>Nhập dự báo theo địa điểm: phản hồi quá lớn (trong {0} KiB).</value>
+  </data>
+  <data name="Wf.Webhook.Exception" xml:space="preserve">
+    <value>Đã xảy ra ngoại lệ.
+{0}</value>
+  </data>
+  <data name="Wf.Webhook.Result" xml:space="preserve">
+    <value>Thời gian phản hồi: {0}ms
+Mã trạng thái: {1}
+Phản hồi: {2}</value>
+  </data>
+  <data name="Wf.Webhook.Timeout" xml:space="preserve">
+    <value>Đã dừng do nhập dự báo theo địa điểm bị quá thời gian ({0:0.#} giây).</value>
+  </data>
+  <data name="WfAction.Activate" xml:space="preserve">
+    <value>Đưa cửa sổ chính lên trên cùng</value>
+  </data>
+  <data name="WfAction.Activate.Desc" xml:space="preserve">
+    <value>Đưa cửa sổ chính lên trên cùng.</value>
+  </data>
+  <data name="WfAction.Dummy" xml:space="preserve">
+    <value>Không làm gì</value>
+  </data>
+  <data name="WfAction.Dummy.Desc" xml:space="preserve">
+    <value>Hành động này không làm gì.
+Không có gì được thực thi và cũng không bị ngắt.</value>
+  </data>
+  <data name="WfAction.ExecuteFile" xml:space="preserve">
+    <value>Mở (chạy) tệp chỉ định</value>
+  </data>
+  <data name="WfAction.Log" xml:space="preserve">
+    <value>Ghi log</value>
+  </data>
+  <data name="WfAction.Multiple" xml:space="preserve">
+    <value>Chạy nhiều hành động</value>
+  </data>
+  <data name="WfAction.Notify" xml:space="preserve">
+    <value>Gửi thông báo</value>
+  </data>
+  <data name="WfAction.PlaySound" xml:space="preserve">
+    <value>Phát âm thanh</value>
+  </data>
+  <data name="WfAction.SwitchTab" xml:space="preserve">
+    <value>Chuyển tab</value>
+  </data>
+  <data name="WfAction.SwitchTab.Desc" xml:space="preserve">
+    <value>Chuyển sang tab đã phát sinh sự kiện.
+Với sự kiện không phụ thuộc tab thì không có gì xảy ra.</value>
+  </data>
+  <data name="WfAction.Voicevox" xml:space="preserve">
+    <value>Đọc văn bản bằng VOICEVOX</value>
+  </data>
+  <data name="WfAction.Wait" xml:space="preserve">
+    <value>Chờ một khoảng thời gian</value>
+  </data>
+  <data name="WfAction.Webhook" xml:space="preserve">
+    <value>POST nội dung tới URL chỉ định</value>
+  </data>
+  <data name="WfTrigger.All" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="WfTrigger.All.Desc" xml:space="preserve">
+    <value>Được kích hoạt với mọi sự kiện.</value>
+  </data>
+  <data name="WfTrigger.Dummy" xml:space="preserve">
+    <value>Không làm gì</value>
+  </data>
+  <data name="WfTrigger.Dummy.Desc" xml:space="preserve">
+    <value>Trigger này không làm gì.
+Chỉ được thực thi khi chạy thử.</value>
+  </data>
+  <data name="WfTrigger.Earthquake" xml:space="preserve">
+    <value>(Thông tin động đất) Nhận thông tin động đất</value>
+  </data>
+  <data name="WfTrigger.Eew" xml:space="preserve">
+    <value>(Kyoshin Monitor) Cảnh báo động đất sớm</value>
+  </data>
+  <data name="WfTrigger.Qzss" xml:space="preserve">
+    <value>(DC Report) Khi nhận / cập nhật</value>
+  </data>
+  <data name="WfTrigger.ShakeDetect" xml:space="preserve">
+    <value>(Kyoshin Monitor) Phát hiện rung chấn</value>
+  </data>
+  <data name="WfTrigger.Startup" xml:space="preserve">
+    <value>Khi ứng dụng khởi động</value>
+  </data>
+  <data name="WfTrigger.Startup.Desc" xml:space="preserve">
+    <value>Chỉ được kích hoạt một lần khi ứng dụng khởi động xong.</value>
+  </data>
+  <data name="WfTrigger.Tsunami" xml:space="preserve">
+    <value>(Thông tin sóng thần) Khi cập nhật thông tin sóng thần</value>
+  </data>
+  <data name="WfTrigger.UpdateAvailable" xml:space="preserve">
+    <value>Khi có bản cập nhật ứng dụng</value>
+  </data>
+  <data name="WindowThemeEditWindow.01" xml:space="preserve">
+    <value>Chỉnh sửa chủ đề cửa sổ</value>
+  </data>
+  <data name="WindowThemeEditWindow.02" xml:space="preserve">
+    <value>Khôi phục (đọc lại trạng thái từ tệp)</value>
+  </data>
+  <data name="WindowThemeEditWindow.03" xml:space="preserve">
+    <value>Lưu chủ đề</value>
+  </data>
+  <data name="WindowThemeEditWindow.04" xml:space="preserve">
+    <value>Tên chủ đề</value>
+  </data>
+  <data name="WindowThemeEditWindow.05" xml:space="preserve">
+    <value>Toàn bộ cửa sổ</value>
+  </data>
+  <data name="WindowThemeEditWindow.06" xml:space="preserve">
+    <value>Màu thanh tiêu đề và thanh bên</value>
+  </data>
+  <data name="WindowThemeEditWindow.07" xml:space="preserve">
+    <value>Phần thanh tiêu đề chỉ áp dụng trên Windows.</value>
+  </data>
+  <data name="WindowThemeEditWindow.08" xml:space="preserve">
+    <value>Dựa trên chủ đề tối</value>
+  </data>
+  <data name="WindowThemeEditWindow.09" xml:space="preserve">
+    <value>Các điều khiển chung như nút bấm sẽ theo chủ đề tối.</value>
+  </data>
+  <data name="WindowThemeEditWindow.10" xml:space="preserve">
+    <value>Màu nền chính</value>
+  </data>
+  <data name="WindowThemeEditWindow.11" xml:space="preserve">
+    <value>Màu chữ chính</value>
+  </data>
+  <data name="WindowThemeEditWindow.12" xml:space="preserve">
+    <value>Màu chữ phụ</value>
+  </data>
+  <data name="WindowThemeEditWindow.13" xml:space="preserve">
+    <value>Màu chữ nhấn mạnh</value>
+  </data>
+  <data name="WindowThemeEditWindow.14" xml:space="preserve">
+    <value>Hiện chỉ dùng cho màu thời gian khi phát lại Kyoshin Monitor.</value>
+  </data>
+  <data name="WindowThemeEditWindow.15" xml:space="preserve">
+    <value>Màu chữ lỗi / cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.16" xml:space="preserve">
+    <value>Màu chữ phụ lỗi / cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.17" xml:space="preserve">
+    <value>Màu nền lỗi / cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.18" xml:space="preserve">
+    <value>Cửa sổ bên trong (widget)</value>
+  </data>
+  <data name="WindowThemeEditWindow.19" xml:space="preserve">
+    <value>Màu nền</value>
+  </data>
+  <data name="WindowThemeEditWindow.20" xml:space="preserve">
+    <value>Màu nền phần tiêu đề</value>
+  </data>
+  <data name="WindowThemeEditWindow.21" xml:space="preserve">
+    <value>Màu nền lỗi / cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.22" xml:space="preserve">
+    <value>Màu nền tiêu đề lỗi / cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.23" xml:space="preserve">
+    <value>Màu địa hình nước ngoài</value>
+  </data>
+  <data name="WindowThemeEditWindow.24" xml:space="preserve">
+    <value>Không thể cài đặt đường viền.</value>
+  </data>
+  <data name="WindowThemeEditWindow.25" xml:space="preserve">
+    <value>Màu địa hình</value>
+  </data>
+  <data name="WindowThemeEditWindow.26" xml:space="preserve">
+    <value>Màu đường bờ biển</value>
+  </data>
+  <data name="WindowThemeEditWindow.27" xml:space="preserve">
+    <value>Độ dày đường bờ biển</value>
+  </data>
+  <data name="WindowThemeEditWindow.28" xml:space="preserve">
+    <value>Đặt về 0 để giảm tải khi vẽ.</value>
+  </data>
+  <data name="WindowThemeEditWindow.29" xml:space="preserve">
+    <value>Màu đường ranh giới tỉnh</value>
+  </data>
+  <data name="WindowThemeEditWindow.30" xml:space="preserve">
+    <value>Độ dày đường ranh giới tỉnh</value>
+  </data>
+  <data name="WindowThemeEditWindow.31" xml:space="preserve">
+    <value>Màu đường ranh giới khu vực</value>
+  </data>
+  <data name="WindowThemeEditWindow.32" xml:space="preserve">
+    <value>Độ dày đường ranh giới khu vực</value>
+  </data>
+  <data name="WindowThemeEditWindow.33" xml:space="preserve">
+    <value>Viền biểu tượng tâm chấn</value>
+  </data>
+  <data name="WindowThemeEditWindow.34" xml:space="preserve">
+    <value>Giữa biểu tượng tâm chấn</value>
+  </data>
+  <data name="WindowThemeEditWindow.35" xml:space="preserve">
+    <value>Viền biểu tượng tâm chấn (dự báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.36" xml:space="preserve">
+    <value>Giữa biểu tượng tâm chấn (dự báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.37" xml:space="preserve">
+    <value>Viền biểu tượng tâm chấn (cảnh báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.38" xml:space="preserve">
+    <value>Giữa biểu tượng tâm chấn (cảnh báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.39" xml:space="preserve">
+    <value>Hiệu ứng nhấp nháy biểu tượng tâm chấn</value>
+  </data>
+  <data name="WindowThemeEditWindow.40" xml:space="preserve">
+    <value>Màu sóng P (dự báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.41" xml:space="preserve">
+    <value>Màu sóng S (dự báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.42" xml:space="preserve">
+    <value>Dùng gradient cho màu sóng S dự báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.43" xml:space="preserve">
+    <value>Màu sóng P (cảnh báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.44" xml:space="preserve">
+    <value>Màu sóng S (cảnh báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.45" xml:space="preserve">
+    <value>Dùng gradient cho màu sóng S cảnh báo</value>
+  </data>
+  <data name="WindowThemeEditWindow.46" xml:space="preserve">
+    <value>Màu nền Dự báo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.47" xml:space="preserve">
+    <value>Màu chữ Dự báo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.48" xml:space="preserve">
+    <value>Màu nền Khuyến cáo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.49" xml:space="preserve">
+    <value>Màu chữ Khuyến cáo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.50" xml:space="preserve">
+    <value>Màu nền Cảnh báo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.51" xml:space="preserve">
+    <value>Màu chữ Cảnh báo sóng thần</value>
+  </data>
+  <data name="WindowThemeEditWindow.52" xml:space="preserve">
+    <value>Màu nền Cảnh báo sóng thần lớn</value>
+  </data>
+  <data name="WindowThemeEditWindow.53" xml:space="preserve">
+    <value>Màu chữ Cảnh báo sóng thần lớn</value>
+  </data>
+  <data name="WindowThemeEditWindow.54" xml:space="preserve">
+    <value>Thông tin phun trào</value>
+  </data>
+  <data name="WindowThemeEditWindow.55" xml:space="preserve">
+    <value>Hiện chỉ dùng cho DC Report.</value>
+  </data>
+  <data name="WindowThemeEditWindow.56" xml:space="preserve">
+    <value>Màu nền tro bụi nhẹ</value>
+  </data>
+  <data name="WindowThemeEditWindow.57" xml:space="preserve">
+    <value>Màu chữ tro bụi nhẹ</value>
+  </data>
+  <data name="WindowThemeEditWindow.58" xml:space="preserve">
+    <value>Màu nền tro bụi vừa</value>
+  </data>
+  <data name="WindowThemeEditWindow.59" xml:space="preserve">
+    <value>Màu chữ tro bụi vừa</value>
+  </data>
+  <data name="WindowThemeEditWindow.60" xml:space="preserve">
+    <value>Màu nền tro bụi nặng</value>
+  </data>
+  <data name="WindowThemeEditWindow.61" xml:space="preserve">
+    <value>Màu chữ tro bụi nặng</value>
+  </data>
+  <data name="WindowThemeEditWindow.62" xml:space="preserve">
+    <value>Màu nền đá núi lửa nhỏ rơi</value>
+  </data>
+  <data name="WindowThemeEditWindow.63" xml:space="preserve">
+    <value>Màu chữ đá núi lửa nhỏ rơi</value>
+  </data>
+  <data name="WindowThemeEditWindow.64" xml:space="preserve">
+    <value>Cảnh báo thời tiết</value>
+  </data>
+  <data name="WindowThemeEditWindow.65" xml:space="preserve">
+    <value>Mức cảnh giác 5 (cảnh báo đặc biệt)</value>
+  </data>
+  <data name="WindowThemeEditWindow.66" xml:space="preserve">
+    <value>Mức cảnh giác 4 (cảnh báo nguy hiểm / thông tin cảnh giác sạt lở đất)</value>
+  </data>
+  <data name="WindowThemeEditWindow.67" xml:space="preserve">
+    <value>Mức cảnh giác 3 (cảnh báo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.68" xml:space="preserve">
+    <value>Mức cảnh giác 2 (khuyến cáo)</value>
+  </data>
+  <data name="WindowThemeEditWindow.69" xml:space="preserve">
+    <value>Cảnh báo bão trên biển</value>
+  </data>
+  <data name="WindowThemeEditWindow.70" xml:space="preserve">
+    <value>Cảnh báo bão gió trên biển</value>
+  </data>
+  <data name="WindowThemeEditWindow.71" xml:space="preserve">
+    <value>Cảnh báo gió mạnh trên biển</value>
+  </data>
+  <data name="WindowThemeEditWindow.72" xml:space="preserve">
+    <value>Cảnh báo gió trên biển</value>
+  </data>
+  <data name="Wizard.SetupWizardBefore" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageContent" xml:space="preserve">
+    <value>Vậy là đã hoàn tất cài đặt cơ bản.
+
+Bạn có thể khởi chạy ứng dụng bằng nút "Khởi chạy" ở góc dưới bên phải.  
+Bạn có thể mở cửa sổ cài đặt bằng biểu tượng bánh răng ở góc trên bên phải.  
+Trình hướng dẫn chỉ bao gồm một phần nhỏ cài đặt, còn rất nhiều mục khác, hãy thử tùy chỉnh theo ý bạn.
+
+KyoshinEewViewer for ingen vẫn đang trong quá trình phát triển.  
+Nếu gặp lỗi hoặc chỗ nào thấy không ổn, hãy thoải mái liên hệ tác giả.  
+Thông tin liên hệ nằm ở tab cuối cùng của cửa sổ cài đặt.
+
+---
+
+## Mẹo sử dụng
+### Muốn phát âm thanh
+
+Bạn có thể thiết lập ở tab "Âm thanh" trong cửa sổ cài đặt.  
+Với các mục có ghi như `{int}: cường độ tối đa`, bạn có thể đổi tên tệp được phát theo cường độ tối đa, v.v.  
+Nếu chỉ định `C:\Sound\{int}.wav`, khi cường độ là 5 yếu thì `C:\Sound\5+.wav` sẽ được phát.
+
+### Muốn dùng để quay video, v.v.
+
+Khi dùng để phát trực tiếp hoặc quay video, phần tab ở trên có thể vướng.  
+Khi đó, bạn có thể khởi động bằng tham số dòng lệnh để chạy ở chế độ đặc biệt chỉ hiển thị một tab nhất định. (Dưới đây là ví dụ trên Windows)
+
+- Có thể khởi động bằng `KyoshinEewViewer.exe -s &lt;loại&gt;`. Loại có thể chỉ định là
+    - `kyoshin-monitor` Kyoshin Monitor
+    - `earthquake` Thông tin động đất
+    - `radar` Radar mây mưa
+    - `qzss` DC Report
+
+Khi khởi động ở chế độ này, các nút ở góc dưới bên trái không hiển thị nhưng vẫn tồn tại, nên bạn có thể nhấp vào để đặt lại vị trí bản đồ hoặc mở màn hình cài đặt.</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageTitle" xml:space="preserve">
+    <value>Lời cuối</value>
+  </data>
+  <data name="Wizard.SetupWizardNext" xml:space="preserve">
+    <value>Tiếp</value>
+  </data>
+  <data name="Wizard.SetupWizardRun" xml:space="preserve">
+    <value>Khởi chạy</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapJapan" xml:space="preserve">
+    <value>Bản đồ (trong Nhật Bản)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapOther" xml:space="preserve">
+    <value>Bản đồ (nước ngoài)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockContent" xml:space="preserve">
+    <value>Nội dung widget thường</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockTitle" xml:space="preserve">
+    <value>Widget thường</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewTitle" xml:space="preserve">
+    <value>Mẫu</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockContent" xml:space="preserve">
+    <value>Nội dung widget khẩn cấp</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockTitle" xml:space="preserve">
+    <value>Widget khẩn cấp</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePageTitle" xml:space="preserve">
+    <value>Cài đặt chủ đề</value>
+  </data>
+  <data name="Wizard.SetupWizardSkipAndRun" xml:space="preserve">
+    <value>Bỏ qua và khởi chạy</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageFunctionDetail" xml:space="preserve">
+    <value>Ứng dụng này có thể nhận và hiển thị
+
+- Cường độ thời gian thực từ Kyoshin Monitor
+- Cảnh báo động đất sớm qua Kyoshin Monitor, SignalNowProfessional và DM-D.S.S
+- Thông tin động đất qua trang web của JMA và DM-D.S.S
+
+và nhiều thông tin khác.
+
+Trước khi bắt đầu sử dụng, hãy tùy chỉnh ứng dụng theo tính năng và giao diện bạn muốn.
+
+Bạn vẫn có thể thay đổi các cài đặt này trong cửa sổ cài đặt sau khi trình hướng dẫn kết thúc.  
+Nếu đang vội, hãy dùng nút "Bỏ qua và khởi chạy".</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitle" xml:space="preserve">
+    <value>Chào mừng đến với KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitleAlt" xml:space="preserve">
+    <value>Chào mừng bạn đến với KyoshinEewViewer for ingen!</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionContent" xml:space="preserve">
+    <value>## Giới thiệu [Project DM-D.S.S](https://dmdata.jp/)
+
+Đây là dịch vụ phát thông tin động đất và các thông tin khác theo thời gian thực bằng WebSocket, v.v. (trả phí)  
+Mặc định, KyoshinEewViewer for ingen nhận thông tin động đất bằng [XML phòng chống thiên tai của JMA (kiểu PULL)](http://xml.kishou.go.jp/xmlpull.html), nhưng cách này có độ trễ **khoảng 1 đến 3 phút** từ lúc công bố đến lúc nhận.  
+Dùng DM-D.S.S có thể giảm xuống **vài giây**, nhận thông tin với tốc độ ngang hoặc nhanh hơn truyền hình và các ứng dụng do doanh nghiệp cung cấp.
+
+## Giá
+
+|Hạng mục|Giá (tối đa theo tháng)|Giá (theo ngày)|
+|---|---|---|
+|Cảnh báo động đất sớm (dự báo)|1650 JPY/tháng|75 JPY/ngày|
+|Cảnh báo động đất sớm (cảnh báo)|440 JPY/tháng|20 JPY/ngày|
+|Liên quan động đất / sóng thần|550 JPY/tháng|25 JPY/ngày|
+
+(Tính đến tháng 7/2022 / chỉ gồm các mục dùng được với phần mềm này)
+
+Để sử dụng, hãy đăng ký tài khoản và ký hợp đồng, sau đó liên kết tài khoản ở tab "DM-D.S.S" trong cửa sổ cài đặt sau khi khởi động ứng dụng.</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionTitle" xml:space="preserve">
+    <value>Giới thiệu Project DM-D.S.S</value>
+  </data>
+  <data name="Wizard.StetupWizardWindowTitle" xml:space="preserve">
+    <value>Trình hướng dẫn cài đặt</value>
+  </data>
+  <data name="Workflow.Action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  <data name="Workflow.Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Workflow.Disabled" xml:space="preserve">
+    <value>(đã tắt)</value>
+  </data>
+  <data name="Workflow.Help" xml:space="preserve">
+    <value>Giới thiệu tính năng workflow</value>
+  </data>
+  <data name="Workflow.New" xml:space="preserve">
+    <value>Tạo workflow mới</value>
+  </data>
+  <data name="Workflow.NewName" xml:space="preserve">
+    <value>Workflow mới</value>
+  </data>
+  <data name="Workflow.None" xml:space="preserve">
+    <value>Chưa có workflow nào.</value>
+  </data>
+  <data name="Workflow.Restore" xml:space="preserve">
+    <value>Khôi phục trạng thái đã lưu (đọc lại từ tệp)</value>
+  </data>
+  <data name="Workflow.Save" xml:space="preserve">
+    <value>Lưu workflow</value>
+  </data>
+  <data name="Workflow.TestRun" xml:space="preserve">
+    <value>Chạy thử</value>
+  </data>
+  <data name="Workflow.TestRunning" xml:space="preserve">
+    <value>Đang chạy thử.</value>
+  </data>
+  <data name="Workflow.Trigger" xml:space="preserve">
+    <value>Điều kiện kích hoạt</value>
+  </data>
+  <data name="Workflow.Warning" xml:space="preserve">
+    <value>Tính năng workflow là tính năng nâng cao và đang được thử nghiệm.
+Hãy đọc kỹ phần giới thiệu ở góc trên bên trái trước khi sử dụng.</value>
+  </data>
+</root>

@@ -5,7 +5,7 @@
 			 xmlns:vm="using:KyoshinEewViewer.ViewModels"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="600"
-			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True"
+			 x:DataType="vm:SettingWindowViewModel" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Earthquake.SettingPages.EarthquakePage">
     <UserControl.Styles>
         <Style Selector="Label">
@@ -21,41 +21,41 @@
     </UserControl.Styles>
     <ScrollViewer>
         <StackPanel>
-            <ui:FASettingsExpander Header="地震情報更新時に自動でタブを切り替える">
+            <ui:FASettingsExpander Header="{loc:Tr EarthquakePage.01}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf0f3;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.SwitchAtUpdate}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.SwitchAtUpdate}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <ui:FASettingsExpander Header="震度の凡例を表示する" Description="地図上へ描画されている観測震度の凡例を表示します。">
+            <ui:FASettingsExpander Header="{loc:Tr EarthquakePage.02}" Description="{loc:Tr EarthquakePage.03}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf03a;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.ShowIntensityLegend}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.ShowIntensityLegend}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="震度速報" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="地域を塗りつぶす" Description="震度速報の発表地域を塗りつぶします。">
+            <TextBlock Text="{loc:Tr EarthquakePage.04}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr EarthquakePage.05}" Description="{loc:Tr EarthquakePage.06}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf576;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.FillSokuhou}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.FillSokuhou}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
 
-            <TextBlock Text="震源･震度情報" FontWeight="Bold" Margin="10,20,10,5" />
-            <ui:FASettingsExpander Header="地域を塗りつぶす" Description="震源･震度情報の発表地域を塗りつぶします。&#xA;大きな地震の場合重くなるため、性能の低いPCでは非推奨です。">
+            <TextBlock Text="{loc:Tr EarthquakePage.07}" FontWeight="Bold" Margin="10,20,10,5" />
+            <ui:FASettingsExpander Header="{loc:Tr EarthquakePage.05}" Description="{loc:Tr EarthquakePage.08}">
                 <ui:FASettingsExpander.IconSource>
                     <ui:FAFontIconSource Glyph="&#xf576;" FontFamily="{StaticResource IconFont}" />
                 </ui:FASettingsExpander.IconSource>
                 <ui:FASettingsExpander.Footer>
-                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.FillDetail}" OnContent="する" OffContent="しない" />
+                    <ToggleSwitch IsChecked="{Binding Config.Earthquake.FillDetail}" OnContent="{loc:Tr Common.On}" OffContent="{loc:Tr Common.Off}" />
                 </ui:FASettingsExpander.Footer>
             </ui:FASettingsExpander>
         </StackPanel>

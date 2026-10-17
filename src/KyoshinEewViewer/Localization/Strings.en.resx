@@ -1,0 +1,3591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accuracy.Epi.1" xml:space="preserve">
+    <value>P/S-wave level exceeded or IPF (1 station) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.2" xml:space="preserve">
+    <value>IPF method (2 stations) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.3" xml:space="preserve">
+    <value>IPF method (3-4 stations) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.4" xml:space="preserve">
+    <value>IPF method (5 or more stations) [JMA]</value>
+  </data>
+  <data name="Accuracy.Epi.5" xml:space="preserve">
+    <value>Hi-net (4 or fewer stations, or no data) [NIED]</value>
+  </data>
+  <data name="Accuracy.Epi.6" xml:space="preserve">
+    <value>Hi-net (5 or more stations) [NIED]</value>
+  </data>
+  <data name="Accuracy.Epi.7" xml:space="preserve">
+    <value>EPOS (offshore [outside the network])</value>
+  </data>
+  <data name="Accuracy.Epi.8" xml:space="preserve">
+    <value>EPOS (inland [inside the network])</value>
+  </data>
+  <data name="Accuracy.Mag.2" xml:space="preserve">
+    <value>Hi-net [NIED]</value>
+  </data>
+  <data name="Accuracy.Mag.3" xml:space="preserve">
+    <value>All stations P phase</value>
+  </data>
+  <data name="Accuracy.Mag.4" xml:space="preserve">
+    <value>Mixed P phase / all phases</value>
+  </data>
+  <data name="Accuracy.Mag.5" xml:space="preserve">
+    <value>All stations all phases</value>
+  </data>
+  <data name="Accuracy.Mag.8" xml:space="preserve">
+    <value>P/S-wave level exceeded</value>
+  </data>
+  <data name="Accuracy.NoParameter" xml:space="preserve">
+    <value>No parameter is set</value>
+  </data>
+  <data name="Accuracy.UnknownValue" xml:space="preserve">
+    <value>Unknown ({0})</value>
+  </data>
+  <data name="AshFallReport.01" xml:space="preserve">
+    <value>Disaster weather information (ash fall)</value>
+  </data>
+  <data name="AshFallReport.02" xml:space="preserve">
+    <value>Volcano name</value>
+  </data>
+  <data name="AshFallReport.03" xml:space="preserve">
+    <value>Base time</value>
+  </data>
+  <data name="AshFallReport.04" xml:space="preserve">
+    <value>From base</value>
+  </data>
+  <data name="AshFallReport.05" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="AshFallReport.06" xml:space="preserve">
+    <value>Map control</value>
+  </data>
+  <data name="AshFallReport.07" xml:space="preserve">
+    <value>hours later</value>
+  </data>
+  <data name="AshFallReport.F01" xml:space="preserve">
+    <value>{0:dd}</value>
+  </data>
+  <data name="AshFallReport.F02" xml:space="preserve">
+    <value>Information by location ({0})</value>
+  </data>
+  <data name="AshFallReport.F03" xml:space="preserve">
+    <value>{0:dd HH:00}</value>
+  </data>
+  <data name="Axis.NoToken" xml:space="preserve">
+    <value>No token has been entered.</value>
+  </data>
+  <data name="Axis.Status.ConnectFailed" xml:space="preserve">
+    <value>Connection failed. It will retry automatically…</value>
+  </data>
+  <data name="Axis.Status.Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Axis.Status.ConnectedRtt" xml:space="preserve">
+    <value>Connected (RTT: {0:0.0}ms)</value>
+  </data>
+  <data name="Axis.Status.Connecting" xml:space="preserve">
+    <value>Connecting…</value>
+  </data>
+  <data name="Axis.Status.DisconnectDone" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Axis.Status.Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Axis.Status.DisconnectedRetry" xml:space="preserve">
+    <value>Disconnected. Reconnecting in {0:0} seconds…</value>
+  </data>
+  <data name="Axis.Status.Disconnecting" xml:space="preserve">
+    <value>Disconnecting…</value>
+  </data>
+  <data name="Axis.Status.Idle" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Axis.TokenExpired" xml:space="preserve">
+    <value>The token has expired.</value>
+  </data>
+  <data name="AxisPage.01" xml:space="preserve">
+    <value>About AXIS</value>
+  </data>
+  <data name="AxisPage.02" xml:space="preserve">
+    <value>It will not connect if the features AXIS can use are not enabled.</value>
+  </data>
+  <data name="AxisPage.03" xml:space="preserve">
+    <value>Access token</value>
+  </data>
+  <data name="AxisPage.04" xml:space="preserve">
+    <value>Token information</value>
+  </data>
+  <data name="AxisPage.05" xml:space="preserve">
+    <value>User name:</value>
+  </data>
+  <data name="AxisPage.06" xml:space="preserve">
+    <value>Channel:</value>
+  </data>
+  <data name="AxisPage.07" xml:space="preserve">
+    <value>Expires:</value>
+  </data>
+  <data name="AxisPage.08" xml:space="preserve">
+    <value>Start receiving</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common.Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Common.Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Common.Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Common.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Common.Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Common.On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="Common.Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Common.Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="DC.Ash.Heavy" xml:space="preserve">
+    <value>Heavy ash fall</value>
+  </data>
+  <data name="DC.Ash.Light" xml:space="preserve">
+    <value>Light ash fall</value>
+  </data>
+  <data name="DC.Ash.Moderate" xml:space="preserve">
+    <value>Moderate ash fall</value>
+  </data>
+  <data name="DC.Ash.SmallRocks" xml:space="preserve">
+    <value>Falling small volcanic rocks</value>
+  </data>
+  <data name="DC.Class.Maximum" xml:space="preserve">
+    <value>Highest priority</value>
+  </data>
+  <data name="DC.Class.Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="DC.Class.Regular" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="DC.Class.TrainingLong" xml:space="preserve">
+    <value>Drill / test</value>
+  </data>
+  <data name="DC.Class.TrainingShort" xml:space="preserve">
+    <value>Drill/Test</value>
+  </data>
+  <data name="DC.Detail" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DC.Flash" xml:space="preserve">
+    <value>Flash report</value>
+  </data>
+  <data name="DC.Flood.Danger" xml:space="preserve">
+    <value>Flood Danger Information</value>
+  </data>
+  <data name="DC.Flood.Occurred" xml:space="preserve">
+    <value>Flood Occurrence Information</value>
+  </data>
+  <data name="DC.Flood.Warning" xml:space="preserve">
+    <value>Flood Warning Information</value>
+  </data>
+  <data name="DC.Info.Cancel" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="DC.Info.Correct" xml:space="preserve">
+    <value>Corrected</value>
+  </data>
+  <data name="DC.Info.Issue" xml:space="preserve">
+    <value>Issued</value>
+  </data>
+  <data name="DC.Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="DC.Magnitude.Huge" xml:space="preserve">
+    <value>Huge</value>
+  </data>
+  <data name="DC.Nankai.Advisory" xml:space="preserve">
+    <value>Megaquake Advisory</value>
+  </data>
+  <data name="DC.Nankai.Ended" xml:space="preserve">
+    <value>Investigation ended</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingA" xml:space="preserve">
+    <value>Under investigation (M6.8+ earthquake occurred)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingB" xml:space="preserve">
+    <value>Under investigation (strainmeter observation)</value>
+  </data>
+  <data name="DC.Nankai.InvestigatingC" xml:space="preserve">
+    <value>Under investigation (other phenomena observed)</value>
+  </data>
+  <data name="DC.Nankai.Warning" xml:space="preserve">
+    <value>Megaquake Warning</value>
+  </data>
+  <data name="DC.NoInformation" xml:space="preserve">
+    <value>No information</value>
+  </data>
+  <data name="DC.Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="DC.OtherValue" xml:space="preserve">
+    <value>Other ({0})</value>
+  </data>
+  <data name="DC.OtherWarning" xml:space="preserve">
+    <value>Other warning</value>
+  </data>
+  <data name="DC.Reserved" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="DC.ReservedValue" xml:space="preserve">
+    <value>Reserved ({0})</value>
+  </data>
+  <data name="DC.Special.All" xml:space="preserve">
+    <value>All weather emergency warnings</value>
+  </data>
+  <data name="DC.Special.Blizzard" xml:space="preserve">
+    <value>Snowstorm Emergency Warning</value>
+  </data>
+  <data name="DC.Special.HeavyRain" xml:space="preserve">
+    <value>Heavy Rain Emergency Warning</value>
+  </data>
+  <data name="DC.Special.HeavySnow" xml:space="preserve">
+    <value>Heavy Snow Emergency Warning</value>
+  </data>
+  <data name="DC.Special.HighWave" xml:space="preserve">
+    <value>High Wave Emergency Warning</value>
+  </data>
+  <data name="DC.Special.Storm" xml:space="preserve">
+    <value>Storm Emergency Warning</value>
+  </data>
+  <data name="DC.Special.StormSurge" xml:space="preserve">
+    <value>Storm Surge Emergency Warning</value>
+  </data>
+  <data name="DC.Tsunami.LocalUnlikely" xml:space="preserve">
+    <value>A destructive local tsunami is very unlikely</value>
+  </data>
+  <data name="DC.Tsunami.NearSource" xml:space="preserve">
+    <value>A destructive tsunami may occur near the hypocenter</value>
+  </data>
+  <data name="DC.Tsunami.None" xml:space="preserve">
+    <value>No tsunami concern</value>
+  </data>
+  <data name="DC.Tsunami.Regional" xml:space="preserve">
+    <value>A destructive regional tsunami may occur</value>
+  </data>
+  <data name="DC.Tsunami.Wide" xml:space="preserve">
+    <value>A destructive wide-area tsunami may occur</value>
+  </data>
+  <data name="DC.Typhoon.Analysis" xml:space="preserve">
+    <value>Analysis</value>
+  </data>
+  <data name="DC.Typhoon.Estimate" xml:space="preserve">
+    <value>Estimate</value>
+  </data>
+  <data name="DC.Typhoon.Forecast" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="DC.Typhoon.Large" xml:space="preserve">
+    <value>Large</value>
+  </data>
+  <data name="DC.Typhoon.Strong" xml:space="preserve">
+    <value>Strong</value>
+  </data>
+  <data name="DC.Typhoon.VeryLarge" xml:space="preserve">
+    <value>Very large</value>
+  </data>
+  <data name="DC.Typhoon.VeryStrong" xml:space="preserve">
+    <value>Very strong</value>
+  </data>
+  <data name="DC.Typhoon.Violent" xml:space="preserve">
+    <value>Violent</value>
+  </data>
+  <data name="DC.Weather.Landslide" xml:space="preserve">
+    <value>Landslide Alert Information</value>
+  </data>
+  <data name="DC.Weather.OtherElement" xml:space="preserve">
+    <value>Other warning information element</value>
+  </data>
+  <data name="DC.Weather.ShortRain" xml:space="preserve">
+    <value>Record-breaking Short-time Heavy Rain Information</value>
+  </data>
+  <data name="DC.Weather.Tornado" xml:space="preserve">
+    <value>Tornado Advisory Information</value>
+  </data>
+  <data name="DCReportHeader.01" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="DCReportHeader.02" xml:space="preserve">
+    <value>Merged</value>
+  </data>
+  <data name="DCReportHeader.F01" xml:space="preserve">
+    <value>{0:MMM dd HH:mm}</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Message" xml:space="preserve">
+    <value>Delete the workflow "{0}"?
+This cannot be undone.</value>
+  </data>
+  <data name="Dialog.DeleteWorkflow.Title" xml:space="preserve">
+    <value>Delete workflow</value>
+  </data>
+  <data name="Dialog.OpenAudioFile" xml:space="preserve">
+    <value>Open audio file</value>
+  </data>
+  <data name="Dialog.OpenXml" xml:space="preserve">
+    <value>Open any XML telegram</value>
+  </data>
+  <data name="Dialog.ResetWindows.Message" xml:space="preserve">
+    <value>This resets the position settings of all windows.
+Windows that are currently open will be closed.
+Are you sure?</value>
+  </data>
+  <data name="Dialog.ResetWindows.Title" xml:space="preserve">
+    <value>Reset window positions</value>
+  </data>
+  <data name="Dmdata.Status.AuthSuccess" xml:space="preserve">
+    <value>Authentication succeeded</value>
+  </data>
+  <data name="Dmdata.Status.Authenticated" xml:space="preserve">
+    <value>Authenticated</value>
+  </data>
+  <data name="Dmdata.Status.Authenticating" xml:space="preserve">
+    <value>Authenticating</value>
+  </data>
+  <data name="Dmdata.Status.ClientCredentials" xml:space="preserve">
+    <value>Using the client credentials flow</value>
+  </data>
+  <data name="Dmdata.Status.NotAuth" xml:space="preserve">
+    <value>Not authenticated</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectFailed" xml:space="preserve">
+    <value>Reconnect failed</value>
+  </data>
+  <data name="Dmdata.Status.ReconnectStarted" xml:space="preserve">
+    <value>Reconnect started</value>
+  </data>
+  <data name="Dmdata.Status.RevokeFailed" xml:space="preserve">
+    <value>Failed to revoke the token</value>
+  </data>
+  <data name="Dmdata.Status.Unlinking" xml:space="preserve">
+    <value>Revoking authentication</value>
+  </data>
+  <data name="DmdataPage.01" xml:space="preserve">
+    <value>About Project DM-D.S.S</value>
+  </data>
+  <data name="DmdataPage.02" xml:space="preserve">
+    <value>Link account</value>
+  </data>
+  <data name="DmdataPage.03" xml:space="preserve">
+    <value>Cancel linking</value>
+  </data>
+  <data name="DmdataPage.04" xml:space="preserve">
+    <value>Unlink account</value>
+  </data>
+  <data name="DmdataPage.05" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="DmdataPage.06" xml:space="preserve">
+    <value>Receive via WebSocket</value>
+  </data>
+  <data name="DmdataPage.07" xml:space="preserve">
+    <value>Uses one WebSocket connection to improve real-time performance.</value>
+  </data>
+  <data name="DmdataPage.08" xml:space="preserve">
+    <value>Fetch interval multiplier for PULL type</value>
+  </data>
+  <data name="DmdataPage.09" xml:space="preserve">
+    <value>Increasing it reduces the load on the server.</value>
+  </data>
+  <data name="DmdataPage.10" xml:space="preserve">
+    <value>Receive drill reports (tests, etc.)</value>
+  </data>
+  <data name="DmdataPage.11" xml:space="preserve">
+    <value>While connected via WebSocket, a reconnect is required for this to take effect.</value>
+  </data>
+  <data name="DmdataPage.12" xml:space="preserve">
+    <value>Connection redundancy</value>
+  </data>
+  <data name="DmdataPage.13" xml:space="preserve">
+    <value>Improves reliability by connecting to multiple endpoints in Tokyo and Osaka.</value>
+  </data>
+  <data name="DmdataPage.14" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="DmdataPage.15" xml:space="preserve">
+    <value>Connection status:</value>
+  </data>
+  <data name="DmdataPage.16" xml:space="preserve">
+    <value>Active connections:</value>
+  </data>
+  <data name="DmdataPage.17" xml:space="preserve">
+    <value>Connected endpoints:</value>
+  </data>
+  <data name="DmdataPage.18" xml:space="preserve">
+    <value>Messages received:</value>
+  </data>
+  <data name="DmdataPage.19" xml:space="preserve">
+    <value>Reconnect now</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.01" xml:space="preserve">
+    <value>When information is received</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.02" xml:space="preserve">
+    <value>When information is received, whether or not it has been updated</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.03" xml:space="preserve">
+    <value>When the max intensity changes</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.04" xml:space="preserve">
+    <value>When the max intensity changes. Also triggered when newly received.</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.05" xml:space="preserve">
+    <value>Only when the intensity rises</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.06" xml:space="preserve">
+    <value>Hypocenter information</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.07" xml:space="preserve">
+    <value>Hypocenter update for a notable earthquake</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.08" xml:space="preserve">
+    <value>Hypocenter update from tsunami information</value>
+  </data>
+  <data name="EarthquakeInformationTrigger.09" xml:space="preserve">
+    <value>Long-period ground motion observation information</value>
+  </data>
+  <data name="EarthquakePage.01" xml:space="preserve">
+    <value>Switch tabs automatically when earthquake information is updated</value>
+  </data>
+  <data name="EarthquakePage.02" xml:space="preserve">
+    <value>Show the intensity legend</value>
+  </data>
+  <data name="EarthquakePage.03" xml:space="preserve">
+    <value>Shows a legend for the observed intensities drawn on the map.</value>
+  </data>
+  <data name="EarthquakePage.04" xml:space="preserve">
+    <value>Seismic intensity flash report</value>
+  </data>
+  <data name="EarthquakePage.05" xml:space="preserve">
+    <value>Fill areas</value>
+  </data>
+  <data name="EarthquakePage.06" xml:space="preserve">
+    <value>Fills the areas announced in the seismic intensity flash report.</value>
+  </data>
+  <data name="EarthquakePage.07" xml:space="preserve">
+    <value>Hypocenter and intensity information</value>
+  </data>
+  <data name="EarthquakePage.08" xml:space="preserve">
+    <value>Fills the areas announced in the hypocenter and intensity information.
+For large earthquakes this becomes heavy, so it is not recommended on low-performance PCs.</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.01" xml:space="preserve">
+    <value>Timetable-style earthquake history</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.02" xml:space="preserve">
+    <value>Very shallow</value>
+  </data>
+  <data name="EarthquakeTimetableWindow.F01" xml:space="preserve">
+    <value>{0:MMMM d, yyyy}</value>
+  </data>
+  <data name="EarthquakeView.01" xml:space="preserve">
+    <value>Please select from the list</value>
+  </data>
+  <data name="EarthquakeView.02" xml:space="preserve">
+    <value>Long-period ground motion class</value>
+  </data>
+  <data name="EarthquakeView.03" xml:space="preserve">
+    <value>Occurrence time</value>
+  </data>
+  <data name="EarthquakeView.04" xml:space="preserve">
+    <value>Detection time</value>
+  </data>
+  <data name="EarthquakeView.05" xml:space="preserve">
+    <value>approx.</value>
+  </data>
+  <data name="EarthquakeView.06" xml:space="preserve">
+    <value>Epicenter</value>
+  </data>
+  <data name="EarthquakeView.07" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="EarthquakeView.08" xml:space="preserve">
+    <value>Magnitude</value>
+  </data>
+  <data name="EarthquakeView.09" xml:space="preserve">
+    <value>Hypocenter depth</value>
+  </data>
+  <data name="EarthquakeView.10" xml:space="preserve">
+    <value>Intensity by location</value>
+  </data>
+  <data name="EarthquakeView.11" xml:space="preserve">
+    <value>No location observed intensity 1 or higher</value>
+  </data>
+  <data name="EarthquakeView.12" xml:space="preserve">
+    <value>Drill</value>
+  </data>
+  <data name="EarthquakeView.13" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="EarthquakeView.14" xml:space="preserve">
+    <value>Intensity</value>
+  </data>
+  <data name="EarthquakeView.15" xml:space="preserve">
+    <value>This information has been cancelled.</value>
+  </data>
+  <data name="EarthquakeView.16" xml:space="preserve">
+    <value>This information has been corrected.</value>
+  </data>
+  <data name="EarthquakeView.17" xml:space="preserve">
+    <value>It has been corrected by newer information.</value>
+  </data>
+  <data name="EarthquakeView.18" xml:space="preserve">
+    <value>Failed to load.</value>
+  </data>
+  <data name="EarthquakeView.19" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="EarthquakeView.20" xml:space="preserve">
+    <value>etc.</value>
+  </data>
+  <data name="EarthquakeView.21" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="EarthquakeView.22" xml:space="preserve">
+    <value>Hypocenter</value>
+  </data>
+  <data name="EarthquakeView.23" xml:space="preserve">
+    <value>Detection</value>
+  </data>
+  <data name="EarthquakeView.24" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="EarthquakeView.25" xml:space="preserve">
+    <value>Displaying</value>
+  </data>
+  <data name="EarthquakeView.26" xml:space="preserve">
+    <value>Fetching</value>
+  </data>
+  <data name="EarthquakeView.27" xml:space="preserve">
+    <value>A problem occurred while fetching the information</value>
+  </data>
+  <data name="EarthquakeView.28" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="EarthquakeView.29" xml:space="preserve">
+    <value>Open timetable</value>
+  </data>
+  <data name="EarthquakeView.30" xml:space="preserve">
+    <value>Open an external XML file (not guaranteed to work)</value>
+  </data>
+  <data name="EarthquakeView.31" xml:space="preserve">
+    <value>Show the past earthquake list</value>
+  </data>
+  <data name="EarthquakeView.F01" xml:space="preserve">
+    <value>{0:HH:mm}</value>
+  </data>
+  <data name="EarthquakeView.F02" xml:space="preserve">
+    <value>Updated {0:dd HH:mm}</value>
+  </data>
+  <data name="EarthquakeView.F03" xml:space="preserve">
+    <value>Source: {0}</value>
+  </data>
+  <data name="EewMap.Cancelled" xml:space="preserve">
+    <value>(cancelled)</value>
+  </data>
+  <data name="EewMap.CancelledMaybe" xml:space="preserve">
+    <value>(cancelled?)</value>
+  </data>
+  <data name="EewMap.Final" xml:space="preserve">
+    <value>(final)</value>
+  </data>
+  <data name="EewMap.MaxIntensity" xml:space="preserve">
+    <value>Max {0}{1}</value>
+  </data>
+  <data name="EewMap.Over" xml:space="preserve">
+    <value> or higher</value>
+  </data>
+  <data name="EewMap.UnknownPlace" xml:space="preserve">
+    <value>Unknown epicenter</value>
+  </data>
+  <data name="EewPanel.01" xml:space="preserve">
+    <value>Occurred</value>
+  </data>
+  <data name="EewPanel.02" xml:space="preserve">
+    <value>Max intensity</value>
+  </data>
+  <data name="EewPanel.03" xml:space="preserve">
+    <value>Depth:</value>
+  </data>
+  <data name="EewPanel.04" xml:space="preserve">
+    <value>Magnitude: </value>
+  </data>
+  <data name="EewPanel.05" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="EewPanel.06" xml:space="preserve">
+    <value>Magnitude not received</value>
+  </data>
+  <data name="EewPanel.07" xml:space="preserve">
+    <value>or higher</value>
+  </data>
+  <data name="EewPanel.08" xml:space="preserve">
+    <value>Accuracy</value>
+  </data>
+  <data name="EewPanel.09" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="EewPanel.10" xml:space="preserve">
+    <value>Unconfirmed</value>
+  </data>
+  <data name="EewPanel.11" xml:space="preserve">
+    <value>Assumed hypocenter</value>
+  </data>
+  <data name="EewPanel.12" xml:space="preserve">
+    <value>Point forecast</value>
+  </data>
+  <data name="EewPanel.13" xml:space="preserve">
+    <value>Estimate by external app</value>
+  </data>
+  <data name="EewPanel.14" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="EewPanel.15" xml:space="preserve">
+    <value>Warning areas</value>
+  </data>
+  <data name="EewPanel.16" xml:space="preserve">
+    <value>Warning source: </value>
+  </data>
+  <data name="EewPanel.17" xml:space="preserve">
+    <value>)</value>
+  </data>
+  <data name="EewPanel.18" xml:space="preserve">
+    <value>Cancelled or out of receiving range</value>
+  </data>
+  <data name="EewPanel.19" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="EewPanel.F01" xml:space="preserve">
+    <value>Earthquake Early Warning (No. {0:00})</value>
+  </data>
+  <data name="EewPanel.F02" xml:space="preserve">
+    <value>Earthquake Early Warning (No. {0:00} / Final)</value>
+  </data>
+  <data name="EewPanel.F03" xml:space="preserve">
+    <value>{0:dd HH:mm:ss}</value>
+  </data>
+  <data name="EewPanel.F04" xml:space="preserve">
+    <value>Epicenter location: {0}</value>
+  </data>
+  <data name="EewPanel.F05" xml:space="preserve">
+    <value>Hypocenter depth: {0}</value>
+  </data>
+  <data name="EewPanel.F06" xml:space="preserve">
+    <value>  Magnitude: {0}</value>
+  </data>
+  <data name="EewPanel.F07" xml:space="preserve">
+    <value>{0} locations</value>
+  </data>
+  <data name="EewPanel.F08" xml:space="preserve">
+    <value>{0} areas</value>
+  </data>
+  <data name="EewPanel.F09" xml:space="preserve">
+    <value>Received from: {0}</value>
+  </data>
+  <data name="EewReport.01" xml:space="preserve">
+    <value>Disaster weather information (Earthquake Early Warning)</value>
+  </data>
+  <data name="EewReport.F01" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="EewReport.F02" xml:space="preserve">
+    <value>Issued {0:MMM dd HH:mm}</value>
+  </data>
+  <data name="EewTrigger.01" xml:space="preserve">
+    <value>Condition (intensity / M)</value>
+  </data>
+  <data name="EewTrigger.02" xml:space="preserve">
+    <value>Sets conditions on intensity and magnitude.</value>
+  </data>
+  <data name="EewTrigger.03" xml:space="preserve">
+    <value>Max intensity: </value>
+  </data>
+  <data name="EewTrigger.04" xml:space="preserve">
+    <value>or higher included</value>
+  </data>
+  <data name="EewTrigger.05" xml:space="preserve">
+    <value>Note: for an assumed hypocenter, M is treated as 1.0.</value>
+  </data>
+  <data name="EewTrigger.06" xml:space="preserve">
+    <value>Magnitude: M</value>
+  </data>
+  <data name="EewTrigger.07" xml:space="preserve">
+    <value>Both conditions are met (AND)</value>
+  </data>
+  <data name="EewTrigger.08" xml:space="preserve">
+    <value>Either condition is met (OR)</value>
+  </data>
+  <data name="EewTrigger.09" xml:space="preserve">
+    <value>Condition (announcement / update)</value>
+  </data>
+  <data name="EewTrigger.10" xml:space="preserve">
+    <value>Trigger conditions based on the announcement or update of the information itself.</value>
+  </data>
+  <data name="EewTrigger.11" xml:space="preserve">
+    <value>New announcement</value>
+  </data>
+  <data name="EewTrigger.12" xml:space="preserve">
+    <value>Follow-up announcement</value>
+  </data>
+  <data name="EewTrigger.13" xml:space="preserve">
+    <value>Information from a more accurate source</value>
+  </data>
+  <data name="EewTrigger.14" xml:space="preserve">
+    <value>Triggered when only the information is updated from a more accurate source without the report number being updated.</value>
+  </data>
+  <data name="EewTrigger.15" xml:space="preserve">
+    <value>Final report</value>
+  </data>
+  <data name="EewTrigger.16" xml:space="preserve">
+    <value>Cancellation report</value>
+  </data>
+  <data name="EewTrigger.17" xml:space="preserve">
+    <value>New warning announcement</value>
+  </data>
+  <data name="EewTrigger.18" xml:space="preserve">
+    <value>At present this is triggered only if you have an Earthquake Early Warning (warning) contract with DM-D.S.S.</value>
+  </data>
+  <data name="EewTrigger.19" xml:space="preserve">
+    <value>Follow-up warning announcement</value>
+  </data>
+  <data name="EewTrigger.20" xml:space="preserve">
+    <value>Warning cancellation</value>
+  </data>
+  <data name="EewTrigger.21" xml:space="preserve">
+    <value>Condition (changes, etc.)</value>
+  </data>
+  <data name="EewTrigger.22" xml:space="preserve">
+    <value>If it overlaps with other conditions, it is triggered once for each condition.</value>
+  </data>
+  <data name="EewTrigger.23" xml:space="preserve">
+    <value>Warning level reached</value>
+  </data>
+  <data name="EewTrigger.24" xml:space="preserve">
+    <value>Triggered only once when an Earthquake Early Warning (forecast) reaches the warning level.</value>
+  </data>
+  <data name="EewTrigger.25" xml:space="preserve">
+    <value>Forecast maximum intensity increased</value>
+  </data>
+  <data name="EewTrigger.26" xml:space="preserve">
+    <value>Also triggered when an intensity is set for something that was previously unknown.
+Not recommended when using SNP integration.</value>
+  </data>
+  <data name="EewTrigger.27" xml:space="preserve">
+    <value>Forecast maximum intensity decreased</value>
+  </data>
+  <data name="EewTrigger.28" xml:space="preserve">
+    <value>Also triggered when the forecast intensity becomes unknown.
+Not recommended when using SNP integration.</value>
+  </data>
+  <data name="Endpoint.Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="Endpoint.Osaka" xml:space="preserve">
+    <value>Osaka</value>
+  </data>
+  <data name="Endpoint.Tokyo" xml:space="preserve">
+    <value>Tokyo</value>
+  </data>
+  <data name="EventLevel.Disabled" xml:space="preserve">
+    <value>Do not use</value>
+  </data>
+  <data name="EventLevel.Medium" xml:space="preserve">
+    <value>Normal (about intensity 1 or higher)</value>
+  </data>
+  <data name="EventLevel.Strong" xml:space="preserve">
+    <value>Strong (about intensity 3 or higher)</value>
+  </data>
+  <data name="EventLevel.Stronger" xml:space="preserve">
+    <value>Very strong (about intensity 5 lower or higher)</value>
+  </data>
+  <data name="EventLevel.Weak" xml:space="preserve">
+    <value>Weak (below intensity 1)</value>
+  </data>
+  <data name="EventLevel.Weaker" xml:space="preserve">
+    <value>Very weak (not recommended)</value>
+  </data>
+  <data name="ExecuteFileAction.01" xml:space="preserve">
+    <value>Executable: </value>
+  </data>
+  <data name="ExecuteFileAction.02" xml:space="preserve">
+    <value>Templates can be used.</value>
+  </data>
+  <data name="ExecuteFileAction.03" xml:space="preserve">
+    <value>Arguments: </value>
+  </data>
+  <data name="ExecuteFileAction.04" xml:space="preserve">
+    <value>Working directory: </value>
+  </data>
+  <data name="ExecuteFileAction.05" xml:space="preserve">
+    <value>Open with the default app</value>
+  </data>
+  <data name="ExecuteFileAction.06" xml:space="preserve">
+    <value>Tries to open the file with the default app through the shell.</value>
+  </data>
+  <data name="ExecuteFileAction.07" xml:space="preserve">
+    <value>Wait for the process to exit</value>
+  </data>
+  <data name="ExecuteFileAction.08" xml:space="preserve">
+    <value>Latest execution result</value>
+  </data>
+  <data name="Feature.Desc" xml:space="preserve">
+    <value>Choose which features to use. Notifications and so on are not performed for features that are not enabled. Applied after restart.</value>
+  </data>
+  <data name="Feature.Title" xml:space="preserve">
+    <value>Feature settings</value>
+  </data>
+  <data name="Feedback.CannotAttach" xml:space="preserve">
+    <value>Some files cannot be attached</value>
+  </data>
+  <data name="Feedback.Cat.Bug" xml:space="preserve">
+    <value>Bug report</value>
+  </data>
+  <data name="Feedback.Cat.Feature" xml:space="preserve">
+    <value>Feature request</value>
+  </data>
+  <data name="Feedback.Cat.Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Feedback.Cat.Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Feedback.Oversize" xml:space="preserve">
+    <value>Files that could not be attached because the total size exceeds the limit ({0}MB):</value>
+  </data>
+  <data name="Feedback.PickFiles" xml:space="preserve">
+    <value>Select files to attach</value>
+  </data>
+  <data name="Feedback.ReadFailed" xml:space="preserve">
+    <value>Files that could not be read:</value>
+  </data>
+  <data name="Feedback.SendFailed" xml:space="preserve">
+    <value>Failed to send: {0}</value>
+  </data>
+  <data name="Feedback.Sending" xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  <data name="Feedback.SentMessage" xml:space="preserve">
+    <value>Your feedback has been sent. Thank you for your help.</value>
+  </data>
+  <data name="Feedback.SentTitle" xml:space="preserve">
+    <value>Feedback sent</value>
+  </data>
+  <data name="Feedback.TotalSize" xml:space="preserve">
+    <value>Total {0} / {1}</value>
+  </data>
+  <data name="Feedback.Unavailable" xml:space="preserve">
+    <value>The feedback feature is unavailable.</value>
+  </data>
+  <data name="FeedbackPage.01" xml:space="preserve">
+    <value>Feedback cannot be sent</value>
+  </data>
+  <data name="FeedbackPage.02" xml:space="preserve">
+    <value>About feedback</value>
+  </data>
+  <data name="FeedbackPage.03" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FeedbackPage.04" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="FeedbackPage.05" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="FeedbackPage.06" xml:space="preserve">
+    <value>Contact email address (optional)</value>
+  </data>
+  <data name="FeedbackPage.07" xml:space="preserve">
+    <value>Enter this only if you need a reply.</value>
+  </data>
+  <data name="FeedbackPage.08" xml:space="preserve">
+    <value>Attach the most recent logs (up to 1000 entries) as a text file</value>
+  </data>
+  <data name="FeedbackPage.09" xml:space="preserve">
+    <value>File attachments</value>
+  </data>
+  <data name="FeedbackPage.10" xml:space="preserve">
+    <value>Add files</value>
+  </data>
+  <data name="FeedbackPage.11" xml:space="preserve">
+    <value>Up to 20 MB in total. You can add images, logs, settings files and so on.</value>
+  </data>
+  <data name="FeedbackPage.12" xml:space="preserve">
+    <value>Remove attachment</value>
+  </data>
+  <data name="FeedbackPage.13" xml:space="preserve">
+    <value>The app was started with crash report sending disabled, so the feedback feature cannot be used. Please enable it in the settings and restart.</value>
+  </data>
+  <data name="FeedbackPage.14" xml:space="preserve">
+    <value>You can send opinions, requests and bug reports to the developer. Please avoid sending information that can identify you personally.</value>
+  </data>
+  <data name="FeedbackPage.15" xml:space="preserve">
+    <value>e.g. △△ is not displayed on the ○○ screen</value>
+  </data>
+  <data name="FeedbackPage.16" xml:space="preserve">
+    <value>Please describe the details concretely.
+For bugs, it helps if you include the steps to reproduce and when it happened.</value>
+  </data>
+  <data name="FloodReport.01" xml:space="preserve">
+    <value>Disaster weather information (flood)</value>
+  </data>
+  <data name="FloodReport.02" xml:space="preserve">
+    <value>Designated river flood forecast</value>
+  </data>
+  <data name="General.Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="General.AutoUpdate" xml:space="preserve">
+    <value>Use auto-update (not implemented)</value>
+  </data>
+  <data name="General.CheckUpdate" xml:space="preserve">
+    <value>Check for updates periodically</value>
+  </data>
+  <data name="General.ColorSample" xml:space="preserve">
+    <value>Color sample</value>
+  </data>
+  <data name="General.DevFeatures" xml:space="preserve">
+    <value>Developer features:</value>
+  </data>
+  <data name="General.FocusExisting" xml:space="preserve">
+    <value>Bring the existing window to the front on duplicate launch</value>
+  </data>
+  <data name="General.FocusExisting.Desc" xml:space="preserve">
+    <value>Shows the already running window instead of a warning screen</value>
+  </data>
+  <data name="General.ForceUpdate" xml:space="preserve">
+    <value>Force update (for testing)</value>
+  </data>
+  <data name="General.HighPriority" xml:space="preserve">
+    <value>Start with process priority set to High</value>
+  </data>
+  <data name="General.HighPriority.Desc" xml:space="preserve">
+    <value>Prevents other apps from taking priority and delaying the display of information</value>
+  </data>
+  <data name="General.IntensityTheme" xml:space="preserve">
+    <value>Intensity icon theme</value>
+  </data>
+  <data name="General.IntensityTheme.Desc" xml:space="preserve">
+    <value>Colors for intensity icons only</value>
+  </data>
+  <data name="General.Language" xml:space="preserve">
+    <value>Display language</value>
+  </data>
+  <data name="General.Language.Desc" xml:space="preserve">
+    <value>Language used in the application</value>
+  </data>
+  <data name="General.LogDir" xml:space="preserve">
+    <value>Output directory</value>
+  </data>
+  <data name="General.LogDir.Desc" xml:space="preserve">
+    <value>File names are chosen automatically.</value>
+  </data>
+  <data name="General.LogToExeDir" xml:space="preserve">
+    <value>Write to the executable directory</value>
+  </data>
+  <data name="General.LogToExeDir.Desc" xml:space="preserve">
+    <value>If disabled, logs are written to the application data directory.</value>
+  </data>
+  <data name="General.NtpFallbackHttp" xml:space="preserve">
+    <value>Try HTTP if NTP is unavailable</value>
+  </data>
+  <data name="General.NtpFallbackHttp.Desc" xml:space="preserve">
+    <value>The server used for HTTP cannot be chosen at present.</value>
+  </data>
+  <data name="General.NtpServer" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="General.NtpServer.Desc" xml:space="preserve">
+    <value>NTP server address</value>
+  </data>
+  <data name="General.NtpSync" xml:space="preserve">
+    <value>Synchronize time over the Internet</value>
+  </data>
+  <data name="General.NtpSync.Desc" xml:space="preserve">
+    <value>Operation is not guaranteed if this is disabled.</value>
+  </data>
+  <data name="General.OpenLogDir" xml:space="preserve">
+    <value>Open log directory</value>
+  </data>
+  <data name="General.Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="General.SendReport" xml:space="preserve">
+    <value>Send operation reports to the developer</value>
+  </data>
+  <data name="General.SendReport.Desc" xml:space="preserve">
+    <value>Processing-time statistics and error details are sent.
+The developer cannot identify individuals from the information sent.
+Please help us stabilize the application.</value>
+  </data>
+  <data name="General.TimeSettings" xml:space="preserve">
+    <value>Time settings</value>
+  </data>
+  <data name="General.UsePreRelease" xml:space="preserve">
+    <value>Use pre-release builds</value>
+  </data>
+  <data name="General.UsePreRelease.Desc" xml:space="preserve">
+    <value>New features under development are available, but they may be unstable.</value>
+  </data>
+  <data name="General.UseStable" xml:space="preserve">
+    <value>Use stable builds</value>
+  </data>
+  <data name="General.UseStable.Desc" xml:space="preserve">
+    <value>A version that is stable but receives new features more slowly. Please wait until it is prepared.</value>
+  </data>
+  <data name="General.WindowScale" xml:space="preserve">
+    <value>Window scale</value>
+  </data>
+  <data name="General.WindowScale.Desc" xml:space="preserve">
+    <value>Zooms the main window in or out.</value>
+  </data>
+  <data name="General.WindowSettings" xml:space="preserve">
+    <value>Window settings</value>
+  </data>
+  <data name="General.WindowSettings.Hint" xml:space="preserve">
+    <value>The hide-on-minimize setting is in the notification settings.</value>
+  </data>
+  <data name="General.WindowTheme" xml:space="preserve">
+    <value>Window theme</value>
+  </data>
+  <data name="General.WindowTheme.Desc" xml:space="preserve">
+    <value>Overall color scheme</value>
+  </data>
+  <data name="General.WriteLog" xml:space="preserve">
+    <value>Write logs</value>
+  </data>
+  <data name="General.WriteLog.Desc" xml:space="preserve">
+    <value>Useful for bug reports and checking behavior (applied after restart)</value>
+  </data>
+  <data name="Gps.Autonomous" xml:space="preserve">
+    <value>Autonomous</value>
+  </data>
+  <data name="Gps.Differential" xml:space="preserve">
+    <value>Differential</value>
+  </data>
+  <data name="Gps.Estimated" xml:space="preserve">
+    <value>Estimated</value>
+  </data>
+  <data name="Gps.None" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="HypocenterReport.01" xml:space="preserve">
+    <value>Disaster weather information (hypocenter)</value>
+  </data>
+  <data name="IntensityThemeEditWindow.01" xml:space="preserve">
+    <value>Edit intensity icon theme</value>
+  </data>
+  <data name="IntensityThemeEditWindow.02" xml:space="preserve">
+    <value>Border thickness</value>
+  </data>
+  <data name="IntensityThemeEditWindow.03" xml:space="preserve">
+    <value>Text:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.04" xml:space="preserve">
+    <value>Background:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.05" xml:space="preserve">
+    <value>Border:</value>
+  </data>
+  <data name="IntensityThemeEditWindow.06" xml:space="preserve">
+    <value>Abnormal</value>
+  </data>
+  <data name="IntensityThemeEditWindow.07" xml:space="preserve">
+    <value>Class 0</value>
+  </data>
+  <data name="IntensityThemeEditWindow.08" xml:space="preserve">
+    <value>Class 1</value>
+  </data>
+  <data name="IntensityThemeEditWindow.09" xml:space="preserve">
+    <value>Class 2</value>
+  </data>
+  <data name="IntensityThemeEditWindow.10" xml:space="preserve">
+    <value>Class 3</value>
+  </data>
+  <data name="IntensityThemeEditWindow.11" xml:space="preserve">
+    <value>Class 4</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.01" xml:space="preserve">
+    <value>About Earthquake Early Warnings (click to expand)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.02" xml:space="preserve">
+    <value>Basic settings</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.03" xml:space="preserve">
+    <value>Switch tabs automatically on announcement</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.04" xml:space="preserve">
+    <value>Receive Earthquake Early Warnings from Kyoshin Monitor</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.05" xml:space="preserve">
+    <value>If turned off and no other source that can receive Earthquake Early Warnings is configured, they can no longer be displayed.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.06" xml:space="preserve">
+    <value>Display settings</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.07" xml:space="preserve">
+    <value>Show detailed information</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.08" xml:space="preserve">
+    <value>Please use this only if you have enough knowledge to make use of the information.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.09" xml:space="preserve">
+    <value>Single-station EEW and accuracy information will be shown.
+However, this information cannot be obtained from Kyoshin Monitor alone, so it is not shown if it cannot be obtained through DM-D.S.S. or SignalNowProfessional.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.10" xml:space="preserve">
+    <value>Match P/S wave drawing to the Kyoshin Monitor delay</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.11" xml:space="preserve">
+    <value>Draws the spread of shaking in line with the Kyoshin Monitor display time.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.12" xml:space="preserve">
+    <value>The circles will match the Kyoshin Monitor observations, but they will be displayed later than real time, so please be careful.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.13" xml:space="preserve">
+    <value>Disable P/S wave animation</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.14" xml:space="preserve">
+    <value>Reduces the load.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.15" xml:space="preserve">
+    <value>Mapping of each area</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.16" xml:space="preserve">
+    <value>Show warning areas on the map</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.17" xml:space="preserve">
+    <value>Fills the areas where a warning has been issued.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.18" xml:space="preserve">
+    <value>Show the forecast maximum intensity of each area on the map</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.19" xml:space="preserve">
+    <value>Fills each area with its forecast maximum intensity.
+This takes priority over warning areas.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.20" xml:space="preserve">
+    <value>Point forecast display</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.21" xml:space="preserve">
+    <value>How to display the per-location forecast intensity and the countdown to arrival provided by an external app.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.22" xml:space="preserve">
+    <value>Show point forecasts on the map</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.23" xml:space="preserve">
+    <value>Shows the forecast intensity and remaining seconds at the location.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.24" xml:space="preserve">
+    <value>Expand to a large countdown</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.25" xml:space="preserve">
+    <value>Locations with a forecast intensity at or above the threshold are shown large in the panel.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.26" xml:space="preserve">
+    <value>Expansion threshold</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.27" xml:space="preserve">
+    <value>External integration</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.28" xml:space="preserve">
+    <value>Requires purchasing the software separately and installing and running it.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.29" xml:space="preserve">
+    <value>(Click to open the product page)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.30" xml:space="preserve">
+    <value>Use the integration if available</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.31" xml:space="preserve">
+    <value>Applied after restart.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.32" xml:space="preserve">
+    <value>Show the configured location (forecast point) on the map</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.33" xml:space="preserve">
+    <value>Use the calculated estimated arrival time (planned)</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.34" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.35" xml:space="preserve">
+    <value>Because only the information needed to calculate the intensity at the current location is sent, the place name and forecast maximum intensity are not shown and are treated as unknown.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.36" xml:space="preserve">
+    <value>Also, even if SignalNowProfessional is not running, the display shows receiving as long as the log file can be read. Please be aware of this.</value>
+  </data>
+  <data name="KyoshinMonitorEewPage.37" xml:space="preserve">
+    <value>Reception through DM-D.S.S. starts automatically when you have an Earthquake Early Warning plan and connect via WebSocket.
+The connection status is shown next to the time information in the main window.
+If it does not connect or switches to PULL type, please revoke the authentication once and authenticate again.</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.01" xml:space="preserve">
+    <value>Items on the map</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.02" xml:space="preserve">
+    <value>Hide observation points below a certain intensity</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.03" xml:space="preserve">
+    <value>Show observation points whose data can no longer be obtained</value>
+  </data>
+  <data name="KyoshinMonitorMapPage.04" xml:space="preserve">
+    <value>Shown as gray circles with the lowest priority.</value>
+  </data>
+  <data name="KyoshinMonitorPage.01" xml:space="preserve">
+    <value>Source server</value>
+  </data>
+  <data name="KyoshinMonitorPage.02" xml:space="preserve">
+    <value>Kyoshin Monitor is recommended in most cases.
+Choosing Do not receive stops reception from Kyoshin Monitor entirely.</value>
+  </data>
+  <data name="KyoshinMonitorPage.03" xml:space="preserve">
+    <value>Shake detection</value>
+  </data>
+  <data name="KyoshinMonitorPage.04" xml:space="preserve">
+    <value>Detects shaking on Kyoshin Monitor and zooms in automatically.</value>
+  </data>
+  <data name="KyoshinMonitorPage.05" xml:space="preserve">
+    <value>Switch tabs automatically when shaking is detected</value>
+  </data>
+  <data name="KyoshinMonitorPage.06" xml:space="preserve">
+    <value>Shaking level used for auto zoom and tab switching</value>
+  </data>
+  <data name="KyoshinMonitorPage.07" xml:space="preserve">
+    <value>Display mode of the shake detection range</value>
+  </data>
+  <data name="KyoshinMonitorPage.08" xml:space="preserve">
+    <value>This is experimental, so depending on the window theme the colors may be hard to see.</value>
+  </data>
+  <data name="KyoshinMonitorPage.09" xml:space="preserve">
+    <value>Animation of the shake detection range</value>
+  </data>
+  <data name="KyoshinMonitorPage.10" xml:space="preserve">
+    <value>In order of drawing load, from highest: Pulse &gt; Blink &gt; None.</value>
+  </data>
+  <data name="KyoshinMonitorPage.11" xml:space="preserve">
+    <value>Fetch timing</value>
+  </data>
+  <data name="KyoshinMonitorPage.12" xml:space="preserve">
+    <value>Adjust data fetch timing</value>
+  </data>
+  <data name="KyoshinMonitorPage.13" xml:space="preserve">
+    <value>Data is fetched from Kyoshin Monitor with a delay from the actual time.</value>
+  </data>
+  <data name="KyoshinMonitorPage.14" xml:space="preserve">
+    <value>Adjust the offset automatically</value>
+  </data>
+  <data name="KyoshinMonitorPage.15" xml:space="preserve">
+    <value>Fetch interval</value>
+  </data>
+  <data name="KyoshinMonitorPage.16" xml:space="preserve">
+    <value>Receives from Kyoshin Monitor at the specified interval.
+This helps save bandwidth.</value>
+  </data>
+  <data name="KyoshinMonitorPage.17" xml:space="preserve">
+    <value>Set the interval to 1 second while an EEW is being received</value>
+  </data>
+  <data name="KyoshinMonitorPage.18" xml:space="preserve">
+    <value>Set the interval to 1 second while shaking is detected</value>
+  </data>
+  <data name="KyoshinMonitorPage.19" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="KyoshinMonitorPage.20" xml:space="preserve">
+    <value>Show color samples</value>
+  </data>
+  <data name="KyoshinMonitorPage.21" xml:space="preserve">
+    <value>Rt intensity is short for real-time intensity.</value>
+  </data>
+  <data name="KyoshinMonitorPage.F01" xml:space="preserve">
+    <value>every {0} s</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.01" xml:space="preserve">
+    <value>Currently displayed:</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.02" xml:space="preserve">
+    <value>Return to real time</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.03" xml:space="preserve">
+    <value>Keep receiving real-time intensity during replay</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.04" xml:space="preserve">
+    <value>Keeps receiving real-time intensity in the background so that shake detection is not affected after the replay ends.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.05" xml:space="preserve">
+    <value>Return to real time when shaking is detected</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.06" xml:space="preserve">
+    <value>Return to real time when a new Earthquake Early Warning is received</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.07" xml:space="preserve">
+    <value>If real-time intensity is not being received under the settings above, reception of EEW from Kyoshin Monitor stops.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.08" xml:space="preserve">
+    <value>Replay</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.09" xml:space="preserve">
+    <value>Time shift</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.10" xml:space="preserve">
+    <value>You can go back up to 3 hours in the past Kyoshin Monitor data.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.11" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.12" xml:space="preserve">
+    <value>3 hours ago</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.13" xml:space="preserve">
+    <value>Start time shift</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.14" xml:space="preserve">
+    <value>* During time shift, Earthquake Early Warning sources other than Kyoshin Monitor are not available.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.15" xml:space="preserve">
+    <value>Play a replay file</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.16" xml:space="preserve">
+    <value>Plays a file that stores past Kyoshin Monitor and Earthquake Early Warning data.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.17" xml:space="preserve">
+    <value>Load file</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.18" xml:space="preserve">
+    <value>Information on the loaded file</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.19" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.20" xml:space="preserve">
+    <value>Created by: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.21" xml:space="preserve">
+    <value>Start: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.22" xml:space="preserve">
+    <value>End: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.23" xml:space="preserve">
+    <value>Compression mode: </value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.24" xml:space="preserve">
+    <value>Playback settings</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.25" xml:space="preserve">
+    <value>* Changing the speed during playback may make the display temporarily glitchy.</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.26" xml:space="preserve">
+    <value>Start playback</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.27" xml:space="preserve">
+    <value>Back to 1x speed</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.28" xml:space="preserve">
+    <value>Information on the file being played</value>
+  </data>
+  <data name="KyoshinMonitorReplayPage.F01" xml:space="preserve">
+    <value>Playback speed: {0:0.0}x</value>
+  </data>
+  <data name="KyoshinMonitorView.01" xml:space="preserve">
+    <value>Rt int.</value>
+  </data>
+  <data name="KyoshinMonitorView.02" xml:space="preserve">
+    <value>Display time</value>
+  </data>
+  <data name="KyoshinMonitorView.03" xml:space="preserve">
+    <value>Receiving Earthquake Early Warnings from SignalNowProfessional.
+This icon is shown even when SignalNowProfessional is not running.</value>
+  </data>
+  <data name="KyoshinMonitorView.04" xml:space="preserve">
+    <value>Receiving Earthquake Early Warnings from DM-D.S.S.</value>
+  </data>
+  <data name="KyoshinMonitorView.05" xml:space="preserve">
+    <value>DM-D.S.S (warnings only)</value>
+  </data>
+  <data name="KyoshinMonitorView.06" xml:space="preserve">
+    <value>Receiving only Earthquake Early Warnings (warning class) from DM-D.S.S.</value>
+  </data>
+  <data name="KyoshinMonitorView.07" xml:space="preserve">
+    <value>Receiving Earthquake Early Warnings from AXIS.</value>
+  </data>
+  <data name="KyoshinMonitorView.08" xml:space="preserve">
+    <value>Not receiving Earthquake Early Warnings</value>
+  </data>
+  <data name="KyoshinMonitorView.09" xml:space="preserve">
+    <value>The WebSocket is disconnected! It will reconnect automatically.</value>
+  </data>
+  <data name="LightningView.01" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="LightningView.02" xml:space="preserve">
+    <value>This is an experimental tool and is not meant for regular use.</value>
+  </data>
+  <data name="LogOutputAction.01" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="MainView.01" xml:space="preserve">
+    <value>Open in separate window</value>
+  </data>
+  <data name="MainView.02" xml:space="preserve">
+    <value>An application update is available</value>
+  </data>
+  <data name="MainView.03" xml:space="preserve">
+    <value>You can see the details in the settings screen</value>
+  </data>
+  <data name="MainView.04" xml:space="preserve">
+    <value>Open settings</value>
+  </data>
+  <data name="MainView.05" xml:space="preserve">
+    <value>Reset map position</value>
+  </data>
+  <data name="Map.AutoZoom" xml:space="preserve">
+    <value>Auto zoom</value>
+  </data>
+  <data name="Map.AutoZoomAnimation" xml:space="preserve">
+    <value>Animate when zooming automatically</value>
+  </data>
+  <data name="Map.AutoZoomEnable" xml:space="preserve">
+    <value>Zoom the map automatically</value>
+  </data>
+  <data name="Map.CurrentRange" xml:space="preserve">
+    <value>Current view range</value>
+  </data>
+  <data name="Map.DisableManualMove" xml:space="preserve">
+    <value>Disable manual map movement</value>
+  </data>
+  <data name="Map.DisableManualMove.Desc" xml:space="preserve">
+    <value>When enabled, the home button on the main screen is hidden.</value>
+  </data>
+  <data name="Map.FitOnResize" xml:space="preserve">
+    <value>Adjust the zoom level on window resize so the whole view range stays visible</value>
+  </data>
+  <data name="Map.Inertia" xml:space="preserve">
+    <value>Enable inertia</value>
+  </data>
+  <data name="Map.Inertia.Desc" xml:space="preserve">
+    <value>After dragging the map or zooming with the mouse wheel, the map keeps scrolling smoothly with inertia.</value>
+  </data>
+  <data name="Map.LimitMaxZoom" xml:space="preserve">
+    <value>Limit maximum zoom</value>
+  </data>
+  <data name="Map.LimitMaxZoom.Desc" xml:space="preserve">
+    <value>Prevents a small earthquake from zooming into a narrow area where the location becomes hard to recognize.</value>
+  </data>
+  <data name="Map.ResetRange" xml:space="preserve">
+    <value>Reset to default range</value>
+  </data>
+  <data name="Map.SaveCurrent" xml:space="preserve">
+    <value>Save current position</value>
+  </data>
+  <data name="Map.ShowGrid" xml:space="preserve">
+    <value>Show grid</value>
+  </data>
+  <data name="Map.ShowMiniMap" xml:space="preserve">
+    <value>Show mini map</value>
+  </data>
+  <data name="Map.ShowMiniMap.Desc" xml:space="preserve">
+    <value>While the default view range is shown, a mini map of the Okinawa and Amami region is displayed at the top left. This affects performance.</value>
+  </data>
+  <data name="Map.ViewRange" xml:space="preserve">
+    <value>View range</value>
+  </data>
+  <data name="MarineReport.01" xml:space="preserve">
+    <value>Disaster weather information (marine)</value>
+  </data>
+  <data name="MonitorMode.Lmoni" xml:space="preserve">
+    <value>Long-period ground motion monitor</value>
+  </data>
+  <data name="MonitorMode.None" xml:space="preserve">
+    <value>Do not receive</value>
+  </data>
+  <data name="MultiWindow.About" xml:space="preserve">
+    <value>About the multi-window feature</value>
+  </data>
+  <data name="MultiWindow.AboutStore" xml:space="preserve">
+    <value>About window storage settings</value>
+  </data>
+  <data name="MultiWindow.Enable" xml:space="preserve">
+    <value>Enable multi-window</value>
+  </data>
+  <data name="MultiWindow.FocusSub" xml:space="preserve">
+    <value>Focus the sub window when switching tabs</value>
+  </data>
+  <data name="MultiWindow.FocusSub.Desc" xml:space="preserve">
+    <value>When a tab switch is requested by a workflow or a setting and that tab has already been detached, its window is focused</value>
+  </data>
+  <data name="MultiWindow.Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="MultiWindow.ResetAll" xml:space="preserve">
+    <value>Reset all windows to their initial positions</value>
+  </data>
+  <data name="MultiWindow.ResetAll.Desc" xml:space="preserve">
+    <value>Resets the position and size of detached windows</value>
+  </data>
+  <data name="MultiWindow.Title" xml:space="preserve">
+    <value>Multi-window</value>
+  </data>
+  <data name="MultipleAction.01" xml:space="preserve">
+    <value>Run simultaneously</value>
+  </data>
+  <data name="MultipleAction.02" xml:space="preserve">
+    <value>Tries to run each action in parallel. No waiting or interruption is performed.</value>
+  </data>
+  <data name="MultipleAction.03" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="MultipleAction.04" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="MultipleAction.05" xml:space="preserve">
+    <value>Delete action</value>
+  </data>
+  <data name="MultipleAction.06" xml:space="preserve">
+    <value>Add action</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.01" xml:space="preserve">
+    <value>Disaster weather information (Nankai Trough earthquake)</value>
+  </data>
+  <data name="NankaiTroughEarthquakeReport.02" xml:space="preserve">
+    <value>Nankai Trough Earthquake Extra Information</value>
+  </data>
+  <data name="NorthwestPacificTsunamiReport.01" xml:space="preserve">
+    <value>Disaster weather information (Northwest Pacific tsunami)</value>
+  </data>
+  <data name="Notify.EqSource" xml:space="preserve">
+    <value>Receiving earthquake information from {0}.</value>
+  </data>
+  <data name="Notify.Linux" xml:space="preserve">
+    <value>Desktop integration (Linux)</value>
+  </data>
+  <data name="Notify.LinuxEntry" xml:space="preserve">
+    <value>Register the desktop entry automatically</value>
+  </data>
+  <data name="Notify.LinuxEntry.Desc" xml:space="preserve">
+    <value>(Applied after restart) Generates an entry and icon in ~/.local/share so that the app name, icon and per-app notification settings work in KDE and similar environments.</value>
+  </data>
+  <data name="Notify.MultiWindowEnabled" xml:space="preserve">
+    <value>The multi-window feature is enabled</value>
+  </data>
+  <data name="Notify.NotifyOnStore" xml:space="preserve">
+    <value>Notify when stored in the task tray</value>
+  </data>
+  <data name="Notify.Off" xml:space="preserve">
+    <value>Don't notify</value>
+  </data>
+  <data name="Notify.On" xml:space="preserve">
+    <value>Notify</value>
+  </data>
+  <data name="Notify.OnEarthquake" xml:space="preserve">
+    <value>When earthquake information is received</value>
+  </data>
+  <data name="Notify.OnEew" xml:space="preserve">
+    <value>When an Earthquake Early Warning is updated</value>
+  </data>
+  <data name="Notify.OnSourceChange" xml:space="preserve">
+    <value>When the earthquake information source changes</value>
+  </data>
+  <data name="Notify.OnTsunami" xml:space="preserve">
+    <value>When tsunami information is updated</value>
+  </data>
+  <data name="Notify.StartMinimized" xml:space="preserve">
+    <value>Start minimized</value>
+  </data>
+  <data name="Notify.StoreOnClose" xml:space="preserve">
+    <value>Store in the task tray when closing the window</value>
+  </data>
+  <data name="Notify.StoreOnMinimize" xml:space="preserve">
+    <value>Store in the task tray when minimized</value>
+  </data>
+  <data name="Notify.Title" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Notify.Tray" xml:space="preserve">
+    <value>Tray icon</value>
+  </data>
+  <data name="Notify.Use" xml:space="preserve">
+    <value>Use notifications</value>
+  </data>
+  <data name="Notify.Use.Desc" xml:space="preserve">
+    <value>This is an experimental implementation and may stop working in a future version.</value>
+  </data>
+  <data name="Notify.UseTray" xml:space="preserve">
+    <value>Use the task tray icon</value>
+  </data>
+  <data name="Notify.UseTray.Desc" xml:space="preserve">
+    <value>(Applied after restart) Keeps an icon in the notification area so you can use the right-click menu and window storage.</value>
+  </data>
+  <data name="Notify.WindowStore" xml:space="preserve">
+    <value>Window storage settings</value>
+  </data>
+  <data name="ObservationPointsDataPage.01" xml:space="preserve">
+    <value>Automatic update of observation point data</value>
+  </data>
+  <data name="ObservationPointsDataPage.02" xml:space="preserve">
+    <value>Automatically downloads new observation point data at startup.</value>
+  </data>
+  <data name="ObservationPointsDataPage.03" xml:space="preserve">
+    <value>Current data information</value>
+  </data>
+  <data name="ObservationPointsDataPage.04" xml:space="preserve">
+    <value>Data version</value>
+  </data>
+  <data name="ObservationPointsDataPage.05" xml:space="preserve">
+    <value>The version of the observation point data in use.</value>
+  </data>
+  <data name="ObservationPointsDataPage.06" xml:space="preserve">
+    <value>Created at</value>
+  </data>
+  <data name="ObservationPointsDataPage.07" xml:space="preserve">
+    <value>Data source</value>
+  </data>
+  <data name="ObservationPointsDataPage.08" xml:space="preserve">
+    <value>Number of observation points</value>
+  </data>
+  <data name="ObservationPointsDataPage.09" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ObservationPointsDataPage.10" xml:space="preserve">
+    <value>Manual update</value>
+  </data>
+  <data name="ObservationPointsDataPage.11" xml:space="preserve">
+    <value>Updates the observation point data manually.</value>
+  </data>
+  <data name="ObservationPointsDataPage.12" xml:space="preserve">
+    <value>The application must be restarted to apply the update.</value>
+  </data>
+  <data name="ObservationPointsDataPage.F01" xml:space="preserve">
+    <value>{0} points</value>
+  </data>
+  <data name="PeakExpansion.IncludeSubRegion" xml:space="preserve">
+    <value>Include sub-areas</value>
+  </data>
+  <data name="PeakExpansion.None" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="PeakExpansion.RegionOnly" xml:space="preserve">
+    <value>Areas only</value>
+  </data>
+  <data name="PlaySoundAction.01" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="PlaySoundAction.02" xml:space="preserve">
+    <value>Suspends the workflow until playback ends. Useful when running another action after playback finishes.</value>
+  </data>
+  <data name="PlaySoundAction.03" xml:space="preserve">
+    <value>Plays the file specified here. Templates can be used.</value>
+  </data>
+  <data name="PlaySoundAction.04" xml:space="preserve">
+    <value>Play a preview. Variables are not expanded.</value>
+  </data>
+  <data name="Quake.Comment.Database" xml:space="preserve">
+    <value>Source: JMA seismic intensity database</value>
+  </data>
+  <data name="Quake.Title.Flash" xml:space="preserve">
+    <value>Intensity flash report</value>
+  </data>
+  <data name="Quake.Title.FlashAndHypo" xml:space="preserve">
+    <value>Flash + hypocenter</value>
+  </data>
+  <data name="Quake.Title.Foreign" xml:space="preserve">
+    <value>Distant earthquake</value>
+  </data>
+  <data name="Quake.Title.Hypo" xml:space="preserve">
+    <value>Hypocenter information</value>
+  </data>
+  <data name="Quake.Title.HypoIntensity" xml:space="preserve">
+    <value>Hypocenter &amp; intensity</value>
+  </data>
+  <data name="Quake.Title.Volcano" xml:space="preserve">
+    <value>Large eruption</value>
+  </data>
+  <data name="Qzss.AutoDetect" xml:space="preserve">
+    <value>Auto detect</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Message" xml:space="preserve">
+    <value>An error occurred during auto detection.
+{0}</value>
+  </data>
+  <data name="Qzss.AutoDetectError.Title" xml:space="preserve">
+    <value>Baud rate auto detection error</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Message" xml:space="preserve">
+    <value>No valid sentence could be received at any baud rate.
+Please check the cable connection, the device power and the device settings, then select the baud rate manually.</value>
+  </data>
+  <data name="Qzss.AutoDetectFailed.Title" xml:space="preserve">
+    <value>The baud rate could not be detected automatically</value>
+  </data>
+  <data name="Qzss.CancelWithRate" xml:space="preserve">
+    <value>Cancel ({0})</value>
+  </data>
+  <data name="Qzss.NoSetting.Message" xml:space="preserve">
+    <value>No settings to send are selected.</value>
+  </data>
+  <data name="Qzss.NoSetting.Title" xml:space="preserve">
+    <value>No settings</value>
+  </data>
+  <data name="Qzss.NotConnected" xml:space="preserve">
+    <value>Not connected to the port. Please connect and try again.</value>
+  </data>
+  <data name="Qzss.SendDone" xml:space="preserve">
+    <value>Settings sent.</value>
+  </data>
+  <data name="Qzss.SendDone.Reconnect" xml:space="preserve">
+    <value>Settings sent. Changing the baud rate to {0} and reconnecting.</value>
+  </data>
+  <data name="Qzss.SendDone.Title" xml:space="preserve">
+    <value>Settings complete</value>
+  </data>
+  <data name="Qzss.SendFailed.Message" xml:space="preserve">
+    <value>Some settings could not be sent. See the progress display for details.</value>
+  </data>
+  <data name="Qzss.SendFailed.Title" xml:space="preserve">
+    <value>Failed to send settings</value>
+  </data>
+  <data name="Qzss.Step.Baud" xml:space="preserve">
+    <value>Change the baud rate of UART1 to {0}</value>
+  </data>
+  <data name="Qzss.Step.L1s" xml:space="preserve">
+    <value>Enable QZSS L1S (DC Report) reception</value>
+  </data>
+  <data name="Qzss.Step.Qzss" xml:space="preserve">
+    <value>Enable QZSS reception</value>
+  </data>
+  <data name="Qzss.Step.Rate" xml:space="preserve">
+    <value>Change the update rate to {0}ms</value>
+  </data>
+  <data name="Qzss.Step.Rmc" xml:space="preserve">
+    <value>Enable NMEA RMC output on UART1</value>
+  </data>
+  <data name="Qzss.Step.Sfrbx" xml:space="preserve">
+    <value>Enable UBX-RXM-SFRBX (satellite navigation data) output on UART1</value>
+  </data>
+  <data name="QzssConn.Serial" xml:space="preserve">
+    <value>Serial port</value>
+  </data>
+  <data name="QzssPage.01" xml:space="preserve">
+    <value>About DC Report</value>
+  </data>
+  <data name="QzssPage.02" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="QzssPage.03" xml:space="preserve">
+    <value>Connection info</value>
+  </data>
+  <data name="QzssPage.04" xml:space="preserve">
+    <value>Connection type</value>
+  </data>
+  <data name="QzssPage.05" xml:space="preserve">
+    <value>Host to connect to</value>
+  </data>
+  <data name="QzssPage.06" xml:space="preserve">
+    <value>Specify a TCP server that outputs NMEA / UBX.</value>
+  </data>
+  <data name="QzssPage.07" xml:space="preserve">
+    <value>Port number</value>
+  </data>
+  <data name="QzssPage.08" xml:space="preserve">
+    <value>Connection port</value>
+  </data>
+  <data name="QzssPage.09" xml:space="preserve">
+    <value>Baud rate</value>
+  </data>
+  <data name="QzssPage.10" xml:space="preserve">
+    <value>Tries each baud rate in turn on the current port and connects with the one that receives a valid sentence. Press it during detection to cancel.</value>
+  </data>
+  <data name="QzssPage.11" xml:space="preserve">
+    <value>Start connection</value>
+  </data>
+  <data name="QzssPage.12" xml:space="preserve">
+    <value>u-blox device initial setup</value>
+  </data>
+  <data name="QzssPage.13" xml:space="preserve">
+    <value>Sends UBX-CFG-VALSET to u-blox devices to apply various settings. Available only with a serial connection.</value>
+  </data>
+  <data name="QzssPage.14" xml:space="preserve">
+    <value>Enable UBX-RXM-SFRBX (satellite navigation data) output on UART1</value>
+  </data>
+  <data name="QzssPage.15" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="QzssPage.16" xml:space="preserve">
+    <value>Don't send</value>
+  </data>
+  <data name="QzssPage.17" xml:space="preserve">
+    <value>Enable NMEA RMC (position) output on UART1</value>
+  </data>
+  <data name="QzssPage.18" xml:space="preserve">
+    <value>Enable QZSS reception</value>
+  </data>
+  <data name="QzssPage.19" xml:space="preserve">
+    <value>Change the update rate</value>
+  </data>
+  <data name="QzssPage.20" xml:space="preserve">
+    <value>Change the baud rate of UART1</value>
+  </data>
+  <data name="QzssPage.21" xml:space="preserve">
+    <value>Sent last because no response can be received.</value>
+  </data>
+  <data name="QzssPage.22" xml:space="preserve">
+    <value>Sends the settings and applies them one by one while checking the device's responses.</value>
+  </data>
+  <data name="QzssPage.23" xml:space="preserve">
+    <value>Send settings</value>
+  </data>
+  <data name="QzssPage.24" xml:space="preserve">
+    <value>Remove latitude/longitude (coordinates) from GPS information</value>
+  </data>
+  <data name="QzssPage.25" xml:space="preserve">
+    <value>Prevents your current location from being identified from screenshots or recordings.</value>
+  </data>
+  <data name="QzssPage.26" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="QzssPage.27" xml:space="preserve">
+    <value>Don't remove</value>
+  </data>
+  <data name="QzssPage.28" xml:space="preserve">
+    <value>Show the current position on the map</value>
+  </data>
+  <data name="QzssPage.29" xml:space="preserve">
+    <value>Ignore messages from sources other than JMA</value>
+  </data>
+  <data name="QzssPage.30" xml:space="preserve">
+    <value>Ignore drill and test messages</value>
+  </data>
+  <data name="QzssPage.31" xml:space="preserve">
+    <value>Time zone offset</value>
+  </data>
+  <data name="QzssPage.32" xml:space="preserve">
+    <value>Displays message times offset from UTC by the specified amount. Japan Standard Time (JST) is -9 hours.</value>
+  </data>
+  <data name="QzssPage.33" xml:space="preserve">
+    <value>Reception settings</value>
+  </data>
+  <data name="QzssPage.34" xml:space="preserve">
+    <value>The Kyoshin Monitor tab shows the occurrence time, the estimated hypocenter, the epicenter place name and the areas expected to shake strongly, but the circles showing the spread of shaking are not displayed because the occurrence time cannot be obtained.</value>
+  </data>
+  <data name="QzssPage.35" xml:space="preserve">
+    <value>The information is shown in the Tsunami tab.</value>
+  </data>
+  <data name="QzssPage.36" xml:space="preserve">
+    <value>The following information is basically shown in the DC Report tab, so it does not work if that tab is not displayed.</value>
+  </data>
+  <data name="QzssPage.37" xml:space="preserve">
+    <value>Earthquake information (hypocenter / intensity)</value>
+  </data>
+  <data name="QzssPage.38" xml:space="preserve">
+    <value>This is not complete information, so it is not shown in the Earthquake tab.</value>
+  </data>
+  <data name="QzssPage.39" xml:space="preserve">
+    <value>Nankai Trough earthquake information</value>
+  </data>
+  <data name="QzssPage.40" xml:space="preserve">
+    <value>Northwest Pacific tsunami information</value>
+  </data>
+  <data name="QzssPage.41" xml:space="preserve">
+    <value>Volcano information</value>
+  </data>
+  <data name="QzssPage.42" xml:space="preserve">
+    <value>Ash fall information</value>
+  </data>
+  <data name="QzssPage.43" xml:space="preserve">
+    <value>Weather information</value>
+  </data>
+  <data name="QzssPage.44" xml:space="preserve">
+    <value>Flood information</value>
+  </data>
+  <data name="QzssPage.45" xml:space="preserve">
+    <value>Typhoon information</value>
+  </data>
+  <data name="QzssPage.46" xml:space="preserve">
+    <value>Marine information</value>
+  </data>
+  <data name="QzssTrigger.01" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="QzssTrigger.02" xml:space="preserve">
+    <value>New reception</value>
+  </data>
+  <data name="QzssTrigger.03" xml:space="preserve">
+    <value>When a non-duplicate DC Report is received</value>
+  </data>
+  <data name="QzssTrigger.04" xml:space="preserve">
+    <value>New group created</value>
+  </data>
+  <data name="QzssTrigger.05" xml:space="preserve">
+    <value>Group updated</value>
+  </data>
+  <data name="QzssTrigger.06" xml:space="preserve">
+    <value>Nankai Trough Earthquake Extra Information fully received</value>
+  </data>
+  <data name="QzssTrigger.07" xml:space="preserve">
+    <value>It is not triggered if Nankai Trough earthquake information is not enabled in Types</value>
+  </data>
+  <data name="QzssTrigger.08" xml:space="preserve">
+    <value>Types</value>
+  </data>
+  <data name="QzssTrigger.09" xml:space="preserve">
+    <value>DC Reports to trigger on.</value>
+  </data>
+  <data name="QzssTrigger.10" xml:space="preserve">
+    <value>Nankai Trough earthquake</value>
+  </data>
+  <data name="QzssTrigger.11" xml:space="preserve">
+    <value>Tsunami</value>
+  </data>
+  <data name="QzssTrigger.12" xml:space="preserve">
+    <value>Volcano</value>
+  </data>
+  <data name="QzssTrigger.13" xml:space="preserve">
+    <value>Ash fall</value>
+  </data>
+  <data name="QzssTrigger.14" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="QzssTrigger.15" xml:space="preserve">
+    <value>Flood</value>
+  </data>
+  <data name="QzssTrigger.16" xml:space="preserve">
+    <value>Typhoon</value>
+  </data>
+  <data name="QzssTrigger.17" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="QzssView.01" xml:space="preserve">
+    <value>Local time</value>
+  </data>
+  <data name="QzssView.02" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="QzssView.03" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="QzssView.04" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="QzssView.05" xml:space="preserve">
+    <value>DC Report reception history</value>
+  </data>
+  <data name="QzssView.06" xml:space="preserve">
+    <value>Last received:</value>
+  </data>
+  <data name="QzssView.07" xml:space="preserve">
+    <value>EEW (warning)</value>
+  </data>
+  <data name="QzssView.08" xml:space="preserve">
+    <value>Intensity information</value>
+  </data>
+  <data name="QzssView.09" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="QzssView.10" xml:space="preserve">
+    <value>Nankai Trough</value>
+  </data>
+  <data name="QzssView.11" xml:space="preserve">
+    <value>Northwest Pacific tsunami</value>
+  </data>
+  <data name="QzssView.12" xml:space="preserve">
+    <value>Ash fall forecast</value>
+  </data>
+  <data name="QzssView.13" xml:space="preserve">
+    <value>Flood forecast</value>
+  </data>
+  <data name="QzssView.14" xml:space="preserve">
+    <value>Marine warning</value>
+  </data>
+  <data name="QzssView.15" xml:space="preserve">
+    <value>Not implemented</value>
+  </data>
+  <data name="QzssView.16" xml:space="preserve">
+    <value>Drill / test</value>
+  </data>
+  <data name="QzssView.17" xml:space="preserve">
+    <value>Test column</value>
+  </data>
+  <data name="QzssView.18" xml:space="preserve">
+    <value>Test content</value>
+  </data>
+  <data name="QzssView.F01" xml:space="preserve">
+    <value>No. {0}</value>
+  </data>
+  <data name="RadarPage.01" xml:space="preserve">
+    <value>Update automatically</value>
+  </data>
+  <data name="RadarPage.02" xml:space="preserve">
+    <value>Updates automatically every minute.</value>
+  </data>
+  <data name="RadarPage.03" xml:space="preserve">
+    <value>Information source</value>
+  </data>
+  <data name="RadarPage.04" xml:space="preserve">
+    <value>JMA website</value>
+  </data>
+  <data name="RadarView.01" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="RadarView.F01" xml:space="preserve">
+    <value>Rain cloud movement {0:HH:mm}</value>
+  </data>
+  <data name="Redundancy.Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Redundancy.Full" xml:space="preserve">
+    <value>Fully connected</value>
+  </data>
+  <data name="Redundancy.Partial" xml:space="preserve">
+    <value>Partially connected</value>
+  </data>
+  <data name="Replay.Ago" xml:space="preserve">
+    <value> ago</value>
+  </data>
+  <data name="Replay.Hours" xml:space="preserve">
+    <value>{0}h</value>
+  </data>
+  <data name="Replay.LoadFailed" xml:space="preserve">
+    <value>Failed to load the replay file</value>
+  </data>
+  <data name="Replay.Minutes" xml:space="preserve">
+    <value>{0}m</value>
+  </data>
+  <data name="Replay.OpenFile" xml:space="preserve">
+    <value>Open replay file</value>
+  </data>
+  <data name="Replay.RealTime" xml:space="preserve">
+    <value>Real time</value>
+  </data>
+  <data name="Replay.Seconds" xml:space="preserve">
+    <value>{0}s</value>
+  </data>
+  <data name="Replay.Separator" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="SeismicIntensityReport.01" xml:space="preserve">
+    <value>Disaster weather information (intensity)</value>
+  </data>
+  <data name="SeismicIntensityReport.02" xml:space="preserve">
+    <value>or below</value>
+  </data>
+  <data name="SelectSeriesPage.01" xml:space="preserve">
+    <value>Choose the information to receive and display</value>
+  </data>
+  <data name="SelectSeriesPage.02" xml:space="preserve">
+    <value>Choose the information you want to display in this application.
+Receiving only the information you need helps reduce the load on the servers providing it.</value>
+  </data>
+  <data name="SelectSeriesPage.03" xml:space="preserve">
+    <value>Kyoshin Monitor / Earthquake Early Warning</value>
+  </data>
+  <data name="SelectSeriesPage.04" xml:space="preserve">
+    <value>Use the Signal Now Professional integration</value>
+  </data>
+  <data name="SelectSeriesPage.05" xml:space="preserve">
+    <value>Even if SignalNowProfessional is not running, the display shows receiving as long as the log file can be read. Please be aware of this.</value>
+  </data>
+  <data name="SelectSeriesPage.06" xml:space="preserve">
+    <value>Receives and displays real-time intensity and Earthquake Early Warnings from Kyoshin Monitor.</value>
+  </data>
+  <data name="SelectSeriesPage.07" xml:space="preserve">
+    <value>Receives and parses the Disaster Prevention XML and displays earthquake information.</value>
+  </data>
+  <data name="SelectSeriesPage.08" xml:space="preserve">
+    <value>Receives and parses the Disaster Prevention XML and displays tsunami information.</value>
+  </data>
+  <data name="SelectSeriesPage.09" xml:space="preserve">
+    <value>Displays disaster-prevention information delivered by "Michibiki". A compatible receiver is required.</value>
+  </data>
+  <data name="SelectThemePage.01" xml:space="preserve">
+    <value>You can change the color scheme by choosing a theme.</value>
+  </data>
+  <data name="SendNotificationAction.01" xml:space="preserve">
+    <value>Notification title</value>
+  </data>
+  <data name="SendNotificationAction.02" xml:space="preserve">
+    <value>Notification body template</value>
+  </data>
+  <data name="SendNotificationAction.03" xml:space="preserve">
+    <value>Urgency</value>
+  </data>
+  <data name="SendNotificationAction.04" xml:space="preserve">
+    <value>You can set the priority of the notification.
+Important tries to be shown even through do-not-disturb settings on supported environments.</value>
+  </data>
+  <data name="Series.Earthquake" xml:space="preserve">
+    <value>Earthquake info</value>
+  </data>
+  <data name="Series.Earthquake.Detail" xml:space="preserve">
+    <value>Receives and displays hypocenter and intensity information.</value>
+  </data>
+  <data name="Series.KyoshinMonitor" xml:space="preserve">
+    <value>Kyoshin Monitor</value>
+  </data>
+  <data name="Series.KyoshinMonitor.Detail" xml:space="preserve">
+    <value>Displays Kyoshin Monitor and Earthquake Early Warnings.</value>
+  </data>
+  <data name="Series.Lightning" xml:space="preserve">
+    <value>[TEST] Lightning info</value>
+  </data>
+  <data name="Series.Lightning.Detail" xml:space="preserve">
+    <value>Displays lightning information. (for debugging)</value>
+  </data>
+  <data name="Series.ObservationPointEditor" xml:space="preserve">
+    <value>Observation point editor</value>
+  </data>
+  <data name="Series.ObservationPointEditor.Detail" xml:space="preserve">
+    <value>Provides editing and management of strong-motion observation point data.</value>
+  </data>
+  <data name="Series.Qzss" xml:space="preserve">
+    <value>DC Report</value>
+  </data>
+  <data name="Series.Qzss.Detail" xml:space="preserve">
+    <value>Displays disaster-prevention information delivered by "Michibiki" (QZSS).</value>
+  </data>
+  <data name="Series.Radar" xml:space="preserve">
+    <value>Rain clouds (β)</value>
+  </data>
+  <data name="Series.Radar.Detail" xml:space="preserve">
+    <value>Displays rain cloud radar images. (experimental)</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier" xml:space="preserve">
+    <value>Shake detection</value>
+  </data>
+  <data name="Series.ShakeDetectionVerifier.Detail" xml:space="preserve">
+    <value>Adjusts shake detection parameters and performs comparative verification.</value>
+  </data>
+  <data name="Series.Tsunami" xml:space="preserve">
+    <value>Tsunami info</value>
+  </data>
+  <data name="Series.Tsunami.Detail" xml:space="preserve">
+    <value>Displays tsunami information.</value>
+  </data>
+  <data name="Series.Typhoon" xml:space="preserve">
+    <value>Typhoon info (α)</value>
+  </data>
+  <data name="Series.Typhoon.Detail" xml:space="preserve">
+    <value>Displays the current position and forecast circles of typhoons.</value>
+  </data>
+  <data name="Setting.About" xml:space="preserve">
+    <value>About this app</value>
+  </data>
+  <data name="Setting.Axis" xml:space="preserve">
+    <value>AXIS (testing)</value>
+  </data>
+  <data name="Setting.Delivery" xml:space="preserve">
+    <value>Delivery services</value>
+  </data>
+  <data name="Setting.Eew" xml:space="preserve">
+    <value>EEW</value>
+  </data>
+  <data name="Setting.Feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Setting.General" xml:space="preserve">
+    <value>Appearance &amp; general</value>
+  </data>
+  <data name="Setting.License" xml:space="preserve">
+    <value>Licenses</value>
+  </data>
+  <data name="Setting.Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Setting.MapIcon" xml:space="preserve">
+    <value>Map icons</value>
+  </data>
+  <data name="Setting.ObsPoints" xml:space="preserve">
+    <value>Observation points</value>
+  </data>
+  <data name="Setting.Qzss" xml:space="preserve">
+    <value>Michibiki DC Report</value>
+  </data>
+  <data name="Setting.Radar" xml:space="preserve">
+    <value>Rain cloud radar</value>
+  </data>
+  <data name="Setting.Replay" xml:space="preserve">
+    <value>Replay</value>
+  </data>
+  <data name="Setting.Sound" xml:space="preserve">
+    <value>Sound</value>
+  </data>
+  <data name="Setting.Update" xml:space="preserve">
+    <value>App update</value>
+  </data>
+  <data name="Setting.WindowTitle" xml:space="preserve">
+    <value>Settings - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Setting.Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="SetupWizardWindow.01" xml:space="preserve">
+    <value>Setup wizard - KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Shake.Title.Medium" xml:space="preserve">
+    <value>Shaking detected</value>
+  </data>
+  <data name="Shake.Title.Strong" xml:space="preserve">
+    <value>Strong shaking detected</value>
+  </data>
+  <data name="Shake.Title.Stronger" xml:space="preserve">
+    <value>Very strong shaking detected</value>
+  </data>
+  <data name="Shake.Title.Weak" xml:space="preserve">
+    <value>Weak shaking detected</value>
+  </data>
+  <data name="Shake.Title.Weaker" xml:space="preserve">
+    <value>Very weak shaking detected</value>
+  </data>
+  <data name="ShakeAnimation.Blink" xml:space="preserve">
+    <value>Blink</value>
+  </data>
+  <data name="ShakeAnimation.None" xml:space="preserve">
+    <value>No animation</value>
+  </data>
+  <data name="ShakeAnimation.Pulse" xml:space="preserve">
+    <value>Pulse</value>
+  </data>
+  <data name="ShakeDetectTrigger.01" xml:space="preserve">
+    <value>Detection level: </value>
+  </data>
+  <data name="ShakeDetectTrigger.02" xml:space="preserve">
+    <value>Run only when the level matches</value>
+  </data>
+  <data name="ShakeDetectTrigger.03" xml:space="preserve">
+    <value>By default, events of a higher level also trigger.
+Enabling this option lets you run the action only at that level.</value>
+  </data>
+  <data name="ShakeDetectTrigger.04" xml:space="preserve">
+    <value>When the max-level area expands: </value>
+  </data>
+  <data name="ShakeDetectTrigger.05" xml:space="preserve">
+    <value>Sets the behavior when the number of areas observing the maximum shaking level increases.
+- Do nothing: no trigger when areas expand
+- Areas only: fires only when a new area is added
+- Include sub-areas: also fires when sub-areas increase</value>
+  </data>
+  <data name="ShakeDetectedRegionPanel.01" xml:space="preserve">
+    <value>(entire area)</value>
+  </data>
+  <data name="ShakeDisplay.ConvexHull" xml:space="preserve">
+    <value>Convex hull (not recommended)</value>
+  </data>
+  <data name="ShakeDisplay.Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="ShakeDisplay.None" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="ShindoName.Int0" xml:space="preserve">
+    <value>Intensity 0</value>
+  </data>
+  <data name="ShindoName.Int1" xml:space="preserve">
+    <value>Intensity 1</value>
+  </data>
+  <data name="ShindoName.Int2" xml:space="preserve">
+    <value>Intensity 2</value>
+  </data>
+  <data name="ShindoName.Int3" xml:space="preserve">
+    <value>Intensity 3</value>
+  </data>
+  <data name="ShindoName.Int4" xml:space="preserve">
+    <value>Intensity 4</value>
+  </data>
+  <data name="ShindoName.Int5Lower" xml:space="preserve">
+    <value>Intensity 5 lower</value>
+  </data>
+  <data name="ShindoName.Int5Upper" xml:space="preserve">
+    <value>Intensity 5 upper</value>
+  </data>
+  <data name="ShindoName.Int6Lower" xml:space="preserve">
+    <value>Intensity 6 lower</value>
+  </data>
+  <data name="ShindoName.Int6Upper" xml:space="preserve">
+    <value>Intensity 6 upper</value>
+  </data>
+  <data name="ShindoName.Int7" xml:space="preserve">
+    <value>Intensity 7</value>
+  </data>
+  <data name="ShindoName.Unknown" xml:space="preserve">
+    <value>Intensity unknown</value>
+  </data>
+  <data name="ShindoThreshold.Int1" xml:space="preserve">
+    <value>Intensity 1 or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int2" xml:space="preserve">
+    <value>Intensity 2 or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int3" xml:space="preserve">
+    <value>Intensity 3 or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int4" xml:space="preserve">
+    <value>Intensity 4 or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int5Lower" xml:space="preserve">
+    <value>Intensity 5 lower or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int5Upper" xml:space="preserve">
+    <value>Intensity 5 upper or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int6Lower" xml:space="preserve">
+    <value>Intensity 6 lower or higher</value>
+  </data>
+  <data name="ShindoThreshold.Int6Upper" xml:space="preserve">
+    <value>Intensity 6 upper or higher</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityDash" xml:space="preserve">
+    <value>{int}: max intensity [-,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQ" xml:space="preserve">
+    <value>{int}: max intensity [?,0,1,...,6-,6+,7]</value>
+  </data>
+  <data name="Sound.Desc.MaxIntensityQMode" xml:space="preserve">
+    <value>{int}: max intensity [?,0,1,...,6-,6+,7]
+{mode}: playback mode [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.QzssGroup" xml:space="preserve">
+    <value>It does not play when merged into simultaneously announced information.</value>
+  </data>
+  <data name="Sound.Desc.QzssNankai" xml:space="preserve">
+    <value>It plays when the reception of information about the Nankai Trough is completed.</value>
+  </data>
+  <data name="Sound.Desc.QzssReceived" xml:space="preserve">
+    <value>It plays even when merged into simultaneously announced information, but not for completely identical information.</value>
+  </data>
+  <data name="Sound.Desc.ShakeRise" xml:space="preserve">
+    <value>It also plays when the intensity rises.
+Shake detection must be enabled in the settings for this to play.
+{mode}: playback mode [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.ShakeWeak" xml:space="preserve">
+    <value>Shake detection must be enabled in the settings for this to play.
+{mode}: playback mode [replay, realtime]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiDowngrade" xml:space="preserve">
+    <value>It plays when the maximum warning level goes down.
+{lv}: warning type after cancellation [none, fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiNew" xml:space="preserve">
+    <value>It plays when received from a state with nothing announced.
+{lv}: warning type [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpdated" xml:space="preserve">
+    <value>This sound plays when no other tsunami-related sound was played.
+{lv}: maximum warning type [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Desc.TsunamiUpgrade" xml:space="preserve">
+    <value>It plays when a higher-level warning / advisory is announced.
+{lv}: warning type after the update [fore, adv, warn, major]</value>
+  </data>
+  <data name="Sound.Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Sound.EewCancel" xml:space="preserve">
+    <value>Earthquake Early Warning received (cancelled)</value>
+  </data>
+  <data name="Sound.EewFinal" xml:space="preserve">
+    <value>Earthquake Early Warning received (final)</value>
+  </data>
+  <data name="Sound.EewFirst" xml:space="preserve">
+    <value>Earthquake Early Warning received (first)</value>
+  </data>
+  <data name="Sound.EewReceived" xml:space="preserve">
+    <value>Earthquake Early Warning received</value>
+  </data>
+  <data name="Sound.EewWarning" xml:space="preserve">
+    <value>Earthquake Early Warning (warning) announced / level reached</value>
+  </data>
+  <data name="Sound.EqIntensityUpdated" xml:space="preserve">
+    <value>Intensity updated</value>
+  </data>
+  <data name="Sound.EqTrainingUpdated" xml:space="preserve">
+    <value>Earthquake information updated (drill)</value>
+  </data>
+  <data name="Sound.EqUpdated" xml:space="preserve">
+    <value>Earthquake information updated</value>
+  </data>
+  <data name="Sound.LightningArrival" xml:space="preserve">
+    <value>When information is received</value>
+  </data>
+  <data name="Sound.Master" xml:space="preserve">
+    <value>Master volume</value>
+  </data>
+  <data name="Sound.Mute" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="Sound.QzssGroup" xml:space="preserve">
+    <value>New group received</value>
+  </data>
+  <data name="Sound.QzssNankai" xml:space="preserve">
+    <value>Nankai Trough information reception completed</value>
+  </data>
+  <data name="Sound.QzssReceived" xml:space="preserve">
+    <value>New information received</value>
+  </data>
+  <data name="Sound.ShakeMedium" xml:space="preserve">
+    <value>Shaking detected (intensity 1 to below 3)</value>
+  </data>
+  <data name="Sound.ShakeStrong" xml:space="preserve">
+    <value>Shaking detected (intensity 3 to below 5 lower)</value>
+  </data>
+  <data name="Sound.ShakeStronger" xml:space="preserve">
+    <value>Shaking detected (intensity 5 lower or higher)</value>
+  </data>
+  <data name="Sound.ShakeWeak" xml:space="preserve">
+    <value>Shaking detected (below intensity 1)</value>
+  </data>
+  <data name="Sound.ShowButton" xml:space="preserve">
+    <value>Show the volume button in the main window</value>
+  </data>
+  <data name="Sound.TsunamiDowngrade" xml:space="preserve">
+    <value>Warning / advisory cancelled</value>
+  </data>
+  <data name="Sound.TsunamiNew" xml:space="preserve">
+    <value>Tsunami information announced</value>
+  </data>
+  <data name="Sound.TsunamiUpdated" xml:space="preserve">
+    <value>Tsunami information updated</value>
+  </data>
+  <data name="Sound.TsunamiUpgrade" xml:space="preserve">
+    <value>Warning / advisory updated</value>
+  </data>
+  <data name="Sound.Unavailable" xml:space="preserve">
+    <value>Audio playback is unavailable</value>
+  </data>
+  <data name="Sound.Unavailable.Desc" xml:space="preserve">
+    <value>There may be no playback device. A restart is required.</value>
+  </data>
+  <data name="Sound.VolumeLabel" xml:space="preserve">
+    <value>Volume:</value>
+  </data>
+  <data name="Source.JmaXml" xml:space="preserve">
+    <value>JMA XML</value>
+  </data>
+  <data name="Template.SyntaxError.Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Template.SyntaxError.Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Template.SyntaxError.Message" xml:space="preserve">
+    <value>The template has a syntax error:
+
+{0}
+
+Keep it as it is?</value>
+  </data>
+  <data name="Template.SyntaxError.Title" xml:space="preserve">
+    <value>Template syntax error</value>
+  </data>
+  <data name="TemplateEditorDialog.01" xml:space="preserve">
+    <value>Edit template</value>
+  </data>
+  <data name="TemplateEditorDialog.02" xml:space="preserve">
+    <value>You can create dynamic content using the Scriban template language</value>
+  </data>
+  <data name="TemplateEditorDialog.03" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Theme.BuiltIn" xml:space="preserve">
+    <value>Built-in theme</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Message" xml:space="preserve">
+    <value>Built-in themes cannot be modified, so it will be saved as an external theme.
+It will be saved as {0}.json. Please check that the name does not contain characters that cannot be used in file names.</value>
+  </data>
+  <data name="Theme.Dialog.Builtin.Title" xml:space="preserve">
+    <value>Save built-in theme</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Message" xml:space="preserve">
+    <value>Close the window and discard the changes to the theme being edited?</value>
+  </data>
+  <data name="Theme.Dialog.Discard.Title" xml:space="preserve">
+    <value>Discard theme changes</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Message" xml:space="preserve">
+    <value>Overwrite the theme in {0}?</value>
+  </data>
+  <data name="Theme.Dialog.Overwrite.Title" xml:space="preserve">
+    <value>Save external theme</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Edit" xml:space="preserve">
+    <value>Discard the changes to the theme being edited?</value>
+  </data>
+  <data name="Theme.Dialog.Restore.File" xml:space="preserve">
+    <value>Reload the theme from the file?</value>
+  </data>
+  <data name="Theme.Dialog.Restore.Title" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Message" xml:space="preserve">
+    <value>Failed to save the theme: {0}</value>
+  </data>
+  <data name="Theme.Dialog.SaveFailed.Title" xml:space="preserve">
+    <value>Failed to save</value>
+  </data>
+  <data name="Theme.External" xml:space="preserve">
+    <value>External theme: {0}</value>
+  </data>
+  <data name="Theme.Temporary" xml:space="preserve">
+    <value>Theme being edited</value>
+  </data>
+  <data name="Tpl.Eew.Message" xml:space="preserve">
+    <value>{{IntensityLongName
+if IsIntensityOver; " or higher"; end
+
+if EpicenterPlaceName
+$"/{EpicenterPlaceName}"
+end
+
+if Magnitude
+$"/M{Magnitude | math.format "F1"}"
+end
+
+if Depth &amp;&amp; !IsTemporaryEpicenter
+$"/{Depth}km"
+end
+
+if IsWarning &amp;&amp; WarningAreaNames
+$" [{WarningAreaNames | array.join ", "}]"
+end}}</value>
+  </data>
+  <data name="Tpl.Eew.Title" xml:space="preserve">
+    <value>{{if IsCancelled; "[Cancelled] "; end
+if IsReplay; "[Replay] "; end
+"Earthquake Early Warning (No. "
+SerialNo | math.format "D2"
+if IsFinal; " / Final"; end
+")"}}</value>
+  </data>
+  <data name="Tpl.Eq.Message" xml:space="preserve">
+    <value>{{
+# status
+if IsCancelled; "[Cancelled] "; end
+if IsTrainingOrTest; "[Drill/Test] "; end
+if IsTest; "[Test] "; end
+
+$"Max {MaxIntensityLongName}"
+
+if Hypocenter &amp;&amp; (IsHypocenterOnly || IsDetailIntensityApplied)
+$"/{Hypocenter.OccurrenceAt | date.to_string "%H:%M"}"
+$"/{Hypocenter.PlaceName}"
+
+if !Hypocenter.IsNoDepthData
+if Hypocenter.IsVeryShallow
+"/very shallow"
+else
+$"/{Hypocenter.Depth}km"
+end
+end
+
+if Hypocenter.MagnitudeAlternativeText
+$"/{Hypocenter.MagnitudeAlternativeText}"
+else
+$"/M{Hypocenter.Magnitude | math.format "F1"}"
+end
+end}}</value>
+  </data>
+  <data name="Tpl.Eq.Title" xml:space="preserve">
+    <value>{{if IsCancelled; "[Cancelled] "; end
+if IsTrainingOrTest; "[Drill/Test] "; end
+if IsTest; "[Test] "; end
+LatestInformationName}}</value>
+  </data>
+  <data name="Tpl.Tsunami.Message" xml:space="preserve">
+    <value>{{
+case Level
+when "None"
+LevelString = "No tsunami"
+when "Forecast"
+LevelString = "Tsunami Forecast"
+when "Advisory"
+LevelString = "Tsunami Advisory"
+when "Warning"
+LevelString = "Tsunami Warning"
+when "MajorWarning"
+LevelString = "Major Tsunami Warning"
+else
+LevelString = "Tsunami information"
+end
+case PreviousLevel
+when "None"
+PreviousLevelString = "No tsunami"
+when "Forecast"
+PreviousLevelString = "Tsunami Forecast"
+when "Advisory"
+PreviousLevelString = "Tsunami Advisory"
+when "Warning"
+PreviousLevelString = "Tsunami Warning"
+when "MajorWarning"
+PreviousLevelString = "Major Tsunami Warning"
+else
+PreviousLevelString = "Tsunami information"
+end
+
+if PreviousLevel != Level
+if PreviousLevel == "None"
+LevelString + " has been issued."
+else if Level == "None"
+if PreviousLevel == "Forecast"
+"The Tsunami Forecast has expired."
+else
+PreviousLevelString + " has been cancelled."
+end
+else
+PreviousLevelString + " has been changed to " + LevelString + "."
+end
+end}}
+
+{{if TsunamiInfo &amp;&amp; Level != "None"
+if TsunamiInfo.MajorWarningAreas
+$" [{TsunamiInfo.MajorWarningAreas | array.map "Name" | array.join ", "}]"
+else if TsunamiInfo.WarningAreas
+$" [{TsunamiInfo.WarningAreas | array.map "Name" | array.join ", "}]"
+else if TsunamiInfo.AdvisoryAreas
+$" ({TsunamiInfo.AdvisoryAreas | array.map "Name" | array.join ", "})"
+end
+end}}</value>
+  </data>
+  <data name="Tpl.Tsunami.Title" xml:space="preserve">
+    <value>{{if TsunamiInfo &amp;&amp; TsunamiInfo.SpecialState; "[" + TsunamiInfo.SpecialState + "] "; end
+if Level == "None"
+"Tsunami cleared"
+else if Level == "Forecast"
+"Tsunami Forecast"
+else if Level == "Advisory"
+"Tsunami Advisory"
+else if Level == "Warning"
+"Tsunami Warning"
+else if Level == "MajorWarning"
+"Major Tsunami Warning"
+else
+"Tsunami information"
+end}}</value>
+  </data>
+  <data name="Tray.Stored.Message" xml:space="preserve">
+    <value>The application is still running</value>
+  </data>
+  <data name="Tray.Stored.Title" xml:space="preserve">
+    <value>Stored in the task tray</value>
+  </data>
+  <data name="Tsunami.ExpectedArrival" xml:space="preserve">
+    <value>Expected {0:HH:mm}</value>
+  </data>
+  <data name="TsunamiInformationTrigger.01" xml:space="preserve">
+    <value>Announcement level: </value>
+  </data>
+  <data name="TsunamiInformationTrigger.02" xml:space="preserve">
+    <value>Run only when it matches</value>
+  </data>
+  <data name="TsunamiInformationTrigger.03" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
+  <data name="TsunamiInformationTrigger.04" xml:space="preserve">
+    <value>When tsunami information is announced from a state of no announcement</value>
+  </data>
+  <data name="TsunamiInformationTrigger.05" xml:space="preserve">
+    <value>Warning level raised</value>
+  </data>
+  <data name="TsunamiInformationTrigger.06" xml:space="preserve">
+    <value>When switched to a higher-level warning</value>
+  </data>
+  <data name="TsunamiInformationTrigger.07" xml:space="preserve">
+    <value>Warning level lowered / cancelled</value>
+  </data>
+  <data name="TsunamiInformationTrigger.08" xml:space="preserve">
+    <value>When the warning level is lowered or cancelled</value>
+  </data>
+  <data name="TsunamiInformationTrigger.09" xml:space="preserve">
+    <value>Other updates</value>
+  </data>
+  <data name="TsunamiInformationTrigger.10" xml:space="preserve">
+    <value>When information is updated in ways other than the above, such as areas being added or removed</value>
+  </data>
+  <data name="TsunamiLevel.Advisory" xml:space="preserve">
+    <value>Tsunami Advisory</value>
+  </data>
+  <data name="TsunamiLevel.Forecast" xml:space="preserve">
+    <value>Tsunami Forecast</value>
+  </data>
+  <data name="TsunamiLevel.MajorWarning" xml:space="preserve">
+    <value>Major Tsunami Warning</value>
+  </data>
+  <data name="TsunamiLevel.None" xml:space="preserve">
+    <value>No tsunami (all)</value>
+  </data>
+  <data name="TsunamiLevel.Warning" xml:space="preserve">
+    <value>Tsunami Warning</value>
+  </data>
+  <data name="TsunamiPage.01" xml:space="preserve">
+    <value>Switch tabs automatically when tsunami information is updated</value>
+  </data>
+  <data name="TsunamiPage.02" xml:space="preserve">
+    <value>The tab does not switch when a warning is cancelled or expires.</value>
+  </data>
+  <data name="TsunamiReport.01" xml:space="preserve">
+    <value>Disaster weather information (tsunami)</value>
+  </data>
+  <data name="TsunamiReport.02" xml:space="preserve">
+    <value>Warning cancelled</value>
+  </data>
+  <data name="TsunamiView.01" xml:space="preserve">
+    <value>Tsunami information</value>
+  </data>
+  <data name="TsunamiView.02" xml:space="preserve">
+    <value>Observed value</value>
+  </data>
+  <data name="TsunamiView.03" xml:space="preserve">
+    <value>Rising</value>
+  </data>
+  <data name="TsunamiView.04" xml:space="preserve">
+    <value>A tsunami higher than this is approaching.</value>
+  </data>
+  <data name="TsunamiView.05" xml:space="preserve">
+    <value>High tide time</value>
+  </data>
+  <data name="TsunamiView.06" xml:space="preserve">
+    <value>Major Tsunami Warning</value>
+  </data>
+  <data name="TsunamiView.07" xml:space="preserve">
+    <value>Tsunami Warning</value>
+  </data>
+  <data name="TsunamiView.08" xml:space="preserve">
+    <value>Tsunami Advisory</value>
+  </data>
+  <data name="TsunamiView.09" xml:space="preserve">
+    <value>Tsunami Forecast</value>
+  </data>
+  <data name="TsunamiView.10" xml:space="preserve">
+    <value>Tsunami warnings, advisories and forecasts have been cancelled.</value>
+  </data>
+  <data name="TsunamiView.11" xml:space="preserve">
+    <value>No tsunami</value>
+  </data>
+  <data name="TsunamiView.12" xml:space="preserve">
+    <value>No tsunami information has been issued</value>
+  </data>
+  <data name="TsunamiView.13" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="TsunamiView.F01" xml:space="preserve">
+    <value>Tsunami information ({0})</value>
+  </data>
+  <data name="TsunamiView.F02" xml:space="preserve">
+    <value>Issued {0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F03" xml:space="preserve">
+    <value>Expected height {0}</value>
+  </data>
+  <data name="TsunamiView.F04" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F05" xml:space="preserve">
+    <value>{0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F06" xml:space="preserve">
+    <value>Valid until {0:dd HH:mm}</value>
+  </data>
+  <data name="TsunamiView.F07" xml:space="preserve">
+    <value>Connected to: {0}</value>
+  </data>
+  <data name="Typhoon.TropicalDepression" xml:space="preserve">
+    <value>Tropical depression</value>
+  </data>
+  <data name="TyphoonReport.01" xml:space="preserve">
+    <value>Disaster weather information (typhoon)</value>
+  </data>
+  <data name="TyphoonReport.02" xml:space="preserve">
+    <value>Size / strength</value>
+  </data>
+  <data name="TyphoonReport.03" xml:space="preserve">
+    <value>Central pressure</value>
+  </data>
+  <data name="TyphoonReport.04" xml:space="preserve">
+    <value>Max wind speed</value>
+  </data>
+  <data name="TyphoonReport.05" xml:space="preserve">
+    <value>Max gust speed</value>
+  </data>
+  <data name="TyphoonReport.F01" xml:space="preserve">
+    <value>Typhoon No. {0}</value>
+  </data>
+  <data name="TyphoonView.01" xml:space="preserve">
+    <value>Center position</value>
+  </data>
+  <data name="TyphoonView.02" xml:space="preserve">
+    <value>Max wind speed near the center</value>
+  </data>
+  <data name="TyphoonView.03" xml:space="preserve">
+    <value>The typhoon has dissipated</value>
+  </data>
+  <data name="TyphoonView.04" xml:space="preserve">
+    <value>No typhoon information has been issued</value>
+  </data>
+  <data name="TyphoonView.F01" xml:space="preserve">
+    <value>{0:MMMM yyyy}</value>
+  </data>
+  <data name="TyphoonView.F02" xml:space="preserve">
+    <value>{0:dd HH:00}</value>
+  </data>
+  <data name="Update.Apply" xml:space="preserve">
+    <value>Apply update</value>
+  </data>
+  <data name="Update.Apply.Desc" xml:space="preserve">
+    <value>Downloads the update files and applies them automatically.</value>
+  </data>
+  <data name="Update.Available" xml:space="preserve">
+    <value>An application update is available.</value>
+  </data>
+  <data name="Update.History" xml:space="preserve">
+    <value>Release notes</value>
+  </data>
+  <data name="Update.OpenDownload" xml:space="preserve">
+    <value>Open download page</value>
+  </data>
+  <data name="Update.State.Applying" xml:space="preserve">
+    <value>Applying the update</value>
+  </data>
+  <data name="Update.State.Downloading" xml:space="preserve">
+    <value>Downloading the update file</value>
+  </data>
+  <data name="Update.State.Failed" xml:space="preserve">
+    <value>The update failed. If it keeps failing, please update manually.</value>
+  </data>
+  <data name="Update.State.Latest" xml:space="preserve">
+    <value>The latest version is already installed</value>
+  </data>
+  <data name="Update.State.Progress" xml:space="preserve">
+    <value>Downloading the update file: {0:#,0}kb / {1:#,0}kb</value>
+  </data>
+  <data name="Update.State.Verifying" xml:space="preserve">
+    <value>Verifying the downloaded file</value>
+  </data>
+  <data name="Update.Status" xml:space="preserve">
+    <value>Update status</value>
+  </data>
+  <data name="UpdateAvailableTrigger.01" xml:space="preserve">
+    <value>Trigger repeatedly</value>
+  </data>
+  <data name="UpdateAvailableTrigger.02" xml:space="preserve">
+    <value>When on, triggers at every update check (about every 10 minutes) while an update exists.
+When off, triggers only once when an update is found.</value>
+  </data>
+  <data name="Voicevox.About" xml:space="preserve">
+    <value>About VOICEVOX</value>
+  </data>
+  <data name="Voicevox.AutoDelete" xml:space="preserve">
+    <value>Delete old cache automatically</value>
+  </data>
+  <data name="Voicevox.AutoDelete.Desc" xml:space="preserve">
+    <value>If not deleted automatically, the cache is removed according to the OS's own cleanup period.</value>
+  </data>
+  <data name="Voicevox.BaseUrl" xml:space="preserve">
+    <value>Base URL</value>
+  </data>
+  <data name="Voicevox.BaseUrl.Desc" xml:space="preserve">
+    <value>Do not change this if you do not understand what it means!
+By changing this value you can synthesize speech with a VOICEVOX running on another PC, or use voices from VOICEVOX Nemo and others that have a VOICEVOX-compatible API.
+Even when speech is synthesized on another PC, the audio itself is played from this application.</value>
+  </data>
+  <data name="Voicevox.CacheManage" xml:space="preserve">
+    <value>Cache management</value>
+  </data>
+  <data name="Voicevox.ClearCache" xml:space="preserve">
+    <value>Clear cache</value>
+  </data>
+  <data name="Voicevox.ClearCache.Desc" xml:space="preserve">
+    <value>Delete all cached audio</value>
+  </data>
+  <data name="Voicevox.Intonation" xml:space="preserve">
+    <value>Intonation</value>
+  </data>
+  <data name="Voicevox.NoCache" xml:space="preserve">
+    <value>Do not cache audio</value>
+  </data>
+  <data name="Voicevox.NoCache.Desc" xml:space="preserve">
+    <value>Even when audio is not cached, temporary files are still used for speech synthesis.</value>
+  </data>
+  <data name="Voicevox.NoCache.Off" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="Voicevox.NoCache.On" xml:space="preserve">
+    <value>Don't cache</value>
+  </data>
+  <data name="Voicevox.PauseLength" xml:space="preserve">
+    <value>Pause length</value>
+  </data>
+  <data name="Voicevox.Pitch" xml:space="preserve">
+    <value>Pitch</value>
+  </data>
+  <data name="Voicevox.PlayTest" xml:space="preserve">
+    <value>Play test voice</value>
+  </data>
+  <data name="Voicevox.RefreshSpeakers" xml:space="preserve">
+    <value>Refresh speaker list</value>
+  </data>
+  <data name="Voicevox.RetentionDays" xml:space="preserve">
+    <value>Cache retention period (days)</value>
+  </data>
+  <data name="Voicevox.RetentionDays.Desc" xml:space="preserve">
+    <value>When a cached item is used, its retention period is extended.</value>
+  </data>
+  <data name="Voicevox.Speaker" xml:space="preserve">
+    <value>Speaker</value>
+  </data>
+  <data name="Voicevox.SpeakersNotLoaded" xml:space="preserve">
+    <value>The speaker list has not been loaded</value>
+  </data>
+  <data name="Voicevox.Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Voicevox.Use" xml:space="preserve">
+    <value>Use this feature</value>
+  </data>
+  <data name="VoicevoxSpeechAction.01" xml:space="preserve">
+    <value>Suspends the workflow until reading aloud finishes. Useful when running another action after reading finishes.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.02" xml:space="preserve">
+    <value>Read sequentially</value>
+  </data>
+  <data name="VoicevoxSpeechAction.03" xml:space="preserve">
+    <value>Splits the text at line breaks, synthesizes everything at once, then reads it in order. If synthesis cannot keep up, reading may break between segments, but the cache is used more easily.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.04" xml:space="preserve">
+    <value>Interrupt the previous playback</value>
+  </data>
+  <data name="VoicevoxSpeechAction.05" xml:space="preserve">
+    <value>If a new playback request arrives while this action is playing audio, the ongoing playback is interrupted and the new audio is played. When reading sequentially, the current segment is interrupted and the remaining segments are cancelled.</value>
+  </data>
+  <data name="VoicevoxSpeechAction.06" xml:space="preserve">
+    <value>Text to read</value>
+  </data>
+  <data name="VolcanoReport.01" xml:space="preserve">
+    <value>Disaster weather information (volcano)</value>
+  </data>
+  <data name="VolcanoReport.02" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="VolcanoReport.03" xml:space="preserve">
+    <value>Phenomenon</value>
+  </data>
+  <data name="WaitAction.01" xml:space="preserve">
+    <value>Wait time (milliseconds): </value>
+  </data>
+  <data name="WeatherReport.01" xml:space="preserve">
+    <value>Disaster weather information (weather)</value>
+  </data>
+  <data name="WeatherReport.02" xml:space="preserve">
+    <value>(issued)</value>
+  </data>
+  <data name="WeatherReport.03" xml:space="preserve">
+    <value>(cancelled)</value>
+  </data>
+  <data name="WebhookAction.01" xml:space="preserve">
+    <value>Import the response as point forecasts for Earthquake Early Warnings</value>
+  </data>
+  <data name="WebhookAction.02" xml:space="preserve">
+    <value>Works only with the Earthquake Early Warning trigger. The measured intensity and arrival time in the response JSON are displayed as-is.
+The accuracy of the estimates is the responsibility of the application returning the response.</value>
+  </data>
+  <data name="WebhookAction.03" xml:space="preserve">
+    <value>Latest response</value>
+  </data>
+  <data name="Wf.ChangeAction.Message" xml:space="preserve">
+    <value>Change from the current setting "{0}" to "{1}"?
+
+The content set for the current action will be lost.</value>
+  </data>
+  <data name="Wf.ChangeAction.Title" xml:space="preserve">
+    <value>Confirm action change</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Message" xml:space="preserve">
+    <value>Change from the current setting "{0}" to "{1}"?
+
+The content of the currently configured trigger will be lost.</value>
+  </data>
+  <data name="Wf.ChangeTrigger.Title" xml:space="preserve">
+    <value>Confirm trigger change</value>
+  </data>
+  <data name="Wf.DeleteAction.Message" xml:space="preserve">
+    <value>Delete the action "{0}"?
+This cannot be undone.</value>
+  </data>
+  <data name="Wf.DeleteAction.Title" xml:space="preserve">
+    <value>Delete action</value>
+  </data>
+  <data name="Wf.Exec.Exception" xml:space="preserve">
+    <value>An exception occurred during execution.
+</value>
+  </data>
+  <data name="Wf.Exec.Exit" xml:space="preserve">
+    <value>Exit code: {0}
+Execution time: {1}ms</value>
+  </data>
+  <data name="Wf.Exec.Running" xml:space="preserve">
+    <value>Running...</value>
+  </data>
+  <data name="Wf.Exec.StartFailed" xml:space="preserve">
+    <value>Failed to start the process</value>
+  </data>
+  <data name="Wf.Inject.NoController" xml:space="preserve">
+    <value>Point forecast import: could not identify the source EEW controller.</value>
+  </data>
+  <data name="Wf.Inject.Skip" xml:space="preserve">
+    <value>Point forecast import: skipped because the status code was not successful.</value>
+  </data>
+  <data name="Wf.Inject.TooLarge" xml:space="preserve">
+    <value>Point forecast import: the response is too large (within {0} KiB).</value>
+  </data>
+  <data name="Wf.Webhook.Exception" xml:space="preserve">
+    <value>An exception occurred.
+{0}</value>
+  </data>
+  <data name="Wf.Webhook.Result" xml:space="preserve">
+    <value>Response time: {0}ms
+Status code: {1}
+Response: {2}</value>
+  </data>
+  <data name="Wf.Webhook.Timeout" xml:space="preserve">
+    <value>Aborted because the point forecast import timed out ({0:0.#} s).</value>
+  </data>
+  <data name="WfAction.Activate" xml:space="preserve">
+    <value>Bring the main window to the front</value>
+  </data>
+  <data name="WfAction.Activate.Desc" xml:space="preserve">
+    <value>Brings the main window to the front.</value>
+  </data>
+  <data name="WfAction.Dummy" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="WfAction.Dummy.Desc" xml:space="preserve">
+    <value>This action does nothing.
+Nothing is executed and nothing is interrupted.</value>
+  </data>
+  <data name="WfAction.ExecuteFile" xml:space="preserve">
+    <value>Open (run) the specified file</value>
+  </data>
+  <data name="WfAction.Log" xml:space="preserve">
+    <value>Write log</value>
+  </data>
+  <data name="WfAction.Multiple" xml:space="preserve">
+    <value>Run multiple actions</value>
+  </data>
+  <data name="WfAction.Notify" xml:space="preserve">
+    <value>Send notification</value>
+  </data>
+  <data name="WfAction.PlaySound" xml:space="preserve">
+    <value>Play sound</value>
+  </data>
+  <data name="WfAction.SwitchTab" xml:space="preserve">
+    <value>Switch tab</value>
+  </data>
+  <data name="WfAction.SwitchTab.Desc" xml:space="preserve">
+    <value>Switches to the tab that raised the event.
+Nothing happens for events that do not depend on a tab.</value>
+  </data>
+  <data name="WfAction.Voicevox" xml:space="preserve">
+    <value>Read text aloud with VOICEVOX</value>
+  </data>
+  <data name="WfAction.Wait" xml:space="preserve">
+    <value>Wait for a specified time</value>
+  </data>
+  <data name="WfAction.Webhook" xml:space="preserve">
+    <value>POST the content to the specified URL</value>
+  </data>
+  <data name="WfTrigger.All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="WfTrigger.All.Desc" xml:space="preserve">
+    <value>Triggered for all events.</value>
+  </data>
+  <data name="WfTrigger.Dummy" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="WfTrigger.Dummy.Desc" xml:space="preserve">
+    <value>This trigger does nothing.
+It is never executed except by a test run.</value>
+  </data>
+  <data name="WfTrigger.Earthquake" xml:space="preserve">
+    <value>(Earthquake info) Earthquake information received</value>
+  </data>
+  <data name="WfTrigger.Eew" xml:space="preserve">
+    <value>(Kyoshin Monitor) Earthquake Early Warning</value>
+  </data>
+  <data name="WfTrigger.Qzss" xml:space="preserve">
+    <value>(DC Report) Received / updated</value>
+  </data>
+  <data name="WfTrigger.ShakeDetect" xml:space="preserve">
+    <value>(Kyoshin Monitor) Shake detection</value>
+  </data>
+  <data name="WfTrigger.Startup" xml:space="preserve">
+    <value>On application startup</value>
+  </data>
+  <data name="WfTrigger.Startup.Desc" xml:space="preserve">
+    <value>Triggered only once when the application has finished starting.</value>
+  </data>
+  <data name="WfTrigger.Tsunami" xml:space="preserve">
+    <value>(Tsunami info) Tsunami information updated</value>
+  </data>
+  <data name="WfTrigger.UpdateAvailable" xml:space="preserve">
+    <value>When an application update exists</value>
+  </data>
+  <data name="WindowThemeEditWindow.01" xml:space="preserve">
+    <value>Edit window theme</value>
+  </data>
+  <data name="WindowThemeEditWindow.02" xml:space="preserve">
+    <value>Restore (reload the file state)</value>
+  </data>
+  <data name="WindowThemeEditWindow.03" xml:space="preserve">
+    <value>Save theme</value>
+  </data>
+  <data name="WindowThemeEditWindow.04" xml:space="preserve">
+    <value>Theme name</value>
+  </data>
+  <data name="WindowThemeEditWindow.05" xml:space="preserve">
+    <value>Entire window</value>
+  </data>
+  <data name="WindowThemeEditWindow.06" xml:space="preserve">
+    <value>Title and sidebar color</value>
+  </data>
+  <data name="WindowThemeEditWindow.07" xml:space="preserve">
+    <value>The title bar part is applied on Windows only.</value>
+  </data>
+  <data name="WindowThemeEditWindow.08" xml:space="preserve">
+    <value>Base on the dark theme</value>
+  </data>
+  <data name="WindowThemeEditWindow.09" xml:space="preserve">
+    <value>General controls such as buttons follow the dark theme.</value>
+  </data>
+  <data name="WindowThemeEditWindow.10" xml:space="preserve">
+    <value>Main background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.11" xml:space="preserve">
+    <value>Main text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.12" xml:space="preserve">
+    <value>Sub text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.13" xml:space="preserve">
+    <value>Emphasis text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.14" xml:space="preserve">
+    <value>At present this is used only for the time color during Kyoshin Monitor replay.</value>
+  </data>
+  <data name="WindowThemeEditWindow.15" xml:space="preserve">
+    <value>Error / warning text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.16" xml:space="preserve">
+    <value>Error / warning sub text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.17" xml:space="preserve">
+    <value>Error / warning background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.18" xml:space="preserve">
+    <value>Inner windows (widgets)</value>
+  </data>
+  <data name="WindowThemeEditWindow.19" xml:space="preserve">
+    <value>Background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.20" xml:space="preserve">
+    <value>Heading background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.21" xml:space="preserve">
+    <value>Error / warning background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.22" xml:space="preserve">
+    <value>Error / warning heading background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.23" xml:space="preserve">
+    <value>Overseas terrain color</value>
+  </data>
+  <data name="WindowThemeEditWindow.24" xml:space="preserve">
+    <value>Borders cannot be configured.</value>
+  </data>
+  <data name="WindowThemeEditWindow.25" xml:space="preserve">
+    <value>Terrain color</value>
+  </data>
+  <data name="WindowThemeEditWindow.26" xml:space="preserve">
+    <value>Coastline color</value>
+  </data>
+  <data name="WindowThemeEditWindow.27" xml:space="preserve">
+    <value>Coastline thickness</value>
+  </data>
+  <data name="WindowThemeEditWindow.28" xml:space="preserve">
+    <value>Setting it to 0 lightens the drawing load.</value>
+  </data>
+  <data name="WindowThemeEditWindow.29" xml:space="preserve">
+    <value>Prefecture border color</value>
+  </data>
+  <data name="WindowThemeEditWindow.30" xml:space="preserve">
+    <value>Prefecture border thickness</value>
+  </data>
+  <data name="WindowThemeEditWindow.31" xml:space="preserve">
+    <value>Area border color</value>
+  </data>
+  <data name="WindowThemeEditWindow.32" xml:space="preserve">
+    <value>Area border thickness</value>
+  </data>
+  <data name="WindowThemeEditWindow.33" xml:space="preserve">
+    <value>Epicenter icon border</value>
+  </data>
+  <data name="WindowThemeEditWindow.34" xml:space="preserve">
+    <value>Epicenter icon center</value>
+  </data>
+  <data name="WindowThemeEditWindow.35" xml:space="preserve">
+    <value>Epicenter icon border (forecast)</value>
+  </data>
+  <data name="WindowThemeEditWindow.36" xml:space="preserve">
+    <value>Epicenter icon center (forecast)</value>
+  </data>
+  <data name="WindowThemeEditWindow.37" xml:space="preserve">
+    <value>Epicenter icon border (warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.38" xml:space="preserve">
+    <value>Epicenter icon center (warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.39" xml:space="preserve">
+    <value>Epicenter icon blink animation</value>
+  </data>
+  <data name="WindowThemeEditWindow.40" xml:space="preserve">
+    <value>P-wave color (forecast)</value>
+  </data>
+  <data name="WindowThemeEditWindow.41" xml:space="preserve">
+    <value>S-wave color (forecast)</value>
+  </data>
+  <data name="WindowThemeEditWindow.42" xml:space="preserve">
+    <value>Use a gradient for the forecast S-wave color</value>
+  </data>
+  <data name="WindowThemeEditWindow.43" xml:space="preserve">
+    <value>P-wave color (warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.44" xml:space="preserve">
+    <value>S-wave color (warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.45" xml:space="preserve">
+    <value>Use a gradient for the warning S-wave color</value>
+  </data>
+  <data name="WindowThemeEditWindow.46" xml:space="preserve">
+    <value>Tsunami Forecast background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.47" xml:space="preserve">
+    <value>Tsunami Forecast text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.48" xml:space="preserve">
+    <value>Tsunami Advisory background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.49" xml:space="preserve">
+    <value>Tsunami Advisory text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.50" xml:space="preserve">
+    <value>Tsunami Warning background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.51" xml:space="preserve">
+    <value>Tsunami Warning text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.52" xml:space="preserve">
+    <value>Major Tsunami Warning background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.53" xml:space="preserve">
+    <value>Major Tsunami Warning text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.54" xml:space="preserve">
+    <value>Eruption information</value>
+  </data>
+  <data name="WindowThemeEditWindow.55" xml:space="preserve">
+    <value>At present this is used only by the DC Report.</value>
+  </data>
+  <data name="WindowThemeEditWindow.56" xml:space="preserve">
+    <value>Light ash fall background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.57" xml:space="preserve">
+    <value>Light ash fall text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.58" xml:space="preserve">
+    <value>Moderate ash fall background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.59" xml:space="preserve">
+    <value>Moderate ash fall text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.60" xml:space="preserve">
+    <value>Heavy ash fall background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.61" xml:space="preserve">
+    <value>Heavy ash fall text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.62" xml:space="preserve">
+    <value>Falling small volcanic rocks background color</value>
+  </data>
+  <data name="WindowThemeEditWindow.63" xml:space="preserve">
+    <value>Falling small volcanic rocks text color</value>
+  </data>
+  <data name="WindowThemeEditWindow.64" xml:space="preserve">
+    <value>Weather warnings</value>
+  </data>
+  <data name="WindowThemeEditWindow.65" xml:space="preserve">
+    <value>Alert level 5 (emergency warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.66" xml:space="preserve">
+    <value>Alert level 4 (danger warning / landslide alert information)</value>
+  </data>
+  <data name="WindowThemeEditWindow.67" xml:space="preserve">
+    <value>Alert level 3 (warning)</value>
+  </data>
+  <data name="WindowThemeEditWindow.68" xml:space="preserve">
+    <value>Alert level 2 (advisory)</value>
+  </data>
+  <data name="WindowThemeEditWindow.69" xml:space="preserve">
+    <value>Marine typhoon warning</value>
+  </data>
+  <data name="WindowThemeEditWindow.70" xml:space="preserve">
+    <value>Marine storm warning</value>
+  </data>
+  <data name="WindowThemeEditWindow.71" xml:space="preserve">
+    <value>Marine gale warning</value>
+  </data>
+  <data name="WindowThemeEditWindow.72" xml:space="preserve">
+    <value>Marine wind warning</value>
+  </data>
+  <data name="Wizard.SetupWizardBefore" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageContent" xml:space="preserve">
+    <value>That completes the basic setup.
+
+You can launch the application with the "Launch" button at the bottom right.  
+You can open the settings window with the gear icon at the top right.  
+The wizard covers only a small part of the settings, and there are many more items, so try customizing it to your liking.
+
+KyoshinEewViewer for ingen is still under development.  
+If you notice any bugs or anything that feels off, feel free to contact the author.  
+Contact information is on the bottom tab of the settings window.
+
+---
+
+## Tips for using the application
+### I want to play sounds
+
+You can do it from the "Sound" tab of the settings window.  
+For items with a notation such as `{int}: max intensity`, you can change the file name to play depending on the maximum intensity and so on.  
+If you specify `C:\Sound\{int}.wav`, then `C:\Sound\5+.wav` is played for intensity 5 lower.
+
+### I want to use it for recording and so on
+
+When using it for streaming or recording, the tab area at the top may get in the way.  
+In that case, you can start it with command-line arguments in a special mode that shows only a specific tab. (The following is a Windows example)
+
+- You can start it with `KyoshinEewViewer.exe -s &lt;type&gt;`. The type can be specified as
+    - `kyoshin-monitor` Kyoshin Monitor
+    - `earthquake` Earthquake information
+    - `radar` Rain cloud radar
+    - `qzss` DC Report
+
+When started in this mode, the buttons at the bottom left are not shown, but they still exist, so you can click them to reset the map position or open the settings screen.</value>
+  </data>
+  <data name="Wizard.SetupWizardEpiloguePageTitle" xml:space="preserve">
+    <value>Finally</value>
+  </data>
+  <data name="Wizard.SetupWizardNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Wizard.SetupWizardRun" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapJapan" xml:space="preserve">
+    <value>Map (inside Japan)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewMapOther" xml:space="preserve">
+    <value>Map (overseas)</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockContent" xml:space="preserve">
+    <value>Normal widget content</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewNormalDockTitle" xml:space="preserve">
+    <value>Normal widget</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewTitle" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockContent" xml:space="preserve">
+    <value>Emergency widget content</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePagePreviewWarningDockTitle" xml:space="preserve">
+    <value>Emergency widget</value>
+  </data>
+  <data name="Wizard.SetupWizardSelectThemePageTitle" xml:space="preserve">
+    <value>Theme settings</value>
+  </data>
+  <data name="Wizard.SetupWizardSkipAndRun" xml:space="preserve">
+    <value>Skip and launch</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageFunctionDetail" xml:space="preserve">
+    <value>This application can receive and display
+
+- Real-time intensity from Kyoshin Monitor
+- Earthquake Early Warnings via Kyoshin Monitor, SignalNowProfessional and DM-D.S.S
+- Earthquake information via the JMA website and DM-D.S.S
+
+and more.
+
+Before you start using the application, let's customize it to the features and appearance you want.
+
+You can change these settings again from the settings window even after this wizard ends.  
+If you are in a hurry, use the "Skip and launch" button.</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitle" xml:space="preserve">
+    <value>Welcome to KyoshinEewViewer for ingen</value>
+  </data>
+  <data name="Wizard.SetupWizardWelcomePageTitleAlt" xml:space="preserve">
+    <value>Welcome to KyoshinEewViewer for ingen!</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionContent" xml:space="preserve">
+    <value>## About [Project DM-D.S.S](https://dmdata.jp/)
+
+This is a service that delivers earthquake information and more in real time using WebSocket and other methods. (paid)  
+By default, KyoshinEewViewer for ingen receives earthquake information using the [JMA Disaster Prevention XML (PULL type)](http://xml.kishou.go.jp/xmlpull.html), but this method introduces a lag of **about 1 to 3 minutes** from announcement to reception.  
+Using DM-D.S.S reduces it to **a few seconds**, allowing you to receive information at a speed equal to or faster than TV and apps provided by companies.
+
+## Pricing
+
+|Category|Price (monthly max)|Price (daily)|
+|---|---|---|
+|Earthquake Early Warning (forecast)|1650 JPY/month|75 JPY/day|
+|Earthquake Early Warning (warning)|440 JPY/month|20 JPY/day|
+|Earthquake / tsunami related|550 JPY/month|25 JPY/day|
+
+(As of July 2022 / only items usable with this software)
+
+To use it, please register an account and sign a contract, then link your account from the "DM-D.S.S" tab of the settings window after starting the application.</value>
+  </data>
+  <data name="Wizard.StetupWizardDmdataPromotionTitle" xml:space="preserve">
+    <value>Introducing Project DM-D.S.S</value>
+  </data>
+  <data name="Wizard.StetupWizardWindowTitle" xml:space="preserve">
+    <value>Setup wizard</value>
+  </data>
+  <data name="Workflow.Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Workflow.Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Workflow.Disabled" xml:space="preserve">
+    <value>(disabled)</value>
+  </data>
+  <data name="Workflow.Help" xml:space="preserve">
+    <value>About the workflow feature</value>
+  </data>
+  <data name="Workflow.New" xml:space="preserve">
+    <value>Create a new workflow</value>
+  </data>
+  <data name="Workflow.NewName" xml:space="preserve">
+    <value>New workflow</value>
+  </data>
+  <data name="Workflow.None" xml:space="preserve">
+    <value>There are no workflows yet.</value>
+  </data>
+  <data name="Workflow.Restore" xml:space="preserve">
+    <value>Restore the saved state (reload from file)</value>
+  </data>
+  <data name="Workflow.Save" xml:space="preserve">
+    <value>Save workflows</value>
+  </data>
+  <data name="Workflow.TestRun" xml:space="preserve">
+    <value>Test run</value>
+  </data>
+  <data name="Workflow.TestRunning" xml:space="preserve">
+    <value>A test run is in progress.</value>
+  </data>
+  <data name="Workflow.Trigger" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="Workflow.Warning" xml:space="preserve">
+    <value>The workflow feature is advanced and still being tested.
+Please read the explanation at the top left carefully before using it.</value>
+  </data>
+</root>

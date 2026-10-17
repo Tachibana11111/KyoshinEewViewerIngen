@@ -1,4 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Core;
 using KyoshinEewViewer.Core.Models;
 using KyoshinEewViewer.Services.ExternalPublishers.Axis.ApiModels;
@@ -39,7 +40,7 @@ public partial class AxisInformationProvider : ObservableObject
 	public partial string? PayloadErrorMessage { get; private set; }
 
 	[ObservableProperty]
-	public partial string? CurrentStatus { get; private set; } = "待機中";
+	public partial string? CurrentStatus { get; private set; } = Loc.Get("Axis.Status.Idle");
 
 	public event Action<AxisWebSocketMessage>? MessageReceived;
 
@@ -55,12 +56,12 @@ public partial class AxisInformationProvider : ObservableObject
 		WebSocketConnection.Connected += () =>
 		{
 			IsConnected = true;
-			CurrentStatus = "接続完了";
+			CurrentStatus = Loc.Get("Axis.Status.Connected");
 			BackoffTime = 1;
 		};
 		WebSocketConnection.PingCompleted += time =>
 		{
-			CurrentStatus = $"接続完了 (RTT: {time.TotalMilliseconds:0.0}ms)";
+			CurrentStatus = Loc.Get("Axis.Status.ConnectedRtt", time.TotalMilliseconds);
 		};
 		WebSocketConnection.Error += (message, canRetry) =>
 		{
@@ -72,10 +73,10 @@ public partial class AxisInformationProvider : ObservableObject
 		WebSocketConnection.Disconnected += () =>
 		{
 			IsConnected = false;
-			CurrentStatus = "切断されました";
+			CurrentStatus = Loc.Get("Axis.Status.Disconnected");
 			if (Config.Axis.Enable)
 			{
-				CurrentStatus = $"切断されました。{BackoffTime:0}秒後に再接続を行います…";
+				CurrentStatus = Loc.Get("Axis.Status.DisconnectedRetry", BackoffTime);
 				ReconnectTimer.Change(TimeSpan.FromSeconds(BackoffTime), Timeout.InfiniteTimeSpan);
 			}
 		};
@@ -92,7 +93,7 @@ public partial class AxisInformationProvider : ObservableObject
 				Config.Axis.Enable = false;
 				ApiClient.Jwt = null;
 				CurrentPayload = null;
-				PayloadErrorMessage = "トークンが入力されていません。";
+				PayloadErrorMessage = Loc.Get("Axis.NoToken");
 				return;
 			}
 			try
@@ -102,7 +103,7 @@ public partial class AxisInformationProvider : ObservableObject
 				if (DateTimeOffset.FromUnixTimeSeconds(CurrentPayload.Exp) < DateTimeOffset.UtcNow)
 				{
 					Config.Axis.Enable = false;
-					PayloadErrorMessage = "トークンの有効期限が切れています。";
+					PayloadErrorMessage = Loc.Get("Axis.TokenExpired");
 				}
 				else
 					PayloadErrorMessage = null;
@@ -160,14 +161,14 @@ public partial class AxisInformationProvider : ObservableObject
 		{
 			IsConnecting = true;
 			// 有効化
-			CurrentStatus = "接続中…";
+			CurrentStatus = Loc.Get("Axis.Status.Connecting");
 			await WebSocketConnection.ConnectAsync();
 			JwtRefreshTimer.Change(TimeSpan.FromMinutes(1), TimeSpan.FromDays(1));
 		}
 		catch (Exception ex)
 		{
 			Logger.LogError(ex, "接続に失敗しました。");
-			CurrentStatus = "接続に失敗しました。自動でリトライされます…";
+			CurrentStatus = Loc.Get("Axis.Status.ConnectFailed");
 			ReconnectTimer.Change(TimeSpan.FromSeconds(BackoffTime), Timeout.InfiniteTimeSpan);
 			IsConnected = false;
 		}
@@ -178,7 +179,7 @@ public partial class AxisInformationProvider : ObservableObject
 	{
 		try
 		{
-			CurrentStatus = "切断中…";
+			CurrentStatus = Loc.Get("Axis.Status.Disconnecting");
 			JwtRefreshTimer.Change(Timeout.Infinite, Timeout.Infinite);
 			ReconnectTimer.Change(Timeout.Infinite, Timeout.Infinite);
 			await WebSocketConnection.DisconnectAsync();
@@ -188,7 +189,7 @@ public partial class AxisInformationProvider : ObservableObject
 		{
 			Logger.LogError(ex, "切断に失敗しました。");
 		}
-		CurrentStatus = "切断しました";
+		CurrentStatus = Loc.Get("Axis.Status.DisconnectDone");
 	}
 
 	public async void CheckAndRefreshJwt()
@@ -205,7 +206,7 @@ public partial class AxisInformationProvider : ObservableObject
 			// 間に合わなかった
 			if (payload.ExpDateTime <= DateTimeOffset.UtcNow)
 			{
-				PayloadErrorMessage = "トークンの有効期限が切れています。";
+				PayloadErrorMessage = Loc.Get("Axis.TokenExpired");
 				Config.Axis.Enable = false;
 				return;
 			}

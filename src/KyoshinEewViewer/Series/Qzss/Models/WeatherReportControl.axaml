@@ -6,18 +6,18 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:WeatherReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.WeatherReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
     </UserControl.Resources>
     <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="280" RowDefinitions="auto,*">
         <StackPanel>
-            <local:DCReportHeaderControl Title="防災気象情報(気象)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr WeatherReport.01}" ShowReportCount="True" />
             <Border Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0">
                 <StackPanel Orientation="Horizontal" Margin="5,0" HorizontalAlignment="Center" Spacing="5">
-                    <TextBlock Text="気象情報" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" />
-                    <TextBlock  Text="{Binding TotalAreaCount,StringFormat={}{0}地域}" Foreground="{DynamicResource SubForegroundColor}" VerticalAlignment="Bottom"/>
+                    <TextBlock Text="{loc:Tr QzssPage.43}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" />
+                    <TextBlock  Text="{loc:TrFormat Path=TotalAreaCount, Key=EewPanel.F08}" Foreground="{DynamicResource SubForegroundColor}" VerticalAlignment="Bottom"/>
                 </StackPanel>
             </Border>
         </StackPanel>
@@ -43,8 +43,8 @@
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" Margin="5,0,0,0" TextElement.FontSize="16">
                                                 <TextBlock Text="{Binding SubCategory, Converter={StaticResource DCReportConverter}, ConverterParameter=WeatherDisasterSubCategory}" />
-                                                <TextBlock Text="(発表)" IsVisible="{Binding !IsCleared}" />
-                                                <TextBlock Text="(解除)" IsVisible="{Binding IsCleared}" />
+                                                <TextBlock Text="{loc:Tr WeatherReport.02}" IsVisible="{Binding !IsCleared}" />
+                                                <TextBlock Text="{loc:Tr WeatherReport.03}" IsVisible="{Binding IsCleared}" />
                                             </StackPanel>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>

@@ -5,7 +5,7 @@
              xmlns:control="clr-namespace:KyoshinEewViewer.Controls;assembly=KyoshinEewViewer"
              xmlns:p="clr-namespace:KyoshinEewViewer.Properties;assembly=KyoshinEewViewer"
 			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-			 FontSize="16"
+			 FontSize="16" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Views.SetupWizardPages.WelcomePage">
 	<StackPanel Margin="10">
 		<StackPanel.Styles>
@@ -14,10 +14,10 @@
 				<Setter Property="TextWrapping" Value="Wrap" />
 			</Style>
 		</StackPanel.Styles>
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-			<Image Source="avares://KyoshinEewViewer.Desktop/Assets/logo.ico" Width="46" Height="46" Margin="5,20,5,5" VerticalAlignment="Center" />
-			<TextBlock x:Name="TitleText" Text="{x:Static p:Resources.SetupWizardWelcomePageTitle}" FontSize="32" VerticalAlignment="Center" />
-		</StackPanel>
-		<control:MarkdownViewer Markdown="{x:Static p:Resources.SetupWizardWelcomePageFunctionDetail}" />
+		<DockPanel HorizontalAlignment="Center" LastChildFill="True">
+			<Image DockPanel.Dock="Left" Source="avares://KyoshinEewViewer.Desktop/Assets/logo.ico" Width="46" Height="46" Margin="5,20,5,5" VerticalAlignment="Center" />
+			<TextBlock x:Name="TitleText" Text="{loc:Tr Wizard.SetupWizardWelcomePageTitle}" FontSize="32" VerticalAlignment="Center" TextWrapping="Wrap" />
+		</DockPanel>
+		<control:MarkdownViewer Markdown="{loc:Tr Wizard.SetupWizardWelcomePageFunctionDetail}" />
 	</StackPanel>
 </UserControl>

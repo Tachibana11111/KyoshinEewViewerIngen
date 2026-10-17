@@ -5,53 +5,53 @@
 		     xmlns:ui="using:FluentAvalonia.UI.Controls"
              xmlns:wf="clr-namespace:KyoshinEewViewer.Series.KyoshinMonitor.Workflow;assembly=KyoshinEewViewer"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="wf:EewTrigger" x:CompileBindings="True"
+             x:DataType="wf:EewTrigger" x:CompileBindings="True" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.KyoshinMonitor.Workflow.EewTriggerControl">
     <StackPanel>
-        <TextBlock Text="条件(震度/M)" FontWeight="Bold" />
-        <TextBlock Text="震度とマグニチュードの条件を設定します。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+        <TextBlock Text="{loc:Tr EewTrigger.01}" FontWeight="Bold" />
+        <TextBlock Text="{loc:Tr EewTrigger.02}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
         <StackPanel Orientation="Horizontal" Margin="5,5,0,0">
-            <TextBlock Text="最大震度: " VerticalAlignment="Center" />
+            <TextBlock Text="{loc:Tr EewTrigger.03}" VerticalAlignment="Center" />
             <ComboBox ItemsSource="{x:Static wf:EewTrigger.ShindoNames}" SelectedValue="{Binding Intensity}" SelectedValueBinding="{ReflectionBinding Key}" DisplayMemberBinding="{ReflectionBinding Value}" />
-            <CheckBox Content="以上を含む" IsChecked="{Binding IncludeGreaterIntensity}" Margin="8,0,0,0" VerticalAlignment="Center" />
+            <CheckBox Content="{loc:Tr EewTrigger.04}" IsChecked="{Binding IncludeGreaterIntensity}" Margin="8,0,0,0" VerticalAlignment="Center" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="5,5,0,0"
-                    ToolTip.Tip="注: 仮定震源要素の場合はM1.0となります。">
-            <TextBlock Text="マグニチュード: M" VerticalAlignment="Center" />
+                    ToolTip.Tip="{loc:Tr EewTrigger.05}">
+            <TextBlock Text="{loc:Tr EewTrigger.06}" VerticalAlignment="Center" />
             <NumericUpDown Value="{Binding Magnitude}" Minimum="0" Maximum="9.9" Increment="0.1" FormatString="0.0" Width="140" />
-            <TextBlock Text="以上" VerticalAlignment="Center" Margin="4,0,0,0" />
+            <TextBlock Text="{loc:Tr EewPanel.07}" VerticalAlignment="Center" Margin="4,0,0,0" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="5,5,0,5">
-            <RadioButton Content="両方の条件を満たす (AND)" IsChecked="{Binding UseAndCondition}" />
-            <RadioButton Content="いずれかの条件を満たす (OR)" IsChecked="{Binding !UseAndCondition}" Margin="10,0,0,0" />
+            <RadioButton Content="{loc:Tr EewTrigger.07}" IsChecked="{Binding UseAndCondition}" />
+            <RadioButton Content="{loc:Tr EewTrigger.08}" IsChecked="{Binding !UseAndCondition}" Margin="10,0,0,0" />
         </StackPanel>
-        <TextBlock Text="条件(発表･更新)" FontWeight="Bold" />
-        <TextBlock Text="情報自体の発表や更新によるトリガーの条件です。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+        <TextBlock Text="{loc:Tr EewTrigger.09}" FontWeight="Bold" />
+        <TextBlock Text="{loc:Tr EewTrigger.10}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
         <WrapPanel Margin="5,0">
-            <CheckBox Content="新規発表" IsChecked="{Binding New}" />
-            <CheckBox Content="続報発表" IsChecked="{Binding Continue}" />
-            <CheckBox Content="より精度の高い情報ソースからの情報" IsChecked="{Binding UpdateWithMoreAccurate}"
-                      ToolTip.Tip="報数が更新されずにより精度の高い情報ソースから情報のみを更新した場合にトリガーされます。" />
-            <CheckBox Content="最終報" IsChecked="{Binding Final}" />
-            <CheckBox Content="キャンセル報" IsChecked="{Binding Cancel}" />
+            <CheckBox Content="{loc:Tr EewTrigger.11}" IsChecked="{Binding New}" />
+            <CheckBox Content="{loc:Tr EewTrigger.12}" IsChecked="{Binding Continue}" />
+            <CheckBox Content="{loc:Tr EewTrigger.13}" IsChecked="{Binding UpdateWithMoreAccurate}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.14}" />
+            <CheckBox Content="{loc:Tr EewTrigger.15}" IsChecked="{Binding Final}" />
+            <CheckBox Content="{loc:Tr EewTrigger.16}" IsChecked="{Binding Cancel}" />
         </WrapPanel>
         <WrapPanel Margin="5,0">
-            <CheckBox Content="警報新規発表" IsChecked="{Binding NewWarning}"
-                      ToolTip.Tip="現段階では DM-D.S.S の緊急地震(警報)契約がある場合のみトリガーされます。" />
-            <CheckBox Content="警報続報発表" IsChecked="{Binding ContinueWarning}"
-                      ToolTip.Tip="現段階では DM-D.S.S の緊急地震(警報)契約がある場合のみトリガーされます。" />
-            <CheckBox Content="警報キャンセル" IsChecked="{Binding CancelWarning}"
-                      ToolTip.Tip="現段階では DM-D.S.S の緊急地震(警報)契約がある場合のみトリガーされます。" />
+            <CheckBox Content="{loc:Tr EewTrigger.17}" IsChecked="{Binding NewWarning}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.18}" />
+            <CheckBox Content="{loc:Tr EewTrigger.19}" IsChecked="{Binding ContinueWarning}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.18}" />
+            <CheckBox Content="{loc:Tr EewTrigger.20}" IsChecked="{Binding CancelWarning}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.18}" />
         </WrapPanel>
-        <TextBlock Text="条件(変更等)" FontWeight="Bold" />
-        <TextBlock Text="他の条件と重なる場合、条件ごとに重複してトリガーされます。" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
+        <TextBlock Text="{loc:Tr EewTrigger.21}" FontWeight="Bold" />
+        <TextBlock Text="{loc:Tr EewTrigger.22}" FontSize="12" Foreground="{DynamicResource SubForegroundColor}" />
         <WrapPanel Margin="5,0">
-            <CheckBox Content="警報レベル到達" IsChecked="{Binding WarningLevelReached}"
-                      ToolTip.Tip="緊急地震速報(予報) が警報レベルになったときに1度だけトリガーされます。" />
-            <CheckBox Content="予想最大震度上昇" IsChecked="{Binding IncreaseInIntensity}"
-                      ToolTip.Tip="予想震度が不明だったものに震度が設定された場合にもトリガーされます。&#xA;SNP連携時には利用非推奨となります。" />
-            <CheckBox Content="予想最大震度低下" IsChecked="{Binding DecreaseInIntensity}"
-                      ToolTip.Tip="予想震度が不明になった場合にもトリガーされます。&#xA;SNP連携時には利用非推奨となります。" />
+            <CheckBox Content="{loc:Tr EewTrigger.23}" IsChecked="{Binding WarningLevelReached}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.24}" />
+            <CheckBox Content="{loc:Tr EewTrigger.25}" IsChecked="{Binding IncreaseInIntensity}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.26}" />
+            <CheckBox Content="{loc:Tr EewTrigger.27}" IsChecked="{Binding DecreaseInIntensity}"
+                      ToolTip.Tip="{loc:Tr EewTrigger.28}" />
         </WrapPanel>
     </StackPanel>
 </UserControl>

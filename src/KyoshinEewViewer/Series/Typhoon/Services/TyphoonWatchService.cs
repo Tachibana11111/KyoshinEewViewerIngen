@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Core;
 using KyoshinEewViewer.JmaXmlParser;
@@ -177,7 +178,7 @@ public partial class TyphoonWatchService : ObservableObject
 				var number = string.IsNullOrWhiteSpace(namePart.TyphoonNamePart.Number) ? null : namePart.TyphoonNamePart.Number[2..];
 
 				return (
-					number != null ? $"台風{number}号" : "熱帯低気圧" + (telegramId.StartsWith("VPTW6") ? new string((char)('a' + (telegramId.Last() - '0')), 1) : ""),
+					number != null ? Loc.Get("TyphoonReport.F01", number) : Loc.Get("Typhoon.TropicalDepression") + (telegramId.StartsWith("VPTW6") ? new string((char)('a' + (telegramId.Last() - '0')), 1) : ""),
 					namePart.TyphoonNamePart.Remark?.Contains("消滅") ?? false,
 					ProcessEstimateTyphoonCircle(info)
 				);

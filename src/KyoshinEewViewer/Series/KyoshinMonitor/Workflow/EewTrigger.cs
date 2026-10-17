@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using KyoshinEewViewer.Localization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using KyoshinEewViewer.Services.Workflows;
 using KyoshinMonitorLib;
@@ -12,19 +13,19 @@ public partial class EewTrigger : WorkflowTrigger
 {
 	public override Type EventType => typeof(EewEvent);
 
-	public static Dictionary<JmaIntensity, string> ShindoNames { get; } = new()
+	public static LocMap<JmaIntensity> ShindoNames { get; } = new()
 	{
-		{ JmaIntensity.Unknown, "震度不明" },
-		{ JmaIntensity.Int0, "震度0" },
-		{ JmaIntensity.Int1, "震度1" },
-		{ JmaIntensity.Int2, "震度2" },
-		{ JmaIntensity.Int3, "震度3" },
-		{ JmaIntensity.Int4, "震度4" },
-		{ JmaIntensity.Int5Lower, "震度5弱" },
-		{ JmaIntensity.Int5Upper, "震度5強" },
-		{ JmaIntensity.Int6Lower, "震度6弱" },
-		{ JmaIntensity.Int6Upper, "震度6強" },
-		{ JmaIntensity.Int7, "震度7" },
+		{ JmaIntensity.Unknown, "ShindoName.Unknown" },
+		{ JmaIntensity.Int0, "ShindoName.Int0" },
+		{ JmaIntensity.Int1, "ShindoName.Int1" },
+		{ JmaIntensity.Int2, "ShindoName.Int2" },
+		{ JmaIntensity.Int3, "ShindoName.Int3" },
+		{ JmaIntensity.Int4, "ShindoName.Int4" },
+		{ JmaIntensity.Int5Lower, "ShindoName.Int5Lower" },
+		{ JmaIntensity.Int5Upper, "ShindoName.Int5Upper" },
+		{ JmaIntensity.Int6Lower, "ShindoName.Int6Lower" },
+		{ JmaIntensity.Int6Upper, "ShindoName.Int6Upper" },
+		{ JmaIntensity.Int7, "ShindoName.Int7" },
 	};
 
 	[JsonIgnore]

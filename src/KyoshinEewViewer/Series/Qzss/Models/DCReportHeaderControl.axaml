@@ -6,7 +6,7 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource SubForegroundColor}"
              x:DataType="local:DCReportGroup"
-             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="100"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="100" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.DCReportHeaderControl"
              x:Name="Root">
     <UserControl.Resources>
@@ -22,21 +22,21 @@
             <StackPanel Margin="5,0">
                 <Panel>
                     <TextBlock HorizontalAlignment="Left">
-                        <Run Text="分類" FontSize="12" />
+                        <Run Text="{loc:Tr DCReportHeader.01}" FontSize="12" />
                         <Run Text="{Binding Classification, Converter={StaticResource DCReportConverter}, ConverterParameter=ReportClassificationLong, Mode=OneWay}" FontSize="16" />
                     </TextBlock>
                     <TextBlock HorizontalAlignment="Right">
-                        <Run Text="種別" FontSize="12" />
+                        <Run Text="{loc:Tr FeedbackPage.03}" FontSize="12" />
                         <Run Text="{Binding InformationType, Converter={StaticResource DCReportConverter}, ConverterParameter=InformationType, Mode=OneWay}" FontSize="16" />
                     </TextBlock>
                 </Panel>
                 <Panel>
                     <TextBlock HorizontalAlignment="Left">
-                        <Run Text="発表" FontSize="12" />
-                        <Run Text="{Binding ReportTime, StringFormat={}M月dd日 HH時mm分, Mode=OneWay}" FontSize="16" />
+                        <Run Text="{loc:Tr TsunamiInformationTrigger.03}" FontSize="12" />
+                        <Run Text="{loc:TrFormat Path=ReportTime, Key=DCReportHeader.F01}" FontSize="16" />
                     </TextBlock>
                     <TextBlock HorizontalAlignment="Right" IsVisible="{Binding ShowReportCount, ElementName=Root}">
-                        <Run Text="統合" FontSize="12" />
+                        <Run Text="{loc:Tr DCReportHeader.02}" FontSize="12" />
                         <Run Text="{Binding ReportCount}" FontSize="14" />
                     </TextBlock>
                 </Panel>

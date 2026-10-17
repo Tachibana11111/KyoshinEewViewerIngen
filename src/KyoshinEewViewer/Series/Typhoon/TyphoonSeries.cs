@@ -1,4 +1,5 @@
 using Avalonia;
+using KyoshinEewViewer.Localization;
 using Avalonia.Controls;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -21,7 +22,7 @@ namespace KyoshinEewViewer.Series.Typhoon;
 
 internal partial class TyphoonSeries : SeriesBase
 {
-	public static SeriesMeta MetaData { get; } = new(typeof(TyphoonSeries), "typhoon", "台風情報α", new FAFontIconSource { Glyph = "\xf751", FontFamily = new(Utils.IconFontName) }, false, "台風の実況･予報円を表示します。");
+	public static SeriesMeta MetaData { get; } = new(typeof(TyphoonSeries), "typhoon", "Series.Typhoon", new FAFontIconSource { Glyph = "\xf751", FontFamily = new(Utils.IconFontName) }, false, "Series.Typhoon.Detail");
 
 	private ILogger Logger { get; }
 	private TyphoonWatchService TyphoonWatchService { get; set; }
@@ -143,7 +144,7 @@ internal partial class TyphoonSeries : SeriesBase
 		{
 			var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions()
 			{
-				Title = "任意のXML電文を開く",
+				Title = Loc.Get("Dialog.OpenXml"),
 				FileTypeFilter = new List<FilePickerFileType>()
 				{
 					FilePickerFileTypes.All,

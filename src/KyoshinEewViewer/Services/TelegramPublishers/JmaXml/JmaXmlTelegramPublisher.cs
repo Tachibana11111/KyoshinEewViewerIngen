@@ -1,4 +1,5 @@
 using KyoshinEewViewer.Core;
+using KyoshinEewViewer.Localization;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -240,7 +241,7 @@ public class JmaXmlTelegramPublisher : TelegramPublisher
 
 					// 初期化完了で通知
 					foreach (var c in telegramGroups.Keys)
-						OnHistoryTelegramArrived("防災情報XML", c, telegramGroups[c]);
+						OnHistoryTelegramArrived(Loc.Get("Source.JmaXml"), c, telegramGroups[c]);
 
 					// コンテキストを登録 このタイミングからPULL開始
 					FeedContexts.TryAdd(type, context);

@@ -1,4 +1,5 @@
 using KyoshinEewViewer.CustomControl;
+using KyoshinEewViewer.Localization;
 using KyoshinEewViewer.Series.KyoshinMonitor.Models;
 using SkiaSharp;
 using System;
@@ -61,19 +62,22 @@ internal static class EewMapDisplay
 	internal static string BuildLabel(Eew eew)
 	{
 		var status = eew.IsCancelled
-			? eew.IsTrueCancelled ? "(取消)" : "(取消?)"
-			: eew.IsFinal ? "(終)" : "";
-		var place = string.IsNullOrWhiteSpace(eew.Hypocenter?.Place) ? "震源地不明" : eew.Hypocenter.Place;
+			? eew.IsTrueCancelled ? Loc.Get("EewMap.Cancelled") : Loc.Get("EewMap.CancelledMaybe")
+			: eew.IsFinal ? Loc.Get("EewMap.Final") : "";
+		var place = string.IsNullOrWhiteSpace(eew.Hypocenter?.Place) ? Loc.Get("EewMap.UnknownPlace") : PlaceNames.Localize(eew.Hypocenter.Place);
 		var magnitude = eew.Hypocenter?.Magnitude is { } value
 			? value.ToString("0.0", CultureInfo.InvariantCulture)
-			: "不明";
-		var intensity = eew.MaxIntensity == KyoshinMonitorLib.JmaIntensity.Unknown
-			? "不明"
-			: KyoshinMonitorLib.JmaIntensityExtensions.ToLongString(eew.MaxIntensity).Replace("震度", "");
-		if (eew.IsIntensityOver && eew.MaxIntensity != KyoshinMonitorLib.JmaIntensity.Unknown)
-			intensity += "以上";
+			: Loc.Get("Common.Unknown");
+		var isJa = Loc.Instance.CurrentCode == "ja";
+		var unknownIntensity = eew.MaxIntensity == KyoshinMonitorLib.JmaIntensity.Unknown;
+		var intensity = unknownIntensity
+			? Loc.Get("Common.Unknown")
+			: isJa
+				? KyoshinMonitorLib.JmaIntensityExtensions.ToLongString(eew.MaxIntensity).Replace("震度", "")
+				: IntensityNames.GetLongName(eew.MaxIntensity).Replace("Intensity ", "").Replace("Cường độ ", "");
+		var over = eew.IsIntensityOver && !unknownIntensity ? Loc.Get("EewMap.Over") : "";
 
-		return $"#{eew.SerialNo}{status} {place} M{magnitude} 最大震度{intensity}";
+		return $"#{eew.SerialNo}{status} {place} M{magnitude} {Loc.Get("EewMap.MaxIntensity", intensity, over)}";
 	}
 
 	/// <summary>

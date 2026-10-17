@@ -23,6 +23,12 @@ public partial class KyoshinEewViewerConfiguration : ObservableObject, IWindowPl
 	[ObservableProperty]
 	public partial bool ShowWizard { get; set; } = true;
 
+	/// <summary>
+	/// 表示言語のコード (ja / en / vi)。空文字はシステムの言語に従う
+	/// </summary>
+	[ObservableProperty]
+	public partial string Language { get; set; } = "";
+
 	[ObservableProperty]
 	public partial double WindowScale { get; set; } = 1;
 

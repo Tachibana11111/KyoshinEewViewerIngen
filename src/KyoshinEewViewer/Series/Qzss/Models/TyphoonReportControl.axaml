@@ -7,7 +7,7 @@
              xmlns:conv="clr-namespace:KyoshinEewViewer.Series.Qzss.Converters"
              Foreground="{DynamicResource MainForegroundColor}"
              x:DataType="local:TyphoonReportGroup"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" xmlns:loc="using:KyoshinEewViewer.Localization"
              x:Class="KyoshinEewViewer.Series.Qzss.Models.TyphoonReportControl">
     <UserControl.Resources>
         <conv:DCReportConverters x:Key="DCReportConverter" />
@@ -15,15 +15,15 @@
 
     <Grid ColumnDefinitions="200,*" RowDefinitions="auto,*">
         <StackPanel>
-            <local:DCReportHeaderControl Title="防災気象情報(台風)" ShowReportCount="True" />
+            <local:DCReportHeaderControl Title="{loc:Tr TyphoonReport.01}" ShowReportCount="True" />
 
             <Border Background="{DynamicResource DockTitleBackgroundColor}" CornerRadius="4,4,0,0" ClipToBounds="True">
-                <TextBlock Text="台風情報" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" />
+                <TextBlock Text="{loc:Tr QzssPage.45}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" />
             </Border>
             <Border Background="{DynamicResource DockBackgroundColor}" CornerRadius="0,0,4,4" ClipToBounds="True">
                 <StackPanel Margin="10,5">
                     <TextBlock FontSize="22" HorizontalAlignment="Center" FontWeight="Bold"
-                        Text="{Binding TyphoonNumber, StringFormat={}台風{0}号}" />
+                        Text="{loc:TrFormat Path=TyphoonNumber, Key=TyphoonReport.F01}" />
                 </StackPanel>
             </Border>
         </StackPanel>
@@ -37,31 +37,31 @@
                                     <Panel Margin="5,0">
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="5">
                                             <TextBlock Text="{Binding TimeType, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonReferenceTimeType}" FontWeight="Bold" FontSize="18" VerticalAlignment="Bottom" />
-                                            <TextBlock Text="{Binding Time, StringFormat={}{0:dd日 HH時}}" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="{loc:TrFormat Path=Time, Key=AshFallReport.F03}" VerticalAlignment="Bottom" />
                                         </StackPanel>
                                         <TextBlock TextElement.Foreground="{DynamicResource SubForegroundColor}" HorizontalAlignment="Right">
                                             <TextBlock Text="{Binding ElapsedHours}" FontSize="20" Margin="0,0,0,-2" />
-                                            <TextBlock Text="時間後" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="{loc:Tr AshFallReport.07}" VerticalAlignment="Bottom" />
                                         </TextBlock>
                                     </Panel>
                                 </Border>
                                 <Border Grid.Row="1" CornerRadius="0,0,4,4" Background="{DynamicResource DockBackgroundColor}">
                                     <StackPanel Margin="10,5">
-                                        <TextBlock Text="大きさ / 勢力" FontSize="14" Margin="0,0,0,-5" />
+                                        <TextBlock Text="{loc:Tr TyphoonReport.02}" FontSize="14" Margin="0,0,0,-5" />
                                         <StackPanel Margin="0,0,0,-5" TextElement.FontSize="18" Orientation="Horizontal" HorizontalAlignment="Right">
                                             <TextBlock Text="{Binding Scale, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonScale}" />
                                             <TextBlock Text="/" Margin="5,0" FontSize="16" />
                                             <TextBlock Text="{Binding Intensity, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonIntensity}" />
                                         </StackPanel>
 
-                                        <TextBlock Text="中心気圧" FontSize="14" Margin="0,0,0,-20" />
+                                        <TextBlock Text="{loc:Tr TyphoonReport.03}" FontSize="14" Margin="0,0,0,-20" />
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                             <TextBlock Text="{Binding CentralPressure}" FontSize="26" Margin="0,0,2,-4" VerticalAlignment="Bottom" />
                                             <TextBlock Text="hpa" FontSize="16" VerticalAlignment="Bottom" />
                                         </StackPanel>
 
                                         <StackPanel>
-                                            <TextBlock Text="最大風速" FontSize="14" Margin="0,0,0,-20" />
+                                            <TextBlock Text="{loc:Tr TyphoonReport.04}" FontSize="14" Margin="0,0,0,-20" />
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                                 <TextBlock Text="{Binding MaxWindSpeed, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonMaximumWindSpeed}" FontSize="22" Margin="0,0,2,-1" VerticalAlignment="Bottom" />
                                                 <TextBlock Text="m/s" IsVisible="{Binding MaxWindSpeed, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonMaximumWindSpeedHasValue}" FontSize="16" VerticalAlignment="Bottom" />
@@ -69,7 +69,7 @@
                                         </StackPanel>
 
                                         <StackPanel>
-                                            <TextBlock Text="最大瞬間風速" FontSize="14" Margin="0,0,0,-20" />
+                                            <TextBlock Text="{loc:Tr TyphoonReport.05}" FontSize="14" Margin="0,0,0,-20" />
                                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                                 <TextBlock Text="{Binding MaxWindGustSpeed, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonMaximumWindGustSpeed}" FontSize="22" Margin="0,0,2,-1" VerticalAlignment="Bottom" />
                                                 <TextBlock Text="m/s" IsVisible="{Binding MaxWindGustSpeed, Converter={StaticResource DCReportConverter}, ConverterParameter=TyphoonMaximumWindGustSpeedHasValue}" FontSize="16" VerticalAlignment="Bottom" />
